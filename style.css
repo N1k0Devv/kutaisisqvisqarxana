@@ -1,8 +1,9 @@
 .container{
     margin: 0 auto;
     width: 100%;
-    max-width: 1146px;
+    max-width: 1326px;
     display: flex;
+    margin-left: 170px;
 }
 .nav{
     color: #2935A7;
@@ -72,17 +73,17 @@ padding-top: 100px;
 .container-1{
     height: 400px;
     width: 100%;
-    max-width: 600px;
+    max-width: 800px;
     display: flex;
     flex-direction: column;
 }
 .s-1 img{
-    margin-left: 70PX;
+    margin-left: 160PX;
     border-radius: 10px;
 }
 footer{
     background: #A9AEDC;
-    max-width: 1363px;
+    max-width: 2000px;
 height: 310px;
 flex-shrink: 0;
 margin-top: 75px;
@@ -125,7 +126,7 @@ margin-left: 45px;
 .s-2{
     margin-left: 60px;
     margin-top: 50px;
-    width: 1146px;
+    width: 1346px;
     background-color: lightyellow;
 }
 .s-2 h2{
@@ -145,9 +146,50 @@ span{
     font-weight: 500;
     line-height: normal;
 }
-
-
-
+.s-3{
+    display: flex;
+    justify-content: space-between;
+}
+.box img{
+    border: 2px solid;
+    height: 255px;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+}
+.container-3{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1326px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+.s-3 h2{
+    color: #222;
+    font-family: "Rockwell Extra Bold";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin-left: 170px;
+}
+.s-3{
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+}
+.container-3 h4{
+    color: #222;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Rockwell;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 66.667% */
+    letter-spacing: 0.48px;
+}
 
 
 
@@ -167,8 +209,14 @@ span{
     .s-1 h3, .s-1 h4{
         padding-left: 20px;
     }
+    .container{
+        margin-left: 0px;
+    }
     footer{
-        width: 1174px;
+        width: 1175px;
+    }
+    .s-3 h2{
+        margin-left: 0px;
     }
 }
 @media (max-width: 1000px){
@@ -195,6 +243,7 @@ span{
         margin: 0 auto;
         width: 100%;
         max-width: 600px;
+        margin-left: 0px;
     }
     #bar{
         display: flex;
@@ -207,7 +256,7 @@ span{
     header i{
         vertical-align: middle;
         padding-top: 40px;
-        margin-left: 20px;
+        margin-left: 50px;
     }
     header h2{
         margin-right: 70px;
@@ -236,23 +285,50 @@ span{
         display: flex;
         flex-direction: column;
     }
+    .container-3{
+        flex-direction: column;
+        max-width: 600px;
+        width: 100%;
+    }
+    .box{
+        margin-top: 50px;
+    }
+    li i{
+        margin-right: 0px;
+    }
+    #mta{
+        margin-left: 0px;
+    }
+
 }
 @media (max-width: 580px){
     .container, .container-1, .s-1 img{
-        width: 570px;
+        width: 560px;
     }
     .s-1{
         width: 580px;
     }
     footer{
-        width: 580px;
+        width: 560px;
+    }
+    footer h3{
+        margin-left: 50px;
+    }
+    .box{
+        margin: 0 auto;
+        margin-top: 50px;
+        width: 430px;
     }
 }
-@media (max-width: 360px){
+@media (max-width: 380px){
     footer{
         display: flex;
     }
-    
+    .box{
+        margin: 0 auto;
+        margin-top: 50px;
+        width: 430px;
+    }
 }
 
 
