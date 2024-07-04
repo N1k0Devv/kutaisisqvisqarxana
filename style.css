@@ -1,9 +1,9 @@
 .container{
     margin: 0 auto;
     width: 100%;
-    max-width: 1326px;
+    max-width: 1126px;
     display: flex;
-    margin-left: 170px;
+    border: 2px solid;
 }
 .nav{
     color: #2935A7;
@@ -15,19 +15,22 @@
     line-height: 16px; /* 80% */
     letter-spacing: 0.4px;
     padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
 }
 nav li, ul{
     display: flex;
     gap: 50px;
 }
 header h2{
-    margin-right: 170px;
     color: #222;
+    margin-right: 50px;
     font-family: "Rockwell Extra Bold";
     font-size: 27.65px;
     font-style: normal;
     font-weight: 800;
     line-height: normal
+
 }
 header i{
     padding-top: 20px;
@@ -42,7 +45,9 @@ flex-shrink: 0;
 .s-1{
     margin-top: 70px;
     display: flex;
+    justify-content: center;
 }
+
 .s-1 h3{
     color: #222;
 font-family: "josefin sans";
@@ -72,15 +77,11 @@ padding-top: 100px;
 }
 .container-1{
     height: 400px;
-    width: 100%;
     max-width: 800px;
     display: flex;
     flex-direction: column;
 }
-.s-1 img{
-    margin-left: 160PX;
-    border-radius: 10px;
-}
+
 footer{
     background: #A9AEDC;
     max-width: 100%;
@@ -173,7 +174,7 @@ span{
     font-style: normal;
     font-weight: 800;
     line-height: normal;
-    margin-left: 170px;
+    margin-left: 70px;
 }
 .s-3{
     display: flex;
@@ -202,156 +203,11 @@ line-height: normal;
     max-width: 100%;
     width: 100%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 1515px){
-    .s-1 img{
-        margin-left: 0px;
-    }
-    .s-1 h3, .s-1 h4{
-        padding-left: 20px;
-    }
-    .container{
-        margin-left: 0px;
-    }
-    footer{
-        width: 1175px;
-    }
-    .s-3 h2{
-        margin-left: 0px;
-    }
-    .s-4 img{
-        width: 100%;
-    }
-    footer{
-        width: 100%;
-    }
-
+.nav:hover{
+    color: green;
 }
-@media (max-width: 1000px){
-    .s-1 h3{
-        font-size: 40px;
-    }
-    .s-1 h4{
-        font-size: 20px;
-    }
-    .container{
-        width: 999px;
-    }
-    .s-1{
-        width: 1000px;
-    }
-    footer{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-    .s-4 img{
-        width: 100%;
-    }
-}
-@media (max-width: 600px){
-    .container{
-        margin: 0 auto;
-        width: 100%;
-        max-width: 600px;
-        margin-left: 0px;
-    }
-    #bar{
-        display: flex;
-        padding-top: 40px;
-        padding-right: 0px;
-    }
-    .nav{
-        display: none;
-    }
-    header i{
-        vertical-align: middle;
-        padding-top: 40px;
-        margin-left: 50px;
-    }
-    header h2{
-        margin-right: 70px;
-    }   
-    .s-1{
-        flex-direction: column;
-        width: 600px;
-    }
-    .s-1 img{
-       margin-left: 0px;
-       width: 100%;
-       max-width: 600px;
-       height: auto;
-    }
-    .s-1 h3{
-        padding-left: 50px;
-        font-size: 48px;
-        padding-left: 60px;
-    }
-    .s-1 h4{
-        padding-left: 50px;
-        font-size: 24px;
-    }
-    footer{
-        width: 600px;
-        display: flex;
-        flex-direction: column;
-    }
-    .container-3{
-        flex-direction: column;
-        max-width: 600px;
-        width: 100%;
-    }
-    .box{
-        margin-top: 50px;
-    }
-    li i{
-        margin-right: 0px;
-    }
-    #mta{
-        margin-left: 0px;
-    }
 
-}
-@media (max-width: 580px){
-    .container, .container-1, .s-1 img{
-        width: 560px;
-    }
-    .s-1{
-        width: 580px;
-    }
-    footer{
-        width: 560px;
-    }
-    footer h3{
-        margin-left: 50px;
-    }
-    .box{
-        margin: 0 auto;
-        margin-top: 50px;
-        width: 430px;
-    }
-}
-@media (max-width: 380px){
-    footer{
-        display: flex;
-    }
-    .box{
-        margin: 0 auto;
-        margin-top: 50px;
-        width: 430px;
-    }
-}
+
 
 
 
