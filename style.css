@@ -3,7 +3,6 @@
     width: 100%;
     max-width: 1126px;
     display: flex;
-    border: 2px solid;
 }
 .nav{
     color: #2935A7;
@@ -124,10 +123,8 @@ margin-left: 45px;
     margin-top: 50px;
     padding-top: 50px;
 }
-.s-2{
-    margin-left: 60px;
+.s-2{  
     margin-top: 50px;
-    width: 1346px;
     background-color: lightyellow;
 }
 .s-2 h2{
@@ -200,13 +197,48 @@ font-weight: 1000;
 line-height: normal;
 }
 .s-4 img{
-    max-width: 100%;
+    max-width: 2000px;
     width: 100%;
 }
 .nav:hover{
     color: green;
 }
-
+.s-4 {
+    /* The image used */
+    background-image: url("images/factory.jfif");
+  
+    /* Set a specific height */
+    min-height: 500px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .s-4 p{
+    color: #000;
+font-family: Rockwell;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 111.111% */
+  }
+.s-4 img{
+    max-width: 2000px;
+    width: 100%;
+}
+.ser-1 p{
+    color: white;font-family: Rockwell;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 111.111% */
+}
+.s-2{
+    width: 100%;
+    max-width: 2000px;
+}
 
 
 
