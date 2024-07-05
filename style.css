@@ -72,11 +72,10 @@ gap: 30px;
 height: 100px;
 padding-left: 100px; 
 padding-top: 80px;
-animate__bounce
 }
 .s-1 h4{
     color: #222;
--webkit-font-feature-settings: 'clig' off, 'liga' off;
+    -webkit-font-feature-settings: 'clig' off, 'liga' off;
         font-feature-settings: 'clig' off, 'liga' off;
 font-family: Rockwell;
 font-size: 24px;
@@ -265,7 +264,7 @@ font-weight: 400;
 line-height: 20px; /* 111.111% */
   }
 .s-4 img{
-    max-width: 2000px;
+    width: 2000px;
     width: 100%;
 }
 .ser-1 p{
