@@ -2,11 +2,14 @@
     margin: 0 auto;
     width: 100%;
     max-width: 1126px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .nav{
     color: #2935A7;
-    font-feature-settings: 'clig' off, 'liga' off;
+    -webkit-font-feature-settings: 'clig' off, 'liga' off;
+            font-feature-settings: 'clig' off, 'liga' off;
     font-family: Rockwell;
     font-size: 20px;
     font-style: normal;
@@ -14,10 +17,16 @@
     line-height: 16px; /* 80% */
     letter-spacing: 0.4px;
     padding-top: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 nav li, ul{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 50px;
 }
@@ -35,7 +44,8 @@ header i{
     padding-top: 20px;
     width: 60.829px;
 height: 55.3px;
-flex-shrink: 0;
+-ms-flex-negative: 0;
+    flex-shrink: 0;
 }
 #bar{
     display: none;
@@ -43,8 +53,12 @@ flex-shrink: 0;
 
 .s-1{
     margin-top: 70px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .s-1 h3{
@@ -58,10 +72,12 @@ gap: 30px;
 height: 100px;
 padding-left: 100px; 
 padding-top: 80px;
+animate__bounce
 }
 .s-1 h4{
     color: #222;
-font-feature-settings: 'clig' off, 'liga' off;
+-webkit-font-feature-settings: 'clig' off, 'liga' off;
+        font-feature-settings: 'clig' off, 'liga' off;
 font-family: Rockwell;
 font-size: 24px;
 font-style: normal;
@@ -77,15 +93,21 @@ padding-top: 100px;
 .container-1{
     height: 400px;
     max-width: 800px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 footer{
     background: #A9AEDC;
     max-width: 100%;
 height: 310px;
-flex-shrink: 0;
+-ms-flex-negative: 0;
+    flex-shrink: 0;
 margin-top: 75px;
 
 }
@@ -145,23 +167,35 @@ span{
     line-height: normal;
 }
 .s-3{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .box img{
     border: 2px solid;
     height: 255px;
 }
 .box{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 .container-3{
     margin: 0 auto;
     width: 100%;
     max-width: 1326px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     margin-top: 50px;
 }
 .s-3 h2{
@@ -174,13 +208,19 @@ span{
     margin-left: 70px;
 }
 .s-3{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-top: 70px;
 }
 .container-3 h4{
     color: #222;
-    font-feature-settings: 'clig' off, 'liga' off;
+    -webkit-font-feature-settings: 'clig' off, 'liga' off;
+            font-feature-settings: 'clig' off, 'liga' off;
     font-family: Rockwell;
     font-size: 24px;
     font-style: normal;
@@ -229,7 +269,8 @@ line-height: 20px; /* 111.111% */
     width: 100%;
 }
 .ser-1 p{
-    color: white;font-family: Rockwell;
+    color: white;
+    font-family: Rockwell;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -239,9 +280,3 @@ line-height: 20px; /* 111.111% */
     width: 100%;
     max-width: 2000px;
 }
-
-
-
-
-
-
