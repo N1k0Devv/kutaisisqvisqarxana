@@ -78,6 +78,15 @@
     }
 }
 @media (max-width: 600px){
+    .topnav{
+        display: flex;
+    }
+    .navigation{
+        display: none;
+    }
+    .container i,.nagli{
+        display: none;
+    }
     .container{
         margin: 0 auto;
         max-width: 600px;
@@ -158,6 +167,9 @@
     header{
         max-width: 600px;
     }
+    .nav-menu , .menu{
+        display: inline;
+    }
 
 }
 @media (max-width: 580px){
@@ -197,6 +209,9 @@
     
     .container h2{ 
         margin-right: 0px;
+    }
+    .niga{ 
+        margin-left: 30px;
     }
 }
 @media (max-width: 530px){

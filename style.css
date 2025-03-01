@@ -72,6 +72,9 @@ gap: 30px;
 height: 100px;
 padding-left: 100px; 
 padding-top: 80px;
+} 
+.s-1 img{
+    border-radius: 5%;
 }
 .s-1 h4{
     color: #222;
@@ -102,13 +105,20 @@ padding-top: 100px;
 }
 
 footer{
-    background: #A9AEDC;
+    background-color: lightgray;
     max-width: 100%;
 height: 310px;
 -ms-flex-negative: 0;
     flex-shrink: 0;
 margin-top: 75px;
 
+}
+.foot-nav a:hover{
+    color: green;
+    font-size: 48px;
+} 
+.icons i:hover{
+    color: green;
 }
 footer h3{
     color: #222;
@@ -143,10 +153,15 @@ margin-left: 45px;
     display: block;
     margin-top: 50px;
     padding-top: 50px;
+    align-items: center;
+    justify-content: center;
 }
 .s-2{  
+    display: flex;
+    flex-direction: column;
     margin-top: 50px;
-    background-color: lightyellow;
+    background-color: lightyellow;align-items: center;
+    justify-content: center;
 }
 .s-2 h2{
     display: inline-block;
@@ -172,6 +187,7 @@ span{
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+            
 }
 .box img{
     border: 2px solid;
@@ -194,8 +210,9 @@ span{
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: distribute;
-        justify-content: space-around;
+        justify-content: space-between;
     margin-top: 50px;
+    
 }
 .s-3 h2{
     color: #222;
@@ -283,3 +300,99 @@ line-height: 20px; /* 111.111% */
     display: flex;
     justify-content: center;
 }
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+    display: none;
+  }
+  
+  .topnav #myLinks {
+    display: none;
+  }
+  
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  .topnav a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+  }
+  body {
+    background-color: aqua;
+  }
+  .zangi{ 
+    display: flex;
+  }
+  #nigger{ 
+    padding-top: 0px;
+  }
+ .kniga{
+    display: flex;
+ }
+ #contact-2{
+    margin-bottom: 100px;
+ }
+ body {
+    font-family: Arial, sans-serif;
+}
+.menu {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 100;
+}
+.bar {
+    width: 30px;
+    height: 4px;
+    background-color: black;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+.nav-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    padding-top: 60px;
+    transition: 0.4s;
+}
+.nav-menu a {
+    padding: 10px 20px;
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+.nav-menu a:hover {
+    background-color: #575757;
+}
+.menu.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+.menu.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+.nav-menu.active {
+    right: 0;
+}
+ 

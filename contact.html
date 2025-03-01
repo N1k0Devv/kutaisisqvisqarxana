@@ -11,12 +11,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/00871c31a5.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <div class="container">
             <i class="fa-solid fa-mountain-sun fa-2xl"></i>            
-            <h2>ქვის ქარხანა</h2>
+            <h2>ქუთაისის ქვის ქარხანა</h2>
             <nav>
                 <ul>
                     <li><a class="nav"  href="index.html">მთავარი</a></li>
@@ -24,7 +25,19 @@
                     <li><a class="nav"  href="sevice.html">სერვისები</a></li>
                     <li><a class="nav"  href="siaxle.html">სიახლე</a></li>
                     <li><a class="nav"  href="contact.html">კონტაქტი</a></li>
-                    <li><i class="fa-solid fa-bars fa-2xl" id="bar"></i></li>
+                    <li><div class="menu" onclick="toggleMenu()">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                    <div class="nav-menu" id="navMenu">
+                        <a href="aboutus.html">ჩვენს შესახებ</a>
+                        <a href="sevice.html">სერვისები</a>
+                        <a href="siaxle.html">სიახლე</a>
+                        <a href="contact.html">კონტაქტი</a>
+                        <a href="checkout.html"><i id="nigger" class="fa-solid fa-cart-shopping"></i></a>
+                    </div></li>
+                    <li><a class="nav" href="checkout.html"><i id="nigger" class="fa-solid fa-cart-shopping"></i></a></li>
                 </ul>
             </nav>
         </div>
@@ -34,7 +47,7 @@
             <i class="fa-solid fa-envelope fa-2xl"></i><span>Email:</span> <h2>info@stonefactory.com</h2>
         </div>
         <div class="contact-1">
-            <i class="fa-brands fa-facebook fa-2xl"></i><span>facebook:</span> <h2>kutaisis stone factory</h2>
+            <i class="fa-brands fa-facebook fa-2xl"></i><span>facebook:</span> <h2>Kutaisi stone factory/ქუთაისის ქვის ქარხანა </h2>
         </div>
         <div class="contact-1">
             <i class="fa-brands fa-x-twitter fa-2xl"></i><span>X(twitter):</span> <h2>stonefactory</h2>
@@ -42,7 +55,7 @@
         <div class="contact-1">
             <i class="fa-brands fa-instagram fa-2xl"></i><span>instagram:</span> <h2>@stonefactory545</h2>
         </div>
-        <div class="contact-1">
+        <div class="contact-1" id="contact-2">
             <i class="fa-solid fa-phone fa-2xl"></i><span>phone:</span> <h2>+995 123 456 789</h2>
         </div>
     </section>
@@ -51,17 +64,22 @@
         <h3>Factory</h3>
         <div class="icons">
         <a href="#"><i class="fa-brands fa-instagram fa-2xl"></i></a>
-        <a href="#"><i class="fa-brands fa-facebook fa-2xl"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100088853137969"><i class="fa-brands fa-facebook fa-2xl"></i></a>
         <a href="#"><i class="fa-brands fa-x-twitter fa-2xl"></i></a>
         </div>
         <div class="foot-nav">
-            <a href="">main</a>
-            <a href="">abous us</a>
-            <a href="">services</a>
-            <a href="">news</a>
-            <a href="">contact</a>
+            <a href="index.html">main</a>
+            <a href="aboutus.html">about us</a>
+            <a href="sevice.html">services</a>
+            <a href="siaxle.html">news</a>
+            <a href="contact.html">contact</a>
         </div>
     </footer>
-
+    <script>
+        function toggleMenu() {
+            document.querySelector(".menu").classList.toggle("active");
+            document.getElementById("navMenu").classList.toggle("active");
+        }
+    </script>
 </body>
 </html>

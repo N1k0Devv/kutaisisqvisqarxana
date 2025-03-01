@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <script src="https://kit.fontawesome.com/00871c31a5.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], input[type="number"], input[type="tel"], select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .cart-summary {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+        }
+        .total {
+            font-weight: bold;
+            font-size: 18px;
+            text-align: right;
+        }
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+        .footer{
+            text-align: center;
+            margin-top: 30px;
+            color: #777;
+            .order-summary {
+            background: white;
+            padding: 20px;
+            max-width: 400px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+    }
+        .item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .total {
+            font-weight: bold;
+            margin-top: 10px;
+            border-top: 2px solid #333;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html"><i class="fa-solid fa-arrow-left"></i></a> 
+        <h1>Checkout</h1>
+        <form id="checkoutForm" action="#" method="post">
+            <!-- Billing Information -->
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Shipping Address</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <!-- Payment Information -->
+            <div class="form-group">
+                <label for="card-number">Credit Card Number</label>
+                <input type="number" id="card-number" name="card-number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="expiration">Expiration Date (MM/YY)</label>
+                <input type="text" id="expiration" name="expiration" required>
+            </div>
+
+            <div class="form-group">
+                <label for="cvv">CVV</label>
+                <input type="number" id="cvv" name="cvv" required>
+            </div>
+
+            <!-- Cart Summary -->
+
+
+
+
+            <style>
+                .order-summary {
+                    background: white;
+                    padding: 20px;
+                    max-width: 400px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                    border-radius: 8px;
+                }
+                .item {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 10px;
+                }
+                .total {
+                    font-weight: bold;
+                    margin-top: 10px;
+                    border-top: 2px solid #333;
+                    padding-top: 10px;
+                }
+            </style>
+
+            
+            <div id="order-summary-container"></div>
+            <button class="btn">დაასრულე შეკვეთა</button>
+
+            
+        </form>
+    </div>
+    <script>
+        function createOrderSummary(containerId, items) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+
+            container.innerHTML = `
+                <div class="order-summary">
+                    <h2>Order Summary</h2>
+                    <div id="items"></div>
+                    <div class="total">Total: $<span id="total-price">0.00</span></div>
+                </div>
+            `;
+
+            window.updateTotal = function () {
+                let total = 0;
+                items.forEach((item, index) => {
+                    const qty = parseInt(document.getElementById(`qty-${index}`).value) || 1;
+                    total += item.price * qty;
+                });
+                document.getElementById("total-price").textContent = total.toFixed(2);
+            };
+
+            function renderItems() {
+                const itemsContainer = document.getElementById("items");
+                itemsContainer.innerHTML = "";
+                items.forEach((item, index) => {
+                    const itemDiv = document.createElement("div");
+                    itemDiv.classList.add("item");
+                    itemDiv.innerHTML = `
+                        <span>${item.name} ($${item.price})</span>
+                        <input type="number" id="qty-${index}" value="${item.quantity}" min="1" style="width: 50px;" onchange="updateTotal()">
+                    `;
+                    itemsContainer.appendChild(itemDiv);
+                });
+                updateTotal();
+            }
+            renderItems();
+        }
+
+        // Example usage:
+        const orderItems = [
+            { name: "Item 1", price: 10, quantity: 1 },
+            { name: "Item 2", price: 20, quantity: 1 },
+            { name: "Item 3", price: 15, quantity: 1 }
+        ];
+        createOrderSummary("order-summary-container", orderItems);
+    </script>
+
+
+    <script>
+
+        
+            // Get form inputs
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const address = document.getElementById("address").value;
+            const phone = document.getElementById("phone").value;
+            const cardNumber = document.getElementById("card-number").value;
+            const expiration = document.getElementById("expiration").value;
+            const cvv = document.getElementById("cvv").value;
+
+            // Simple validation
+            if (name === "" || email === "" || address === "" || phone === "" || cardNumber === "" || expiration === "" || cvv === "") {
+                alert("Please fill in all fields.");
+                return; // Stop the form from submitting
+            }
+
+            // Validate email
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+
+            // Validate card number (simple length check for example)
+            if (cardNumber.length < 16) {
+                alert("Please enter a valid credit card number.");
+                return;
+            }
+
+            // If all validation passes, simulate form submission
+            alert("Order submitted successfully!");
+
+            // You can add further actions here (e.g., sending data to a server)
+        ;
+
+        // Update total dynamically (you can add more items here)
+    </script>
+
+</body>
+</html>
