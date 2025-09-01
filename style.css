@@ -7,7 +7,7 @@
     display: flex;
 }
 .nav{
-    color: #2935A7;
+    
     -webkit-font-feature-settings: 'clig' off, 'liga' off;
             font-feature-settings: 'clig' off, 'liga' off;
     font-family: Rockwell;
@@ -30,7 +30,9 @@ nav li, ul{
     display: flex;
     gap: 50px;
     height: 60px;
-
+}
+.small-nav{
+  font-size: 20px;
 }
 header h2{
     color: #222;
@@ -61,6 +63,7 @@ height: 55.3px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+            background-color: white;
 }
 header{
   background-color: whitesmoke;
@@ -165,8 +168,8 @@ margin-left: 45px;
 .s-2{  
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
-    background-color: lightyellow;align-items: center;
+    background-color: white;
+    align-items: center;
     justify-content: center;
 }
 .s-2 h2{
@@ -237,7 +240,7 @@ span{
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-top: 70px;
+    margin-bottom: 50px;
 }
 .container-3 h4{
     color: #222;
@@ -265,20 +268,7 @@ line-height: normal;
 .nav:hover{
     color: green;
 }
-.s-4 {
-    /* The image used */
-    background-image: url("images/Marble\ Warehouse.jpg");
-  
-    /* Set a specific height */
-    min-height: 500px;
-  
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-top: 10px;
-  }
+
   .s-4 p{
     color: #000;
 font-family: Rockwell;
@@ -335,7 +325,7 @@ line-height: 20px; /* 111.111% */
     background-color: #ddd;
   }
   body {
-    background-color: aqua;
+    background-color: white;
   }
   .zangi{ 
     display: flex;
@@ -602,7 +592,7 @@ line-height: 20px; /* 111.111% */
   font-weight: 500;
 }
 .materials-section {
-  background-color: #2bb1c2;
+  background-color: #333;
   padding: 60px 30px;
 }
 
@@ -665,4 +655,5 @@ line-height: 20px; /* 111.111% */
 }
 html{
   scroll-behavior:smooth;
+  background-color: white;
 }
