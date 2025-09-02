@@ -44,18 +44,41 @@
             
         </div>
     </header>
-    <section class="s-1">
-        <img src="https://imgs.search.brave.com/nLEzN4_f1cYZrnlkbZ5bTLDfhw6iACmPvtK9dLP2a8g/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9ncmFu/aXRlZ29sZC5jb20v/Y2RuL3Nob3AvYXJ0/aWNsZXMvU3RvbmUt/VGlsZS1mb3ItRmxv/b3JpbmdfODAweC5q/cGc_dj0xNjQ0ODk0/NTcy" alt="">
-        <div class="container-1">
-        <h3>ქვის ფილები და სხვა</h3>
-        <h4>მაღალი ხარისხის პროდუქტები</h4>
-        </div>
-    </section>
+    <section class="about-hero" style="background-image: url('images/pexels-ahmetcotur-31817156.jpg');">
+  <div class="overlay">
+    <h1>MAIN</h1>
+  </div>
+</section>
+
+    <section class="marble-features">
+  <div class="feature-card">
+    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Precision Icon" />
+    <h3>Timeless Beauty</h3>
+    <p>
+      Marble is renowned for its elegant veining and natural beauty. Each slab is unique, adding a one-of-a-kind charm to any space.
+    </p>
+  </div>
+  <div class="feature-card">
+    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png" alt="Design Icon" />
+    <h3>Natural Luxury</h3>
+    <p>
+      A hallmark of luxury interiors, marble offers a smooth, refined surface that enhances both modern and classic design aesthetics.
+    </p>
+  </div>
+  <div class="feature-card">
+    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828961.png" alt="Quality Icon" />
+    <h3>Cool & Durable</h3>
+    <p>
+      Naturally cool and resistant to heat, marble is an excellent choice for kitchen countertops, offering beauty and performance.
+    </p>
+  </div>
+</section>
+
      <section class="expertise-section">
-  <div class="expertise-images">
+  <div class="expertise-images" id="expertise-left">
     <img src="images/Marble Warehouse.jpg" alt="Stone Image" class="img-right">
   </div>
-  <div class="expertise-text">
+  <div class="expertise-text" id="expertise-right">
     <h2>Our Expertise</h2>
     <p>
       With over 30 years of experience in the marble industry, Integrity-Stone.com has the expertise to handle any project, no matter how complex.
@@ -139,8 +162,35 @@ ScrollSmoother.create({
 });
 
 // Animate footer when it comes into view
+const boxes = document.querySelectorAll('.service-item');
 
+    function checkScroll() {
+      const triggerBottom = window.innerHeight * 0.9;
+      const container = document.querySelector('.services-grid');
+      const containerTop = container.getBoundingClientRect().top;
 
+      if (containerTop < triggerBottom) {
+        boxes.forEach(box => box.classList.add('animate'));
+      }
+    }
+
+    window.addEventListener('scroll', checkScroll);
+function handleScrollAnimation() {
+    const section = document.querySelector('.expertise-section');
+    const left = document.getElementById('expertise-left');
+    const right = document.getElementById('expertise-right');
+
+    const sectionTop = section.getBoundingClientRect().top;
+    const triggerPoint = window.innerHeight * 0.85;
+
+    if (sectionTop < triggerPoint) {
+      left.classList.add('animate');
+      right.classList.add('animate');
+    }
+  }
+
+  window.addEventListener('scroll', handleScrollAnimation);
+  window.addEventListener('load', handleScrollAnimation);
 
         </script>
     

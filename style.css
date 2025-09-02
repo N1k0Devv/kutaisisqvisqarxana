@@ -57,7 +57,7 @@ height: 55.3px;
 }
 
 .s-1{
-    margin-top: 70px;
+    margin-top: 60px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -65,6 +65,7 @@ height: 55.3px;
         -ms-flex-pack: center;
             justify-content: center;
             background-color: white;
+            margin-bottom: 150px;
 }
 header{
   background-color: whitesmoke;
@@ -202,6 +203,7 @@ span{
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+            padding-top: 20px;
             
 }
 .box img{
@@ -665,3 +667,228 @@ line-height: 20px; /* 111.111% */
   color:#000;
   margin-top: 20px;
 }
+
+
+
+    .service-item {
+ 
+      transform: translateX(-150%);
+      opacity: 0;
+      transition: all 2s ease;
+    }
+
+    .service-item:nth-child(2) {
+      transition-delay: 0.1s;
+    }
+
+    .service-item:nth-child(3) {
+      transition-delay: 0.2s;
+    }
+
+    .service-item:nth-child(4) {
+      transition-delay: 0.3s;
+    }
+
+    .service-item.animate {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  
+
+  .expertise-section {
+    opacity: 1;
+    margin-top: 50px;
+  }
+
+  .expertise-images,
+  .expertise-text {
+    width: 45%;
+    transition: all 2s ease;
+    opacity: 0;
+  }
+
+  #expertise-left {
+    transform: translateX(-150px);
+  }
+
+  #expertise-right {
+    transform: translateX(150px);
+  }
+
+  .animate {
+    transform: translateX(0) !important;
+    opacity: 1 !important;
+  }
+  .img-right{
+     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.5s ease;
+  }
+  .img-right:hover{
+  transform: scale(1.03);
+
+  }
+ .marble-features {
+  background-image: url('images/modern-kitchen-with-contemporary-interior-decor-furnishings.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 80px 60px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  min-height: 500px;
+  
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 30px 20px;
+  width: 300px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+.feature-card img {
+  width: 40px;
+  margin-bottom: 15px;
+}
+
+.feature-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.feature-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* ============================= */
+/*        Responsive Styles      */
+/* ============================= */
+
+@media (max-width: 1024px) {
+  .marble-features {
+    padding: 60px 40px;
+    gap: 20px;
+  }
+
+  .feature-card {
+    width: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .marble-features {
+    padding: 40px 20px;
+    flex-direction: column;
+    align-items: center;
+    height: auto; /* Allow height to adjust based on content */
+  }
+
+  .feature-card {
+    width: 90%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .marble-features {
+    padding: 30px 15px;
+    gap: 15px;
+  }
+
+  .feature-card {
+    padding: 25px 15px;
+    width: 100%;
+  }
+
+  .feature-card h3 {
+    font-size: 18px;
+  }
+
+  .feature-card p {
+    font-size: 14px;
+  }
+
+  .feature-card img {
+    width: 35px;
+  }
+}
+.s-1 img {
+  
+  max-width: 100%;
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+/* Text container animation */
+.s-1 .container-1 {
+  opacity: 0;
+  transform: translateX(100px);
+  animation: slideInRight 1s ease-out forwards;
+  animation-delay: 0.5s; /* Delay for staggered effect */
+}
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.about-hero {
+  background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+.overlay {
+ background-color: rgba(0, 0, 0, 0.4);
+    padding: 40px 20px;
+    width: 100%;
+}
+
+.about-hero h1 {
+  font-size: 4rem;
+    margin-bottom: 10px;
+    font-weight: 800; 
+    color: white;
+}
+/* Initial hidden state */
+.info-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease-out, transform 0.6s ease-out;
+}
+
+/* Shown state (added via JS) */
+.info-card[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+

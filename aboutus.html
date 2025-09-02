@@ -43,7 +43,7 @@
    <!-- SECTION 1 -->
 <section class="hero-section" style="background-image: url('images/pexels-ahmetcotur-31817156.jpg');">
   <div class="hero-overlay">
-    <h1>About Us</h1>
+    <h1>ABOUT US</h1>
   </div>
 </section>
 
@@ -126,15 +126,26 @@
     }
   }
 </style>
-<section class="s-3">
-        <h2>Photos</h2>
-        <div class="container-3">
-            <img src="images/facry.jfif" alt="">
-            <img src="images/facrory3.jfif" alt="">
-            <img src="images/factory.jfif" alt="">
-            <img src="images/factory2.jfif" alt="">
-        </div>
-    </section>
+<section class="services-section" id="servisebi">
+  <h2>PHOTO</h2>
+  <div class="services-grid">
+    <div class="service-item">
+      <img src="images/pool.jpg" alt="pool Coping">
+      <p>Pool Coping</p>
+    </div>
+    <div class="service-item">
+      <img src="images/granite pavers.jpg" alt="granite pavers">
+      <p>Granite Pavers</p>
+    </div>
+    <div class="service-item">
+      <img src="images/steps.jpg" alt="granite steps">
+      <p>Granite Steps</p>
+    </div>
+    <div class="service-item">
+      <img src="images/marble pavers.jpg" alt="marble pavers">
+      <p>Marble pavers</p>
+    </div>
+</section>
     <section class="materials-section">
   <div class="materials-container">
     <div class="materials-image">
@@ -326,7 +337,34 @@ ScrollSmoother.create({
   smoothTouch: 0.1, // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
 });
 // Animate footer when it comes into view
+const boxes = document.querySelectorAll('.service-item');
 
+    function checkScroll() {
+      const triggerBottom = window.innerHeight * 0.9;
+      const container = document.querySelector('.services-grid');
+      const containerTop = container.getBoundingClientRect().top;
+
+      if (containerTop < triggerBottom) {
+        boxes.forEach(box => box.classList.add('animate'));
+      }
+    }
+
+    window.addEventListener('scroll', checkScroll);
+
+    const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.setAttribute('data-visible', 'true');
+        observer.unobserve(entry.target); // Only animate once
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  document.querySelectorAll('.info-card').forEach(card => {
+    observer.observe(card);
+  });
     </script>
     </div>
   </div>
