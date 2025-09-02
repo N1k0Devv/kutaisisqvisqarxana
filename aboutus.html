@@ -9,18 +9,22 @@
     <link rel="stylesheet" href="media.css">
     <script src="https://kit.fontawesome.com/7706f5712b.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/00871c31a5.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
-    <header>
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+      <header>
         <div class="container">
             <i class="fa-solid fa-mountain-sun fa-2xl"></i>            
-            <h2>ქუთაისის ქვის ქარხანა</h2>
+            <h2><a href="index.html" class="linki">ქუთაისის ქვის ქარხანა</a></h2>
             <nav>
                 <ul>
                     <li><a class="nav"  href="index.html">მთავარი</a></li>
                     <li><a class="nav"  href="aboutus.html">ჩვენს შესახებ</a></li>
-                    <li><a class="nav"  href="sevice.html">სერვისები</a></li>
-                    <li><a class="nav"  href="siaxle.html">სიახლე</a></li>
+                    <li><a class="nav"  href="index.html#servisebi">სერვისები</a></li>
                     <li><a class="nav"  href="contact.html">კონტაქტი</a></li>
                     <li><div class="menu" onclick="toggleMenu()">
                         <div class="bar"></div>
@@ -29,21 +33,17 @@
                     </div>
                     <div class="nav-menu" id="navMenu">
                         <a href="index.html">mtavari</a>
-                        <a href="aboutus.html">ჩვენს შესახებ</a>
-                        <a href="sevice.html">სერვისები</a>
+                        <a href="aboutus.html" class="small-nav">ჩვენს შესახებ</a>
                         <a href="contact.html">კონტაქტი</a>
-                        <a href="checkout.html"><i id="nigger" class="fa-solid fa-cart-shopping"></i></a>
                     </div></li>
-                    <li><a class="nav" href="checkout.html"><i id="nigger" class="fa-solid fa-cart-shopping"></i></a></li>
                 </ul>
             </nav>
         </div>
     </header>
    <!-- SECTION 1 -->
-<section class="hero-section" style="background-image: url('images/pool.jpg');">
+<section class="hero-section" style="background-image: url('images/pexels-ahmetcotur-31817156.jpg');">
   <div class="hero-overlay">
     <h1>About Us</h1>
-    <p><strong>MAIN</strong> » ABOUT US</p>
   </div>
 </section>
 
@@ -51,10 +51,10 @@
   <div class="content-container">
     <h2>About us</h2>
     <p>
-      AllStone is one of the largest importer and exporter of natural stone facing materials in Georgia. Our goal is to build on our history of best quality product and service delivery for our customers, to be the Project Partner – from receiving customized orders of natural stones until the final delivery.
+      Kutaisis qvis qarxana is one of the largest importer and exporter of natural stone facing materials in Georgia. Our goal is to build on our history of best quality product and service delivery for our customers, to be the Project Partner – from receiving customized orders of natural stones until the final delivery.
     </p>
     <p>
-      In Allstone quarries we excavate natural stones and turn it into unique design facing materials according to your idea and your project. 18 quarries provide a wide variety of products and guarantee environment-friendly natural stone selection...
+      In our factory quarries we excavate natural stones and turn it into unique design facing materials according to your idea and your project. 18 quarries provide a wide variety of products and guarantee environment-friendly natural stone selection...
     </p>
     <p>
       Our team has been excavating, transforming and selling natural stone products from proprietary or exclusive quarries for more than 10 years...
@@ -65,7 +65,7 @@
   .hero-section {
     background-size: cover;
     background-position: center;
-    height: 300px;
+    height: 450px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -81,8 +81,9 @@
   }
 
   .hero-overlay h1 {
-    font-size: 2.5rem;
+    font-size: 4rem;
     margin-bottom: 10px;
+    font-weight: 800;
   }
 
   .hero-overlay p {
@@ -105,6 +106,7 @@
     font-size: 2rem;
     margin-bottom: 20px;
     color: #222;
+    font-weight: 800;
   }
 
   .content-container p {
@@ -136,7 +138,7 @@
     <section class="materials-section">
   <div class="materials-container">
     <div class="materials-image">
-      <img src="images/marble steps.jpg" alt="Kitchen Countertop">
+      <img src="images/pexels-edward-jenner-4250577.jpg" alt="Kitchen Countertop">
     </div>
     <div class="materials-text">
       <h2>Our Materials</h2>
@@ -214,7 +216,7 @@
   }
 
   .info-card-bottom {
-    background: #161616;
+    background: #333;
     color: #fff;
     padding: 25px 25px 30px;
     font-size: 1rem;
@@ -240,7 +242,7 @@
     <section class="contact-section">
   <div class="contact-item">
     <i class="fa-solid fa-phone fa-2xl" id="icona"></i>
-    <p>(+995) 123 45 56 <span class="highlight"></span></p>
+    <p>(+995) 123 45 67 89 <span class="highlight"></span></p>
   </div>
   <div class="contact-item">
     <i class="fa-solid fa-location-dot fa-2xl" id="icona"></i>
@@ -256,7 +258,7 @@
   .contact-section {
     display: flex;
     justify-content: space-around;
-    background-color: #1a1a1a;
+    background-color: #333;
     padding: 20px;
     color: white;
     text-align: center;
@@ -292,22 +294,44 @@
         <h3>Factory</h3>
         <div class="icons">
         <a href="#"><i class="fa-brands fa-instagram fa-2xl"></i></a>
-        <a href="https://www.facebook.com/profile.php?id=100088853137969"><i class="fa-brands fa-facebook fa-2xl"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100088853137969" target="_blank"><i class="fa-brands fa-facebook fa-2xl"></i></a>
         <a href="#"><i class="fa-brands fa-x-twitter fa-2xl"></i></a>
         </div>
         <div class="foot-nav">
             <a href="index.html">main</a>
             <a href="aboutus.html">about us</a>
-            <a href="sevice.html">services</a>
-            <a href="siaxle.html">news</a>
+            <a href="index.html#servisebi">services</a>
             <a href="contact.html">contact</a>
         </div>
     </footer>
     <script>
+      
         function toggleMenu() {
             document.querySelector(".menu").classList.toggle("active");
             document.getElementById("navMenu").classList.toggle("active");
         }
+        function closeMenu() {
+    document.querySelector('.menu').classList.remove('active');
+    document.getElementById('navMenu').classList.remove('active');
+  }
+  document.addEventListener("DOMContentLoaded", function () {
+    document.body.classList.add('loaded');
+  });
+        
+  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+  // create the scrollSmoother before your scrollTriggers
+ScrollSmoother.create({
+  smooth: 1, // how long (in seconds) it takes to "catch up" to the native scroll position
+  effects: true, // looks for data-speed and data-lag attributes on elements
+  smoothTouch: 0.1, // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
+});
+// Animate footer when it comes into view
+
     </script>
+    </div>
+  </div>
+  <!-- position: fixed elements can go outside --->
+
+    
 </body>
 </html>
