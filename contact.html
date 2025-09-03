@@ -1,205 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="media.css">
-    <script src="https://kit.fontawesome.com/7706f5712b.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/00871c31a5.js" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media.css" />
+    <script
+      src="https://kit.fontawesome.com/7706f5712b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/00871c31a5.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-</head>
-<body>
-     <div id="smooth-wrapper">
-    <div id="smooth-content">
-       <header>
-        <div class="container">
-            <i class="fa-solid fa-mountain-sun fa-2xl"></i>            
-            <h2><a href="index.html" class="linki">ქუთაისის ქვის ქარხანა</a></h2>
+  </head>
+  <body>
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <header>
+          <div class="container">
+            <i class="fa-solid fa-mountain-sun fa-2xl" id="mta"></i>
+            <h2>
+              <a href="index.html" class="linki">ქუთაისის ქვის ქარხანა</a>
+            </h2>
             <nav>
-                <ul>
-                    <li><a class="nav"  href="index.html">მთავარი</a></li>
-                    <li><a class="nav"  href="aboutus.html">ჩვენს შესახებ</a></li>
-                    <li><a class="nav"  href="index.html#servisebi">სერვისები</a></li>
-                    <li><a class="nav"  href="contact.html">კონტაქტი</a></li>
-                    <li><div class="menu" onclick="toggleMenu()">
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                    </div>
-                    <div class="nav-menu" id="navMenu">
-                        <a href="index.html">mtavari</a>
-                        <a href="index.html#servisebi">servisebi</a>
-                        <a href="aboutus.html" class="small-nav">ჩვენს შესახებ</a>
-                        
-                    </div></li>
-                </ul>
+              <ul>
+                <li><a class="nav" href="index.html">მთავარი</a></li>
+                <li><a class="nav" href="aboutus.html">ჩვენს შესახებ</a></li>
+                <li>
+                  <a class="nav" href="index.html#servisebi">სერვისები</a>
+                </li>
+                <li><a class="nav" href="contact.html">კონტაქტი</a></li>
+                <li>
+                  <div class="menu" onclick="toggleMenu()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                  </div>
+                  <div class="nav-menu" id="navMenu">
+                    <!-- Add this inside .nav-menu -->
+                    <span class="nav-close" onclick="closeMenu()">&times;</span>
+                    <a href="index.html">mtavari</a>
+                    <a href="index.html#servisebi">servisebi</a>
+                    <a href="aboutus.html" class="small-nav">ჩვენს შესახებ</a>
+                  </div>
+                </li>
+              </ul>
             </nav>
-        </div>
-    </header>
-    <!-- Contact Section -->
-<section class="contact-hero">
-  <div class="contact-content">
-    <h1>Contact Us</h1>
-    <p>
-      Here you will find our contacts, locations, mails and the contact form if you prefer to write us.
-    </p>
-  </div>
-</section>
+          </div>
+        </header>
+        <!-- Contact Section -->
+        <section class="contact-hero">
+          <div class="contact-content">
+            <h1>Contact Us</h1>
+            <p>
+              Here you will find our contacts, locations, mails and the contact
+              form if you prefer to write us.
+            </p>
+          </div>
+        </section>
 
-<!-- CSS -->
-<style>
-/* Base Styles */
-.contact-hero {
-  position: relative;
-  min-height: 100vh;
-  background: url('images/pexels-pixabay-163007.jpg') no-repeat center center / cover;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 60px;
-  color: white;
-  box-sizing: border-box;
-}
+        <!-- CSS -->
+        <style>
+          /* Base Styles */
+          .contact-hero {
+            position: relative;
+            min-height: 100vh;
+            background: url("images/pexels-pixabay-163007.jpg") no-repeat center
+              center / cover;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 60px;
+            color: white;
+            box-sizing: border-box;
+          }
 
-.contact-hero::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45); /* dark overlay for contrast */
-  z-index: 0;
-}
+          .contact-hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.45); /* dark overlay for contrast */
+            z-index: 0;
+          }
 
-.contact-content {
-  position: relative;
-  z-index: 1;
-  max-width: 600px;
-}
+          .contact-content {
+            position: relative;
+            z-index: 1;
+            max-width: 600px;
+          }
 
-.contact-content h1 {
-  font-size: 4rem;
-  margin-bottom: 1rem;
-  font-weight: bold;
-}
+          .contact-content h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+          }
 
-.contact-content p {
-  font-size: 1.25rem;
-  line-height: 1.6;
-}
+          .contact-content p {
+            font-size: 1.25rem;
+            line-height: 1.6;
+          }
 
-/* Responsive Styles */
-@media (max-width: 1024px) {
-  .contact-content h1 {
-    font-size: 3rem;
-  }
+          /* Responsive Styles */
+          @media (max-width: 1024px) {
+            .contact-content h1 {
+              font-size: 3rem;
+            }
 
-  .contact-content p {
-    font-size: 1.1rem;
-  }
-}
+            .contact-content p {
+              font-size: 1.1rem;
+            }
+          }
 
-@media (max-width: 768px) {
-  .contact-hero {
-    padding: 40px 20px;
-    justify-content: center;
-    text-align: center;
-  }
+          @media (max-width: 768px) {
+            .contact-hero {
+              padding: 40px 20px;
+              justify-content: center;
+              text-align: center;
+            }
 
-  .contact-content {
-    max-width: 100%;
-  }
+            .contact-content {
+              max-width: 100%;
+            }
 
-  .contact-content h1 {
-    font-size: 2.5rem;
-  }
+            .contact-content h1 {
+              font-size: 2.5rem;
+            }
 
-  .contact-content p {
-    font-size: 1rem;
-  }
-}
+            .contact-content p {
+              font-size: 1rem;
+            }
+          }
 
-@media (max-width: 480px) {
-  .contact-content h1 {
-    font-size: 2rem;
-  }
+          @media (max-width: 480px) {
+            .contact-content h1 {
+              font-size: 2rem;
+            }
 
-  .contact-content p {
-    font-size: 0.95rem;
-  }
-}
-</style>
-
-    <section class="s-2">
-        <div class="contact-1">
-            <i class="fa-solid fa-envelope fa-2xl"></i><span>Email:</span> <h2>info@stonefactory.com</h2>
-        </div>
-        <div class="contact-1">
-            <i class="fa-brands fa-facebook fa-2xl"></i><span>facebook:</span> <h2><a href="https://www.facebook.com/profile.php?id=100088853137969" target="_blank">Kutaisi stone factory/ქუთაისის ქვის ქარხანა</a> </h2>
-        </div>
-        <div class="contact-1">
-            <i class="fa-brands fa-x-twitter fa-2xl"></i><span>X(twitter):</span> <h2>stonefactory</h2>
-        </div>
-        <div class="contact-1">
-            <i class="fa-brands fa-instagram fa-2xl"></i><span>instagram:</span> <h2>@stonefactory545</h2>
-        </div>
-        <div class="contact-1" id="contact-2">
-            <i class="fa-solid fa-phone fa-2xl"></i><span>phone:</span> <h2>+995 123 456 789</h2>
-        </div>
-        <section class="full-width-map">
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1586.6179632019825!2d42.713427499999995!3d42.2359375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x405ced59ad1080a3%3A0xcfffdd5f8b662e56!2z4YOl4YOj4YOX4YOQ4YOY4YOh4YOY4YOhIOGDpeGDleGDmOGDoSDhg6Xhg5Dhg6Dhg67hg5Dhg5zhg5A!5e1!3m2!1ska!2sge!4v1756673128935!5m2!1ska!2sge"
-      allowfullscreen 
-      loading="lazy" 
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-  </section>
-    </section>
-    <footer>
-        <h3 class="stone">Stone</h3>
-        <h3>Factory</h3>
-        <div class="icons">
-        <a href="#"><i class="fa-brands fa-instagram fa-2xl"></i></a>
-        <a href="https://www.facebook.com/profile.php?id=100088853137969" target="_blank" ><i class="fa-brands fa-facebook fa-2xl"></i></a>
-        <a href="#"><i class="fa-brands fa-x-twitter fa-2xl"></i></a>
-        </div>
-        <div class="foot-nav">
+            .contact-content p {
+              font-size: 0.95rem;
+            }
+          }
+        </style>
+        <section class="s-2">
+          <div class="contact-1">
+            <i class="fa-solid fa-envelope fa-2xl"></i><span>Email:</span>
+            <h2>info@stonefactory.com</h2>
+          </div>
+          <div class="contact-1">
+            <i class="fa-brands fa-facebook fa-2xl"></i><span>facebook:</span>
+            <h2>
+              <a
+                href="https://www.facebook.com/profile.php?id=100088853137969"
+                target="_blank"
+                >Kutaisi stone factory/ქუთაისის ქვის ქარხანა</a
+              >
+            </h2>
+          </div>
+          <div class="contact-1">
+            <i class="fa-brands fa-x-twitter fa-2xl"></i
+            ><span>X(twitter):</span>
+            <h2>stonefactory</h2>
+          </div>
+          <div class="contact-1">
+            <i class="fa-brands fa-instagram fa-2xl"></i><span>instagram:</span>
+            <h2>@stonefactory545</h2>
+          </div>
+          <div class="contact-1" id="contact-2">
+            <i class="fa-solid fa-phone fa-2xl"></i><span>phone:</span>
+            <h2>+995 123 456 789</h2>
+          </div>
+          <section class="full-width-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1586.6179632019825!2d42.713427499999995!3d42.2359375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x405ced59ad1080a3%3A0xcfffdd5f8b662e56!2z4YOl4YOj4YOX4YOQ4YOY4YOh4YOY4YOhIOGDpeGDleGDmOGDoSDhg6Xhg5Dhg6Dhg67hg5Dhg5zhg5A!5e1!3m2!1ska!2sge!4v1756673128935!5m2!1ska!2sge"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >
+            </iframe>
+          </section>
+        </section>
+        <footer>
+          <h3 class="stone">Stone</h3>
+          <h3>Factory</h3>
+          <div class="icons">
+            <a href="#"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+            <a
+              href="https://www.facebook.com/profile.php?id=100088853137969"
+              target="_blank"
+              ><i class="fa-brands fa-facebook fa-2xl"></i
+            ></a>
+            <a href="#"><i class="fa-brands fa-x-twitter fa-2xl"></i></a>
+          </div>
+          <div class="foot-nav">
             <a href="index.html">main</a>
             <a href="aboutus.html">about us</a>
             <a href="index.html#servisebi">services</a>
             <a href="contact.html">contact</a>
-        </div>
-    </footer>
-    <script>
-        function toggleMenu() {
+          </div>
+        </footer>
+        <script>
+          function toggleMenu() {
             document.querySelector(".menu").classList.toggle("active");
             document.getElementById("navMenu").classList.toggle("active");
-        }
-        function closeMenu() {
-    document.querySelector('.menu').classList.remove('active');
-    document.getElementById('navMenu').classList.remove('active');
-  }
-  
-  
-  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-  // create the scrollSmoother before your scrollTriggers
-ScrollSmoother.create({
-  smooth: 2, // how long (in seconds) it takes to "catch up" to the native scroll position
-  effects: true, // looks for data-speed and data-lag attributes on elements
-  smoothTouch: 0.1, // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
-});
+          }
+          function closeMenu() {
+            document.querySelector(".menu").classList.remove("active");
+            document.getElementById("navMenu").classList.remove("active");
+          }
 
-
-    </script>
+          gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+          // create the scrollSmoother before your scrollTriggers
+          ScrollSmoother.create({
+            smooth: 2, // how long (in seconds) it takes to "catch up" to the native scroll position
+            effects: true, // looks for data-speed and data-lag attributes on elements
+            smoothTouch: 0.1, // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
+          });
+        </script>
+      </div>
     </div>
-  </div>
-   
-</body>
+  </body>
 </html>

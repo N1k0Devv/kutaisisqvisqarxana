@@ -99,6 +99,7 @@
         display: flex;
         padding-top: 40px;
         margin-left: 10px;
+        z-index: 1010;
     }
     .nav{
         display: none;
