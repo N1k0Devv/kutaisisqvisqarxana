@@ -116,24 +116,21 @@ header {
 }
 
 footer {
-  background-color: lightgray;
+  background-color: #333;
   width: 100%;
   padding: 50px 20px;
 }
 
-.foot-nav a:hover {
-  color: green;
-  font-size: 48px;
-}
+/* ...existing code... */
 .icons i:hover {
-  color: green;
+  color: #2d89ef;
 }
 footer h3 {
-  color: #222;
+  color: white;
   font-family: "Rockwell Extra Bold";
   font-size: 48px;
   font-style: normal;
-  font-weight: 800;
+  font-weight: 1000;
   line-height: normal;
   margin-left: 100px;
 }
@@ -147,15 +144,6 @@ footer h3 {
 .foot-nav {
   margin-left: 290px;
   margin-top: 0px;
-}
-.foot-nav a {
-  color: #222;
-  font-family: "Rockwell Extra Bold";
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 800;
-  line-height: normal;
-  margin-left: 45px;
 }
 .contact-1 {
   display: block;
@@ -438,7 +426,7 @@ li::after {
   bottom: -2px;
   width: 0;
   height: 2px;
-  background: #007bff;
+  background: yellow;
   transition: width 0.3s ease;
 }
 
@@ -951,7 +939,6 @@ header h2 {
   top: 28px;
   right: 18px;
 }
-
 .menu .bar {
   width: 32px;
   height: 4px;
@@ -1151,4 +1138,50 @@ header .linki:hover {
   }
 }
 
-/* ...existing
+
+.foot-nav a {
+  position: relative;
+  padding: 10px 5px;
+  cursor: pointer;
+  color: white;
+  font-family: "Rockwell Extra Bold";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  margin-left: 45px;
+  transition: color 0.5s;
+}
+
+.foot-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 3px;
+  background: #2d89ef;
+  border-radius: 2px;
+  transition: width 0.4s cubic-bezier(.77,0,.18,1);
+}
+
+.foot-nav a:hover {
+  color: #2d89ef;
+  
+}
+
+.foot-nav a:hover::after {
+  width: 100%;
+}
+.icons i{ 
+  color: white;
+   transition: color 0.5s;
+}
+footer h3{
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.5s;
+}
+footer h3:hover{
+  color: #2d89ef;
+}
