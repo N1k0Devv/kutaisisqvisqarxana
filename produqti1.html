@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ქუთაისის ქვის ქარხანა</title>
+    <script src="https://kit.fontawesome.com/7706f5712b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+    <script src="https://kit.fontawesome.com/00871c31a5.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <div id="smooth-wrapper">
+    <div id="smooth-content">
+        <header>
+        <div class="container">
+            <i class="fa-solid fa-mountain-sun fa-2xl" id="mta"></i>            
+            <h2><a href="index.html" class="linki">ქუთაისის ქვის ქარხანა</a></h2>
+                <ul>
+                    <li><a class="nav" id="nav" href="index.html">მთავარი</a></li>
+                    <li><a class="nav" id="nav" href="aboutus.html">ჩვენსშესახებ</a></li>
+                    <li><a href="products.html" class="nav">პროდუქტები</a></li>
+                    <li><a class="nav" id="nav" href="contact.html">კონტაქტი</a></li>
+                    
+                    <li><div class="menu" onclick="toggleMenu()">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                    <div class="nav-menu" id="navMenu">
+                      <a href="index.html">mtavari</a>
+                        <a href="aboutus.html">ჩვენს შესახებ</a>
+                        <a href="products.html">პროდუქტები</a>
+                        <a href="contact.html">კონტაქტი</a>
+                    </div></li>   
+                </ul>
+        </div>
+    </header>
+    </header>
+<section class="product-1">
+     <div class="container">
+        <div class="product-section">
+            <!-- Product Image -->
+            <div class="product-image">
+                <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800" alt="ბაბადუბის ფილა">
+                <button class="expand-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15,3 21,3 21,9"></polyline>
+                        <polyline points="9,21 3,21 3,15"></polyline>
+                        <line x1="21" y1="3" x2="14" y2="10"></line>
+                        <line x1="3" y1="21" x2="10" y2="14"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Product Details -->
+            <div class="product-details">
+                <h1 class="product-title">ბაბადუბის ფილა 30სმ</h1>
+                
+                <div class="product-price">47.00 ₾</div>
+                
+                <div class="product-code">ბაბადუბის ფილა</div>
+                
+                <p class="product-description">
+                    ფასი მოცემულია ერთ კვადრატულ მეტრზე.
+                </p>
+
+                <div class="specifications">
+                    <div class="spec-item">
+                        <span class="spec-label">სიგრძე:</span>
+                        <span class="spec-value">თავისუფალი</span>
+                    </div>
+                    
+                    <div class="spec-item">
+                        <span class="spec-label">სიგანე:</span>
+                        <span class="spec-value">30სმ</span>
+                    </div>
+                    
+                    <div class="spec-item">
+                        <span class="spec-label">სისქე:</span>
+                        <span class="spec-value">2,2სმ</span>
+                    </div>
+                    
+                    <div class="spec-item">
+                        <span class="spec-label">ფერი:</span>
+                        <span class="spec-value">რუხი</span>
+                    </div>
+                    
+                    <div class="spec-item">
+                        <span class="spec-label">დამუშავება:</span>
+                        <span class="spec-value">ნაყრითა, კუთხე-ჩამოგანული</span>
+                    </div>
+                    
+                    <div class="spec-item">
+                        <span class="spec-label">ზარმომშვიდია:</span>
+                        <span class="spec-value">თეთრი-ნყატი, საქართველო</span>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="add-to-cart-btn">კალათაში დამატება</button>
+                    <button class="wishlist-btn">♡</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for enlarged image -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modalImage" src="" alt="Enlarged view">
+        </div>
+    </div>
+</section>
+    <style>
+        /* ...existing code... */
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s cubic-bezier(.77,0,.18,1);
+}
+
+.product-image:hover img {
+    transform: scale(1.12);
+}
+   .product-1 {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 48px 16px;
+}
+
+.product-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+}
+
+/* Product Image */
+.product-image {
+    position: relative;
+    aspect-ratio: 1;
+    background-color: #e5e7eb;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.expand-btn {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.2s ease;
+    color: #4b5563;
+}
+
+.expand-btn:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Product Details */
+.product-details {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.product-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #111827;
+    line-height: 1.2;
+}
+
+.product-price {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #f97316;
+}
+
+.product-code {
+    font-size: 1.125rem;
+    color: #6b7280;
+}
+
+.product-description {
+    font-size: 1.125rem;
+    color: #374151;
+    line-height: 1.7;
+}
+
+/* Specifications */
+.specifications {
+    display: flex;
+    flex-direction: column;
+}
+
+.spec-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.spec-item:last-child {
+    border-bottom: none;
+}
+
+.spec-label {
+    font-weight: 500;
+    color: #6b7280;
+}
+
+.spec-value {
+    color: #111827;
+    text-align: right;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.add-to-cart-btn {
+    flex: 1;
+    background-color: #f97316;
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #ea580c;
+}
+
+.wishlist-btn {
+    padding: 16px 32px;
+    border: 2px solid #d1d5db;
+    background: white;
+    color: #374151;
+    border-radius: 8px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+}
+
+.wishlist-btn:hover {
+    border-color: #9ca3af;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .product-section {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    
+    .product-title {
+        font-size: 2rem;
+    }
+    
+    .product-price {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding: 24px 16px;
+    }
+    
+    .product-title {
+        font-size: 1.75rem;
+    }
+    
+    .product-price {
+        font-size: 1.75rem;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+    }
+    
+    .wishlist-btn {
+        align-self: center;
+        width: 60px;
+    }
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    position: relative;
+    margin: auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 1200px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content img {
+    max-width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+    transition: color 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+    color: #f97316;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.modal.fade-out {
+    animation: fadeOut 0.3s ease;
+}
+</style>
+<section class="contact-section">
+  <div class="contact-item">
+    <i class="fa-solid fa-phone fa-2xl" id="icona"></i>
+    <p>(+995) 123 45 67 89 <span class="highlight"></span></p>
+  </div>
+  <div class="contact-item">
+    <i class="fa-solid fa-location-dot fa-2xl" id="icona"></i>
+    <p>n 19 ახალგაზრდობის გამზ, ქუთაისი</p>
+  </div>
+  <div class="contact-item">
+    <i class="fa-solid fa-envelope fa-2xl" id="icona"></i>
+    <p>info@qvisqarxana</p>
+  </div>
+</section>
+
+<style>
+  .contact-section {
+    display: flex;
+    justify-content: space-around;
+    background-color: #222;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 20px; 
+    margin-top: 20px;
+  }
+  .contact-item {
+    flex: 1 1 200px;
+    max-width: 300px;
+  }
+  #icona {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 8px;
+  }
+  .highlight {
+    color: #e74c3c;
+  }
+  @media (max-width: 600px) {
+    .contact-section {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>
+<footer>
+        <h3 class="stone">Stone</h3>
+        <h3>Factory</h3>
+        <div class="icons">
+        <a href="#"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100088853137969" target="_blank"><i class="fa-brands fa-facebook fa-2xl"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter fa-2xl"></i></a>
+        </div>
+        <div class="foot-nav">
+            <a href="index.html">main</a>
+            <a href="aboutus.html">about us</a>
+            <a href="index.html#servisebi">services</a>
+            <a href="contact.html">contact</a>
+        </div>
+    </footer>
+        <script> gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+  // create the scrollSmoother before your scrollTriggers
+ScrollSmoother.create({
+  smooth: 2, // how long (in seconds) it takes to "catch up" to the native scroll position
+  effects: true, // looks for data-speed and data-lag attributes on elements
+  smoothTouch: 0.1, // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
+});
+const modal = document.getElementById('imageModal');
+const modalImage = document.getElementById('modalImage');
+const expandBtn = document.querySelector('.expand-btn');
+const closeBtn = document.querySelector('.close');
+const productImage = document.querySelector('.product-image img');
+
+// Open modal when expand button is clicked
+expandBtn.addEventListener('click', function() {
+    modal.style.display = 'block';
+    modalImage.src = productImage.src;
+    modalImage.alt = productImage.alt;
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+});
+
+// Close modal when X button is clicked
+closeBtn.addEventListener('click', function() {
+    closeModal();
+});
+
+// Close modal when clicking outside the image
+modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+        closeModal();
+    }
+});
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modal.style.display === 'block') {
+        closeModal();
+    }
+});
+
+// Function to close modal with animation
+function closeModal() {
+    modal.classList.add('fade-out');
+    setTimeout(() => {
+        modal.style.display = 'none';
+        modal.classList.remove('fade-out');
+        document.body.style.overflow = 'auto'; // Restore scrolling
+    }, 300);
+}
+
+// Prevent modal from closing when clicking on the image
+modalImage.addEventListener('click', function(e) {
+    e.stopPropagation();
+});
+</script>
+    </div>
+    </div>
+</body>
+</html>
