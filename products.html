@@ -78,30 +78,30 @@
                     </div>
 
                     <!-- Filter Controls -->
-                    <div class="filter-controls">
+                    <div class="filter-controls" role="region" aria-label="პროდუქტების ფილტრები">
                         <!-- Category Filter -->
                         <div class="filter-group">
-                            <label class="filter-label">კატეგორია:</label>
-                            <div class="products-filter-buttons">
-                                <button class="products-filter-btn active" data-filter="all">ყველა</button>
-                                <button class="products-filter-btn" data-filter="basalt">ბაზალტი</button>
-                                <button class="products-filter-btn" data-filter="marble">მარმარილო</button>
-                                <button class="products-filter-btn" data-filter="granite">გრანიტი</button>
+                            <label class="filter-label" for="categoryFilter">კატეგორია:</label>
+                            <div class="products-filter-buttons" id="categoryFilter">
+                                <button type="button" class="products-filter-btn active" data-filter="all">ყველა</button>
+                                <button type="button" class="products-filter-btn" data-filter="basalt">ბაზალტი</button>
+                                <button type="button" class="products-filter-btn" data-filter="marble">მარმარილო</button>
+                                <button type="button" class="products-filter-btn" data-filter="granite">გრანიტი</button>
                             </div>
                         </div>
 
                         <!-- Price Range Filter -->
                         <div class="filter-group">
-                            <label class="filter-label">ფასის დიაპაზონი:</label>
+                            <label class="filter-label" for="minPrice">ფასის დიაპაზონი:</label>
                             <div class="price-filter">
                                 <div class="price-inputs">
-                                    <input type="number" id="minPrice" placeholder="მინ. ფასი" min="0" />
+                                    <input type="number" id="minPrice" placeholder="მინ. ფასი" min="0" aria-label="მინიმალური ფასი" />
                                     <span>-</span>
-                                    <input type="number" id="maxPrice" placeholder="მაქს. ფასი" min="0" />
+                                    <input type="number" id="maxPrice" placeholder="მაქს. ფასი" min="0" aria-label="მაქსიმალური ფასი" />
                                     <span>₾</span>
                                 </div>
                                 <div class="price-range-slider">
-                                    <input type="range" id="priceRange" min="0" max="200" value="200" />
+                                    <input type="range" id="priceRange" min="0" max="200" value="200" aria-label="ფასის სლაიდერი" />
                                     <div class="range-labels">
                                         <span>0₾</span>
                                         <span id="maxPriceLabel">200₾</span>
@@ -112,8 +112,8 @@
 
                         <!-- Sort Options -->
                         <div class="filter-group">
-                            <label class="filter-label">დალაგება:</label>
-                            <select id="sortSelect" class="sort-select">
+                            <label class="filter-label" for="sortSelect">დალაგება:</label>
+                            <select id="sortSelect" class="sort-select" aria-label="დალაგების არჩევა">
                                 <option value="default">ნაგულისხმევი</option>
                                 <option value="name-asc">სახელი (ა-ზ)</option>
                                 <option value="name-desc">სახელი (ზ-ა)</option>
@@ -124,12 +124,12 @@
 
                         <!-- View Toggle -->
                         <div class="filter-group">
-                            <label class="filter-label">ხედი:</label>
-                            <div class="view-toggle">
-                                <button id="gridView" class="view-btn active" title="ბადის ხედი">
+                            <label class="filter-label" for="gridView">ხედი:</label>
+                            <div class="view-toggle" id="viewToggle">
+                                <button type="button" id="gridView" class="view-btn active" title="ბადის ხედი" aria-label="ბადის ხედი">
                                     <i class="fas fa-th"></i>
                                 </button>
-                                <button id="listView" class="view-btn" title="სიის ხედი">
+                                <button type="button" id="listView" class="view-btn" title="სიის ხედი" aria-label="სიის ხედი">
                                     <i class="fas fa-list"></i>
                                 </button>
                             </div>
@@ -137,7 +137,7 @@
 
                         <!-- Clear All Filters -->
                         <div class="filter-group">
-                            <button id="clearFilters" class="clear-filters-btn">
+                            <button type="button" id="clearFilters" class="clear-filters-btn" aria-label="ფილტრების გასუფთავება">
                                 <i class="fas fa-undo"></i>
                                 ფილტრების გასუფთავება
                             </button>
@@ -310,7 +310,9 @@
             padding: 0;
             box-sizing: border-box;
         }
-
+        footer{
+            padding-left: 30px;
+        }
         :root {
             --primary-color: #2c3e50;
             --secondary-color: #f39c12;
@@ -472,8 +474,6 @@
             background: #f0f0f0;
             color: var(--accent-color);
         }
-
-        /* Filter Controls */
         .filter-controls {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -489,7 +489,7 @@
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
-            marg
+            margin-bottom: 1rem;
         }
 
         .filter-label {
@@ -636,8 +636,8 @@
             margin-bottom: 2rem;
             padding: 1rem;
             background: white;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
         }
 
         .filter-tags {
@@ -647,7 +647,7 @@
         }
 
         .filter-tag {
-            background: var(--primary-color);
+            background: #667eea;
             color: white;
             padding: 0.25rem 0.75rem;
             border-radius: 15px;
@@ -676,7 +676,8 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            transition: var(--transition);
+            transition: all 0.3s ease;
+            align-items: start;
         }
 
         .products-showcase-grid.list-view {
@@ -696,33 +697,29 @@
 
         .product-showcase-card {
             background: white;
-            border-radius: var(--border-radius);
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             opacity: 1;
             transform: scale(1);
+            display: block;
+            position: relative;
         }
 
         .product-showcase-card:hover {
             transform: translateY(-10px);
-            box-shadow: var(--shadow-hover);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
         }
 
         .product-showcase-card.hide {
-            opacity: 0;
-            transform: scale(0.8);
-            pointer-events: none;
-            height: 0;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
+            display: none !important;
         }
 
         .product-showcase-card.show {
+            display: block;
             opacity: 1;
             transform: scale(1);
-            pointer-events: auto;
         }
 
         .product-showcase-image {
@@ -735,7 +732,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: var(--transition);
+            transition: all 0.4s ease;
         }
 
         .product-showcase-card:hover .product-showcase-image img {
@@ -753,7 +750,7 @@
             align-items: center;
             justify-content: center;
             opacity: 0;
-            transition: var(--transition);
+            transition: all 0.3s ease;
         }
 
         .product-showcase-card:hover .product-showcase-overlay {
@@ -763,12 +760,12 @@
         .product-quick-view-btn {
             padding: 0.75rem 1.5rem;
             background: white;
-            color: var(--primary-color);
+            color: #667eea;
             border: none;
             border-radius: 25px;
             cursor: pointer;
             font-weight: 600;
-            transition: var(--transition);
+            transition: all 0.3s ease;
             transform: translateY(20px);
         }
 
@@ -777,8 +774,8 @@
         }
 
         .product-quick-view-btn:hover {
-            background: var(--secondary-color);
-            color: white;
+            background: #ffd700;
+            color: #333;
         }
 
         .product-showcase-info {
@@ -789,11 +786,11 @@
             font-size: 1.25rem;
             font-weight: 600;
             margin-bottom: 0.5rem;
-            color: var(--text-dark);
+            color: #333;
         }
 
         .product-showcase-category {
-            color: var(--text-light);
+            color: #666;
             font-size: 0.9rem;
             margin-bottom: 1rem;
         }
@@ -801,24 +798,24 @@
         .product-showcase-price {
             font-size: 1.5rem;
             font-weight: 700;
-            color: var(--secondary-color);
+            color: #ffd700;
             margin-bottom: 1rem;
         }
 
         .product-add-to-cart-btn {
             width: 100%;
             padding: 0.75rem;
-            background: var(--primary-color);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             border: none;
-            border-radius: var(--border-radius);
+            border-radius: 12px;
             cursor: pointer;
             font-weight: 600;
-            transition: var(--transition);
+            transition: all 0.3s ease;
         }
 
         .product-add-to-cart-btn:hover {
-            background: var(--secondary-color);
+            background: linear-gradient(135deg, #ffd700 0%, #ffb347 100%);
             transform: translateY(-2px);
         }
 
@@ -826,7 +823,7 @@
         .no-results {
             text-align: center;
             padding: 4rem 2rem;
-            color: var(--text-light);
+            color: #666;
         }
 
         .no-results i {
@@ -837,7 +834,7 @@
 
         .no-results h3 {
             margin-bottom: 1rem;
-            color: var(--text-dark);
+            color: #333;
         }
 
         /* Modal Styles */
@@ -857,7 +854,7 @@
             background: white;
             margin: 5% auto;
             padding: 0;
-            border-radius: var(--border-radius);
+            border-radius: 15px;
             width: 90%;
             max-width: 800px;
             position: relative;
@@ -882,7 +879,7 @@
             font-size: 2rem;
             cursor: pointer;
             z-index: 10;
-            color: var(--text-dark);
+            color: #333;
             background: white;
             width: 40px;
             height: 40px;
@@ -890,7 +887,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: var(--shadow);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
         .products-modal-body {
@@ -904,24 +901,24 @@
             width: 100%;
             height: 300px;
             object-fit: cover;
-            border-radius: var(--border-radius);
+            border-radius: 12px;
         }
 
         .products-modal-info h3 {
             font-size: 2rem;
             margin-bottom: 0.5rem;
-            color: var(--text-dark);
+            color: #333;
         }
 
         .products-modal-info p {
-            color: var(--text-light);
+            color: #666;
             margin-bottom: 1rem;
         }
 
         .products-modal-price {
             font-size: 2rem;
             font-weight: 700;
-            color: var(--secondary-color);
+            color: #ffd700;
             margin-bottom: 1rem;
         }
 
@@ -932,18 +929,18 @@
 
         .products-modal-add-to-cart {
             padding: 1rem 2rem;
-            background: var(--primary-color);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             border: none;
-            border-radius: var(--border-radius);
+            border-radius: 12px;
             cursor: pointer;
             font-weight: 600;
             font-size: 1.1rem;
-            transition: var(--transition);
+            transition: all 0.3s ease;
         }
 
         .products-modal-add-to-cart:hover {
-            background: var(--secondary-color);
+            background: linear-gradient(135deg, #ffd700 0%, #ffb347 100%);
         }
 
         /* Responsive Design */
@@ -1013,19 +1010,276 @@
                 padding: 12px 40px 12px 35px;
             }
         }
+
+        /* Header Responsive Styles */
+        @media (max-width: 1200px) {
+            header .container {
+                padding: 0 15px;
+            }
+            
+            header h2 {
+                font-size: 1.6rem;
+            }
+            
+            ul {
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            header {
+                height: 80px;
+            }
+            
+            header h2 {
+                font-size: 1.4rem;
+                letter-spacing: 1px;
+            }
+            
+            #mta {
+                font-size: 1.8rem;
+                margin-right: 10px;
+            }
+            
+            ul {
+                gap: 20px;
+            }
+            
+            .nav {
+                font-size: 0.9rem;
+                padding: 10px 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                height: 70px;
+            }
+            
+            header .container {
+                padding: 0 10px;
+            }
+            
+            header h2 {
+                font-size: 1.2rem;
+                letter-spacing: 0.5px;
+            }
+            
+            #mta {
+                font-size: 1.5rem;
+                margin-right: 8px;
+            }
+            
+            ul {
+                gap: 15px;
+            }
+            
+            .nav {
+                font-size: 0.85rem;
+                padding: 8px 12px;
+            }
+            
+            .cart-link span {
+                display: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header {
+                height: 60px;
+            }
+            
+            header .container {
+                justify-content: space-between;
+                padding: 0 15px;
+            }
+            
+            /* Hide desktop navigation */
+            header ul {
+                display: none;
+            }
+        }
+        
+        /* Always show mobile menu */
+        .menu {
+            display: flex;
+            position: relative;
+            top: auto;
+            right: auto;
+            padding: 5px;
+            cursor: pointer;
+        }
+            
+            .menu .bar {
+                width: 25px;
+                height: 2px;
+                margin: 2px 0;
+            }
+            
+            /* Mobile navigation menu */
+            .nav-menu {
+                display: none;
+                position: fixed;
+                top: 60px;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+                backdrop-filter: blur(20px);
+                padding: 20px 0;
+                transform: translateY(-100%);
+                transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                z-index: 999;
+                flex-direction: column;
+            }
+            
+            .nav-menu.active {
+                display: flex;
+                transform: translateY(0);
+            }
+            
+            .nav-menu a {
+                display: block;
+                padding: 15px 30px;
+                color: white;
+                text-decoration: none;
+                font-size: 1.1rem;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                transition: all 0.3s ease;
+            }
+            
+            .nav-menu a:hover {
+                background: rgba(255, 215, 0, 0.1);
+                color: #ffd700;
+                transform: translateX(10px);
+            }
+            
+            /* Adjust logo and title */
+            header h2 {
+                font-size: 1rem;
+                letter-spacing: 0;
+            }
+            
+            #mta {
+                font-size: 1.2rem;
+                margin-right: 5px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                height: 55px;
+            }
+            
+            header .container {
+                padding: 0 10px;
+            }
+            
+            header h2 {
+                font-size: 0.9rem;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 200px;
+            }
+            
+            #mta {
+                font-size: 1rem;
+                margin-right: 3px;
+            }
+            
+            .menu .bar {
+                width: 20px;
+                height: 2px;
+                margin: 1.5px 0;
+            }
+            
+            .nav-menu {
+                top: 55px;
+            }
+            
+            .nav-menu a {
+                padding: 12px 20px;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 360px) {
+            header h2 {
+                font-size: 0.8rem;
+                max-width: 150px;
+            }
+            
+            #mta {
+                font-size: 0.9rem;
+            }
+            
+            header .container {
+                padding: 0 8px;
+            }
+        }
     </style>
 
     <script src="cart.js"></script>
     <script>
       function toggleMenu() {
-                document.getElementById("menu").classList.toggle("active");
-                document.getElementById("navMenu").classList.toggle("active");
+                const menu = document.getElementById("menu");
+                const navMenu = document.getElementById("navMenu");
+                
+                if (menu) menu.classList.toggle("active");
+                if (navMenu) navMenu.classList.toggle("active");
             }
-             function closeMenu() {
-    document.querySelector('.menu').classList.remove('active');
-    document.getElementById('navMenu').classList.remove('active');
-  }
-  
+            
+        function closeMenu() {
+            const menu = document.querySelector('.menu');
+            const navMenu = document.getElementById('navMenu');
+            
+            if (navMenu && navMenu.classList.contains('active')) {
+                // Add closing animation
+                navMenu.classList.add('closing');
+                
+                // Remove active class after animation delay
+                setTimeout(() => {
+                    navMenu.classList.remove('active', 'closing');
+                }, 400); // Match the slideOut animation duration
+            }
+            
+            if (menu) {
+                menu.classList.remove('active');
+            }
+        }
+            
+        // Setup mobile menu functionality
+        function setupMobileMenu() {
+            const navMenu = document.getElementById('navMenu');
+            
+            if (navMenu) {
+                // Close menu when clicking on links
+                const navLinks = navMenu.querySelectorAll('a');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', closeMenu);
+                });
+                
+                // Close menu when clicking outside
+                document.addEventListener('click', function(e) {
+                    const menu = document.getElementById('menu');
+                    const isClickInsideMenu = menu && menu.contains(e.target);
+                    const isClickInsideNavMenu = navMenu.contains(e.target);
+                    
+                    if (!isClickInsideMenu && !isClickInsideNavMenu && navMenu.classList.contains('active')) {
+                        closeMenu();
+                    }
+                });
+                
+                // Close menu on escape key
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                        closeMenu();
+                    }
+                });
+            }
+        }
+
         // Global variables
         let currentModal = null;
         let allProducts = [];
@@ -1099,10 +1353,13 @@
         // Sort functionality
         function setupSort() {
             const sortSelect = document.getElementById('sortSelect');
-            sortSelect.addEventListener('change', applyFilters);
+            if (sortSelect) {
+                sortSelect.addEventListener('change', function() {
+                    console.log('Sort changed to:', this.value);
+                    applyFilters();
+                });
+            }
         }
-
-        // View toggle functionality
         function setupViewToggle() {
             const gridViewBtn = document.getElementById('gridView');
             const listViewBtn = document.getElementById('listView');
@@ -1123,16 +1380,22 @@
 
         // Apply all filters
         function applyFilters() {
-            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-            const activeCategory = document.querySelector('.products-filter-btn.active').getAttribute('data-filter');
-            const minPrice = parseFloat(document.getElementById('minPrice').value) || 0;
-            const maxPrice = parseFloat(document.getElementById('maxPrice').value) || Infinity;
-            const sortBy = document.getElementById('sortSelect').value;
+            const searchInput = document.getElementById('searchInput');
+            const activeCategory = document.querySelector('.products-filter-btn.active');
+            const minPriceInput = document.getElementById('minPrice');
+            const maxPriceInput = document.getElementById('maxPrice');
+            const sortSelect = document.getElementById('sortSelect');
+
+            const searchTerm = searchInput ? searchInput.value.toLowerCase() : '';
+            const activeCategoryFilter = activeCategory ? activeCategory.getAttribute('data-filter') : 'all';
+            const minPrice = parseFloat(minPriceInput ? minPriceInput.value : 0) || 0;
+            const maxPrice = parseFloat(maxPriceInput ? maxPriceInput.value : Infinity) || Infinity;
+            const sortBy = sortSelect ? sortSelect.value : 'default';
 
             // Filter products
             filteredProducts = allProducts.filter(product => {
                 const matchesSearch = product.name.toLowerCase().includes(searchTerm);
-                const matchesCategory = activeCategory === 'all' || product.category === activeCategory;
+                const matchesCategory = activeCategoryFilter === 'all' || product.category === activeCategoryFilter;
                 const matchesPrice = product.price >= minPrice && product.price <= maxPrice;
                 
                 return matchesSearch && matchesCategory && matchesPrice;
@@ -1149,28 +1412,45 @@
 
         // Sort products
         function sortProducts(products, sortBy) {
+            console.log('Sorting products by:', sortBy, 'Total products:', products.length);
+            
             switch (sortBy) {
                 case 'name-asc':
-                    products.sort((a, b) => a.name.localeCompare(b.name));
+                    products.sort((a, b) => a.name.localeCompare(b.name, 'ka'));
+                    console.log('Sorted by name ascending');
                     break;
                 case 'name-desc':
-                    products.sort((a, b) => b.name.localeCompare(a.name));
+                    products.sort((a, b) => b.name.localeCompare(a.name, 'ka'));
+                    console.log('Sorted by name descending');
                     break;
                 case 'price-asc':
                     products.sort((a, b) => a.price - b.price);
+                    console.log('Sorted by price ascending');
                     break;
                 case 'price-desc':
                     products.sort((a, b) => b.price - a.price);
+                    console.log('Sorted by price descending');
                     break;
                 default:
-                    // Keep original order
+                    console.log('Using default sort order');
+                    // Keep original order - restore to allProducts order
+                    const originalOrder = allProducts.map(p => p.id);
+                    products.sort((a, b) => {
+                        return originalOrder.indexOf(a.id) - originalOrder.indexOf(b.id);
+                    });
                     break;
             }
+            
+            // Log first few products after sorting
+            console.log('First 3 products after sort:', products.slice(0, 3).map(p => ({ name: p.name, price: p.price })));
         }
 
         // Update product display
         function updateProductDisplay() {
             const noResults = document.getElementById('noResults');
+            const productsGrid = document.getElementById('productsGrid');
+            
+            if (!productsGrid) return;
             
             // Hide all products first
             allProducts.forEach(product => {
@@ -1179,15 +1459,26 @@
             });
 
             if (filteredProducts.length === 0) {
-                noResults.style.display = 'block';
+                if (noResults) noResults.style.display = 'block';
             } else {
-                noResults.style.display = 'none';
+                if (noResults) noResults.style.display = 'none';
                 
-                // Show filtered products
-                filteredProducts.forEach((product, index) => {
+                // Clear the grid and re-append in the correct order
+                const productElements = [];
+                
+                // Collect all product elements in the filtered order
+                filteredProducts.forEach(product => {
+                    productElements.push(product.element);
+                });
+                
+                // Re-append elements to maintain proper order
+                productElements.forEach((element, index) => {
+                    productsGrid.appendChild(element);
+                    
+                    // Show products with stagger animation
                     setTimeout(() => {
-                        product.element.classList.remove('hide');
-                        product.element.classList.add('show');
+                        element.classList.remove('hide');
+                        element.classList.add('show');
                     }, index * 50);
                 });
             }
@@ -1196,82 +1487,52 @@
         // Update results count
         function updateResultsCount() {
             const resultsCount = document.getElementById('resultsCount');
-            const count = filteredProducts.length;
-            resultsCount.textContent = `${count} პროდუქტი ნაპოვნია`;
+            if (resultsCount) {
+                const count = filteredProducts.length;
+                resultsCount.textContent = `${count} პროდუქტი ნაპოვნია`;
+            }
         }
 
         // Update active filters display
         function updateActiveFilters() {
             const activeFiltersContainer = document.getElementById('activeFilters');
+            if (!activeFiltersContainer) return;
+            
             const filters = [];
 
             // Search filter
-            const searchTerm = document.getElementById('searchInput').value;
+            const searchInput = document.getElementById('searchInput');
+            const searchTerm = searchInput ? searchInput.value : '';
             if (searchTerm) {
-                filters.push({
-                    type: 'search',
-                    label: `ძიება: "${searchTerm}"`,
-                    action: () => {
-                        document.getElementById('searchInput').value = '';
-                        document.getElementById('clearSearch').style.display = 'none';
-                        applyFilters();
-                    }
-                });
+                filters.push(`ძიება: "${searchTerm}"`);
             }
 
             // Category filter
             const activeCategory = document.querySelector('.products-filter-btn.active');
-            if (activeCategory.getAttribute('data-filter') !== 'all') {
-                filters.push({
-                    type: 'category',
-                    label: `კატეგორია: ${activeCategory.textContent}`,
-                    action: () => {
-                        document.querySelectorAll('.products-filter-btn').forEach(btn => btn.classList.remove('active'));
-                        document.querySelector('[data-filter="all"]').classList.add('active');
-                        applyFilters();
-                    }
-                });
+            if (activeCategory && activeCategory.getAttribute('data-filter') !== 'all') {
+                filters.push(`კატეგორია: ${activeCategory.textContent}`);
             }
 
             // Price filter
-            const minPrice = document.getElementById('minPrice').value;
-            const maxPrice = document.getElementById('maxPrice').value;
-            if (minPrice || (maxPrice && maxPrice < Math.max(...allProducts.map(p => p.price)))) {
+            const minPriceInput = document.getElementById('minPrice');
+            const maxPriceInput = document.getElementById('maxPrice');
+            const minPrice = minPriceInput ? minPriceInput.value : '';
+            const maxPrice = maxPriceInput ? maxPriceInput.value : '';
+            if (minPrice || (maxPrice && allProducts.length > 0 && maxPrice < Math.max(...allProducts.map(p => p.price)))) {
                 const priceLabel = `ფასი: ${minPrice || 0}₾ - ${maxPrice || '∞'}₾`;
-                filters.push({
-                    type: 'price',
-                    label: priceLabel,
-                    action: () => {
-                        document.getElementById('minPrice').value = '';
-                        document.getElementById('maxPrice').value = '';
-                        const maxProductPrice = Math.max(...allProducts.map(p => p.price));
-                        document.getElementById('priceRange').value = maxProductPrice;
-                        document.getElementById('maxPriceLabel').textContent = maxProductPrice + '₾';
-                        applyFilters();
-                    }
-                });
+                filters.push(priceLabel);
             }
 
             // Sort filter
             const sortSelect = document.getElementById('sortSelect');
-            if (sortSelect.value !== 'default') {
+            if (sortSelect && sortSelect.value !== 'default') {
                 const sortLabel = sortSelect.options[sortSelect.selectedIndex].text;
-                filters.push({
-                    type: 'sort',
-                    label: `დალაგება: ${sortLabel}`,
-                    action: () => {
-                        sortSelect.value = 'default';
-                        applyFilters();
-                    }
-                });
+                filters.push(`დალაგება: ${sortLabel}`);
             }
 
             // Render filter tags
             activeFiltersContainer.innerHTML = filters.map(filter => `
-                <div class="filter-tag">
-                    ${filter.label}
-                    <button onclick="removeFilter('${filter.type}')" title="ფილტრის მოშორება">×</button>
-                </div>
+                <div class="filter-tag">${filter}</div>
             `).join('');
         }
 
@@ -1279,22 +1540,32 @@
         function removeFilter(type) {
             switch (type) {
                 case 'search':
-                    document.getElementById('searchInput').value = '';
-                    document.getElementById('clearSearch').style.display = 'none';
+                    const searchInput = document.getElementById('searchInput');
+                    const clearSearchBtn = document.getElementById('clearSearch');
+                    if (searchInput) searchInput.value = '';
+                    if (clearSearchBtn) clearSearchBtn.style.display = 'none';
                     break;
                 case 'category':
                     document.querySelectorAll('.products-filter-btn').forEach(btn => btn.classList.remove('active'));
-                    document.querySelector('[data-filter="all"]').classList.add('active');
+                    const allBtn = document.querySelector('[data-filter="all"]');
+                    if (allBtn) allBtn.classList.add('active');
                     break;
                 case 'price':
-                    document.getElementById('minPrice').value = '';
-                    document.getElementById('maxPrice').value = '';
-                    const maxProductPrice = Math.max(...allProducts.map(p => p.price));
-                    document.getElementById('priceRange').value = maxProductPrice;
-                    document.getElementById('maxPriceLabel').textContent = maxProductPrice + '₾';
+                    const minPriceInput = document.getElementById('minPrice');
+                    const maxPriceInput = document.getElementById('maxPrice');
+                    const priceRange = document.getElementById('priceRange');
+                    const maxPriceLabel = document.getElementById('maxPriceLabel');
+                    if (minPriceInput) minPriceInput.value = '';
+                    if (maxPriceInput) maxPriceInput.value = '';
+                    if (allProducts.length > 0) {
+                        const maxProductPrice = Math.max(...allProducts.map(p => p.price));
+                        if (priceRange) priceRange.value = maxProductPrice;
+                        if (maxPriceLabel) maxPriceLabel.textContent = maxProductPrice + '₾';
+                    }
                     break;
                 case 'sort':
-                    document.getElementById('sortSelect').value = 'default';
+                    const sortSelect = document.getElementById('sortSelect');
+                    if (sortSelect) sortSelect.value = 'default';
                     break;
             }
             applyFilters();
@@ -1302,18 +1573,29 @@
 
         // Clear all filters
         function clearAllFilters() {
-            document.getElementById('searchInput').value = '';
-            document.getElementById('clearSearch').style.display = 'none';
-            document.getElementById('minPrice').value = '';
-            document.getElementById('maxPrice').value = '';
-            document.getElementById('sortSelect').value = 'default';
+            const searchInput = document.getElementById('searchInput');
+            const clearSearchBtn = document.getElementById('clearSearch');
+            const minPriceInput = document.getElementById('minPrice');
+            const maxPriceInput = document.getElementById('maxPrice');
+            const sortSelect = document.getElementById('sortSelect');
+            const priceRange = document.getElementById('priceRange');
+            const maxPriceLabel = document.getElementById('maxPriceLabel');
             
-            const maxProductPrice = Math.max(...allProducts.map(p => p.price));
-            document.getElementById('priceRange').value = maxProductPrice;
-            document.getElementById('maxPriceLabel').textContent = maxProductPrice + '₾';
+            if (searchInput) searchInput.value = '';
+            if (clearSearchBtn) clearSearchBtn.style.display = 'none';
+            if (minPriceInput) minPriceInput.value = '';
+            if (maxPriceInput) maxPriceInput.value = '';
+            if (sortSelect) sortSelect.value = 'default';
+            
+            if (allProducts.length > 0) {
+                const maxProductPrice = Math.max(...allProducts.map(p => p.price));
+                if (priceRange) priceRange.value = maxProductPrice;
+                if (maxPriceLabel) maxPriceLabel.textContent = maxProductPrice + '₾';
+            }
             
             document.querySelectorAll('.products-filter-btn').forEach(btn => btn.classList.remove('active'));
-            document.querySelector('[data-filter="all"]').classList.add('active');
+            const allBtn = document.querySelector('[data-filter="all"]');
+            if (allBtn) allBtn.classList.add('active');
             
             applyFilters();
         }
@@ -1325,6 +1607,11 @@
 
         // Add product to cart function
         function addProductToCart(button) {
+            if (!window.cartManager) {
+                alert('კალათის სისტემა ვერ იტვირთება!');
+                return;
+            }
+
             const productCard = button.closest('.product-showcase-card');
             const productId = productCard.getAttribute('data-product-id');
             const img = productCard.querySelector('img');
@@ -1352,37 +1639,44 @@
 
         // Add product from modal to cart
         function addModalProductToCart() {
-            const modalContent = document.querySelector('.products-modal-content');
-            const productCards = document.querySelectorAll('.product-showcase-card');
-            let currentProductCard = null;
-            
-            // Find the current product card based on modal content
-            const modalTitle = document.getElementById('modalTitle').textContent;
-            productCards.forEach(card => {
-                const cardTitle = card.querySelector('.product-showcase-title').textContent;
-                if (cardTitle === modalTitle) {
-                    currentProductCard = card;
+            if (!window.cartManager) {
+                alert('კალათის სისტემა ვერ იტვირთება!');
+                return;
+            }
+
+            const modalTitle = document.getElementById('modalTitle');
+            const modalCategory = document.getElementById('modalCategory');
+            const modalPrice = document.getElementById('modalPrice');
+            const modalImage = document.getElementById('modalImage');
+
+            if (modalTitle && modalCategory && modalPrice && modalImage) {
+                // Find the corresponding product card
+                const productCards = document.querySelectorAll('.product-showcase-card');
+                let currentProductCard = null;
+                
+                productCards.forEach(card => {
+                    const cardTitle = card.querySelector('.product-showcase-title').textContent;
+                    if (cardTitle === modalTitle.textContent) {
+                        currentProductCard = card;
+                    }
+                });
+                
+                if (currentProductCard) {
+                    const productId = currentProductCard.getAttribute('data-product-id');
+                    const priceElement = currentProductCard.querySelector('.product-showcase-price');
+                    const price = parseFloat(priceElement.getAttribute('data-price'));
+                    
+                    const product = {
+                        id: productId,
+                        name: modalTitle.textContent,
+                        price: price,
+                        category: modalCategory.textContent,
+                        image: modalImage.src
+                    };
+                    
+                    cartManager.addToCart(product);
+                    closeQuickView();
                 }
-            });
-            
-            if (currentProductCard) {
-                const productId = currentProductCard.getAttribute('data-product-id');
-                const img = currentProductCard.querySelector('img');
-                const title = currentProductCard.querySelector('.product-showcase-title');
-                const category = currentProductCard.querySelector('.product-showcase-category');
-                const priceElement = currentProductCard.querySelector('.product-showcase-price');
-                const price = parseFloat(priceElement.getAttribute('data-price'));
-                
-                const product = {
-                    id: productId,
-                    name: title.textContent,
-                    price: price,
-                    category: category.textContent,
-                    image: img.src
-                };
-                
-                cartManager.addToCart(product);
-                closeQuickView();
             }
         }
 
@@ -1401,25 +1695,29 @@
             const modalCategory = document.getElementById('modalCategory');
             const modalPrice = document.getElementById('modalPrice');
             
-            // Populate modal with product data
-            modalImage.src = img.src;
-            modalImage.alt = img.alt;
-            modalTitle.textContent = title.textContent;
-            modalCategory.textContent = category.textContent;
-            modalPrice.textContent = price.textContent;
-            
-            // Show modal
-            modal.style.display = 'block';
-            document.body.style.overflow = 'hidden';
-            currentModal = modal;
+            if (modal && modalImage && modalTitle && modalCategory && modalPrice) {
+                // Populate modal with product data
+                modalImage.src = img.src;
+                modalImage.alt = img.alt;
+                modalTitle.textContent = title.textContent;
+                modalCategory.textContent = category.textContent;
+                modalPrice.textContent = price.textContent;
+                
+                // Show modal
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+                currentModal = modal;
+            }
         }
 
         // Close Modal Function
         function closeQuickView() {
             const modal = document.getElementById('quickViewModal');
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-            currentModal = null;
+            if (modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+                currentModal = null;
+            }
         }
 
         // DOM Content Loaded Event
@@ -1430,7 +1728,15 @@
             setupPriceFilter();
             setupSort();
             setupViewToggle();
-            setupClearFilters();
+
+            // Setup clear filters button
+            const clearFiltersBtn = document.getElementById('clearFilters');
+            if (clearFiltersBtn) {
+                clearFiltersBtn.addEventListener('click', clearAllFilters);
+            }
+            
+            // Mobile menu setup
+            setupMobileMenu();
 
             // Initial filter application
             applyFilters();

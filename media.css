@@ -168,8 +168,8 @@
     header{
         max-width: 600px;
     }
-    .nav-menu , .menu{
-        display: inline;
+    .nav-menu.active{
+        display: flex;
     }
 
 }

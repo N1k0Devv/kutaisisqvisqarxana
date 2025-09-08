@@ -627,13 +627,50 @@
   <script src="cart.js"></script>
   <script>
     function toggleMenu() {
-        document.querySelector(".menu").classList.toggle("active");
-        document.getElementById("navMenu").classList.toggle("active");
+        const menu = document.getElementById("menu");
+        const navMenu = document.getElementById("navMenu");
+        
+        if (menu) menu.classList.toggle("active");
+        if (navMenu) navMenu.classList.toggle("active");
     }
-
+    
     function closeMenu() {
-        document.querySelector('.menu').classList.remove('active');
-        document.getElementById('navMenu').classList.remove('active');
+        const menu = document.querySelector('.menu');
+        const navMenu = document.getElementById('navMenu');
+        
+        if (menu) menu.classList.remove('active');
+        if (navMenu) navMenu.classList.remove('active');
+    }
+    
+    // Setup mobile menu functionality
+    function setupMobileMenu() {
+        const navMenu = document.getElementById('navMenu');
+        
+        if (navMenu) {
+            // Close menu when clicking on links
+            const navLinks = navMenu.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', closeMenu);
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', function(e) {
+                const menu = document.getElementById('menu');
+                const isClickInsideMenu = menu && menu.contains(e.target);
+                const isClickInsideNavMenu = navMenu.contains(e.target);
+                
+                if (!isClickInsideMenu && !isClickInsideNavMenu && navMenu.classList.contains('active')) {
+                    closeMenu();
+                }
+            });
+            
+            // Close menu on escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                    closeMenu();
+                }
+            });
+        }
     }
 
     // Format card number input
@@ -799,6 +836,7 @@
     // Initialize checkout page
     document.addEventListener('DOMContentLoaded', function() {
         renderOrderItems();
+        setupMobileMenu();
         
         // Add event listeners
         const form = document.getElementById('checkoutForm');

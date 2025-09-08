@@ -129,13 +129,65 @@
     </footer>
  <script>
             function toggleMenu() {
-                document.querySelector(".menu").classList.toggle("active");
-                document.getElementById("navMenu").classList.toggle("active");
+                const menu = document.getElementById("menu");
+                const navMenu = document.getElementById("navMenu");
+                
+                if (menu) menu.classList.toggle("active");
+                if (navMenu) navMenu.classList.toggle("active");
             }
-             function closeMenu() {
-    document.querySelector('.menu').classList.remove('active');
-    document.getElementById('navMenu').classList.remove('active');
-  }
+            
+            function closeMenu() {
+                const menu = document.querySelector('.menu');
+                const navMenu = document.getElementById('navMenu');
+                
+                if (navMenu && navMenu.classList.contains('active')) {
+                    // Add closing animation
+                    navMenu.classList.add('closing');
+                    
+                    // Remove active class after animation delay
+                    setTimeout(() => {
+                        navMenu.classList.remove('active', 'closing');
+                    }, 400); // Match the slideOut animation duration
+                }
+                
+                if (menu) {
+                    menu.classList.remove('active');
+                }
+            }
+            
+            // Setup mobile menu functionality
+            function setupMobileMenu() {
+                const navMenu = document.getElementById('navMenu');
+                
+                if (navMenu) {
+                    // Close menu when clicking on links
+                    const navLinks = navMenu.querySelectorAll('a');
+                    navLinks.forEach(link => {
+                        link.addEventListener('click', closeMenu);
+                    });
+                    
+                    // Close menu when clicking outside
+                    document.addEventListener('click', function(e) {
+                        const menu = document.getElementById('menu');
+                        const isClickInsideMenu = menu && menu.contains(e.target);
+                        const isClickInsideNavMenu = navMenu.contains(e.target);
+                        
+                        if (!isClickInsideMenu && !isClickInsideNavMenu && navMenu.classList.contains('active')) {
+                            closeMenu();
+                        }
+                    });
+                    
+                    // Close menu on escape key
+                    document.addEventListener('keydown', function(e) {
+                        if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                            closeMenu();
+                        }
+                    });
+                }
+            }
+            
+            // Initialize mobile menu on page load
+            document.addEventListener('DOMContentLoaded', setupMobileMenu);
              $("a").on('click', function(event) {
 
     // Make sure this.hash has a value before overriding default behavior
