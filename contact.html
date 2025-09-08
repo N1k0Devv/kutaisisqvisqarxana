@@ -29,26 +29,33 @@
   <body>
     <div id="smooth-wrapper">
       <div id="smooth-content">
-      <header>
+   <header>
         <div class="container">
             <i class="fa-solid fa-mountain-sun fa-2xl" id="mta"></i>            
             <h2><a href="index.html" class="linki">ქუთაისის ქვის ქარხანა</a></h2>
                 <ul>
                     <li><a class="nav" id="nav" href="index.html">მთავარი</a></li>
                     <li><a class="nav" id="nav" href="aboutus.html">ჩვენსშესახებ</a></li>
-                    <li><a href="products.html" class="nav">პროდუქტები</a></li>
+                    <li><a href="products.html" id="nav" class="nav">პროდუქტები</a></li>
                     <li><a class="nav" id="nav" href="contact.html">კონტაქტი</a></li>
+                    <li>
+                      <a href="cart.html" class="nav cart-link" style="display: inline-flex; align-items: center; gap: 6px;">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>კალათა</span>
+                      </a>
+                    </li>
                     
-                    <li><div class="menu" onclick="toggleMenu()">
+                    <li><div class="menu" id="menu" onclick="toggleMenu()">
                         <div class="bar"></div>
                         <div class="bar"></div>
                         <div class="bar"></div>
                     </div>
                     <div class="nav-menu" id="navMenu">
-                      <a href="index.html">mtavari</a>
+                      <a href="index.html">მთავარი</a>
                         <a href="aboutus.html">ჩვენს შესახებ</a>
                         <a href="products.html">პროდუქტები</a>
                         <a href="contact.html">კონტაქტი</a>
+                        <a href="cart.html">კალათა</a>
                     </div></li>   
                 </ul>
         </div>
