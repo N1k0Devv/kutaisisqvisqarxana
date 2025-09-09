@@ -25,11 +25,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   </head>
   <body>
     <div id="smooth-wrapper">
       <div id="smooth-content">
-   <header>
+        <header>
         <div class="container">
             <i class="fa-solid fa-mountain-sun fa-2xl" id="mta"></i>            
             <h2><a href="index.html" class="linki">ქუთაისის ქვის ქარხანა</a></h2>
@@ -110,8 +112,8 @@
               </div>
               <div class="card-content">
                 <h3>ელექტრონული ფოსტა</h3>
-                <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="caa3a4aca58ab9bea5a4afacaba9bea5b8b3e4a9a5a7">[email&#160;protected]</a></p>
-                <a href="/cdn-cgi/l/email-protection#10797e767f5063647f7e75767173647f62693e737f7d" class="contact-btn">
+                <p><a href="mailto:info@kutaisistonefactory.ge">info@kutaisistonefactory.ge</a></p>
+                <a href="mailto:info@kutaisistonefactory.ge" class="contact-btn">
                   <span>წერილი გაგზავნა</span>
                   <i class="fas fa-arrow-right"></i>
                 </a>
@@ -125,11 +127,20 @@
               </div>
               <div class="card-content">
                 <h3>ტელეფონი</h3>
-                <p>+995 123 456 789</p>
-                <a href="tel:+995123456789" class="contact-btn">
-                  <span>ზარი</span>
-                  <i class="fas fa-arrow-right"></i>
-                </a>
+                <p>
+                  <a href="tel:+995123456789" class="phone-link">+995 123 456 789</a><br>
+                  <a href="tel:+995987654321" class="phone-link">+995 987 654 321</a>
+                </p>
+                <div class="phone-buttons">
+                  <a href="tel:+995123456789" class="contact-btn primary-phone">
+                    <span>ზარი (მთავარი)</span>
+                    <i class="fas fa-phone"></i>
+                  </a>
+                  <a href="tel:+995987654321" class="contact-btn secondary-phone">
+                    <span>ზარი (მთავარი 2)</span>
+                    <i class="fas fa-phone"></i>
+                  </a>
+                </div>
               </div>
               <div class="card-decoration"></div>
             </div>
@@ -181,17 +192,31 @@
               <p>შეავსეთ ფორმა და ჩვენ დაგიკავშირდებით უმოკლეს დროში</p>
             </div>
             
+            <!-- Success/Error Messages -->
+            <div id="form-messages" class="form-messages" style="display: none;">
+              <div id="success-message" class="success-message" style="display: none;">
+                <i class="fas fa-check-circle"></i>
+                <span>შეტყობინება წარმატებით გაიგზავნა! ჩვენ დაგიკავშირდებით უმოკლეს დროში.</span>
+              </div>
+              <div id="error-message" class="error-message" style="display: none;">
+                <i class="fas fa-exclamation-triangle"></i>
+                <span>დაფიქსირდა შეცდომა. გთხოვთ სცადოთ თავიდან ან დაგვიკავშირდით ტელეფონით.</span>
+              </div>
+            </div>
+            
             <form class="contact-form" id="contactForm">
               <div class="form-row">
                 <div class="form-group">
                   <label for="firstName">სახელი *</label>
                   <input type="text" id="firstName" name="firstName" required>
                   <div class="input-focus-line"></div>
+                  <div class="error-text" id="firstName-error"></div>
                 </div>
                 <div class="form-group">
                   <label for="lastName">გვარი *</label>
                   <input type="text" id="lastName" name="lastName" required>
                   <div class="input-focus-line"></div>
+                  <div class="error-text" id="lastName-error"></div>
                 </div>
               </div>
               
@@ -200,11 +225,13 @@
                   <label for="email">ელ.ფოსტა *</label>
                   <input type="email" id="email" name="email" required>
                   <div class="input-focus-line"></div>
+                  <div class="error-text" id="email-error"></div>
                 </div>
                 <div class="form-group">
                   <label for="phone">ტელეფონი</label>
                   <input type="tel" id="phone" name="phone">
                   <div class="input-focus-line"></div>
+                  <div class="error-text" id="phone-error"></div>
                 </div>
               </div>
               
@@ -218,15 +245,17 @@
                   <option value="partnership">პარტნიორობა</option>
                 </select>
                 <div class="input-focus-line"></div>
+                <div class="error-text" id="subject-error"></div>
               </div>
               
               <div class="form-group">
                 <label for="message">შეტყობინება *</label>
                 <textarea id="message" name="message" rows="5" required placeholder="დაწერეთ თქვენი შეტყობინება აქ..."></textarea>
                 <div class="input-focus-line"></div>
+                <div class="error-text" id="message-error"></div>
               </div>
               
-              <button type="submit" class="submit-btn">
+              <button type="submit" class="submit-btn" id="submit-btn">
                 <span>შეტყობინების გაგზავნა</span>
                 <i class="fas fa-paper-plane"></i>
               </button>
@@ -270,7 +299,10 @@
                   </div>
                   <div class="info-details">
                     <h4>ტელეფონი</h4>
-                    <p>+995 123 456 789<br>+995 987 654 321</p>
+                    <p>
+                      <a href="tel:+995123456789" class="phone-link">+995 123 456 789</a><br>
+                      <a href="tel:+995987654321" class="phone-link">+995 987 654 321</a>
+                    </p>
                   </div>
                 </div>
                 
@@ -298,9 +330,30 @@
                 
                 </div>
               </div>
-            </div>
-          </div>
+            
+          
         </section>
+
+        <!-- Footer - Now inside smooth-content -->
+        <footer>
+          <h3 class="stone">Stone</h3>
+          <h3>Factory</h3>
+          <div class="icons">
+            <a href="#"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+            <a
+              href="https://www.facebook.com/profile.php?id=100088853137969"
+              target="_blank"
+              ><i class="fa-brands fa-facebook fa-2xl"></i
+            ></a>
+            <a href="#"><i class="fa-brands fa-x-twitter fa-2xl"></i></a>
+          </div>
+          <div class="foot-nav">
+            <a href="index.html">main</a>
+            <a href="aboutus.html">about us</a>
+            <a href="products.html">products</a>
+            <a href="contact.html">contact</a>
+          </div>
+        </footer>
 
         <!-- Enhanced CSS Styles -->
         <style>
@@ -644,6 +697,45 @@
             color: rgba(255, 255, 255, 0.8);
           }
 
+          /* Form Messages */
+          .form-messages {
+            margin-bottom: 30px;
+          }
+
+          .success-message, .error-message {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 20px;
+            border-radius: 15px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            animation: slideInDown 0.5s ease-out;
+          }
+
+          .success-message {
+            background: rgba(34, 197, 94, 0.15);
+            color: #22c55e;
+            border: 1px solid rgba(34, 197, 94, 0.3);
+          }
+
+          .error-message {
+            background: rgba(239, 68, 68, 0.15);
+            color: #ef4444;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+          }
+
+          @keyframes slideInDown {
+            0% {
+              opacity: 0;
+              transform: translateY(-20px);
+            }
+            100% {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+
           .contact-form {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(20px);
@@ -700,6 +792,30 @@
             color: rgba(255, 255, 255, 0.6);
           }
 
+          .form-group input.error,
+          .form-group select.error,
+          .form-group textarea.error {
+            border-color: #ef4444;
+            background: rgba(239, 68, 68, 0.1);
+          }
+
+          .error-text {
+            color: #ef4444;
+            font-size: 0.85rem;
+            margin-top: 5px;
+            display: none;
+          }
+
+          .error-text.show {
+            display: block;
+            animation: fadeIn 0.3s ease-out;
+          }
+
+          @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+          }
+
           .input-focus-line {
             position: absolute;
             bottom: 0;
@@ -733,10 +849,25 @@
             box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
           }
 
-          .submit-btn:hover {
+          .submit-btn:hover:not(:disabled) {
             transform: translateY(-3px) scale(1.05);
             box-shadow: 0 15px 40px rgba(255, 215, 0, 0.4);
             background: linear-gradient(135deg, #ffb347 0%, #ffd700 100%);
+          }
+
+          .submit-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+          }
+
+          .submit-btn .loading-spinner {
+            animation: spin 1s linear infinite;
+          }
+
+          @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
           }
 
           /* Fixed Map Section */
@@ -1048,29 +1179,76 @@
               font-size: 1rem;
             }
           }
+
+          /* Enhanced Phone Functionality Styles */
+          .phone-link {
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            padding: 2px 8px;
+            border-radius: 8px;
+            display: inline-block;
+            margin: 2px 0;
+          }
+
+          .phone-link:hover {
+            color: #fff;
+            background: rgba(255, 215, 0, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+          }
+
+          .phone-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 15px;
+          }
+
+          .contact-btn.primary-phone,
+          .contact-btn.secondary-phone {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            font-size: 0.9rem;
+            padding: 12px 20px;
+          }
+
+          .contact-btn.secondary-phone {
+            background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+          }
+
+          .contact-btn.primary-phone:hover {
+            background: linear-gradient(135deg, #218838 0%, #1c7d72 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(40, 167, 69, 0.4);
+          }
+
+          .contact-btn.secondary-phone:hover {
+            background: linear-gradient(135deg, #545b62 0%, #343a40 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(108, 117, 125, 0.4);
+          }
+
+          /* Mobile responsive adjustments for phone buttons */
+          @media (max-width: 768px) {
+            .phone-buttons {
+              gap: 10px;
+            }
+            
+            .contact-btn.primary-phone,
+            .contact-btn.secondary-phone {
+              font-size: 0.85rem;
+              padding: 10px 16px;
+            }
+          }
         </style>
 
-        <footer>
-          <h3 class="stone">Stone</h3>
-          <h3>Factory</h3>
-          <div class="icons">
-            <a href="#"><i class="fa-brands fa-instagram fa-2xl"></i></a>
-            <a
-              href="https://www.facebook.com/profile.php?id=100088853137969"
-              target="_blank"
-              ><i class="fa-brands fa-facebook fa-2xl"></i
-            ></a>
-            <a href="#"><i class="fa-brands fa-x-twitter fa-2xl"></i></a>
-          </div>
-          <div class="foot-nav">
-            <a href="index.html">main</a>
-            <a href="aboutus.html">about us</a>
-            <a href="index.html#servisebi">services</a>
-            <a href="contact.html">contact</a>
-          </div>
-        </footer>
-
         <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+          // Initialize EmailJS
+          (function(){
+            emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+          })();
+
           function toggleMenu() {
                 const menu = document.getElementById("menu");
                 const navMenu = document.getElementById("navMenu");
@@ -1083,8 +1261,19 @@
                 const menu = document.querySelector('.menu');
                 const navMenu = document.getElementById('navMenu');
                 
-                if (menu) menu.classList.remove('active');
-                if (navMenu) navMenu.classList.remove('active');
+                if (navMenu && navMenu.classList.contains('active')) {
+                    // Add closing animation
+                    navMenu.classList.add('closing');
+                    
+                    // Remove active class after animation delay
+                    setTimeout(() => {
+                        navMenu.classList.remove('active', 'closing');
+                    }, 400); // Match the slideOut animation duration
+                }
+                
+                if (menu) {
+                    menu.classList.remove('active');
+                }
             }
             
             // Setup mobile menu functionality
@@ -1121,7 +1310,109 @@
             // Initialize mobile menu on page load
             document.addEventListener('DOMContentLoaded', setupMobileMenu);
 
-            // Contact form handling
+            // Form validation functions
+            function validateEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+
+            function validatePhone(phone) {
+                if (!phone) return true; // Phone is optional
+                const phoneRegex = /^[\+]?[0-9\s\-\(\)]{7,}$/;
+                return phoneRegex.test(phone);
+            }
+
+            function showError(fieldId, message) {
+                const field = document.getElementById(fieldId);
+                const errorElement = document.getElementById(fieldId + '-error');
+                
+                field.classList.add('error');
+                errorElement.textContent = message;
+                errorElement.classList.add('show');
+            }
+
+            function clearError(fieldId) {
+                const field = document.getElementById(fieldId);
+                const errorElement = document.getElementById(fieldId + '-error');
+                
+                field.classList.remove('error');
+                errorElement.classList.remove('show');
+            }
+
+            function showMessage(type, message) {
+                const messagesContainer = document.getElementById('form-messages');
+                const successMessage = document.getElementById('success-message');
+                const errorMessage = document.getElementById('error-message');
+                
+                // Hide all messages first
+                successMessage.style.display = 'none';
+                errorMessage.style.display = 'none';
+                
+                if (type === 'success') {
+                    successMessage.querySelector('span').textContent = message;
+                    successMessage.style.display = 'flex';
+                } else {
+                    errorMessage.querySelector('span').textContent = message;
+                    errorMessage.style.display = 'flex';
+                }
+                
+                messagesContainer.style.display = 'block';
+                
+                // Auto hide after 5 seconds
+                setTimeout(() => {
+                    messagesContainer.style.display = 'none';
+                }, 5000);
+            }
+
+            function validateForm(formData) {
+                let isValid = true;
+                
+                // Clear all previous errors
+                ['firstName', 'lastName', 'email', 'phone', 'subject', 'message'].forEach(field => {
+                    clearError(field);
+                });
+
+                // Validate required fields
+                if (!formData.firstName.trim()) {
+                    showError('firstName', 'სახელი სავალდებულოა');
+                    isValid = false;
+                }
+
+                if (!formData.lastName.trim()) {
+                    showError('lastName', 'გვარი სავალდებულოა');
+                    isValid = false;
+                }
+
+                if (!formData.email.trim()) {
+                    showError('email', 'ელ.ფოსტა სავალდებულოა');
+                    isValid = false;
+                } else if (!validateEmail(formData.email)) {
+                    showError('email', 'გთხოვთ შეიყვანოთ სწორი ელ.ფოსტის მისამართი');
+                    isValid = false;
+                }
+
+                if (formData.phone && !validatePhone(formData.phone)) {
+                    showError('phone', 'გთხოვთ შეიყვანოთ სწორი ტელეფონის ნომერი');
+                    isValid = false;
+                }
+
+                if (!formData.subject) {
+                    showError('subject', 'თემის არჩევა სავალდებულოა');
+                    isValid = false;
+                }
+
+                if (!formData.message.trim()) {
+                    showError('message', 'შეტყობინება სავალდებულოა');
+                    isValid = false;
+                } else if (formData.message.trim().length < 10) {
+                    showError('message', 'შეტყობინება უნდა იყოს მინიმუმ 10 სიმბოლო');
+                    isValid = false;
+                }
+
+                return isValid;
+            }
+
+            // Enhanced contact form handling
             document.getElementById('contactForm').addEventListener('submit', function(e) {
                 e.preventDefault();
                 
@@ -1129,25 +1420,99 @@
                 const formData = new FormData(this);
                 const data = Object.fromEntries(formData);
                 
-                // Simple validation
-                if (!data.firstName || !data.lastName || !data.email || !data.subject || !data.message) {
-                    alert('გთხოვთ შეავსოთ ყველა სავალდებულო ველი');
+                // Validate form
+                if (!validateForm(data)) {
                     return;
                 }
                 
-                // Simulate form submission
-                const submitBtn = this.querySelector('.submit-btn');
-                const originalText = submitBtn.innerHTML;
+                const submitBtn = document.getElementById('submit-btn');
+                const originalHTML = submitBtn.innerHTML;
                 
-                submitBtn.innerHTML = '<span>იგზავნება...</span><i class="fas fa-spinner fa-spin"></i>';
+                // Show loading state
+                submitBtn.innerHTML = '<span>იგზავნება...</span><i class="fas fa-spinner loading-spinner"></i>';
                 submitBtn.disabled = true;
                 
-                setTimeout(() => {
-                    alert('შეტყობინება წარმატებით გაიგზავნა! ჩვენ დაგიკავშირდებით უმოკლეს დროში.');
-                    this.reset();
-                    submitBtn.innerHTML = originalText;
-                    submitBtn.disabled = false;
-                }, 2000);
+                // Prepare email template parameters
+                const templateParams = {
+                    from_name: `${data.firstName} ${data.lastName}`,
+                    from_email: data.email,
+                    phone: data.phone || 'არ არის მითითებული',
+                    subject: data.subject,
+                    message: data.message,
+                    to_email: 'info@kutaisistonefactory.ge'
+                };
+                
+                // Send email using EmailJS (fallback to localStorage if EmailJS not configured)
+                if (typeof emailjs !== 'undefined' && emailjs.send) {
+                    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+                        .then(function(response) {
+                            console.log('SUCCESS!', response.status, response.text);
+                            showMessage('success', 'შეტყობინება წარმატებით გაიგზავნა! ჩვენ დაგიკავშირდებით უმოკლეს დროში.');
+                            document.getElementById('contactForm').reset();
+                        })
+                        .catch(function(error) {
+                            console.log('FAILED...', error);
+                            // Fallback to localStorage
+                            saveToLocalStorage(data);
+                            showMessage('success', 'შეტყობინება შენახულია! ჩვენ დაგიკავშირდებით უმოკლეს დროში.');
+                            document.getElementById('contactForm').reset();
+                        })
+                        .finally(function() {
+                            submitBtn.innerHTML = originalHTML;
+                            submitBtn.disabled = false;
+                        });
+                } else {
+                    // Fallback: Save to localStorage
+                    setTimeout(() => {
+                        saveToLocalStorage(data);
+                        showMessage('success', 'შეტყობინება შენახულია! ჩვენ დაგიკავშირდებით უმოკლეს დროში.');
+                        document.getElementById('contactForm').reset();
+                        submitBtn.innerHTML = originalHTML;
+                        submitBtn.disabled = false;
+                    }, 1500);
+                }
+            });
+
+            // Save form data to localStorage as fallback
+            function saveToLocalStorage(data) {
+                const submissions = JSON.parse(localStorage.getItem('contactSubmissions') || '[]');
+                const submission = {
+                    ...data,
+                    timestamp: new Date().toISOString(),
+                    id: Date.now()
+                };
+                submissions.push(submission);
+                localStorage.setItem('contactSubmissions', JSON.stringify(submissions));
+                console.log('Form data saved to localStorage:', submission);
+            }
+
+            // Real-time validation
+            document.getElementById('email').addEventListener('blur', function() {
+                if (this.value && !validateEmail(this.value)) {
+                    showError('email', 'გთხოვთ შეიყვანოთ სწორი ელ.ფოსტის მისამართი');
+                } else {
+                    clearError('email');
+                }
+            });
+
+            document.getElementById('phone').addEventListener('blur', function() {
+                if (this.value && !validatePhone(this.value)) {
+                    showError('phone', 'გთხოვთ შეიყვანოთ სწორი ტელეფონის ნომერი');
+                } else {
+                    clearError('phone');
+                }
+            });
+
+            // Clear errors on input
+            ['firstName', 'lastName', 'email', 'phone', 'subject', 'message'].forEach(fieldId => {
+                const field = document.getElementById(fieldId);
+                if (field) {
+                    field.addEventListener('input', function() {
+                        if (this.classList.contains('error')) {
+                            clearError(fieldId);
+                        }
+                    });
+                }
             });
 
             // Smooth scrolling for anchor links
@@ -1163,6 +1528,107 @@
                     }
                 });
             });
+
+            // Enhanced Phone Functionality
+            function initPhoneFunctionality() {
+                const phoneLinks = document.querySelectorAll('.phone-link, .primary-phone, .secondary-phone');
+                
+                phoneLinks.forEach(link => {
+                    link.addEventListener('click', function(e) {
+                        const phoneNumber = this.getAttribute('href').replace('tel:', '');
+                        
+                        // Add visual feedback
+                        this.style.transform = 'scale(0.95)';
+                        setTimeout(() => {
+                            this.style.transform = '';
+                        }, 150);
+                        
+                        // Show toast notification on desktop (where tel: might not work as expected)
+                        if (!isMobileDevice()) {
+                            showPhoneToast(phoneNumber);
+                        }
+                        
+                        console.log('Phone call initiated:', phoneNumber);
+                    });
+                });
+            }
+            
+            // Detect mobile device
+            function isMobileDevice() {
+                return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
+                       (navigator.maxTouchPoints && navigator.maxTouchPoints > 2 && /MacIntel/.test(navigator.platform));
+            }
+            
+            // Show toast notification for phone calls
+            function showPhoneToast(phoneNumber) {
+                const toast = document.createElement('div');
+                toast.className = 'phone-toast';
+                toast.innerHTML = `
+                    <i class="fas fa-phone"></i>
+                    <span>დარეკვა: ${phoneNumber}</span>
+                `;
+                
+                // Add toast styles
+                toast.style.cssText = `
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    background: linear-gradient(135deg, #28a745, #20c997);
+                    color: white;
+                    padding: 12px 20px;
+                    border-radius: 12px;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-weight: 600;
+                    box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
+                    z-index: 10000;
+                    animation: slideInToast 0.3s ease-out;
+                    font-size: 0.9rem;
+                `;
+                
+                document.body.appendChild(toast);
+                
+                // Remove toast after 3 seconds
+                setTimeout(() => {
+                    toast.style.animation = 'slideOutToast 0.3s ease-out';
+                    setTimeout(() => {
+                        if (document.body.contains(toast)) {
+                            document.body.removeChild(toast);
+                        }
+                    }, 300);
+                }, 3000);
+            }
+            
+            // Add toast animations to document head
+            const toastStyles = document.createElement('style');
+            toastStyles.textContent = `
+                @keyframes slideInToast {
+                    from {
+                        transform: translateX(100%);
+                        opacity: 0;
+                    }
+                    to {
+                        transform: translateX(0);
+                        opacity: 1;
+                    }
+                }
+                
+                @keyframes slideOutToast {
+                    from {
+                        transform: translateX(0);
+                        opacity: 1;
+                    }
+                    to {
+                        transform: translateX(100%);
+                        opacity: 0;
+                    }
+                }
+            `;
+            document.head.appendChild(toastStyles);
+            
+            // Initialize phone functionality when DOM is loaded
+            document.addEventListener('DOMContentLoaded', initPhoneFunctionality);
 
           gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
           // create the scrollSmoother before your scrollTriggers
