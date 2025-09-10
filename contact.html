@@ -289,7 +289,8 @@
                   </div>
                   <div class="info-details">
                     <h4>სამუშაო საათები</h4>
-                    <p>ორშაბათი - პარასკევი: 9:00 - 18:00<br>შაბათი: 10:00 - 16:00<br>კვირა: დახურული</p>
+                    <p>
+ყოველთვის ღია</p>
                   </div>
                 </div>
                 
@@ -306,15 +307,7 @@
                   </div>
                 </div>
                 
-                <div class="info-card">
-                  <div class="info-icon">
-                    <i class="fas fa-car"></i>
-                  </div>
-                  <div class="info-details">
-                    <h4>პარკინგი</h4>
-                    <p>უფასო პარკინგი ხელმისაწვდომია<br>ყველა ვიზიტორისთვის</p>
-                  </div>
-                </div>
+               
               </div>
               
               <div class="map-display">
@@ -335,25 +328,21 @@
         </section>
 
         <!-- Footer - Now inside smooth-content -->
-        <footer>
-          <h3 class="stone">Stone</h3>
-          <h3>Factory</h3>
-          <div class="icons">
-            <a href="#"><i class="fa-brands fa-instagram fa-2xl"></i></a>
-            <a
-              href="https://www.facebook.com/profile.php?id=100088853137969"
-              target="_blank"
-              ><i class="fa-brands fa-facebook fa-2xl"></i
-            ></a>
-            <a href="#"><i class="fa-brands fa-x-twitter fa-2xl"></i></a>
-          </div>
-          <div class="foot-nav">
+         <footer>
+        <h3 class="stone">Stone</h3>
+        <h3>Factory</h3>
+        <div class="icons">
+        <a href="#"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100088853137969" target="_blank"><i class="fa-brands fa-facebook fa-2xl"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter fa-2xl"></i></a>
+        </div>
+        <div class="foot-nav">
             <a href="index.html">main</a>
             <a href="aboutus.html">about us</a>
-            <a href="products.html">products</a>
+            <a href="products.html">Products</a>
             <a href="contact.html">contact</a>
-          </div>
-        </footer>
+        </div>
+    </footer>
 
         <!-- Enhanced CSS Styles -->
         <style>
@@ -1637,6 +1626,47 @@
             effects: true, // looks for data-speed and data-lag attributes on elements
             smoothTouch: 0.1, // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
           });
+          document.getElementById("contactForm").addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const formData = new FormData(form);
+
+  const data = {
+    firstName: formData.get("firstName"),
+    lastName: formData.get("lastName"),
+    email: formData.get("email"),
+    phone: formData.get("phone"),
+    subject: formData.get("subject"),
+    message: formData.get("message"),
+  };
+
+  try {
+    const response = await fetch("http://localhost:3000/send-message", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    const result = await response.json();
+
+    if (response.ok) {
+      document.getElementById("success-message").style.display = "block";
+      document.getElementById("error-message").style.display = "none";
+      form.reset();
+    } else {
+      throw new Error(result.message || "დაფიქსირდა შეცდომა");
+    }
+  } catch (error) {
+    document.getElementById("error-message").style.display = "block";
+    document.getElementById("success-message").style.display = "none";
+  }
+
+  document.getElementById("form-messages").style.display = "block";
+});
+
         </script>
       </div>
     </div>

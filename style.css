@@ -840,12 +840,11 @@ iframe{
 }
 
 .service-item p {
-  padding: 30px;
+  padding: 10px;
   font-size: 1.3rem;
   color: #fff;
   font-weight: 700;
   margin: 0;
-  background: rgba(26, 26, 46, 0.8);
   backdrop-filter: blur(10px);
   transition: var(--transition);
 }
