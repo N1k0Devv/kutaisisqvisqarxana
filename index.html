@@ -1,1385 +1,1550 @@
 <!DOCTYPE html>
+<html lang="ka">
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ქუთაისის ქვის ქარხანა</title>
-    <script src="https://kit.fontawesome.com/7706f5712b.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="media.css">
+    <script
+      src="https://kit.fontawesome.com/7706f5712b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-</head>
-<body>
-  <div id="smooth-wrapper">
-    <div id="smooth-content">
-       <header>
-        <div class="container">
-            <i class="fa-solid fa-mountain-sun fa-2xl" id="mta"></i>            
-            <h2><a href="index.html" class="linki">ქუთაისის ქვის ქარხანა</a></h2>
-                <ul>
-                    <li><a class="nav" href="index.html">მთავარი</a></li>
-                    <li><a class="nav" href="aboutus.html">ჩვენსშესახებ</a></li>
-                    <li><a href="products.html" class="nav">პროდუქტები</a></li>
-                    <li><a class="nav" href="contact.html">კონტაქტი</a></li>
-                    <li>
-                      <a href="cart.html" class="nav cart-link" style="display: inline-flex; align-items: center; gap: 6px;">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span>კალათა</span>
-                      </a>
-                    </li>
-                    
-                    <li><div class="menu" id="menu" onclick="toggleMenu()">
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                    </div>
-                    <div class="nav-menu" id="navMenu">
-                      <a href="index.html">მთავარი</a>
-                        <a href="aboutus.html">ჩვენს შესახებ</a>
-                        <a href="products.html">პროდუქტები</a>
-                        <a href="contact.html">კონტაქტი</a>
-                        <a href="cart.html">კალათა</a>
-                    </div></li>   
-                </ul>
-        </div>
-    </header>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <header>
+          <div class="container">
+            <i class="fa-solid fa-mountain-sun fa-2xl" id="mta"></i>
+            <h2>
+              <a href="index.html" class="linki">ქუთაისის ქვის ქარხანა</a>
+            </h2>
+            <ul>
+              <li><a class="nav" href="index.html">მთავარი</a></li>
+              <li><a class="nav" href="aboutus.html">ჩვენსშესახებ</a></li>
+              <li><a href="products.html" class="nav">პროდუქტები</a></li>
+              <li><a class="nav" href="contact.html">კონტაქტი</a></li>
+              <li>
+                <a
+                  href="cart.html"
+                  class="nav cart-link"
+                  style="display: inline-flex; align-items: center; gap: 6px"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>კალათა</span>
+                </a>
+              </li>
 
-    <!-- Enhanced Hero Section -->
-    <section class="hero-section" style="background-image: url('images/pexels-ahmetcotur-31817156.jpg');">
-      <div class="hero-overlay">
-        <div class="hero-content">
-          <div class="hero-badge">Premium Stone Factory</div>
-          <h1 class="hero-title">Kutaisi Stone Factory</h1>
-          <p class="hero-subtitle">Crafting Excellence in Natural Stone Since 2010</p>
-          <div class="hero-stats">
-            <div class="hero-stat">
-              <div class="stat-number">18+</div>
-              <div class="stat-label">Quarries</div>
-            </div>
-            <div class="hero-stat">
-              <div class="stat-number">500+</div>
-              <div class="stat-label">Projects</div>
-            </div>
-            <div class="hero-stat">
-              <div class="stat-number">10+</div>
-              <div class="stat-label">Years</div>
-            </div>
+              <li>
+                <div class="menu" id="menu" onclick="toggleMenu()">
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                </div>
+                <div class="nav-menu" id="navMenu">
+                  <a href="index.html">მთავარი</a>
+                  <a href="aboutus.html">ჩვენს შესახებ</a>
+                  <a href="products.html">პროდუქტები</a>
+                  <a href="contact.html">კონტაქტი</a>
+                  <a href="cart.html">კალათა</a>
+                </div>
+              </li>
+            </ul>
           </div>
-          <div class="hero-buttons">
-            <a href="products.html" class="hero-btn primary">Explore Products</a>
-            <a href="aboutus.html" class="hero-btn secondary">Learn More</a>
-          </div>
-        </div>
-      </div>
-    </section>
+        </header>
 
-    <!-- Enhanced Features Section -->
-    <section class="marble-features">
-      <div class="features-header">
-        <div class="section-badge">Why Choose Us</div>
-        <h2 class="section-title">Premium Stone Features</h2>
-        <p class="section-subtitle">Discover what makes our natural stone products exceptional</p>
-      </div>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-gem"></i>
-          </div>
-          <h3>Timeless Beauty</h3>
-          <p>Marble is renowned for its elegant veining and natural beauty. Each slab is unique, adding a one-of-a-kind charm to any space.</p>
-          <div class="feature-highlight">Premium Quality</div>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-crown"></i>
-          </div>
-          <h3>Natural Luxury</h3>
-          <p>A hallmark of luxury interiors, marble offers a smooth, refined surface that enhances both modern and classic design aesthetics.</p>
-          <div class="feature-highlight">Luxury Design</div>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-shield-alt"></i>
-          </div>
-          <h3>Cool & Durable</h3>
-          <p>Naturally cool and resistant to heat, marble is an excellent choice for kitchen countertops, offering beauty and performance.</p>
-          <div class="feature-highlight">Long Lasting</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Enhanced Expertise Section -->
-    <section class="expertise-section">
-      <div class="expertise-container">
-        <div class="expertise-images" id="expertise-left">
-          <div class="image-wrapper">
-            <img src="images/Marble Warehouse.jpg" alt="Stone Image" class="img-right">
-            <div class="image-overlay">
-              <div class="overlay-content">
-                <div class="experience-badge">30+ Years</div>
-                <p>Industry Experience</p>
+        <!-- Enhanced Hero Section -->
+        <section
+          class="hero-section"
+          style="background-image: url('images/pexels-ahmetcotur-31817156.jpg')"
+        >
+          <div class="hero-overlay">
+            <div class="hero-content">
+              <div class="hero-badge">პრემიუმი ქვის ქარხანა</div>
+              <h1 class="hero-title">ქუთაისის ქვის ქარხანა</h1>
+              <p class="hero-subtitle">
+                მაღალი ხარისხის ნატურალური ქვის დამუშავება 2010 წლიდან
+              </p>
+              <div class="hero-stats">
+                <div class="hero-stat">
+                  <div class="stat-number">18+</div>
+                  <div class="stat-label">ქვანები</div>
+                </div>
+                <div class="hero-stat">
+                  <div class="stat-number">500+</div>
+                  <div class="stat-label">პროექტები</div>
+                </div>
+                <div class="hero-stat">
+                  <div class="stat-number">10+</div>
+                  <div class="stat-label">წლები</div>
+                </div>
+              </div>
+              <div class="hero-buttons">
+                <a href="products.html" class="hero-btn primary"
+                  >პროდუქტების ნახვა</a
+                >
+                <a href="aboutus.html" class="hero-btn secondary">გაიგე მეტი</a>
               </div>
             </div>
           </div>
-        </div>
-        <div class="expertise-text" id="expertise-right">
-          <div class="section-badge">Our Expertise</div>
-          <h2>Crafting Excellence Since 1990</h2>
-          <p>With over 30 years of experience in the marble industry, Integrity-Stone.com has the expertise to handle any project, no matter how complex.</p>
-          <p>Our team of skilled craftsmen has a deep understanding of the material and can create stunning designs that meet the needs of each client.</p>
-          <div class="expertise-features">
-            <div class="expertise-item">
-              <div class="expertise-icon">
-                <i class="fas fa-tools"></i>
-              </div>
-              <div class="expertise-content">
-                <h4>Master Craftsmen</h4>
-                <span>Skilled artisans with decades of experience</span>
-              </div>
-            </div>
-            <div class="expertise-item">
-              <div class="expertise-icon">
-                <i class="fas fa-award"></i>
-              </div>
-              <div class="expertise-content">
-                <h4>Quality Assured</h4>
-                <span>Every project meets our highest standards</span>
-              </div>
-            </div>
-          </div>
-          <a href="aboutus.html" class="expertise-btn">Learn More About Us</a>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- Enhanced Services Section -->
-    <section class="services-section" id="servisebi">
-      <div class="services-header">
-        <div class="section-badge">Our Services</div>
-        <h2>Professional Stone Services</h2>
-        <p>From concept to completion, we deliver exceptional stone solutions</p>
-      </div>
-      <div class="services-grid">
-        <div class="service-item">
-          <div class="service-image">
-            <img src="images/pool.jpg" alt="Pool Coping">
-            <div class="service-overlay">
-              <div class="service-icon">
-                <i class="fas fa-swimming-pool"></i>
+        <!-- Enhanced Features Section -->
+        <section class="marble-features">
+          <div class="features-header">
+            <div class="section-badge">რატომ ჩვენ</div>
+            <h2 class="section-title">პრემიუმი ქვის მახასიათებლები</h2>
+            <p class="section-subtitle">
+              გაიგეთ, რა ხდის ჩვენს ნატურალურ ქვას განსაკუთრებულს
+            </p>
+          </div>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-gem"></i>
               </div>
+              <h3>მუდმივი სილამაზე</h3>
+              <p>
+                მარმარილო გამოირჩევა ელეგანტური წვრილი ხაზებით და ბუნებრივი
+                სილამაზით. თითოეული ფილა უნიკალურია და ხაზს უსვამს სივრცის
+                განსაკუთრებულობას.
+              </p>
+              <div class="feature-highlight">პრემიუმი ხარისხი</div>
             </div>
-          </div>
-          <div class="service-content">
-            <h3>Pool Coping</h3>
-            <p>Premium stone coping for elegant pool designs</p>
-            <div class="service-features">
-              <span>Slip Resistant</span>
-              <span>Weather Proof</span>
-            </div>
-          </div>
-        </div>
-        <div class="service-item">
-          <div class="service-image">
-            <img src="images/granite pavers.jpg" alt="Granite Pavers">
-            <div class="service-overlay">
-              <div class="service-icon">
-                <i class="fas fa-th-large"></i>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-crown"></i>
               </div>
+              <h3>ბუნებრივი ელეგანტურობა</h3>
+              <p>
+                მარმარილო არის ელეგანტურობის სიმბოლო; його გლუვი ზედაპირი
+                გამოკვეთავს როგორც თანამედროვე, ასევე კლასიკურ დიზაინს.
+              </p>
+              <div class="feature-highlight">ლუქს დიზაინი</div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h3>ცივი და გამძლე</h3>
+              <p>
+                ბუნებრივად ცივი და სითბოს მიმართ მდგრადი, მარმარილო შესანიშნავი
+                არჩევანია საზიდეებისთვის და სამზარეულოს ზედაპირებისთვის, რაც
+                აერთიანებს სილამაზესა და ფunktionალურობას.
+              </p>
+              <div class="feature-highlight">ხანგრძლივობა</div>
             </div>
           </div>
-          <div class="service-content">
-            <h3>Granite Pavers</h3>
-            <p>Durable granite pavers for outdoor spaces</p>
-            <div class="service-features">
-              <span>Heavy Duty</span>
-              <span>Low Maintenance</span>
-            </div>
-          </div>
-        </div>
-        <div class="service-item">
-          <div class="service-image">
-            <img src="images/steps.jpg" alt="Granite Steps">
-            <div class="service-overlay">
-              <div class="service-icon">
-                <i class="fas fa-stairs"></i>
+        </section>
+
+        <!-- Enhanced Expertise Section -->
+        <section class="expertise-section">
+          <div class="expertise-container">
+            <div class="expertise-images" id="expertise-left">
+              <div class="image-wrapper">
+                <img
+                  src="images/Marble Warehouse.jpg"
+                  alt="Stone Image"
+                  class="img-right"
+                />
+                <div class="image-overlay">
+                  <div class="overlay-content">
+                    <div class="experience-badge">30+ Years</div>
+                    <p>Industry Experience</p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="service-content">
-            <h3>Granite Steps</h3>
-            <p>Custom granite steps for safe and stylish access</p>
-            <div class="service-features">
-              <span>Anti-Slip</span>
-              <span>Custom Sizes</span>
+            <div class="expertise-text" id="expertise-right">
+              <div class="section-badge">ჩვენი გამოცდილება</div>
+              <h2>შექმნილი ხარისხი 1990 წლიდან</h2>
+              <p>
+                30 წელზე მეტი გამოცდილებით მარმარილოს ინდუსტრიაში, ჩვენი გუნდი
+                უზრუნველყოფს ნებისმიერი მასშტაბის პროექტის მაღალ პროფესიულ
+                შესრულებას.
+              </p>
+              <p>
+                ჩვენი ოსტატები ღრმად აცნობიერებენ მასალის თავისებურებებს და
+                ქმნიან ესთეტიკურ, მომხმარებლის საჭიროებებზე მორგებულ დიზაინს.
+              </p>
+              <div class="expertise-features">
+                <div class="expertise-item">
+                  <div class="expertise-icon">
+                    <i class="fas fa-tools"></i>
+                  </div>
+                  <div class="expertise-content">
+                    <h4>Master Craftsmen</h4>
+                    <span>Skilled artisans with decades of experience</span>
+                  </div>
+                </div>
+                <div class="expertise-item">
+                  <div class="expertise-icon">
+                    <i class="fas fa-award"></i>
+                  </div>
+                  <div class="expertise-content">
+                    <h4>Quality Assured</h4>
+                    <span>Every project meets our highest standards</span>
+                  </div>
+                </div>
+              </div>
+              <a href="aboutus.html" class="expertise-btn">გაიგე მეტი ჩვენზე</a>
             </div>
           </div>
-        </div>
-        <div class="service-item">
-          <div class="service-image">
-            <img src="images/modern-kitchen-with-contemporary-interior-decor-furnishings.jpg" alt="Marble Kitchen">
-            <div class="service-overlay">
-              <div class="service-icon">
-                <i class="fa-solid fa-sink"></i>
+        </section>
+
+        <!-- Enhanced Services Section -->
+        <section class="services-section" id="servisebi">
+          <div class="services-header">
+            <div class="section-badge">ჩვენი სერვისები</div>
+            <h2>პროფესიონალური ქვის მომსახურება</h2>
+            <p>
+              განიდან საბოლოომდე — ჩვენ ვთავაზობთ მაღალი სტანდარტის ქვის
+              გადაწყვეტილებებს
+            </p>
+          </div>
+          <div class="services-grid">
+            <div class="service-item">
+              <div class="service-image">
+                <img src="images/pool.jpg" alt="Pool Coping" />
+                <div class="service-overlay">
+                  <div class="service-icon">
+                    <i class="fas fa-swimming-pool"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="service-content">
+                <h3>აუზის ფილა</h3>
+                <p>პრემიუმ ქვის ფილა ელეგანტური აუზის დიზაინისთვის</p>
+                <div class="service-features">
+                  <span>Slip Resistant</span>
+                  <span>Weather Proof</span>
+                </div>
+              </div>
+            </div>
+            <div class="service-item">
+              <div class="service-image">
+                <img src="images/granite pavers.jpg" alt="Granite Pavers" />
+                <div class="service-overlay">
+                  <div class="service-icon">
+                    <i class="fas fa-th-large"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="service-content">
+                <h3>გრანიტის ფილები</h3>
+                <p>მყარი გრანიტის ფილები გარე სივრცეებისთვის</p>
+                <div class="service-features">
+                  <span>Heavy Duty</span>
+                  <span>Low Maintenance</span>
+                </div>
+              </div>
+            </div>
+            <div class="service-item">
+              <div class="service-image">
+                <img src="images/steps.jpg" alt="Granite Steps" />
+                <div class="service-overlay">
+                  <div class="service-icon">
+                    <i class="fas fa-stairs"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="service-content">
+                <h3>გრანიტის საფეხურები</h3>
+                <p>საბოლოო და სტილური გრანიტის საფეხურები</p>
+                <div class="service-features">
+                  <span>Anti-Slip</span>
+                  <span>Custom Sizes</span>
+                </div>
+              </div>
+            </div>
+            <div class="service-item">
+              <div class="service-image">
+                <img
+                  src="images/modern-kitchen-with-contemporary-interior-decor-furnishings.jpg"
+                  alt="Marble Kitchen"
+                />
+                <div class="service-overlay">
+                  <div class="service-icon">
+                    <i class="fa-solid fa-sink"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="service-content">
+                <h3>მარმარილოს სამზარეულო</h3>
+                <p>
+                  ლუქს კლასის მარმარილოს სადღესასწაულო და სამზარეულოს სისტემები
+                </p>
+                <div class="service-features">
+                  <span>Heat Resistant</span>
+                  <span>Premium Finish</span>
+                </div>
+              </div>
+            </div>
+            <div class="service-item">
+              <div class="service-image">
+                <img src="images/granite table.jpg" alt="Granite Table" />
+                <div class="service-overlay">
+                  <div class="service-icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-picnic-table"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M16 7l2 9m-10 -9l-2 9m-1 -9h14m2 5h-18" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="service-content">
+                <h3>გრანიტის მაგიდა</h3>
+                <p>
+                  კასტომიზებული გრანიტის მაგიდები სასადილო და კომერციული
+                  სივრცეებისთვის
+                </p>
+                <div class="service-features">
+                  <span>Scratch Resistant</span>
+                  <span>Custom Design</span>
+                </div>
+              </div>
+            </div>
+            <div class="service-item">
+              <div class="service-image">
+                <img src="images/marble pavers.jpg" alt="Marble Pavers" />
+                <div class="service-overlay">
+                  <div class="service-icon">
+                    <i class="fas fa-border-all"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="service-content">
+                <h3>მარმარილოს ფილები</h3>
+                <p>
+                  ლუქს კლასის მარმარილოს ფილები პრესტიჟული ინსტალაციებისთვის
+                </p>
+                <div class="service-features">
+                  <span>Premium Finish</span>
+                  <span>Unique Patterns</span>
+                </div>
               </div>
             </div>
           </div>
-          <div class="service-content">
-            <h3>Marble Kitchen</h3>
-            <p>Luxurious marble countertops and kitchen installations</p>
-            <div class="service-features">
-              <span>Heat Resistant</span>
-              <span>Premium Finish</span>
+        </section>
+
+        <!-- New CTA Section -->
+        <section class="cta-section">
+          <div class="cta-container">
+            <div class="cta-content">
+              <div class="section-badge">დაიწყე</div>
+              <h2>მზად ხართ შეცვალოთ თქვენი სივრცე?</h2>
+              <p>
+                ჩვენი ექსპერტები დაგეხმარებიან იდეალური ქვის გადაწყვეტის
+                არჩევაში. მიიღეთ უფასო კონსულტაცია დღესვე.
+              </p>
+              <div class="cta-buttons">
+                <a href="contact.html" class="cta-btn primary"
+                  >დაგვიკავშირდით</a
+                >
+                <a href="products.html" class="cta-btn secondary"
+                  >პროდუქტების ნახვა</a
+                >
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="service-item">
-          <div class="service-image">
-            <img src="images/granite table.jpg" alt="Granite Table">
-            <div class="service-overlay">
-              <div class="service-icon">
-                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-picnic-table"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16 7l2 9m-10 -9l-2 9m-1 -9h14m2 5h-18" /></svg>
+            <div class="cta-features">
+              <div class="cta-feature">
+                <div class="cta-icon">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div class="cta-text">
+                  <h4>უფასო კონსულტაცია</h4>
+                  <span>ექსპერტის რჩევა თქვენი პროექტისთვის</span>
+                </div>
+              </div>
+              <div class="cta-feature">
+                <div class="cta-icon">
+                  <i class="fas fa-truck"></i>
+                </div>
+                <div class="cta-text">
+                  <h4>სწრაფი მიწოდება</h4>
+                  <span>სწრაფი და უსაფრთხო ინსტალაცია</span>
+                </div>
               </div>
             </div>
           </div>
-          <div class="service-content">
-            <h3>Granite Table</h3>
-            <p>Custom granite tables for dining and commercial spaces</p>
-            <div class="service-features">
-              <span>Scratch Resistant</span>
-              <span>Custom Design</span>
-            </div>
+        </section>
+
+        <footer>
+          <h3 class="stone">Stone</h3>
+          <h3>Factory</h3>
+          <div class="icons">
+            <a href="#"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+            <a
+              href="https://www.facebook.com/profile.php?id=100088853137969"
+              target="_blank"
+              ><i class="fa-brands fa-facebook fa-2xl"></i
+            ></a>
+            <a href="#"><i class="fa-brands fa-x-twitter fa-2xl"></i></a>
           </div>
-        </div>
-        <div class="service-item">
-          <div class="service-image">
-            <img src="images/marble pavers.jpg" alt="Marble Pavers">
-            <div class="service-overlay">
-              <div class="service-icon">
-                <i class="fas fa-border-all"></i>
-              </div>
-            </div>
+          <div class="foot-nav">
+            <a href="index.html">მთავარი</a>
+            <a href="aboutus.html">ჩვენს შესახებ</a>
+            <a href="index.html#servisebi">პროდუქტები</a>
+            <a href="contact.html">კონტაქტი</a>
           </div>
-          <div class="service-content">
-            <h3>Marble Pavers</h3>
-            <p>Luxurious marble pavers for premium installations</p>
-            <div class="service-features">
-              <span>Premium Finish</span>
-              <span>Unique Patterns</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- New CTA Section -->
-    <section class="cta-section">
-      <div class="cta-container">
-        <div class="cta-content">
-          <div class="section-badge">Get Started</div>
-          <h2>Ready to Transform Your Space?</h2>
-          <p>Let our expert team help you choose the perfect stone solution for your project. Get a free consultation today.</p>
-          <div class="cta-buttons">
-            <a href="contact.html" class="cta-btn primary">contact us</a>
-            <a href="products.html" class="cta-btn secondary">View Products</a>
-          </div>
-        </div>
-        <div class="cta-features">
-          <div class="cta-feature">
-            <div class="cta-icon">
-              <i class="fas fa-phone"></i>
-            </div>
-            <div class="cta-text">
-              <h4>Free Consultation</h4>
-              <span>Expert advice for your project</span>
-            </div>
-          </div>
-          <div class="cta-feature">
-            <div class="cta-icon">
-              <i class="fas fa-truck"></i>
-            </div>
-            <div class="cta-text">
-              <h4>Fast Delivery</h4>
-              <span>Quick and safe installation</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-        <h3 class="stone">Stone</h3>
-        <h3>Factory</h3>
-        <div class="icons">
-        <a href="#"><i class="fa-brands fa-instagram fa-2xl"></i></a>
-        <a href="https://www.facebook.com/profile.php?id=100088853137969" target="_blank"><i class="fa-brands fa-facebook fa-2xl"></i></a>
-        <a href="#"><i class="fa-brands fa-x-twitter fa-2xl"></i></a>
-        </div>
-        <div class="foot-nav">
-            <a href="index.html">main</a>
-            <a href="aboutus.html">about us</a>
-            <a href="index.html#servisebi">services</a>
-            <a href="contact.html">contact</a>
-        </div>
-    </footer>
-
-    <style>
-      /* ========== ULTRA-STYLISH INDEX PAGE DESIGN ========== */
-      
-      /* Enhanced Hero Section */
-      .hero-section {
-        min-height: 100vh;
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-      }
-
-      .hero-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(135deg, rgba(44, 62, 80, 0.8) 0%, rgba(52, 73, 94, 0.6) 100%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-      }
-
-      .hero-overlay::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: radial-gradient(circle at 30% 70%, rgba(243, 156, 18, 0.1) 0%, transparent 50%);
-        animation: heroGlow 8s ease-in-out infinite alternate;
-      }
-
-      @keyframes heroGlow {
-        0% { opacity: 0.3; transform: scale(1); }
-        100% { opacity: 0.7; transform: scale(1.1); }
-      }
-
-      .hero-content {
-        text-align: center;
-        max-width: 800px;
-        padding: 0 20px;
-        position: relative;
-        z-index: 2;
-      }
-
-      .hero-badge {
-        display: inline-block;
-        padding: 8px 24px;
-        background: linear-gradient(45deg, #f39c12, #e74c3c);
-        color: white;
-        border-radius: 30px;
-        font-size: 0.9rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        margin-bottom: 1.5rem;
-        box-shadow: 0 8px 25px rgba(243, 156, 18, 0.3);
-        animation: badgeFloat 3s ease-in-out infinite;
-      }
-
-      @keyframes badgeFloat {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-5px); }
-      }
-
-      .hero-title {
-        font-size: clamp(3rem, 8vw, 5rem);
-        font-weight: 900;
-        color: white;
-        margin-bottom: 1rem;
-        text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        animation: titleSlideIn 1s ease-out;
-      }
-
-      @keyframes titleSlideIn {
-        0% { opacity: 0; transform: translateY(50px); }
-        100% { opacity: 1; transform: translateY(0); }
-      }
-
-      .hero-subtitle {
-        font-size: 1.3rem;
-        color: #ecf0f1;
-        margin-bottom: 2.5rem;
-        line-height: 1.6;
-        animation: subtitleSlideIn 1s ease-out 0.3s both;
-      }
-
-      @keyframes subtitleSlideIn {
-        0% { opacity: 0; transform: translateY(30px); }
-        100% { opacity: 1; transform: translateY(0); }
-      }
-
-      .hero-stats {
-        display: flex;
-        justify-content: center;
-        gap: 40px;
-        margin-bottom: 3rem;
-        animation: statsSlideIn 1s ease-out 0.6s both;
-      }
-
-      @keyframes statsSlideIn {
-        0% { opacity: 0; transform: translateY(30px); }
-        100% { opacity: 1; transform: translateY(0); }
-      }
-
-      .hero-stat {
-        text-align: center;
-        padding: 20px;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 15px;
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        transition: all 0.4s ease;
-      }
-
-      .hero-stat:hover {
-        transform: translateY(-10px) scale(1.05);
-        background: rgba(255, 255, 255, 0.2);
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-      }
-
-      .stat-number {
-        font-size: 2.5rem;
-        font-weight: 800;
-        color: #f39c12;
-        margin-bottom: 0.5rem;
-        text-shadow: 0 5px 15px rgba(243, 156, 18, 0.3);
-      }
-
-      .stat-label {
-        font-size: 0.9rem;
-        color: #bdc3c7;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-      }
-
-      .hero-buttons {
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-        flex-wrap: wrap;
-        animation: buttonsSlideIn 1s ease-out 0.9s both;
-      }
-
-      @keyframes buttonsSlideIn {
-        0% { opacity: 0; transform: translateY(30px); }
-        100% { opacity: 1; transform: translateY(0); }
-      }
-
-      .hero-btn {
-        padding: 15px 35px;
-        border-radius: 50px;
-        font-weight: 600;
-        text-decoration: none;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        position: relative;
-        overflow: hidden;
-      }
-
-      .hero-btn.primary {
-        background: linear-gradient(45deg, #f39c12, #e74c3c);
-        color: white;
-        box-shadow: 0 8px 25px rgba(243, 156, 18, 0.4);
-      }
-
-      .hero-btn.primary:hover {
-        transform: translateY(-3px) scale(1.05);
-        box-shadow: 0 15px 40px rgba(243, 156, 18, 0.6);
-        background: linear-gradient(45deg, #e74c3c, #f39c12);
-      }
-
-      .hero-btn.secondary {
-        background: transparent;
-        color: white;
-        border: 2px solid white;
-      }
-
-      .hero-btn.secondary:hover {
-        background: white;
-        color: #2c3e50;
-        transform: translateY(-3px) scale(1.05);
-        box-shadow: 0 15px 40px rgba(255, 255, 255, 0.3);
-      }
-
-      .hero-scroll-indicator {
-        position: absolute;
-        bottom: 30px;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 2;
-      }
-
-      .scroll-arrow {
-        width: 50px;
-        height: 50px;
-        border: 2px solid white;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        animation: scrollBounce 2s ease-in-out infinite;
-        cursor: pointer;
-        transition: all 0.3s ease;
-      }
-
-      .scroll-arrow:hover {
-        background: rgba(255, 255, 255, 0.1);
-        transform: scale(1.1);
-      }
-
-      @keyframes scrollBounce {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(10px); }
-      }
-
-      /* Enhanced Features Section */
-      .marble-features {
-        padding: 120px 0;
-        background: linear-gradient(135deg, #f8fafc 0%, #e0e7ef 100%);
-      }
-
-      .features-header {
-        text-align: center;
-        max-width: 800px;
-        margin: 0 auto 80px;
-        padding: 0 20px;
-      }
-
-      .section-badge {
-        display: inline-block;
-        padding: 8px 20px;
-        background: linear-gradient(45deg, #f39c12, #e74c3c);
-        color: white;
-        border-radius: 25px;
-        font-size: 0.9rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        margin-bottom: 1rem;
-        box-shadow: 0 5px 15px rgba(243, 156, 18, 0.3);
-      }
-
-      .section-title {
-        font-size: clamp(2.5rem, 5vw, 3.5rem);
-        font-weight: 800;
-        color: #2c3e50;
-        margin-bottom: 1rem;
-        line-height: 1.2;
-      }
-
-      .section-subtitle {
-        font-size: 1.2rem;
-        color: #666;
-        line-height: 1.6;
-      }
-
-      .features-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 40px;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
-
-      .feature-card {
-        background: white;
-        padding: 40px 30px;
-        border-radius: 20px;
-        text-align: center;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        position: relative;
-        overflow: hidden;
-        cursor: pointer;
-      }
-
-      .feature-card::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(45deg, rgba(243, 156, 18, 0.05), rgba(231, 76, 60, 0.05));
-        opacity: 0;
-        transition: opacity 0.4s ease;
-      }
-
-      .feature-card:hover {
-        transform: translateY(-20px) scale(1.02);
-        box-shadow: 0 30px 60px rgba(243, 156, 18, 0.2);
-      }
-
-      .feature-card:hover::before {
-        opacity: 1;
-      }
-
-      .feature-icon {
-        width: 80px;
-        height: 80px;
-        margin: 0 auto 25px;
-        background: linear-gradient(45deg, #f39c12, #e74c3c);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-size: 2rem;
-        transition: all 0.4s ease;
-        position: relative;
-        z-index: 2;
-      }
-
-      .feature-card:hover .feature-icon {
-        transform: scale(1.1) rotate(360deg);
-        box-shadow: 0 15px 30px rgba(243, 156, 18, 0.4);
-      }
-
-      .feature-card h3 {
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: #2c3e50;
-        margin-bottom: 1rem;
-        transition: all 0.3s ease;
-        position: relative;
-        z-index: 2;
-      }
-
-      .feature-card:hover h3 {
-        color: #f39c12;
-      }
-
-      .feature-card p {
-        color: #666;
-        line-height: 1.6;
-        margin-bottom: 1.5rem;
-        position: relative;
-        z-index: 2;
-      }
-
-      .feature-highlight {
-        display: inline-block;
-        padding: 6px 16px;
-        background: linear-gradient(45deg, #f39c12, #e74c3c);
-        color: white;
-        border-radius: 20px;
-        font-size: 0.8rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        position: relative;
-        z-index: 2;
-      }
-
-      /* Enhanced Expertise Section */
-      .expertise-section {
-        padding: 120px 0;
-        background: white;
-      }
-
-      .expertise-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 80px;
-        align-items: center;
-      }
-
-      .image-wrapper {
-        position: relative;
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-        transition: all 0.4s ease;
-      }
-
-      .image-wrapper:hover {
-        transform: scale(1.02) rotate(2deg);
-        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
-      }
-
-      .image-wrapper img {
-        width: 100%;
-        height: 400px;
-        object-fit: cover;
-        transition: all 0.5s ease;
-      }
-
-      .image-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(45deg, rgba(243, 156, 18, 0.8), rgba(231, 76, 60, 0.8));
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        opacity: 0;
-        transition: all 0.4s ease;
-      }
-
-      .image-wrapper:hover .image-overlay {
-        opacity: 1;
-      }
-
-      .overlay-content {
-        text-align: center;
-        color: white;
-      }
-
-      .experience-badge {
-        font-size: 3rem;
-        font-weight: 900;
-        margin-bottom: 0.5rem;
-        text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-      }
-
-      .expertise-text h2 {
-        font-size: clamp(2rem, 4vw, 3rem);
-        font-weight: 800;
-        color: #2c3e50;
-        margin-bottom: 1.5rem;
-        line-height: 1.2;
-      }
-
-      .expertise-text p {
-        font-size: 1.1rem;
-        color: #666;
-        line-height: 1.7;
-        margin-bottom: 1.5rem;
-      }
-
-      .expertise-features {
-        margin: 2rem 0;
-      }
-
-      .expertise-item {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        margin-bottom: 1.5rem;
-        padding: 20px;
-        background: #f8f9fa;
-        border-radius: 15px;
-        transition: all 0.3s ease;
-      }
-
-      .expertise-item:hover {
-        transform: translateX(10px);
-        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-      }
-
-      .expertise-icon {
-        width: 60px;
-        height: 60px;
-        background: linear-gradient(45deg, #f39c12, #e74c3c);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-size: 1.5rem;
-        flex-shrink: 0;
-      }
-
-      .expertise-content h4 {
-        font-size: 1.2rem;
-        font-weight: 700;
-        color: #2c3e50;
-        margin-bottom: 0.3rem;
-      }
-
-      .expertise-content span {
-        color: #666;
-        font-size: 0.9rem;
-      }
-
-      .expertise-btn {
-        display: inline-block;
-        padding: 15px 30px;
-        background: linear-gradient(45deg, #f39c12, #e74c3c);
-        color: white;
-        text-decoration: none;
-        border-radius: 50px;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        transition: all 0.4s ease;
-        box-shadow: 0 8px 25px rgba(243, 156, 18, 0.3);
-      }
-
-      .expertise-btn:hover {
-        transform: translateY(-3px) scale(1.05);
-        box-shadow: 0 15px 40px rgba(243, 156, 18, 0.5);
-        background: linear-gradient(45deg, #e74c3c, #f39c12);
-      }
-
-      /* Enhanced Services Section */
-      .services-section {
-        padding: 120px 0;
-        background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-      }
-
-      .services-header {
-        text-align: center;
-        max-width: 800px;
-        margin: 0 auto 80px;
-        padding: 0 20px;
-      }
-
-      .services-header .section-badge {
-        background: linear-gradient(45deg, #1abc9c, #16a085);
-      }
-
-      .services-header h2 {
-        font-size: clamp(2.5rem, 5vw, 3.5rem);
-        font-weight: 800;
-        color: white;
-        margin-bottom: 1rem;
-        line-height: 1.2;
-      }
-
-      .services-header p {
-        font-size: 1.2rem;
-        color: #bdc3c7;
-        line-height: 1.6;
-      }
-
-      .services-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 30px;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
-
-      .service-item {
-        background: white;
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-        transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        cursor: pointer;
-      }
-
-      .service-item:hover {
-        transform: translateY(-15px) scale(1.02);
-        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
-      }
-
-      .service-image {
-        position: relative;
-        height: 250px;
-        overflow: hidden;
-      }
-
-      .service-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: all 0.5s ease;
-      }
-
-      .service-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(45deg, rgba(26, 188, 156, 0.8), rgba(22, 160, 133, 0.8));
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        opacity: 0;
-        transition: all 0.4s ease;
-      }
-
-      .service-item:hover .service-overlay {
-        opacity: 1;
-      }
-
-      .service-item:hover .service-image img {
-        transform: scale(1.1);
-      }
-
-      .service-icon {
-        width: 80px;
-        height: 80px;
-        background: rgba(255, 255, 255, 0.2);
-        border: 2px solid white;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-size: 2rem;
-        backdrop-filter: blur(10px);
-      }
-
-      .service-content {
-        padding: 30px;
-      }
-
-      .service-content h3 {
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: #2c3e50;
-        margin-bottom: 1rem;
-      }
-
-      .service-content p {
-        color: #666;
-        line-height: 1.6;
-        margin-bottom: 1.5rem;
-        border-radius: 10px;
-      }
-
-      .service-features {
-        display: flex;
-        gap: 10px;
-        flex-wrap: wrap;
-      }
-
-      .service-features span {
-        padding: 4px 12px;
-        background: linear-gradient(45deg, #1abc9c, #16a085);
-        color: white;
-        border-radius: 15px;
-        font-size: 0.8rem;
-        font-weight: 600;
-      }
-
-      /* New CTA Section */
-      .cta-section {
-        padding: 120px 0;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        position: relative;
-        overflow: hidden;
-      }
-
-      .cta-section::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-        opacity: 0.3;
-      }
-
-      .cta-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        gap: 60px;
-        align-items: center;
-        position: relative;
-        z-index: 2;
-      }
-
-      .cta-content {
-        color: white;
-      }
-
-      .cta-content .section-badge {
-        background: rgba(255, 255, 255, 0.2);
-        color: white;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-      }
-
-      .cta-content h2 {
-        font-size: clamp(2.5rem, 5vw, 3.5rem);
-        font-weight: 800;
-        margin-bottom: 1.5rem;
-        line-height: 1.2;
-      }
-
-      .cta-content p {
-        font-size: 1.2rem;
-        line-height: 1.6;
-        margin-bottom: 2.5rem;
-        opacity: 0.9;
-      }
-
-      .cta-buttons {
-        display: flex;
-        gap: 20px;
-        flex-wrap: wrap;
-      }
-
-      .cta-btn {
-        padding: 15px 35px;
-        border-radius: 50px;
-        font-weight: 600;
-        text-decoration: none;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        transition: all 0.4s ease;
-      }
-
-      .cta-btn.primary {
-        background: white;
-        color: #667eea;
-      }
-
-      .cta-btn.primary:hover {
-        transform: translateY(-3px) scale(1.05);
-        box-shadow: 0 15px 40px rgba(255, 255, 255, 0.3);
-      }
-
-      .cta-btn.secondary {
-        background: transparent;
-        color: white;
-        border: 2px solid white;
-      }
-
-      .cta-btn.secondary:hover {
-        background: white;
-        color: #667eea;
-        transform: translateY(-3px) scale(1.05);
-      }
-
-      .cta-features {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-      }
-
-      .cta-feature {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        padding: 25px;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 15px;
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        transition: all 0.3s ease;
-      }
-
-      .cta-feature:hover {
-        transform: translateX(10px);
-        background: rgba(255, 255, 255, 0.2);
-      }
-
-      .cta-icon {
-        width: 60px;
-        height: 60px;
-        background: rgba(255, 255, 255, 0.2);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-size: 1.5rem;
-        flex-shrink: 0;
-      }
-
-      .cta-text {
-        color: white;
-      }
-
-      .cta-text h4 {
-        font-size: 1.2rem;
-        font-weight: 700;
-        margin-bottom: 0.3rem;
-      }
-
-      .cta-text span {
-        opacity: 0.8;
-        font-size: 0.9rem;
-      }
-
-      /* Responsive Design */
-      @media (max-width: 1024px) {
-        .hero-stats {
-          gap: 20px;
-        }
-
-        .expertise-container {
-          grid-template-columns: 1fr;
-          gap: 60px;
-        }
-
-        .cta-container {
-          grid-template-columns: 1fr;
-          gap: 40px;
-          text-align: center;
-        }
-      }
-
-      @media (max-width: 768px) {
-        .hero-stats {
-          flex-direction: column;
-          gap: 15px;
-        }
-
-        .hero-buttons {
-          flex-direction: column;
-          align-items: center;
-        }
-
-        .features-grid {
-          grid-template-columns: 1fr;
-          gap: 30px;
-        }
-
-        .services-grid {
-          grid-template-columns: 1fr;
-          gap: 20px;
-        }
-
-        .cta-features {
-          flex-direction: row;
-          gap: 20px;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .hero-content {
-          padding: 0 15px;
-        }
-
-        .cta-features {
-          flex-direction: column;
-        }
-
-        .expertise-item {
-          flex-direction: column;
-          text-align: center;
-          gap: 15px;
-        }
-      }
-
-      /* Hide old about-hero class */
-      .about-hero {
-        display: none;
-      }
-
-      /* Animation classes for scroll triggers */
-      .animate {
-        opacity: 1 !important;
-        transform: translateY(0) !important;
-      }
-
-      /* Initial states for animations */
-      .feature-card,
-      .service-item,
-      .expertise-item {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: opacity 0.6s ease, transform 0.6s ease;
-      }
-    </style>
-
-<script>
-            function toggleMenu() {
+        </footer>
+
+        <style>
+          /* ========== ULTRA-STYLISH INDEX PAGE DESIGN ========== */
+
+          /* Enhanced Hero Section */
+          .hero-section {
+            min-height: 100vh;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+          }
+
+          .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+              135deg,
+              rgba(44, 62, 80, 0.8) 0%,
+              rgba(52, 73, 94, 0.6) 100%
+            );
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+          }
+
+          .hero-overlay::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(
+              circle at 30% 70%,
+              rgba(243, 156, 18, 0.1) 0%,
+              transparent 50%
+            );
+            animation: heroGlow 8s ease-in-out infinite alternate;
+          }
+
+          @keyframes heroGlow {
+            0% {
+              opacity: 0.3;
+              transform: scale(1);
+            }
+            100% {
+              opacity: 0.7;
+              transform: scale(1.1);
+            }
+          }
+
+          .hero-content {
+            text-align: center;
+            max-width: 800px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+          }
+
+          .hero-badge {
+            display: inline-block;
+            padding: 8px 24px;
+            background: linear-gradient(45deg, #f39c12, #e74c3c);
+            color: white;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 8px 25px rgba(243, 156, 18, 0.3);
+            animation: badgeFloat 3s ease-in-out infinite;
+          }
+
+          @keyframes badgeFloat {
+            0%,
+            100% {
+              transform: translateY(0px);
+            }
+            50% {
+              transform: translateY(-5px);
+            }
+          }
+
+          .hero-title {
+            font-size: clamp(3rem, 8vw, 5rem);
+            font-weight: 900;
+            color: white;
+            margin-bottom: 1rem;
+            text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            animation: titleSlideIn 1s ease-out;
+          }
+
+          @keyframes titleSlideIn {
+            0% {
+              opacity: 0;
+              transform: translateY(50px);
+            }
+            100% {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+
+          .hero-subtitle {
+            font-size: 1.3rem;
+            color: #ecf0f1;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+            animation: subtitleSlideIn 1s ease-out 0.3s both;
+          }
+
+          @keyframes subtitleSlideIn {
+            0% {
+              opacity: 0;
+              transform: translateY(30px);
+            }
+            100% {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+
+          .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 3rem;
+            animation: statsSlideIn 1s ease-out 0.6s both;
+          }
+
+          @keyframes statsSlideIn {
+            0% {
+              opacity: 0;
+              transform: translateY(30px);
+            }
+            100% {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+
+          .hero-stat {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.4s ease;
+          }
+
+          .hero-stat:hover {
+            transform: translateY(-10px) scale(1.05);
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+          }
+
+          .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #f39c12;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 5px 15px rgba(243, 156, 18, 0.3);
+          }
+
+          .stat-label {
+            font-size: 0.9rem;
+            color: #bdc3c7;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+          }
+
+          .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: buttonsSlideIn 1s ease-out 0.9s both;
+          }
+
+          @keyframes buttonsSlideIn {
+            0% {
+              opacity: 0;
+              transform: translateY(30px);
+            }
+            100% {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+
+          .hero-btn {
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+            overflow: hidden;
+          }
+
+          .hero-btn.primary {
+            background: linear-gradient(45deg, #f39c12, #e74c3c);
+            color: white;
+            box-shadow: 0 8px 25px rgba(243, 156, 18, 0.4);
+          }
+
+          .hero-btn.primary:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(243, 156, 18, 0.6);
+            background: linear-gradient(45deg, #e74c3c, #f39c12);
+          }
+
+          .hero-btn.secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+          }
+
+          .hero-btn.secondary:hover {
+            background: white;
+            color: #2c3e50;
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(255, 255, 255, 0.3);
+          }
+
+          .hero-scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+          }
+
+          .scroll-arrow {
+            width: 50px;
+            height: 50px;
+            border: 2px solid white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            animation: scrollBounce 2s ease-in-out infinite;
+            cursor: pointer;
+            transition: all 0.3s ease;
+          }
+
+          .scroll-arrow:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: scale(1.1);
+          }
+
+          @keyframes scrollBounce {
+            0%,
+            100% {
+              transform: translateY(0);
+            }
+            50% {
+              transform: translateY(10px);
+            }
+          }
+
+          /* Enhanced Features Section */
+          .marble-features {
+            padding: 120px 0;
+            background: linear-gradient(135deg, #f8fafc 0%, #e0e7ef 100%);
+          }
+
+          .features-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 80px;
+            padding: 0 20px;
+          }
+
+          .section-badge {
+            display: inline-block;
+            padding: 8px 20px;
+            background: linear-gradient(45deg, #f39c12, #e74c3c);
+            color: white;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            box-shadow: 0 5px 15px rgba(243, 156, 18, 0.3);
+          }
+
+          .section-title {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 800;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+          }
+
+          .section-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            line-height: 1.6;
+          }
+
+          .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+          }
+
+          .feature-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+          }
+
+          .feature-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+              45deg,
+              rgba(243, 156, 18, 0.05),
+              rgba(231, 76, 60, 0.05)
+            );
+            opacity: 0;
+            transition: opacity 0.4s ease;
+          }
+
+          .feature-card:hover {
+            transform: translateY(-20px) scale(1.02);
+            box-shadow: 0 30px 60px rgba(243, 156, 18, 0.2);
+          }
+
+          .feature-card:hover::before {
+            opacity: 1;
+          }
+
+          .feature-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 25px;
+            background: linear-gradient(45deg, #f39c12, #e74c3c);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            transition: all 0.4s ease;
+            position: relative;
+            z-index: 2;
+          }
+
+          .feature-card:hover .feature-icon {
+            transform: scale(1.1) rotate(360deg);
+            box-shadow: 0 15px 30px rgba(243, 156, 18, 0.4);
+          }
+
+          .feature-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 2;
+          }
+
+          .feature-card:hover h3 {
+            color: #f39c12;
+          }
+
+          .feature-card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 2;
+          }
+
+          .feature-highlight {
+            display: inline-block;
+            padding: 6px 16px;
+            background: linear-gradient(45deg, #f39c12, #e74c3c);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            z-index: 2;
+          }
+
+          /* Enhanced Expertise Section */
+          .expertise-section {
+            padding: 120px 0;
+            background: white;
+          }
+
+          .expertise-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+          }
+
+          .image-wrapper {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            transition: all 0.4s ease;
+          }
+
+          .image-wrapper:hover {
+            transform: scale(1.02) rotate(2deg);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+          }
+
+          .image-wrapper img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: all 0.5s ease;
+          }
+
+          .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+              45deg,
+              rgba(243, 156, 18, 0.8),
+              rgba(231, 76, 60, 0.8)
+            );
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.4s ease;
+          }
+
+          .image-wrapper:hover .image-overlay {
+            opacity: 1;
+          }
+
+          .overlay-content {
+            text-align: center;
+            color: white;
+          }
+
+          .experience-badge {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+          }
+
+          .expertise-text h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+          }
+
+          .expertise-text p {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+          }
+
+          .expertise-features {
+            margin: 2rem 0;
+          }
+
+          .expertise-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 1.5rem;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+          }
+
+          .expertise-item:hover {
+            transform: translateX(10px);
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+          }
+
+          .expertise-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #f39c12, #e74c3c);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+          }
+
+          .expertise-content h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 0.3rem;
+          }
+
+          .expertise-content span {
+            color: #666;
+            font-size: 0.9rem;
+          }
+
+          .expertise-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: linear-gradient(45deg, #f39c12, #e74c3c);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 25px rgba(243, 156, 18, 0.3);
+          }
+
+          .expertise-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(243, 156, 18, 0.5);
+            background: linear-gradient(45deg, #e74c3c, #f39c12);
+          }
+
+          /* Enhanced Services Section */
+          .services-section {
+            padding: 120px 0;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+          }
+
+          .services-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 80px;
+            padding: 0 20px;
+          }
+
+          .services-header .section-badge {
+            background: linear-gradient(45deg, #1abc9c, #16a085);
+          }
+
+          .services-header h2 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 800;
+            color: white;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+          }
+
+          .services-header p {
+            font-size: 1.2rem;
+            color: #bdc3c7;
+            line-height: 1.6;
+          }
+
+          .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+          }
+
+          .service-item {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            cursor: pointer;
+          }
+
+          .service-item:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+          }
+
+          .service-image {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+          }
+
+          .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.5s ease;
+          }
+
+          .service-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+              45deg,
+              rgba(26, 188, 156, 0.8),
+              rgba(22, 160, 133, 0.8)
+            );
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.4s ease;
+          }
+
+          .service-item:hover .service-overlay {
+            opacity: 1;
+          }
+
+          .service-item:hover .service-image img {
+            transform: scale(1.1);
+          }
+
+          .service-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            backdrop-filter: blur(10px);
+          }
+
+          .service-content {
+            padding: 30px;
+          }
+
+          .service-content h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+          }
+
+          .service-content p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            border-radius: 10px;
+          }
+
+          .service-features {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+          }
+
+          .service-features span {
+            padding: 4px 12px;
+            background: linear-gradient(45deg, #1abc9c, #16a085);
+            color: white;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+          }
+
+          /* New CTA Section */
+          .cta-section {
+            padding: 120px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+            overflow: hidden;
+          }
+
+          .cta-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+          }
+
+          .cta-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+          }
+
+          .cta-content {
+            color: white;
+          }
+
+          .cta-content .section-badge {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+          }
+
+          .cta-content h2 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+          }
+
+          .cta-content p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+          }
+
+          .cta-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+          }
+
+          .cta-btn {
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.4s ease;
+          }
+
+          .cta-btn.primary {
+            background: white;
+            color: #667eea;
+          }
+
+          .cta-btn.primary:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(255, 255, 255, 0.3);
+          }
+
+          .cta-btn.secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+          }
+
+          .cta-btn.secondary:hover {
+            background: white;
+            color: #667eea;
+            transform: translateY(-3px) scale(1.05);
+          }
+
+          .cta-features {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+          }
+
+          .cta-feature {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+          }
+
+          .cta-feature:hover {
+            transform: translateX(10px);
+            background: rgba(255, 255, 255, 0.2);
+          }
+
+          .cta-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+          }
+
+          .cta-text {
+            color: white;
+          }
+
+          .cta-text h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+          }
+
+          .cta-text span {
+            opacity: 0.8;
+            font-size: 0.9rem;
+          }
+
+          /* Responsive Design */
+          @media (max-width: 1024px) {
+            .hero-stats {
+              gap: 20px;
+            }
+
+            .expertise-container {
+              grid-template-columns: 1fr;
+              gap: 60px;
+            }
+
+            .cta-container {
+              grid-template-columns: 1fr;
+              gap: 40px;
+              text-align: center;
+            }
+          }
+
+          @media (max-width: 768px) {
+            .hero-stats {
+              flex-direction: column;
+              gap: 15px;
+            }
+
+            .hero-buttons {
+              flex-direction: column;
+              align-items: center;
+            }
+
+            .features-grid {
+              grid-template-columns: 1fr;
+              gap: 30px;
+            }
+
+            .services-grid {
+              grid-template-columns: 1fr;
+              gap: 20px;
+            }
+
+            .cta-features {
+              flex-direction: row;
+              gap: 20px;
+            }
+          }
+
+          @media (max-width: 480px) {
+            .hero-content {
+              padding: 0 15px;
+            }
+
+            .cta-features {
+              flex-direction: column;
+            }
+
+            .expertise-item {
+              flex-direction: column;
+              text-align: center;
+              gap: 15px;
+            }
+          }
+
+          /* Hide old about-hero class */
+          .about-hero {
+            display: none;
+          }
+
+          /* Animation classes for scroll triggers */
+          .animate {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+          }
+
+          /* Initial states for animations */
+          .feature-card,
+          .service-item,
+          .expertise-item {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+          }
+        </style>
+
+        <script>
+          function toggleMenu() {
+            const menu = document.getElementById("menu");
+            const navMenu = document.getElementById("navMenu");
+
+            if (menu) menu.classList.toggle("active");
+            if (navMenu) navMenu.classList.toggle("active");
+          }
+
+          function closeMenu() {
+            const menu = document.querySelector(".menu");
+            const navMenu = document.getElementById("navMenu");
+
+            if (navMenu && navMenu.classList.contains("active")) {
+              // Add closing animation
+              navMenu.classList.add("closing");
+
+              // Remove active class after animation delay
+              setTimeout(() => {
+                navMenu.classList.remove("active", "closing");
+              }, 400); // Match the slideOut animation duration
+            }
+
+            if (menu) {
+              menu.classList.remove("active");
+            }
+          }
+
+          // Setup mobile menu functionality
+          function setupMobileMenu() {
+            const navMenu = document.getElementById("navMenu");
+
+            if (navMenu) {
+              // Close menu when clicking on links
+              const navLinks = navMenu.querySelectorAll("a");
+              navLinks.forEach((link) => {
+                link.addEventListener("click", closeMenu);
+              });
+
+              // Close menu when clicking outside
+              document.addEventListener("click", function (e) {
                 const menu = document.getElementById("menu");
-                const navMenu = document.getElementById("navMenu");
-                
-                if (menu) menu.classList.toggle("active");
-                if (navMenu) navMenu.classList.toggle("active");
-            }
-            
-            function closeMenu() {
-                const menu = document.querySelector('.menu');
-                const navMenu = document.getElementById('navMenu');
-                
-                if (navMenu && navMenu.classList.contains('active')) {
-                    // Add closing animation
-                    navMenu.classList.add('closing');
-                    
-                    // Remove active class after animation delay
-                    setTimeout(() => {
-                        navMenu.classList.remove('active', 'closing');
-                    }, 400); // Match the slideOut animation duration
-                }
-                
-                if (menu) {
-                    menu.classList.remove('active');
-                }
-            }
-            
-            // Setup mobile menu functionality
-            function setupMobileMenu() {
-                const navMenu = document.getElementById('navMenu');
-                
-                if (navMenu) {
-                    // Close menu when clicking on links
-                    const navLinks = navMenu.querySelectorAll('a');
-                    navLinks.forEach(link => {
-                        link.addEventListener('click', closeMenu);
-                    });
-                    
-                    // Close menu when clicking outside
-                    document.addEventListener('click', function(e) {
-                        const menu = document.getElementById('menu');
-                        const isClickInsideMenu = menu && menu.contains(e.target);
-                        const isClickInsideNavMenu = navMenu.contains(e.target);
-                        
-                        if (!isClickInsideMenu && !isClickInsideNavMenu && navMenu.classList.contains('active')) {
-                            closeMenu();
-                        }
-                    });
-                    
-                    // Close menu on escape key
-                    document.addEventListener('keydown', function(e) {
-                        if (e.key === 'Escape' && navMenu.classList.contains('active')) {
-                            closeMenu();
-                        }
-                    });
-                }
-            }
-            
-            // Initialize mobile menu on page load
-            document.addEventListener('DOMContentLoaded', setupMobileMenu);
+                const isClickInsideMenu = menu && menu.contains(e.target);
+                const isClickInsideNavMenu = navMenu.contains(e.target);
 
-            // Wait for jQuery to load before using it
-            $(document).ready(function() {
-                // Smooth scrolling for anchor links
-                $("a[href*='#']").on('click', function(event) {
-                    // Make sure this.hash has a value before overriding default behavior
-                    if (this.hash !== "") {
-                        // Prevent default anchor click behavior
-                        event.preventDefault();
+                if (
+                  !isClickInsideMenu &&
+                  !isClickInsideNavMenu &&
+                  navMenu.classList.contains("active")
+                ) {
+                  closeMenu();
+                }
+              });
 
-                        // Store hash
-                        var hash = this.hash;
+              // Close menu on escape key
+              document.addEventListener("keydown", function (e) {
+                if (
+                  e.key === "Escape" &&
+                  navMenu.classList.contains("active")
+                ) {
+                  closeMenu();
+                }
+              });
+            }
+          }
 
-                        // Using jQuery's animate() method to add smooth page scroll
-                        $('html, body').animate({
-                            scrollTop: $(hash).offset().top
-                        }, 800, function(){
-                            // Add hash (#) to URL when done scrolling (default click behavior)
-                            window.location.hash = hash;
-                        });
-                    }
-                });
+          // Initialize mobile menu on page load
+          document.addEventListener("DOMContentLoaded", setupMobileMenu);
+
+          // Wait for jQuery to load before using it
+          $(document).ready(function () {
+            // Smooth scrolling for anchor links
+            $("a[href*='#']").on("click", function (event) {
+              // Make sure this.hash has a value before overriding default behavior
+              if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
+
+                // Store hash
+                var hash = this.hash;
+
+                // Using jQuery's animate() method to add smooth page scroll
+                $("html, body").animate(
+                  {
+                    scrollTop: $(hash).offset().top,
+                  },
+                  800,
+                  function () {
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                  }
+                );
+              }
+            });
+          });
+
+          // GSAP ScrollSmoother and animations
+          document.addEventListener("DOMContentLoaded", function () {
+            // Check if GSAP is loaded
+            if (
+              typeof gsap !== "undefined" &&
+              typeof ScrollTrigger !== "undefined" &&
+              typeof ScrollSmoother !== "undefined"
+            ) {
+              gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+              // Create the scrollSmoother
+              ScrollSmoother.create({
+                smooth: 2,
+                effects: true,
+                smoothTouch: 0.1,
+              });
+            }
+
+            // Enhanced scroll animations with Intersection Observer
+            const observerOptions = {
+              threshold: 0.1,
+              rootMargin: "0px 0px -50px 0px",
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("animate");
+                }
+              });
+            }, observerOptions);
+
+            // Observe elements for animation
+            const animatedElements = document.querySelectorAll(
+              ".feature-card, .service-item, .expertise-item"
+            );
+            animatedElements.forEach((el) => observer.observe(el));
+
+            // Stagger animations
+            const featureCards = document.querySelectorAll(".feature-card");
+            featureCards.forEach((card, index) => {
+              card.style.transitionDelay = `${index * 0.2}s`;
             });
 
-            // GSAP ScrollSmoother and animations
-            document.addEventListener('DOMContentLoaded', function() {
-                // Check if GSAP is loaded
-                if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined' && typeof ScrollSmoother !== 'undefined') {
-                    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-                    
-                    // Create the scrollSmoother
-                    ScrollSmoother.create({
-                        smooth: 2,
-                        effects: true,
-                        smoothTouch: 0.1,
-                    });
-                }
-
-                // Enhanced scroll animations with Intersection Observer
-                const observerOptions = {
-                    threshold: 0.1,
-                    rootMargin: '0px 0px -50px 0px'
-                };
-
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('animate');
-                        }
-                    });
-                }, observerOptions);
-
-                // Observe elements for animation
-                const animatedElements = document.querySelectorAll('.feature-card, .service-item, .expertise-item');
-                animatedElements.forEach(el => observer.observe(el));
-
-                // Stagger animations
-                const featureCards = document.querySelectorAll('.feature-card');
-                featureCards.forEach((card, index) => {
-                    card.style.transitionDelay = `${index * 0.2}s`;
-                });
-
-                const serviceItems = document.querySelectorAll('.service-item');
-                serviceItems.forEach((item, index) => {
-                    item.style.transitionDelay = `${index * 0.15}s`;
-                });
-
-                // Smooth scroll for hero scroll indicator
-                const scrollArrow = document.querySelector('.scroll-arrow');
-                if (scrollArrow) {
-                    scrollArrow.addEventListener('click', function() {
-                        const featuresSection = document.querySelector('.marble-features');
-                        if (featuresSection) {
-                            featuresSection.scrollIntoView({ behavior: 'smooth' });
-                        }
-                    });
-                }
-
-                // Additional scroll animations
-                function checkScroll() {
-                    const triggerBottom = window.innerHeight * 0.9;
-                    const container = document.querySelector('.services-grid');
-                    if (container) {
-                        const containerTop = container.getBoundingClientRect().top;
-
-                        if (containerTop < triggerBottom) {
-                            const boxes = document.querySelectorAll('.service-item');
-                            boxes.forEach(box => box.classList.add('animate'));
-                        }
-                    }
-                }
-
-                function handleScrollAnimation() {
-                    const section = document.querySelector('.expertise-section');
-                    const left = document.getElementById('expertise-left');
-                    const right = document.getElementById('expertise-right');
-
-                    if (section && left && right) {
-                        const sectionTop = section.getBoundingClientRect().top;
-                        const triggerPoint = window.innerHeight * 0.85;
-
-                        if (sectionTop < triggerPoint) {
-                            left.classList.add('animate');
-                            right.classList.add('animate');
-                        }
-                    }
-                }
-
-                window.addEventListener('scroll', checkScroll);
-                window.addEventListener('scroll', handleScrollAnimation);
-                window.addEventListener('load', handleScrollAnimation);
+            const serviceItems = document.querySelectorAll(".service-item");
+            serviceItems.forEach((item, index) => {
+              item.style.transitionDelay = `${index * 0.15}s`;
             });
+
+            // Smooth scroll for hero scroll indicator
+            const scrollArrow = document.querySelector(".scroll-arrow");
+            if (scrollArrow) {
+              scrollArrow.addEventListener("click", function () {
+                const featuresSection =
+                  document.querySelector(".marble-features");
+                if (featuresSection) {
+                  featuresSection.scrollIntoView({ behavior: "smooth" });
+                }
+              });
+            }
+
+            // Additional scroll animations
+            function checkScroll() {
+              const triggerBottom = window.innerHeight * 0.9;
+              const container = document.querySelector(".services-grid");
+              if (container) {
+                const containerTop = container.getBoundingClientRect().top;
+
+                if (containerTop < triggerBottom) {
+                  const boxes = document.querySelectorAll(".service-item");
+                  boxes.forEach((box) => box.classList.add("animate"));
+                }
+              }
+            }
+
+            function handleScrollAnimation() {
+              const section = document.querySelector(".expertise-section");
+              const left = document.getElementById("expertise-left");
+              const right = document.getElementById("expertise-right");
+
+              if (section && left && right) {
+                const sectionTop = section.getBoundingClientRect().top;
+                const triggerPoint = window.innerHeight * 0.85;
+
+                if (sectionTop < triggerPoint) {
+                  left.classList.add("animate");
+                  right.classList.add("animate");
+                }
+              }
+            }
+
+            window.addEventListener("scroll", checkScroll);
+            window.addEventListener("scroll", handleScrollAnimation);
+            window.addEventListener("load", handleScrollAnimation);
+          });
         </script>
-    
-   
+      </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>

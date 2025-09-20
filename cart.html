@@ -1,421 +1,460 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="ka">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ქუთაისის ქვის ქარხანა - კალათა</title>
-    <script src="https://kit.fontawesome.com/7706f5712b.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="media.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/7706f5712b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
-    <script src="https://kit.fontawesome.com/00871c31a5.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/00871c31a5.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-</head>
-<body>
-  <div id="smooth-wrapper">
-    <div id="smooth-content">
-       <header>
-        <div class="container">
-            <i class="fa-solid fa-mountain-sun fa-2xl" id="mta"></i>            
-            <h2><a href="index.html" class="linki">ქუთაისის ქვის ქარხანა</a></h2>
-                <ul>
-                    <li><a class="nav" id="nav" href="index.html">მთავარი</a></li>
-                    <li><a class="nav" id="nav" href="aboutus.html">ჩვენსშესახებ</a></li>
-                    <li><a href="products.html" id="nav" class="nav">პროდუქტები</a></li>
-                    <li><a class="nav" id="nav" href="contact.html">კონტაქტი</a></li>
-                    <li>
-                      <a href="cart.html" class="nav cart-link" style="display: inline-flex; align-items: center; gap: 6px;">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span>კალათა</span>
-                      </a>
-                    </li>
-                    
-                    <li><div class="menu" id="menu" onclick="toggleMenu()">
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                    </div>
-                    <div class="nav-menu" id="navMenu">
-                      <a href="index.html">მთავარი</a>
-                        <a href="aboutus.html">ჩვენს შესახებ</a>
-                        <a href="products.html">პროდუქტები</a>
-                        <a href="contact.html">კონტაქტი</a>
-                        <a href="cart.html">კალათა</a>
-                    </div></li>   
-                </ul>
-        </div>
-    </header>
-    <!-- Cart Content -->
-    <section class="cart-section">
-      <div class="cart-container">
-        <div class="cart-content">
-          <div class="cart-items" id="cartItems">
-            <!-- Cart items will be populated by JavaScript -->
+  </head>
+  <body>
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <header>
+          <div class="container">
+            <i class="fa-solid fa-mountain-sun fa-2xl" id="mta"></i>
+            <h2>
+              <a href="index.html" class="linki">ქუთაისის ქვის ქარხანა</a>
+            </h2>
+            <ul>
+              <li><a class="nav" id="nav" href="index.html">მთავარი</a></li>
+              <li>
+                <a class="nav" id="nav" href="aboutus.html">ჩვენსშესახებ</a>
+              </li>
+              <li>
+                <a href="products.html" id="nav" class="nav">პროდუქტები</a>
+              </li>
+              <li><a class="nav" id="nav" href="contact.html">კონტაქტი</a></li>
+              <li>
+                <a
+                  href="cart.html"
+                  class="nav cart-link"
+                  style="display: inline-flex; align-items: center; gap: 6px"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>კალათა</span>
+                </a>
+              </li>
+
+              <li>
+                <div class="menu" id="menu" onclick="toggleMenu()">
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                </div>
+                <div class="nav-menu" id="navMenu">
+                  <a href="index.html">მთავარი</a>
+                  <a href="aboutus.html">ჩვენს შესახებ</a>
+                  <a href="products.html">პროდუქტები</a>
+                  <a href="contact.html">კონტაქტი</a>
+                  <a href="cart.html">კალათა</a>
+                </div>
+              </li>
+            </ul>
           </div>
-          
-          <div class="cart-summary">
-            <div class="summary-card">
-              <h3>შეკვეთის შეჯამება</h3>
-              <div class="summary-row">
-                <span>ნივთები:</span>
-                <span id="itemCount">0</span>
+        </header>
+        <!-- Cart Content -->
+        <section class="cart-section">
+          <div class="cart-container">
+            <div class="cart-content">
+              <div class="cart-items" id="cartItems">
+                <!-- Cart items will be populated by JavaScript -->
               </div>
-              <div class="summary-row">
-                <span>ჯამი:</span>
-                <span id="cartTotal">0.00 ₾</span>
-              </div>
-              <div class="summary-actions">
-                <button class="btn-secondary" onclick="clearCart()">კალათის გასუფთავება</button>
-                <button class="btn-primary" onclick="proceedToCheckout()">შეკვეთის გაფორმება</button>
+
+              <div class="cart-summary">
+                <div class="summary-card">
+                  <h3>შეკვეთის შეჯამება</h3>
+                  <div class="summary-row">
+                    <span>ნივთები:</span>
+                    <span id="itemCount">0</span>
+                  </div>
+                  <div class="summary-row">
+                    <span>ჯამი:</span>
+                    <span id="cartTotal">0.00 ₾</span>
+                  </div>
+                  <div class="summary-actions">
+                    <button class="btn-secondary" onclick="clearCart()">
+                      კალათის გასუფთავება
+                    </button>
+                    <button class="btn-primary" onclick="proceedToCheckout()">
+                      გაფორმება
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
+
+        <footer>
+          <h3 class="stone">Stone</h3>
+          <h3>Factory</h3>
+          <div class="icons">
+            <a href="#"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+            <a
+              href="https://www.facebook.com/profile.php?id=100088853137969"
+              target="_blank"
+              ><i class="fa-brands fa-facebook fa-2xl"></i
+            ></a>
+            <a href="#"><i class="fa-brands fa-x-twitter fa-2xl"></i></a>
+          </div>
+          <div class="foot-nav">
+            <a href="index.html">მთავარი</a>
+            <a href="aboutus.html">ჩვენს შესახებ</a>
+            <a href="products.html">პროდუქტები</a>
+            <a href="contact.html">კონტაქტი</a>
+          </div>
+        </footer>
       </div>
-    </section>
-
-     <footer>
-        <h3 class="stone">Stone</h3>
-        <h3>Factory</h3>
-        <div class="icons">
-        <a href="#"><i class="fa-brands fa-instagram fa-2xl"></i></a>
-        <a href="https://www.facebook.com/profile.php?id=100088853137969" target="_blank"><i class="fa-brands fa-facebook fa-2xl"></i></a>
-        <a href="#"><i class="fa-brands fa-x-twitter fa-2xl"></i></a>
-        </div>
-        <div class="foot-nav">
-            <a href="index.html">main</a>
-            <a href="aboutus.html">about us</a>
-            <a href="products.html">Products</a>
-            <a href="contact.html">contact</a>
-        </div>
-    </footer>
     </div>
-  </div>
 
-  <style>
-    .cart-link {
-      position: relative;
-    }
+    <style>
+      .cart-link {
+        position: relative;
+      }
 
-    .cart-badge {
-      position: absolute;
-      top: -8px;
-      right: -8px;
-      background: #e74c3c;
-      color: white;
-      border-radius: 50%;
-      width: 20px;
-      height: 20px;
-      font-size: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-    }
+      .cart-badge {
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        background: #e74c3c;
+        color: white;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+      }
 
-    .cart-section {
-      padding: 80px 20px;
-      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-      min-height: 70vh;
-    }
+      .cart-section {
+        padding: 80px 20px;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        min-height: 70vh;
+      }
 
-    .cart-container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+      .cart-container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
 
-    .cart-content {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 40px;
-      align-items: start;
-    }
-
-    .cart-items {
-      background: white;
-      border-radius: 15px;
-      padding: 30px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    }
-
-    .cart-item {
-      display: grid;
-      grid-template-columns: 100px 1fr auto auto auto;
-      gap: 20px;
-      align-items: center;
-      padding: 20px 0;
-      border-bottom: 1px solid #eee;
-    }
-
-    .cart-item:last-child {
-      border-bottom: none;
-    }
-
-    .cart-item-image img {
-      width: 100px;
-      height: 80px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-
-    .cart-item-info h4 {
-      margin: 0 0 5px 0;
-      color: #333;
-      font-size: 1.1rem;
-    }
-
-    .cart-item-info p {
-      margin: 0;
-      color: #666;
-      font-size: 0.9rem;
-    }
-
-    .cart-item-price {
-      font-weight: bold;
-      color: #ffd700;
-      font-size: 1.1rem;
-    }
-
-    .quantity-controls {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .quantity-btn {
-      background: var(--primary);
-      color: white;
-      border: none;
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.3s ease;
-    }
-
-    .quantity-btn:hover {
-      transform: scale(1.1);
-    }
-
-    .quantity-input {
-      width: 50px;
-      text-align: center;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      padding: 5px;
-    }
-
-    .remove-btn {
-      background: #e74c3c;
-      color: white;
-      border: none;
-      padding: 8px 12px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .remove-btn:hover {
-      background: #c0392b;
-      transform: translateY(-2px);
-    }
-
-    .cart-summary {
-      position: sticky;
-      top: 120px;
-    }
-
-    .summary-card {
-      background: white;
-      border-radius: 15px;
-      padding: 30px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    }
-
-    .summary-card h3 {
-      margin: 0 0 20px 0;
-      color: #333;
-      font-size: 1.3rem;
-    }
-
-    .summary-row {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 15px;
-      padding-bottom: 15px;
-      border-bottom: 1px solid #eee;
-    }
-
-    .summary-row:last-of-type {
-      border-bottom: 2px solid #333;
-      font-weight: bold;
-      font-size: 1.2rem;
-      color: #ffd700;
-    }
-
-    .summary-actions {
-      margin-top: 25px;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    .btn-primary, .btn-secondary {
-      padding: 15px 25px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: 600;
-      font-size: 1rem;
-      transition: all 0.3s ease;
-    }
-
-    .btn-primary {
-      background: var(--primary);
-      color: white;
-    }
-
-    .btn-primary:hover {
-      background: var(--gold);
-      transform: translateY(-2px);
-    }
-
-    .btn-secondary {
-      background: #e74c3c;
-      color: white;
-    }
-
-    .btn-secondary:hover {
-      background: #c0392b;
-      transform: translateY(-2px);
-    }
-
-    .empty-cart {
-      text-align: center;
-      padding: 60px 20px;
-      color: #666;
-    }
-
-    .empty-cart i {
-      font-size: 4rem;
-      color: #ddd;
-      margin-bottom: 20px;
-    }
-
-    .empty-cart h3 {
-      margin-bottom: 15px;
-      color: #333;
-    }
-
-    .empty-cart a {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 25px;
-      background: var(--primary);
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: all 0.3s ease;
-    }
-
-    .empty-cart a:hover {
-      background: var(--gold);
-      transform: translateY(-2px);
-    }
-
-    @media (max-width: 768px) {
       .cart-content {
-        grid-template-columns: 1fr;
-        gap: 20px;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 40px;
+        align-items: start;
+      }
+
+      .cart-items {
+        background: white;
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
       }
 
       .cart-item {
-        grid-template-columns: 80px 1fr;
-        gap: 15px;
+        display: grid;
+        grid-template-columns: 100px 1fr auto auto auto;
+        gap: 20px;
+        align-items: center;
+        padding: 20px 0;
+        border-bottom: 1px solid #eee;
       }
 
-      .cart-item-price,
-      .quantity-controls,
-      .remove-btn {
-        grid-column: 1 / -1;
-        justify-self: start;
-        margin-top: 10px;
+      .cart-item:last-child {
+        border-bottom: none;
+      }
+
+      .cart-item-image img {
+        width: 100px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+
+      .cart-item-info h4 {
+        margin: 0 0 5px 0;
+        color: #333;
+        font-size: 1.1rem;
+      }
+
+      .cart-item-info p {
+        margin: 0;
+        color: #666;
+        font-size: 0.9rem;
+      }
+
+      .cart-item-price {
+        font-weight: bold;
+        color: #ffd700;
+        font-size: 1.1rem;
       }
 
       .quantity-controls {
-        justify-self: center;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .quantity-btn {
+        background: var(--primary);
+        color: white;
+        border: none;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+      }
+
+      .quantity-btn:hover {
+        transform: scale(1.1);
+      }
+
+      .quantity-input {
+        width: 50px;
+        text-align: center;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 5px;
       }
 
       .remove-btn {
-        justify-self: end;
+        background: #e74c3c;
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
       }
-    }
-  </style>
 
-  <script src="cart.js"></script>
-  <script>
-    function toggleMenu() {
+      .remove-btn:hover {
+        background: #c0392b;
+        transform: translateY(-2px);
+      }
+
+      .cart-summary {
+        position: sticky;
+        top: 120px;
+      }
+
+      .summary-card {
+        background: white;
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .summary-card h3 {
+        margin: 0 0 20px 0;
+        color: #333;
+        font-size: 1.3rem;
+      }
+
+      .summary-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #eee;
+      }
+
+      .summary-row:last-of-type {
+        border-bottom: 2px solid #333;
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: #ffd700;
+      }
+
+      .summary-actions {
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        padding: 15px 25px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary {
+        background: var(--primary);
+        color: white;
+      }
+
+      .btn-primary:hover {
+        background: var(--gold);
+        transform: translateY(-2px);
+      }
+
+      .btn-secondary {
+        background: #e74c3c;
+        color: white;
+      }
+
+      .btn-secondary:hover {
+        background: #c0392b;
+        transform: translateY(-2px);
+      }
+
+      .empty-cart {
+        text-align: center;
+        padding: 60px 20px;
+        color: #666;
+      }
+
+      .empty-cart i {
+        font-size: 4rem;
+        color: #ddd;
+        margin-bottom: 20px;
+      }
+
+      .empty-cart h3 {
+        margin-bottom: 15px;
+        color: #333;
+      }
+
+      .empty-cart a {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 12px 25px;
+        background: var(--primary);
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+      }
+
+      .empty-cart a:hover {
+        background: var(--gold);
+        transform: translateY(-2px);
+      }
+
+      @media (max-width: 768px) {
+        .cart-content {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+
+        .cart-item {
+          grid-template-columns: 80px 1fr;
+          gap: 15px;
+        }
+
+        .cart-item-price,
+        .quantity-controls,
+        .remove-btn {
+          grid-column: 1 / -1;
+          justify-self: start;
+          margin-top: 10px;
+        }
+
+        .quantity-controls {
+          justify-self: center;
+        }
+
+        .remove-btn {
+          justify-self: end;
+        }
+      }
+    </style>
+
+    <script src="cart.js"></script>
+    <script>
+      function toggleMenu() {
         const menu = document.getElementById("menu");
         const navMenu = document.getElementById("navMenu");
-        
+
         if (menu) menu.classList.toggle("active");
         if (navMenu) navMenu.classList.toggle("active");
-    }
-    
-    function closeMenu() {
-        const menu = document.querySelector('.menu');
-        const navMenu = document.getElementById('navMenu');
-        
-        if (menu) menu.classList.remove('active');
-        if (navMenu) navMenu.classList.remove('active');
-    }
-    
-    // Setup mobile menu functionality
-    function setupMobileMenu() {
-        const navMenu = document.getElementById('navMenu');
-        
-        if (navMenu) {
-            // Close menu when clicking on links
-            const navLinks = navMenu.querySelectorAll('a');
-            navLinks.forEach(link => {
-                link.addEventListener('click', closeMenu);
-            });
-            
-            // Close menu when clicking outside
-            document.addEventListener('click', function(e) {
-                const menu = document.getElementById('menu');
-                const isClickInsideMenu = menu && menu.contains(e.target);
-                const isClickInsideNavMenu = navMenu.contains(e.target);
-                
-                if (!isClickInsideMenu && !isClickInsideNavMenu && navMenu.classList.contains('active')) {
-                    closeMenu();
-                }
-            });
-            
-            // Close menu on escape key
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape' && navMenu.classList.contains('active')) {
-                    closeMenu();
-                }
-            });
-        }
-    }
+      }
 
-    function renderCartItems() {
-      const cartItemsContainer = document.getElementById('cartItems');
-      const itemCountElement = document.getElementById('itemCount');
-      const cartTotalElement = document.getElementById('cartTotal');
-      
-      if (cartManager.cart.length === 0) {
-        cartItemsContainer.innerHTML = `
+      function closeMenu() {
+        const menu = document.querySelector(".menu");
+        const navMenu = document.getElementById("navMenu");
+
+        if (menu) menu.classList.remove("active");
+        if (navMenu) navMenu.classList.remove("active");
+      }
+
+      // Setup mobile menu functionality
+      function setupMobileMenu() {
+        const navMenu = document.getElementById("navMenu");
+
+        if (navMenu) {
+          // Close menu when clicking on links
+          const navLinks = navMenu.querySelectorAll("a");
+          navLinks.forEach((link) => {
+            link.addEventListener("click", closeMenu);
+          });
+
+          // Close menu when clicking outside
+          document.addEventListener("click", function (e) {
+            const menu = document.getElementById("menu");
+            const isClickInsideMenu = menu && menu.contains(e.target);
+            const isClickInsideNavMenu = navMenu.contains(e.target);
+
+            if (
+              !isClickInsideMenu &&
+              !isClickInsideNavMenu &&
+              navMenu.classList.contains("active")
+            ) {
+              closeMenu();
+            }
+          });
+
+          // Close menu on escape key
+          document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape" && navMenu.classList.contains("active")) {
+              closeMenu();
+            }
+          });
+        }
+      }
+
+      function renderCartItems() {
+        const cartItemsContainer = document.getElementById("cartItems");
+        const itemCountElement = document.getElementById("itemCount");
+        const cartTotalElement = document.getElementById("cartTotal");
+
+        if (cartManager.cart.length === 0) {
+          cartItemsContainer.innerHTML = `
           <div class="empty-cart">
             <i class="fas fa-shopping-cart"></i>
             <h3>თქვენი კალათა ცარიელია</h3>
@@ -423,8 +462,10 @@
             <a href="products.html">პროდუქტების ნახვა</a>
           </div>
         `;
-      } else {
-        cartItemsContainer.innerHTML = cartManager.cart.map(item => `
+        } else {
+          cartItemsContainer.innerHTML = cartManager.cart
+            .map(
+              (item) => `
           <div class="cart-item">
             <div class="cart-item-image">
               <img src="${item.image}" alt="${item.name}">
@@ -435,63 +476,74 @@
             </div>
             <div class="cart-item-price">${item.price.toFixed(2)} ₾</div>
             <div class="quantity-controls">
-              <button class="quantity-btn" onclick="updateQuantity('${item.id}', ${item.quantity - 1})">-</button>
-              <input type="number" class="quantity-input" value="${item.quantity}" 
-                     onchange="updateQuantity('${item.id}', parseInt(this.value))" min="1">
-              <button class="quantity-btn" onclick="updateQuantity('${item.id}', ${item.quantity + 1})">+</button>
+              <button class="quantity-btn" onclick="updateQuantity('${
+                item.id
+              }', ${item.quantity - 1})">-</button>
+              <input type="number" class="quantity-input" value="${
+                item.quantity
+              }" 
+                     onchange="updateQuantity('${
+                       item.id
+                     }', parseInt(this.value))" min="1">
+              <button class="quantity-btn" onclick="updateQuantity('${
+                item.id
+              }', ${item.quantity + 1})">+</button>
             </div>
             <button class="remove-btn" onclick="removeItem('${item.id}')">
               <i class="fas fa-trash"></i>
             </button>
           </div>
-        `).join('');
+        `
+            )
+            .join("");
+        }
+
+        // Update summary
+        itemCountElement.textContent = cartManager.getCartItemCount();
+        cartTotalElement.textContent =
+          cartManager.getCartTotal().toFixed(2) + " ₾";
       }
-      
-      // Update summary
-      itemCountElement.textContent = cartManager.getCartItemCount();
-      cartTotalElement.textContent = cartManager.getCartTotal().toFixed(2) + ' ₾';
-    }
 
-    function updateQuantity(productId, quantity) {
-      cartManager.updateQuantity(productId, quantity);
-      renderCartItems();
-    }
-
-    function removeItem(productId) {
-      cartManager.removeFromCart(productId);
-      renderCartItems();
-    }
-
-    function clearCart() {
-      if (confirm('ნამდვილად გსურთ კალათის გასუფთავება?')) {
-        cartManager.clearCart();
+      function updateQuantity(productId, quantity) {
+        cartManager.updateQuantity(productId, quantity);
         renderCartItems();
       }
-    }
 
-    function proceedToCheckout() {
-      if (cartManager.cart.length === 0) {
-        alert('კალათა ცარიელია!');
-        return;
+      function removeItem(productId) {
+        cartManager.removeFromCart(productId);
+        renderCartItems();
       }
-      window.location.href = 'checkout.html';
-    }
 
-    // Initialize cart display and mobile menu
-    document.addEventListener('DOMContentLoaded', function() {
-      renderCartItems();
-      setupMobileMenu();
-    });
+      function clearCart() {
+        if (confirm("ნამდვილად გსურთ კალათის გასუფთავება?")) {
+          cartManager.clearCart();
+          renderCartItems();
+        }
+      }
 
-    // GSAP ScrollSmoother
-    if (typeof gsap !== 'undefined') {
-      gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-      ScrollSmoother.create({
-        smooth: 2,
-        effects: true,
-        smoothTouch: 0.1,
+      function proceedToCheckout() {
+        if (cartManager.cart.length === 0) {
+          alert("კალათა ცარიელია!");
+          return;
+        }
+        window.location.href = "checkout.html";
+      }
+
+      // Initialize cart display and mobile menu
+      document.addEventListener("DOMContentLoaded", function () {
+        renderCartItems();
+        setupMobileMenu();
       });
-    }
-  </script>
-</body>
+
+      // GSAP ScrollSmoother
+      if (typeof gsap !== "undefined") {
+        gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+        ScrollSmoother.create({
+          smooth: 2,
+          effects: true,
+          smoothTouch: 0.1,
+        });
+      }
+    </script>
+  </body>
 </html>

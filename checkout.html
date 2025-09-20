@@ -1,705 +1,798 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="ka">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ქუთაისის ქვის ქარხანა - შეკვეთის გაფორმება</title>
-    <script src="https://kit.fontawesome.com/7706f5712b.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="media.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/7706f5712b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
-    <script src="https://kit.fontawesome.com/00871c31a5.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/00871c31a5.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-</head>
-<body>
-  <div id="smooth-wrapper">
-    <div id="smooth-content">
-      <header>
-        <div class="container">
-            <i class="fa-solid fa-mountain-sun fa-2xl" id="mta"></i>            
-            <h2><a href="index.html" class="linki">ქუთაისის ქვის ქარხანა</a></h2>
-                <ul>
-                    <li><a class="nav" id="nav" href="index.html">მთავარი</a></li>
-                    <li><a class="nav" id="nav" href="aboutus.html">ჩვენსშესახებ</a></li>
-                    <li><a href="products.html" id="nav" class="nav">პროდუქტები</a></li>
-                    <li><a class="nav" id="nav" href="contact.html">კონტაქტი</a></li>
-                    <li>
-                      <a href="cart.html" class="nav cart-link" style="display: inline-flex; align-items: center; gap: 6px;">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span>კალათა</span>
-                      </a>
-                    </li>
-                    
-                    <li><div class="menu" id="menu" onclick="toggleMenu()">
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                    </div>
-                    <div class="nav-menu" id="navMenu">
-                      <a href="index.html">მთავარი</a>
-                        <a href="aboutus.html">ჩვენს შესახებ</a>
-                        <a href="products.html">პროდუქტები</a>
-                        <a href="contact.html">კონტაქტი</a>
-                        <a href="cart.html">კალათა</a>
-                    </div></li>   
-                </ul>
-        </div>
-    </header>
+  </head>
+  <body>
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <header>
+          <div class="container">
+            <i class="fa-solid fa-mountain-sun fa-2xl" id="mta"></i>
+            <h2>
+              <a href="index.html" class="linki">ქუთაისის ქვის ქარხანა</a>
+            </h2>
+            <ul>
+              <li><a class="nav" id="nav" href="index.html">მთავარი</a></li>
+              <li>
+                <a class="nav" id="nav" href="aboutus.html">ჩვენსშესახებ</a>
+              </li>
+              <li>
+                <a href="products.html" id="nav" class="nav">პროდუქტები</a>
+              </li>
+              <li><a class="nav" id="nav" href="contact.html">კონტაქტი</a></li>
+              <li>
+                <a
+                  href="cart.html"
+                  class="nav cart-link"
+                  style="display: inline-flex; align-items: center; gap: 6px"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>კალათა</span>
+                </a>
+              </li>
 
-    <!-- Checkout Content -->
-    <section class="checkout-section">
-        <div class="checkout-container">
+              <li>
+                <div class="menu" id="menu" onclick="toggleMenu()">
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                </div>
+                <div class="nav-menu" id="navMenu">
+                  <a href="index.html">მთავარი</a>
+                  <a href="aboutus.html">ჩვენს შესახებ</a>
+                  <a href="products.html">პროდუქტები</a>
+                  <a href="contact.html">კონტაქტი</a>
+                  <a href="cart.html">კალათა</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </header>
+
+        <!-- Checkout Content -->
+        <section class="checkout-section">
+          <div class="checkout-container">
             <div class="checkout-content">
-                <!-- Billing Form -->
-                <div class="checkout-form">
-                    <div class="form-card">
-                        <h2><i class="fas fa-user"></i> მიწოდების ინფორმაცია</h2>
-                        <form id="checkoutForm">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="firstName">სახელი *</label>
-                                    <input type="text" id="firstName" name="firstName" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="lastName">გვარი *</label>
-                                    <input type="text" id="lastName" name="lastName" required>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="email">ელ. ფოსტა *</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="phone">ტელეფონის ნომერი *</label>
-                                <input type="tel" id="phone" name="phone" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="address">მისამართი *</label>
-                                <input type="text" id="address" name="address" required>
-                            </div>
-
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="city">ქალაქი *</label>
-                                    <input type="text" id="city" name="city" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="postalCode">საფოსტო კოდი</label>
-                                    <input type="text" id="postalCode" name="postalCode">
-                                </div>
-                            </div>
-
-                            <h3><i class="fas fa-credit-card"></i> გადახდის ინფორმაცია</h3>
-                            
-                            <div class="payment-methods">
-                                <div class="payment-method">
-                                    <input type="radio" id="creditCard" name="paymentMethod" value="creditCard" checked>
-                                    <label for="creditCard">
-                                        <i class="fas fa-credit-card"></i>
-                                        საკრედიტო ბარათი
-                                    </label>
-                                </div>
-                                <div class="payment-method">
-                                    <input type="radio" id="cashOnDelivery" name="paymentMethod" value="cashOnDelivery">
-                                    <label for="cashOnDelivery">
-                                        <i class="fas fa-money-bill-wave"></i>
-                                        ნაღდი ანგარიშსწორება
-                                    </label>
-                                </div>
-                            </div>
-
-                            <div id="cardDetails" class="card-details">
-                                <div class="form-group">
-                                    <label for="cardNumber">ბარათის ნომერი *</label>
-                                    <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
-                                </div>
-
-                                <div class="form-row">
-                                    <div class="form-group">
-                                        <label for="expiryDate">ვადის გასვლა *</label>
-                                        <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" maxlength="5">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="cvv">CVV *</label>
-                                        <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="4">
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="cardName">ბარათზე მითითებული სახელი *</label>
-                                    <input type="text" id="cardName" name="cardName">
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="notes">დამატებითი შენიშვნები</label>
-                                <textarea id="notes" name="notes" rows="3" placeholder="თქვენი შენიშვნები..."></textarea>
-                            </div>
-                        </form>
+              <!-- Billing Form -->
+              <div class="checkout-form">
+                <div class="form-card">
+                  <h2><i class="fas fa-user"></i> მიწოდების ინფორმაცია</h2>
+                  <form id="checkoutForm">
+                    <div class="form-row">
+                      <div class="form-group">
+                        <label for="firstName">სახელი *</label>
+                        <input
+                          type="text"
+                          id="firstName"
+                          name="firstName"
+                          required
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label for="lastName">გვარი *</label>
+                        <input
+                          type="text"
+                          id="lastName"
+                          name="lastName"
+                          required
+                        />
+                      </div>
                     </div>
-                </div>
 
-                <!-- Order Summary -->
-                <div class="order-summary">
-                    <div class="summary-card">
-                        <h2><i class="fas fa-receipt"></i> შეკვეთის შეჯამება</h2>
-                        
-                        <div class="order-items" id="orderItems">
-                            <!-- Order items will be populated by JavaScript -->
-                        </div>
-
-                        <div class="order-totals">
-                            <div class="total-row">
-                                <span>ნივთები:</span>
-                                <span id="itemsSubtotal">0.00 ₾</span>
-                            </div>
-                            <div class="total-row">
-                                <span>მიწოდება:</span>
-                                <span id="shippingCost">უფასო</span>
-                            </div>
-                            <div class="total-row total-final">
-                                <span>სულ გადასახდელი:</span>
-                                <span id="finalTotal">0.00 ₾</span>
-                            </div>
-                        </div>
-
-                        <button type="submit" form="checkoutForm" class="place-order-btn">
-                            <i class="fas fa-check"></i>
-                            შეკვეთის დადასტურება
-                        </button>
-
-                        <div class="security-info">
-                            <i class="fas fa-shield-alt"></i>
-                            <span>თქვენი ინფორმაცია დაცულია SSL შიფრაციით</span>
-                        </div>
+                    <div class="form-group">
+                      <label for="email">ელ. ფოსტა *</label>
+                      <input type="email" id="email" name="email" required />
                     </div>
+
+                    <div class="form-group">
+                      <label for="phone">ტელეფონის ნომერი *</label>
+                      <input type="tel" id="phone" name="phone" required />
+                    </div>
+
+                    <div class="form-group">
+                      <label for="address">მისამართი *</label>
+                      <input type="text" id="address" name="address" required />
+                    </div>
+
+                    <div class="form-row">
+                      <div class="form-group">
+                        <label for="city">ქალაქი *</label>
+                        <input type="text" id="city" name="city" required />
+                      </div>
+                      <div class="form-group">
+                        <label for="postalCode">საფოსტო კოდი</label>
+                        <input type="text" id="postalCode" name="postalCode" />
+                      </div>
+                    </div>
+
+                    <h3>
+                      <i class="fas fa-credit-card"></i> გადახდის ინფორმაცია
+                    </h3>
+
+                    <div class="payment-methods">
+                      <div class="payment-method">
+                        <input
+                          type="radio"
+                          id="creditCard"
+                          name="paymentMethod"
+                          value="creditCard"
+                          checked
+                        />
+                        <label for="creditCard">
+                          <i class="fas fa-credit-card"></i>
+                          საკრედიტო ბარათი
+                        </label>
+                      </div>
+                      <div class="payment-method">
+                        <input
+                          type="radio"
+                          id="cashOnDelivery"
+                          name="paymentMethod"
+                          value="cashOnDelivery"
+                        />
+                        <label for="cashOnDelivery">
+                          <i class="fas fa-money-bill-wave"></i>
+                          ნაღდი ანგარიშსწორება
+                        </label>
+                      </div>
+                    </div>
+
+                    <div id="cardDetails" class="card-details">
+                      <div class="form-group">
+                        <label for="cardNumber">ბარათის ნომერი *</label>
+                        <input
+                          type="text"
+                          id="cardNumber"
+                          name="cardNumber"
+                          placeholder="1234 5678 9012 3456"
+                          maxlength="19"
+                        />
+                      </div>
+
+                      <div class="form-row">
+                        <div class="form-group">
+                          <label for="expiryDate">ვადის გასვლა *</label>
+                          <input
+                            type="text"
+                            id="expiryDate"
+                            name="expiryDate"
+                            placeholder="MM/YY"
+                            maxlength="5"
+                          />
+                        </div>
+                        <div class="form-group">
+                          <label for="cvv">CVV *</label>
+                          <input
+                            type="text"
+                            id="cvv"
+                            name="cvv"
+                            placeholder="123"
+                            maxlength="4"
+                          />
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="cardName"
+                          >ბარათზე მითითებული სახელი *</label
+                        >
+                        <input type="text" id="cardName" name="cardName" />
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="notes">დამატებითი შენიშვნები</label>
+                      <textarea
+                        id="notes"
+                        name="notes"
+                        rows="3"
+                        placeholder="თქვენი შენიშვნები..."
+                      ></textarea>
+                    </div>
+                  </form>
                 </div>
+              </div>
+
+              <!-- Order Summary -->
+              <div class="order-summary">
+                <div class="summary-card">
+                  <h2><i class="fas fa-receipt"></i> შეკვეთის შეჯამება</h2>
+
+                  <div class="order-items" id="orderItems">
+                    <!-- Order items will be populated by JavaScript -->
+                  </div>
+
+                  <div class="order-totals">
+                    <div class="total-row">
+                      <span>ნივთები:</span>
+                      <span id="itemsSubtotal">0.00 ₾</span>
+                    </div>
+                    <div class="total-row">
+                      <span>მიწოდება:</span>
+                      <span id="shippingCost">უფასო</span>
+                    </div>
+                    <div class="total-row total-final">
+                      <span>სულ გადასახდელი:</span>
+                      <span id="finalTotal">0.00 ₾</span>
+                    </div>
+                  </div>
+
+                  <button
+                    type="submit"
+                    form="checkoutForm"
+                    class="place-order-btn"
+                  >
+                    <i class="fas fa-check"></i>
+                    შეკვეთის დადასტურება
+                  </button>
+
+                  <div class="security-info">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>თქვენი ინფორმაცია დაცულია SSL შიფრაციით</span>
+                  </div>
+                </div>
+              </div>
             </div>
-        </div>
-    </section>
+          </div>
+        </section>
 
-    <footer>
-        <h3 class="stone">Stone</h3>
-        <h3>Factory</h3>
-        <div class="icons">
-        <a href="#"><i class="fa-brands fa-instagram fa-2xl"></i></a>
-        <a href="https://www.facebook.com/profile.php?id=100088853137969" target="_blank"><i class="fa-brands fa-facebook fa-2xl"></i></a>
-        <a href="#"><i class="fa-brands fa-x-twitter fa-2xl"></i></a>
-        </div>
-        <div class="foot-nav">
+        <footer>
+          <h3 class="stone">Stone</h3>
+          <h3>Factory</h3>
+          <div class="icons">
+            <a href="#"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+            <a
+              href="https://www.facebook.com/profile.php?id=100088853137969"
+              target="_blank"
+              ><i class="fa-brands fa-facebook fa-2xl"></i
+            ></a>
+            <a href="#"><i class="fa-brands fa-x-twitter fa-2xl"></i></a>
+          </div>
+          <div class="foot-nav">
             <a href="index.html">main</a>
             <a href="aboutus.html">about us</a>
             <a href="products.html">Products</a>
             <a href="contact.html">contact</a>
-        </div>
-    </footer>
-    </div>
-  </div>
-   
-  <!-- Success Modal -->
-  <div id="successModal" class="success-modal">
-      <div class="success-modal-content">
-          <div class="success-icon">
-              <i class="fas fa-check-circle"></i>
           </div>
-          <h2>შეკვეთა წარმატებით გაფორმდა!</h2>
-          <p>თქვენი შეკვეთის ნომერია: <strong id="orderNumber"></strong></p>
-          <p>ჩვენ დაგიკავშირდებით მალე შეკვეთის დეტალების შესახებ.</p>
-          <div class="success-actions">
-              <button onclick="goToHome()" class="btn-primary">მთავარ გვერდზე დაბრუნება</button>
-              <button onclick="continueShopping()" class="btn-secondary">შოპინგის გაგრძელება</button>
-          </div>
+        </footer>
       </div>
-  </div>
+    </div>
 
-  <style>
-    :root {
-      --primary: #667eea;
-      --gold: #f39c12;
-    }
+    <!-- Success Modal -->
+    <div id="successModal" class="success-modal">
+      <div class="success-modal-content">
+        <div class="success-icon">
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <h2>შეკვეთა წარმატებით გაფორმდა!</h2>
+        <p>თქვენი შეკვეთის ნომერია: <strong id="orderNumber"></strong></p>
+        <p>ჩვენ დაგიკავშირდებით მალე შეკვეთის დეტალების შესახებ.</p>
+        <div class="success-actions">
+          <button onclick="goToHome()" class="btn-primary">
+            მთავარ გვერდზე დაბრუნება
+          </button>
+          <button onclick="continueShopping()" class="btn-secondary">
+            შოპინგის გაგრძელება
+          </button>
+        </div>
+      </div>
+    </div>
 
-    .cart-link {
-      position: relative;
-    }
-
-    .cart-badge {
-      position: absolute;
-      top: -8px;
-      right: -8px;
-      background: #e74c3c;
-      color: white;
-      border-radius: 50%;
-      width: 20px;
-      height: 20px;
-      font-size: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-    }
-
-    .checkout-section {
-      padding: 80px 20px;
-      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-      min-height: 80vh;
-    }
-
-    .checkout-container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .checkout-content {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 40px;
-      align-items: start;
-    }
-
-    .form-card, .summary-card {
-      background: white;
-      border-radius: 15px;
-      padding: 30px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      margin-bottom: 20px;
-    }
-
-    .form-card h2, .summary-card h2 {
-      color: #333;
-      margin-bottom: 25px;
-      font-size: 1.4rem;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .form-card h3 {
-      color: #333;
-      margin: 30px 0 20px 0;
-      font-size: 1.2rem;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      border-top: 1px solid #eee;
-      padding-top: 20px;
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-
-    .form-group {
-      margin-bottom: 20px;
-    }
-
-    .form-group label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: 600;
-      color: #333;
-    }
-
-    .form-group input,
-    .form-group textarea,
-    .form-group select {
-      width: 100%;
-      padding: 12px 15px;
-      border: 2px solid #e1e5e9;
-      border-radius: 8px;
-      font-size: 1rem;
-      transition: all 0.3s ease;
-      background: white;
-      box-sizing: border-box;
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus,
-    .form-group select:focus {
-      outline: none;
-      border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-    }
-
-    .payment-methods {
-      display: flex;
-      gap: 20px;
-      margin-bottom: 25px;
-    }
-
-    .payment-method {
-      flex: 1;
-    }
-
-    .payment-method input[type="radio"] {
-      display: none;
-    }
-
-    .payment-method label {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 15px 20px;
-      border: 2px solid #e1e5e9;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      font-weight: 500;
-    }
-
-    .payment-method input[type="radio"]:checked + label {
-      border-color: var(--primary);
-      background: rgba(102, 126, 234, 0.1);
-      color: var(--primary);
-    }
-
-    .card-details {
-      transition: all 0.3s ease;
-    }
-
-    .card-details.hidden {
-      display: none;
-    }
-
-    .order-items {
-      margin-bottom: 25px;
-    }
-
-    .order-item {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      padding: 15px 0;
-      border-bottom: 1px solid #eee;
-    }
-
-    .order-item:last-child {
-      border-bottom: none;
-    }
-
-    .item-image {
-      width: 60px;
-      height: 50px;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-
-    .item-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .item-details {
-      flex: 1;
-    }
-
-    .item-name {
-      font-weight: 600;
-      color: #333;
-      margin-bottom: 3px;
-    }
-
-    .item-category {
-      font-size: 0.9rem;
-      color: #666;
-    }
-
-    .item-quantity {
-      color: #666;
-      font-size: 0.9rem;
-    }
-
-    .item-price {
-      font-weight: 700;
-      color: var(--gold);
-    }
-
-    .order-totals {
-      border-top: 1px solid #eee;
-      padding-top: 20px;
-    }
-
-    .total-row {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 12px;
-      color: #333;
-    }
-
-    .total-final {
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--gold);
-      border-top: 2px solid #333;
-      padding-top: 15px;
-      margin-top: 15px;
-    }
-
-    .place-order-btn {
-      width: 100%;
-      padding: 18px 25px;
-      background: var(--primary);
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 1.1rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 25px;
-    }
-
-    .place-order-btn:hover {
-      background: var(--gold);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    }
-
-    .security-info {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      margin-top: 20px;
-      color: #666;
-      font-size: 0.9rem;
-    }
-
-    .security-info i {
-      color: #27ae60;
-    }
-
-    .empty-checkout {
-      text-align: center;
-      padding: 60px 20px;
-      color: #666;
-    }
-
-    .empty-checkout i {
-      font-size: 4rem;
-      color: #ddd;
-      margin-bottom: 20px;
-    }
-
-    .empty-checkout h3 {
-      margin-bottom: 15px;
-      color: #333;
-    }
-
-    .empty-checkout a {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 25px;
-      background: var(--primary);
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: all 0.3s ease;
-    }
-
-    .empty-checkout a:hover {
-      background: var(--gold);
-      transform: translateY(-2px);
-    }
-
-    /* Success Modal */
-    .success-modal {
-      display: none;
-      position: fixed;
-      z-index: 3000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.8);
-      backdrop-filter: blur(5px);
-    }
-
-    .success-modal-content {
-      background: white;
-      margin: 10% auto;
-      padding: 40px;
-      border-radius: 15px;
-      width: 90%;
-      max-width: 500px;
-      text-align: center;
-      animation: modalSlideIn 0.3s ease;
-    }
-
-    .success-icon {
-      font-size: 4rem;
-      color: #27ae60;
-      margin-bottom: 20px;
-    }
-
-    .success-modal-content h2 {
-      color: #333;
-      margin-bottom: 15px;
-    }
-
-    .success-modal-content p {
-      color: #666;
-      margin-bottom: 15px;
-      line-height: 1.6;
-    }
-
-    .success-actions {
-      display: flex;
-      gap: 15px;
-      justify-content: center;
-      margin-top: 30px;
-    }
-
-    .btn-primary, .btn-secondary {
-      padding: 12px 25px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: 600;
-      transition: all 0.3s ease;
-    }
-
-    .btn-primary {
-      background: var(--primary);
-      color: white;
-    }
-
-    .btn-primary:hover {
-      background: var(--gold);
-      transform: translateY(-2px);
-    }
-
-    .btn-secondary {
-      background: #e74c3c;
-      color: white;
-    }
-
-    .btn-secondary:hover {
-      background: #c0392b;
-      transform: translateY(-2px);
-    }
-
-    @keyframes modalSlideIn {
-      from {
-        opacity: 0;
-        transform: translateY(-50px);
+    <style>
+      :root {
+        --primary: #667eea;
+        --gold: #f39c12;
       }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
 
-    @media (max-width: 768px) {
+      .cart-link {
+        position: relative;
+      }
+
+      .cart-badge {
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        background: #e74c3c;
+        color: white;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+      }
+
+      .checkout-section {
+        padding: 80px 20px;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        min-height: 80vh;
+      }
+
+      .checkout-container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
       .checkout-content {
-        grid-template-columns: 1fr;
-        gap: 20px;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 40px;
+        align-items: start;
       }
 
-      .form-row {
-        grid-template-columns: 1fr;
-        gap: 0;
+      .form-card,
+      .summary-card {
+        background: white;
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
       }
 
-      .payment-methods {
-        flex-direction: column;
+      .form-card h2,
+      .summary-card h2 {
+        color: #333;
+        margin-bottom: 25px;
+        font-size: 1.4rem;
+        display: flex;
+        align-items: center;
         gap: 10px;
       }
 
-      .success-actions {
-        flex-direction: column;
+      .form-card h3 {
+        color: #333;
+        margin: 30px 0 20px 0;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border-top: 1px solid #eee;
+        padding-top: 20px;
       }
-    }
-  </style>
 
-  <script src="cart.js"></script>
-  <script>
-    function toggleMenu() {
+      .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: #333;
+      }
+
+      .form-group input,
+      .form-group textarea,
+      .form-group select {
+        width: 100%;
+        padding: 12px 15px;
+        border: 2px solid #e1e5e9;
+        border-radius: 8px;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        background: white;
+        box-sizing: border-box;
+      }
+
+      .form-group input:focus,
+      .form-group textarea:focus,
+      .form-group select:focus {
+        outline: none;
+        border-color: var(--primary);
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+      }
+
+      .payment-methods {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 25px;
+      }
+
+      .payment-method {
+        flex: 1;
+      }
+
+      .payment-method input[type="radio"] {
+        display: none;
+      }
+
+      .payment-method label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 15px 20px;
+        border: 2px solid #e1e5e9;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-weight: 500;
+      }
+
+      .payment-method input[type="radio"]:checked + label {
+        border-color: var(--primary);
+        background: rgba(102, 126, 234, 0.1);
+        color: var(--primary);
+      }
+
+      .card-details {
+        transition: all 0.3s ease;
+      }
+
+      .card-details.hidden {
+        display: none;
+      }
+
+      .order-items {
+        margin-bottom: 25px;
+      }
+
+      .order-item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 15px 0;
+        border-bottom: 1px solid #eee;
+      }
+
+      .order-item:last-child {
+        border-bottom: none;
+      }
+
+      .item-image {
+        width: 60px;
+        height: 50px;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .item-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .item-details {
+        flex: 1;
+      }
+
+      .item-name {
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 3px;
+      }
+
+      .item-category {
+        font-size: 0.9rem;
+        color: #666;
+      }
+
+      .item-quantity {
+        color: #666;
+        font-size: 0.9rem;
+      }
+
+      .item-price {
+        font-weight: 700;
+        color: var(--gold);
+      }
+
+      .order-totals {
+        border-top: 1px solid #eee;
+        padding-top: 20px;
+      }
+
+      .total-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 12px;
+        color: #333;
+      }
+
+      .total-final {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--gold);
+        border-top: 2px solid #333;
+        padding-top: 15px;
+        margin-top: 15px;
+      }
+
+      .place-order-btn {
+        width: 100%;
+        padding: 18px 25px;
+        background: var(--primary);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 25px;
+      }
+
+      .place-order-btn:hover {
+        background: var(--gold);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .security-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 20px;
+        color: #666;
+        font-size: 0.9rem;
+      }
+
+      .security-info i {
+        color: #27ae60;
+      }
+
+      .empty-checkout {
+        text-align: center;
+        padding: 60px 20px;
+        color: #666;
+      }
+
+      .empty-checkout i {
+        font-size: 4rem;
+        color: #ddd;
+        margin-bottom: 20px;
+      }
+
+      .empty-checkout h3 {
+        margin-bottom: 15px;
+        color: #333;
+      }
+
+      .empty-checkout a {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 12px 25px;
+        background: var(--primary);
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+      }
+
+      .empty-checkout a:hover {
+        background: var(--gold);
+        transform: translateY(-2px);
+      }
+
+      /* Success Modal */
+      .success-modal {
+        display: none;
+        position: fixed;
+        z-index: 3000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(5px);
+      }
+
+      .success-modal-content {
+        background: white;
+        margin: 10% auto;
+        padding: 40px;
+        border-radius: 15px;
+        width: 90%;
+        max-width: 500px;
+        text-align: center;
+        animation: modalSlideIn 0.3s ease;
+      }
+
+      .success-icon {
+        font-size: 4rem;
+        color: #27ae60;
+        margin-bottom: 20px;
+      }
+
+      .success-modal-content h2 {
+        color: #333;
+        margin-bottom: 15px;
+      }
+
+      .success-modal-content p {
+        color: #666;
+        margin-bottom: 15px;
+        line-height: 1.6;
+      }
+
+      .success-actions {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        margin-top: 30px;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        padding: 12px 25px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary {
+        background: var(--primary);
+        color: white;
+      }
+
+      .btn-primary:hover {
+        background: var(--gold);
+        transform: translateY(-2px);
+      }
+
+      .btn-secondary {
+        background: #e74c3c;
+        color: white;
+      }
+
+      .btn-secondary:hover {
+        background: #c0392b;
+        transform: translateY(-2px);
+      }
+
+      @keyframes modalSlideIn {
+        from {
+          opacity: 0;
+          transform: translateY(-50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .checkout-content {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+
+        .form-row {
+          grid-template-columns: 1fr;
+          gap: 0;
+        }
+
+        .payment-methods {
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        .success-actions {
+          flex-direction: column;
+        }
+      }
+    </style>
+
+    <script src="cart.js"></script>
+    <script>
+      function toggleMenu() {
         const menu = document.getElementById("menu");
         const navMenu = document.getElementById("navMenu");
-        
+
         if (menu) menu.classList.toggle("active");
         if (navMenu) navMenu.classList.toggle("active");
-    }
-    
-    function closeMenu() {
-        const menu = document.querySelector('.menu');
-        const navMenu = document.getElementById('navMenu');
-        
-        if (menu) menu.classList.remove('active');
-        if (navMenu) navMenu.classList.remove('active');
-    }
-    
-    // Setup mobile menu functionality
-    function setupMobileMenu() {
-        const navMenu = document.getElementById('navMenu');
-        
+      }
+
+      function closeMenu() {
+        const menu = document.querySelector(".menu");
+        const navMenu = document.getElementById("navMenu");
+
+        if (menu) menu.classList.remove("active");
+        if (navMenu) navMenu.classList.remove("active");
+      }
+
+      // Setup mobile menu functionality
+      function setupMobileMenu() {
+        const navMenu = document.getElementById("navMenu");
+
         if (navMenu) {
-            // Close menu when clicking on links
-            const navLinks = navMenu.querySelectorAll('a');
-            navLinks.forEach(link => {
-                link.addEventListener('click', closeMenu);
-            });
-            
-            // Close menu when clicking outside
-            document.addEventListener('click', function(e) {
-                const menu = document.getElementById('menu');
-                const isClickInsideMenu = menu && menu.contains(e.target);
-                const isClickInsideNavMenu = navMenu.contains(e.target);
-                
-                if (!isClickInsideMenu && !isClickInsideNavMenu && navMenu.classList.contains('active')) {
-                    closeMenu();
-                }
-            });
-            
-            // Close menu on escape key
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape' && navMenu.classList.contains('active')) {
-                    closeMenu();
-                }
-            });
+          // Close menu when clicking on links
+          const navLinks = navMenu.querySelectorAll("a");
+          navLinks.forEach((link) => {
+            link.addEventListener("click", closeMenu);
+          });
+
+          // Close menu when clicking outside
+          document.addEventListener("click", function (e) {
+            const menu = document.getElementById("menu");
+            const isClickInsideMenu = menu && menu.contains(e.target);
+            const isClickInsideNavMenu = navMenu.contains(e.target);
+
+            if (
+              !isClickInsideMenu &&
+              !isClickInsideNavMenu &&
+              navMenu.classList.contains("active")
+            ) {
+              closeMenu();
+            }
+          });
+
+          // Close menu on escape key
+          document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape" && navMenu.classList.contains("active")) {
+              closeMenu();
+            }
+          });
         }
-    }
+      }
 
-    // Format card number input
-    function formatCardNumber(input) {
-        let value = input.value.replace(/\D/g, '');
-        value = value.replace(/(\d{4})(?=\d)/g, '$1 ');
+      // Format card number input
+      function formatCardNumber(input) {
+        let value = input.value.replace(/\D/g, "");
+        value = value.replace(/(\d{4})(?=\d)/g, "$1 ");
         input.value = value;
-    }
+      }
 
-    // Format expiry date input
-    function formatExpiryDate(input) {
-        let value = input.value.replace(/\D/g, '');
+      // Format expiry date input
+      function formatExpiryDate(input) {
+        let value = input.value.replace(/\D/g, "");
         if (value.length >= 2) {
-            value = value.substring(0, 2) + '/' + value.substring(2, 4);
+          value = value.substring(0, 2) + "/" + value.substring(2, 4);
         }
         input.value = value;
-    }
+      }
 
-    // Render order items
-    function renderOrderItems() {
-        const orderItemsContainer = document.getElementById('orderItems');
-        const itemsSubtotalElement = document.getElementById('itemsSubtotal');
-        const finalTotalElement = document.getElementById('finalTotal');
-        
+      // Render order items
+      function renderOrderItems() {
+        const orderItemsContainer = document.getElementById("orderItems");
+        const itemsSubtotalElement = document.getElementById("itemsSubtotal");
+        const finalTotalElement = document.getElementById("finalTotal");
+
         if (cartManager.cart.length === 0) {
-            document.querySelector('.checkout-content').innerHTML = `
+          document.querySelector(".checkout-content").innerHTML = `
                 <div class="empty-checkout">
                     <i class="fas fa-shopping-cart"></i>
                     <h3>თქვენი კალათა ცარიელია</h3>
@@ -707,10 +800,12 @@
                     <a href="products.html">პროდუქტების ნახვა</a>
                 </div>
             `;
-            return;
+          return;
         }
 
-        orderItemsContainer.innerHTML = cartManager.cart.map(item => `
+        orderItemsContainer.innerHTML = cartManager.cart
+          .map(
+            (item) => `
             <div class="order-item">
                 <div class="item-image">
                     <img src="${item.image}" alt="${item.name}">
@@ -720,173 +815,190 @@
                     <div class="item-category">${item.category}</div>
                     <div class="item-quantity">რაოდენობა: ${item.quantity}</div>
                 </div>
-                <div class="item-price">${(item.price * item.quantity).toFixed(2)} ₾</div>
+                <div class="item-price">${(item.price * item.quantity).toFixed(
+                  2
+                )} ₾</div>
             </div>
-        `).join('');
+        `
+          )
+          .join("");
 
         const subtotal = cartManager.getCartTotal();
-        itemsSubtotalElement.textContent = subtotal.toFixed(2) + ' ₾';
-        finalTotalElement.textContent = subtotal.toFixed(2) + ' ₾';
-    }
+        itemsSubtotalElement.textContent = subtotal.toFixed(2) + " ₾";
+        finalTotalElement.textContent = subtotal.toFixed(2) + " ₾";
+      }
 
-    // Handle payment method change
-    function handlePaymentMethodChange() {
-        const cardDetails = document.getElementById('cardDetails');
-        const creditCardRadio = document.getElementById('creditCard');
-        
+      // Handle payment method change
+      function handlePaymentMethodChange() {
+        const cardDetails = document.getElementById("cardDetails");
+        const creditCardRadio = document.getElementById("creditCard");
+
         if (creditCardRadio.checked) {
-            cardDetails.classList.remove('hidden');
+          cardDetails.classList.remove("hidden");
         } else {
-            cardDetails.classList.add('hidden');
+          cardDetails.classList.add("hidden");
         }
-    }
+      }
 
-    // Generate order number
-    function generateOrderNumber() {
-        return 'ORD-' + Date.now().toString().slice(-8);
-    }
+      // Generate order number
+      function generateOrderNumber() {
+        return "ORD-" + Date.now().toString().slice(-8);
+      }
 
-    // Show success modal
-    function showSuccessModal(orderNumber) {
-        document.getElementById('orderNumber').textContent = orderNumber;
-        document.getElementById('successModal').style.display = 'block';
-        document.body.style.overflow = 'hidden';
-    }
+      // Show success modal
+      function showSuccessModal(orderNumber) {
+        document.getElementById("orderNumber").textContent = orderNumber;
+        document.getElementById("successModal").style.display = "block";
+        document.body.style.overflow = "hidden";
+      }
 
-    // Success modal actions
-    function goToHome() {
-        window.location.href = 'index.html';
-    }
+      // Success modal actions
+      function goToHome() {
+        window.location.href = "index.html";
+      }
 
-    function continueShopping() {
-        window.location.href = 'products.html';
-    }
+      function continueShopping() {
+        window.location.href = "products.html";
+      }
 
-    // Form validation
-    function validateForm() {
-        const form = document.getElementById('checkoutForm');
+      // Form validation
+      function validateForm() {
+        const form = document.getElementById("checkoutForm");
         const formData = new FormData(form);
-        const paymentMethod = formData.get('paymentMethod');
-        
+        const paymentMethod = formData.get("paymentMethod");
+
         // Basic validation
-        const requiredFields = ['firstName', 'lastName', 'email', 'phone', 'address', 'city'];
-        
+        const requiredFields = [
+          "firstName",
+          "lastName",
+          "email",
+          "phone",
+          "address",
+          "city",
+        ];
+
         for (let field of requiredFields) {
-            const value = formData.get(field);
-            if (!value || value.trim() === '') {
-                alert(`გთხოვთ შეავსოთ ${document.querySelector(`label[for="${field}"]`).textContent}`);
-                return false;
-            }
+          const value = formData.get(field);
+          if (!value || value.trim() === "") {
+            alert(
+              `გთხოვთ შეავსოთ ${
+                document.querySelector(`label[for="${field}"]`).textContent
+              }`
+            );
+            return false;
+          }
         }
 
         // Email validation
-        const email = formData.get('email');
+        const email = formData.get("email");
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
-            alert('გთხოვთ შეიყვანოთ სწორი ელ. ფოსტის მისამართი');
-            return false;
+          alert("გთხოვთ შეიყვანოთ სწორი ელ. ფოსტის მისამართი");
+          return false;
         }
 
         // Credit card validation
-        if (paymentMethod === 'creditCard') {
-            const cardNumber = formData.get('cardNumber').replace(/\s/g, '');
-            const expiryDate = formData.get('expiryDate');
-            const cvv = formData.get('cvv');
-            const cardName = formData.get('cardName');
+        if (paymentMethod === "creditCard") {
+          const cardNumber = formData.get("cardNumber").replace(/\s/g, "");
+          const expiryDate = formData.get("expiryDate");
+          const cvv = formData.get("cvv");
+          const cardName = formData.get("cardName");
 
-            if (cardNumber.length < 16) {
-                alert('გთხოვთ შეიყვანოთ სწორი ბარათის ნომერი');
-                return false;
-            }
+          if (cardNumber.length < 16) {
+            alert("გთხოვთ შეიყვანოთ სწორი ბარათის ნომერი");
+            return false;
+          }
 
-            if (!expiryDate || expiryDate.length !== 5) {
-                alert('გთხოვთ შეიყვანოთ ბარათის ვადის გასვლის თარიღი');
-                return false;
-            }
+          if (!expiryDate || expiryDate.length !== 5) {
+            alert("გთხოვთ შეიყვანოთ ბარათის ვადის გასვლის თარიღი");
+            return false;
+          }
 
-            if (!cvv || cvv.length < 3) {
-                alert('გთხოვთ შეიყვანოთ CVV კოდი');
-                return false;
-            }
+          if (!cvv || cvv.length < 3) {
+            alert("გთხოვთ შეიყვანოთ CVV კოდი");
+            return false;
+          }
 
-            if (!cardName || cardName.trim() === '') {
-                alert('გთხოვთ შეიყვანოთ ბარათზე მითითებული სახელი');
-                return false;
-            }
+          if (!cardName || cardName.trim() === "") {
+            alert("გთხოვთ შეიყვანოთ ბარათზე მითითებული სახელი");
+            return false;
+          }
         }
 
         return true;
-    }
+      }
 
-    // Handle form submission
-    function handleFormSubmission(e) {
+      // Handle form submission
+      function handleFormSubmission(e) {
         e.preventDefault();
-        
+
         if (!validateForm()) {
-            return;
+          return;
         }
 
         // Simulate order processing
         const orderNumber = generateOrderNumber();
-        
+
         // Clear cart
         cartManager.clearCart();
-        
+
         // Show success modal
         showSuccessModal(orderNumber);
-    }
+      }
 
-    // Initialize checkout page
-    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize checkout page
+      document.addEventListener("DOMContentLoaded", function () {
         renderOrderItems();
         setupMobileMenu();
-        
+
         // Add event listeners
-        const form = document.getElementById('checkoutForm');
+        const form = document.getElementById("checkoutForm");
         if (form) {
-            form.addEventListener('submit', handleFormSubmission);
+          form.addEventListener("submit", handleFormSubmission);
         }
 
         // Payment method change listeners
-        const paymentMethods = document.querySelectorAll('input[name="paymentMethod"]');
-        paymentMethods.forEach(method => {
-            method.addEventListener('change', handlePaymentMethodChange);
+        const paymentMethods = document.querySelectorAll(
+          'input[name="paymentMethod"]'
+        );
+        paymentMethods.forEach((method) => {
+          method.addEventListener("change", handlePaymentMethodChange);
         });
 
         // Card number formatting
-        const cardNumberInput = document.getElementById('cardNumber');
+        const cardNumberInput = document.getElementById("cardNumber");
         if (cardNumberInput) {
-            cardNumberInput.addEventListener('input', function() {
-                formatCardNumber(this);
-            });
+          cardNumberInput.addEventListener("input", function () {
+            formatCardNumber(this);
+          });
         }
 
         // Expiry date formatting
-        const expiryDateInput = document.getElementById('expiryDate');
+        const expiryDateInput = document.getElementById("expiryDate");
         if (expiryDateInput) {
-            expiryDateInput.addEventListener('input', function() {
-                formatExpiryDate(this);
-            });
+          expiryDateInput.addEventListener("input", function () {
+            formatExpiryDate(this);
+          });
         }
 
         // CVV input restriction
-        const cvvInput = document.getElementById('cvv');
+        const cvvInput = document.getElementById("cvv");
         if (cvvInput) {
-            cvvInput.addEventListener('input', function() {
-                this.value = this.value.replace(/\D/g, '');
-            });
+          cvvInput.addEventListener("input", function () {
+            this.value = this.value.replace(/\D/g, "");
+          });
         }
-    });
-
-    // GSAP ScrollSmoother
-    if (typeof gsap !== 'undefined') {
-      gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-      ScrollSmoother.create({
-        smooth: 2,
-        effects: true,
-        smoothTouch: 0.1,
       });
-    }
-  </script>
-</body>
+
+      // GSAP ScrollSmoother
+      if (typeof gsap !== "undefined") {
+        gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+        ScrollSmoother.create({
+          smooth: 2,
+          effects: true,
+          smoothTouch: 0.1,
+        });
+      }
+    </script>
+  </body>
 </html>

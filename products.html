@@ -1,2467 +1,2817 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="ka">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ქუთაისის ქვის ქარხანა - პროდუქტები</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="media.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="media.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
-    <script src="https://kit.fontawesome.com/00871c31a5.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/00871c31a5.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <div id="smooth-wrapper">
-        <div id="smooth-content">
-            <!-- Header -->
-            <header>
-        <div class="container">
-            <i class="fa-solid fa-mountain-sun fa-2xl" id="mta"></i>            
-            <h2><a href="index.html" class="linki">ქუთაისის ქვის ქარხანა</a></h2>
-                <ul>
-                    <li><a class="nav" id="nav" href="index.html">მთავარი</a></li>
-                    <li><a class="nav" id="nav" href="aboutus.html">ჩვენსშესახებ</a></li>
-                    <li><a href="products.html" id="nav" class="nav">პროდუქტები</a></li>
-                    <li><a class="nav" id="nav" href="contact.html">კონტაქტი</a></li>
-<li>
-                      <a href="cart.html" class="nav cart-link" style="display: inline-flex; align-items: center; gap: 6px;">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span>კალათა</span>
-                       
-                      </a>
-                    </li>                    
-                    <li><div class="menu" id="menu" onclick="toggleMenu()">
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                    </div>
-                    <div class="nav-menu" id="navMenu">
-                      <a href="index.html">მთავარი</a>
-                        <a href="aboutus.html">ჩვენს შესახებ</a>
-                        <a href="products.html">პროდუქტები</a>
-                        <a href="contact.html">კონტაქტი</a>
-                        <a href="cart.html">კალათა</a>
-                    </div></li>   
-                </ul>
-        </div>
-    </header>
-
-            <!-- Enhanced Hero Section -->
-            <section class="products-hero">
-                <div class="hero-particles"></div>
-                <div class="products-hero-overlay">
-                    <div class="products-hero-content">
-                        <div class="hero-badge">Premium Collection</div>
-                        <h1 class="products-hero-title">ჩვენი პროდუქტები</h1>
-                        <p class="products-hero-subtitle">მაღალი ხარისხის ქვის მასალები თქვენი პროექტებისთვის</p>
-                        <div class="hero-stats">
-                            <div class="hero-stat">
-                                <div class="stat-number">50+</div>
-                                <div class="stat-label">პროდუქტი</div>
-                            </div>
-                            <div class="hero-stat">
-                                <div class="stat-number">3</div>
-                                <div class="stat-label">კატეგორია</div>
-                            </div>
-                            <div class="hero-stat">
-                                <div class="stat-number">100%</div>
-                                <div class="stat-label">ხარისხი</div>
-                            </div>
-                        </div>
-                    </div>
+      <div id="smooth-content">
+        <!-- Header -->
+        <header>
+          <div class="container">
+            <i class="fa-solid fa-mountain-sun fa-2xl" id="mta"></i>
+            <h2>
+              <a href="index.html" class="linki">ქუთაისის ქვის ქარხანა</a>
+            </h2>
+            <ul>
+              <li><a class="nav" id="nav" href="index.html">მთავარი</a></li>
+              <li>
+                <a class="nav" id="nav" href="aboutus.html">ჩვენსშესახებ</a>
+              </li>
+              <li>
+                <a href="products.html" id="nav" class="nav">პროდუქტები</a>
+              </li>
+              <li><a class="nav" id="nav" href="contact.html">კონტაქტი</a></li>
+              <li>
+                <a
+                  href="cart.html"
+                  class="nav cart-link"
+                  style="display: inline-flex; align-items: center; gap: 6px"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>კალათა</span>
+                </a>
+              </li>
+              <li>
+                <div class="menu" id="menu" onclick="toggleMenu()">
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                  <div class="bar"></div>
                 </div>
-            </section>
-
-            <!-- Enhanced Filter Section -->
-            <section class="products-filter-section">
-                <div class="products-container">
-                    <!-- Search Bar -->
-                    <div class="search-container">
-                        <div class="search-box">
-                            <i class="fas fa-search"></i>
-                            <input type="text" id="searchInput" placeholder="ძიება პროდუქტების მიხედვით..." />
-                            <button id="clearSearch" class="clear-search-btn" style="display: none;">
-                                <i class="fas fa-times"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Filter Controls -->
-                    <div class="filter-controls" role="region" aria-label="პროდუქტების ფილტრები">
-                        <!-- Category Filter -->
-                        <div class="filter-group">
-                            <label class="filter-label" for="categoryFilter">კატეგორია:</label>
-                            <div class="products-filter-buttons" id="categoryFilter">
-                                <button type="button" class="products-filter-btn active" data-filter="all">ყველა</button>
-                                <button type="button" class="products-filter-btn" data-filter="basalt">ბაზალტი</button>
-                                <button type="button" class="products-filter-btn" data-filter="marble">მარმარილო</button>
-                                <button type="button" class="products-filter-btn" data-filter="granite">გრანიტი</button>
-                            </div>
-                        </div>
-
-                        <!-- Price Range Filter -->
-                        <div class="filter-group">
-                            <label class="filter-label" for="minPrice">ფასის დიაპაზონი:</label>
-                            <div class="price-filter">
-                                <div class="price-inputs">
-                                    <input type="number" id="minPrice" placeholder="მინ. ფასი" min="0" aria-label="მინიმალური ფასი" />
-                                    <span>-</span>
-                                    <input type="number" id="maxPrice" placeholder="მაქს. ფასი" min="0" aria-label="მაქსიმალური ფასი" />
-                                    <span>₾</span>
-                                </div>
-                                <div class="price-range-slider">
-                                    <input type="range" id="priceRange" min="0" max="200" value="200" aria-label="ფასის სლაიდერი" />
-                                    <div class="range-labels">
-                                        <span>0₾</span>
-                                        <span id="maxPriceLabel">200₾</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Sort Options -->
-                        <div class="filter-group">
-                            <label class="filter-label" for="sortSelect">დალაგება:</label>
-                            <select id="sortSelect" class="sort-select" aria-label="დალაგების არჩევა">
-                                <option value="default">ნაგულისხმევი</option>
-                                <option value="name-asc">სახელი (ა-ზ)</option>
-                                <option value="name-desc">სახელი (ზ-ა)</option>
-                                <option value="price-asc">ფასი (ზრდადობით)</option>
-                                <option value="price-desc">ფასი (კლებადობით)</option>
-                            </select>
-                        </div>
-
-                        <!-- View Toggle -->
-                        <div class="filter-group">
-                            <label class="filter-label" for="gridView">ხედი:</label>
-                            <div class="view-toggle" id="viewToggle">
-                                <button type="button" id="gridView" class="view-btn active" title="ბადის ხედი" aria-label="ბადის ხედი">
-                                    <i class="fas fa-th"></i>
-                                </button>
-                                <button type="button" id="listView" class="view-btn" title="სიის ხედი" aria-label="სიის ხედი">
-                                    <i class="fas fa-list"></i>
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Clear All Filters -->
-                        <div class="filter-group">
-                            <button type="button" id="clearFilters" class="clear-filters-btn" aria-label="ფილტრების გასუფთავება">
-                                <i class="fas fa-undo"></i>
-                                ფილტრების გასუფთავება
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Results Info -->
-                    <div class="results-info">
-                        <span id="resultsCount">6 პროდუქტი ნაპოვნია</span>
-                        <div class="filter-tags" id="activeFilters"></div>
-                    </div>
+                <div class="nav-menu" id="navMenu">
+                  <a href="index.html">მთავარი</a>
+                  <a href="aboutus.html">ჩვენს შესახებ</a>
+                  <a href="products.html">პროდუქტები</a>
+                  <a href="contact.html">კონტაქტი</a>
+                  <a href="cart.html">კალათა</a>
                 </div>
-            </section>
+              </li>
+            </ul>
+          </div>
+        </header>
 
-            <!-- Products Section -->
-            <section class="products-showcase-section" id="products">
-                <div class="products-container">
-                    <div class="products-showcase-grid" id="productsGrid">
-                        <!-- Product 1 -->
-                        <div class="product-showcase-card" data-category="basalt" data-product-id="basalt-30" data-name="ბაზალტის ფილა 30სმ" data-price="47.00">
-                            <div class="product-showcase-image">
-                                <img src="images/granite pavers.jpg" alt="ბაზალტის ფილა" loading="lazy">
-                                <div class="product-showcase-overlay">
-                                    <button class="product-quick-view-btn" onclick="openQuickView(this)">
-                                        <i class="fas fa-eye"></i>
-                                        სწრაფი ნახვა
-                                    </button>
-                                </div>
-                                <div class="product-badge">ბესტსელერი</div>
-                            </div>
-                            <div class="product-showcase-info">
-                                <h3 class="product-showcase-title">ბაზალტის ფილა 30სმ</h3>
-                                <p class="product-showcase-category">ბაზალტი</p>
-                                <div class="product-showcase-price" data-price="47.00">47.00 ₾</div>
-                                <button class="product-add-to-cart-btn" onclick="addProductToCart(this)">
-                                    <i class="fas fa-shopping-cart"></i>
-                                    კალათაში დამატება
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Product 2 -->
-                        <div class="product-showcase-card" data-category="basalt" data-product-id="basalt-40" data-name="ბაზალტის ფილა 40სმ" data-price="65.00">
-                            <div class="product-showcase-image">
-                                <img src="images/steps.jpg" alt="ბაზალტის ფილა" loading="lazy">
-                                <div class="product-showcase-overlay">
-                                    <button class="product-quick-view-btn" onclick="openQuickView(this)">
-                                        <i class="fas fa-eye"></i>
-                                        სწრაფი ნახვა
-                                    </button>
-                                </div>
-                                <div class="product-badge new">ახალი</div>
-                            </div>
-                            <div class="product-showcase-info">
-                                <h3 class="product-showcase-title">ბაზალტის ფილა 40სმ</h3>
-                                <p class="product-showcase-category">ბაზალტი</p>
-                                <div class="product-showcase-price" data-price="65.00">65.00 ₾</div>
-                                <button class="product-add-to-cart-btn" onclick="addProductToCart(this)">
-                                    <i class="fas fa-shopping-cart"></i>
-                                    კალათაში დამატება
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Product 3 -->
-                        <div class="product-showcase-card" data-category="marble" data-product-id="marble-slab" data-name="მარმარილოს ფილა" data-price="85.00">
-                            <div class="product-showcase-image">
-                                <img src="images/marble pavers.jpg" alt="მარმარილოს ფილა" loading="lazy">
-                                <div class="product-showcase-overlay">
-                                    <button class="product-quick-view-btn" onclick="openQuickView(this)">
-                                        <i class="fas fa-eye"></i>
-                                        სწრაფი ნახვა
-                                    </button>
-                                </div>
-                                <div class="product-badge premium">პრემიუმი</div>
-                            </div>
-                            <div class="product-showcase-info">
-                                <h3 class="product-showcase-title">მარმარილოს ფილა</h3>
-                                <p class="product-showcase-category">მარმარილო</p>
-                                <div class="product-showcase-price" data-price="85.00">85.00 ₾</div>
-                                <button class="product-add-to-cart-btn" onclick="addProductToCart(this)">
-                                    <i class="fas fa-shopping-cart"></i>
-                                    კალათაში დამატება
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Product 4 -->
-                        <div class="product-showcase-card" data-category="granite" data-product-id="granite-slab" data-name="გრანიტის ფილა" data-price="72.00">
-                            <div class="product-showcase-image">
-                                <img src="images/granite table.jpg" alt="გრანიტის ფილა" loading="lazy">
-                                <div class="product-showcase-overlay">
-                                    <button class="product-quick-view-btn" onclick="openQuickView(this)">
-                                        <i class="fas fa-eye"></i>
-                                        სწრაფი ნახვა
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="product-showcase-info">
-                                <h3 class="product-showcase-title">გრანიტის ფილა</h3>
-                                <p class="product-showcase-category">გრანიტი</p>
-                                <div class="product-showcase-price" data-price="72.00">72.00 ₾</div>
-                                <button class="product-add-to-cart-btn" onclick="addProductToCart(this)">
-                                    <i class="fas fa-shopping-cart"></i>
-                                    კალათაში დამატება
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Product 5 -->
-                        <div class="product-showcase-card" data-category="basalt" data-product-id="basalt-block" data-name="ბაზალტის ბლოკი" data-price="120.00">
-                            <div class="product-showcase-image">
-                                <img src="images/pool.jpg" alt="ბაზალტის ბლოკი" loading="lazy">
-                                <div class="product-showcase-overlay">
-                                    <button class="product-quick-view-btn" onclick="openQuickView(this)">
-                                        <i class="fas fa-eye"></i>
-                                        სწრაფი ნახვა
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="product-showcase-info">
-                                <h3 class="product-showcase-title">ბაზალტის ბლოკი</h3>
-                                <p class="product-showcase-category">ბაზალტი</p>
-                                <div class="product-showcase-price" data-price="120.00">120.00 ₾</div>
-                                <button class="product-add-to-cart-btn" onclick="addProductToCart(this)">
-                                    <i class="fas fa-shopping-cart"></i>
-                                    კალათაში დამატება
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Product 6 -->
-                        <div class="product-showcase-card" data-category="marble" data-product-id="marble-block" data-name="მარმარილოს ბლოკი" data-price="150.00">
-                            <div class="product-showcase-image">
-                                <img src="images/modern-kitchen-with-contemporary-interior-decor-furnishings.jpg" alt="მარმარილოს ბლოკი" loading="lazy">
-                                <div class="product-showcase-overlay">
-                                    <button class="product-quick-view-btn" onclick="openQuickView(this)">
-                                        <i class="fas fa-eye"></i>
-                                        სწრაფი ნახვა
-                                    </button>
-                                </div>
-                                <div class="product-badge premium">პრემიუმი</div>
-                            </div>
-                            <div class="product-showcase-info">
-                                <h3 class="product-showcase-title">მარმარილოს ბლოკი</h3>
-                                <p class="product-showcase-category">მარმარილო</p>
-                                <div class="product-showcase-price" data-price="150.00">150.00 ₾</div>
-                                <button class="product-add-to-cart-btn" onclick="addProductToCart(this)">
-                                    <i class="fas fa-shopping-cart"></i>
-                                    კალათაში დამატება
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- No Results Message -->
-                    <div id="noResults" class="no-results" style="display: none;">
-                        <i class="fas fa-search"></i>
-                        <h3>პროდუქტები ვერ მოიძებნა</h3>
-                        <p>სცადეთ სხვა ძიების პარამეტრები</p>
-                        <button onclick="clearAllFilters()" class="clear-filters-btn">
-                            ყველა ფილტრის გასუფთავება
-                        </button>
-                    </div>
+        <!-- Enhanced Hero Section -->
+        <section class="products-hero">
+          <div class="hero-particles"></div>
+          <div class="products-hero-overlay">
+            <div class="products-hero-content">
+              <div class="hero-badge">პრემიუმ კოლექცია</div>
+              <h1 class="products-hero-title">ჩვენი პროდუქტები</h1>
+              <p class="products-hero-subtitle">
+                მაღალი ხარისხის ქვის მასალები თქვენი პროექტებისთვის
+              </p>
+              <div class="hero-stats">
+                <div class="hero-stat">
+                  <div class="stat-number">50+</div>
+                  <div class="stat-label">პროდუქტი</div>
                 </div>
-            </section>
+                <div class="hero-stat">
+                  <div class="stat-number">3</div>
+                  <div class="stat-label">კატეგორია</div>
+                </div>
+                <div class="hero-stat">
+                  <div class="stat-number">100%</div>
+                  <div class="stat-label">ხარისხი</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-            <!-- Footer -->
-            <footer>
-        <h3 class="stone">Stone</h3>
-        <h3>Factory</h3>
-        <div class="icons">
-        <a href="#"><i class="fa-brands fa-instagram fa-2xl"></i></a>
-        <a href="https://www.facebook.com/profile.php?id=100088853137969" target="_blank"><i class="fa-brands fa-facebook fa-2xl"></i></a>
-        <a href="#"><i class="fa-brands fa-x-twitter fa-2xl"></i></a>
-        </div>
-        <div class="foot-nav">
+        <!-- Enhanced Filter Section -->
+        <section class="products-filter-section">
+          <div class="products-container">
+            <!-- Search Bar -->
+            <div class="search-container">
+              <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input
+                  type="text"
+                  id="searchInput"
+                  placeholder="ძიება პროდუქტებში..."
+                />
+                <button
+                  id="clearSearch"
+                  class="clear-search-btn"
+                  style="display: none"
+                >
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Filter Controls -->
+            <div
+              class="filter-controls"
+              role="region"
+              aria-label="პროდუქტების ფილტრები"
+            >
+              <!-- Category Filter -->
+              <div class="filter-group">
+                <label class="filter-label" for="categoryFilter"
+                  >კატეგორია:</label
+                >
+                <div class="products-filter-buttons" id="categoryFilter">
+                  <button
+                    type="button"
+                    class="products-filter-btn active"
+                    data-filter="all"
+                  >
+                    ყველა
+                  </button>
+                  <button
+                    type="button"
+                    class="products-filter-btn"
+                    data-filter="basalt"
+                  >
+                    ბაზალტი
+                  </button>
+                  <button
+                    type="button"
+                    class="products-filter-btn"
+                    data-filter="marble"
+                  >
+                    მარმარილო
+                  </button>
+                  <button
+                    type="button"
+                    class="products-filter-btn"
+                    data-filter="granite"
+                  >
+                    გრანიტი
+                  </button>
+                </div>
+              </div>
+
+              <!-- Price Range Filter -->
+              <div class="filter-group">
+                <label class="filter-label" for="minPrice"
+                  >ფასის დიაპაზონი:</label
+                >
+                <div class="price-filter">
+                  <div class="price-inputs">
+                    <input
+                      type="number"
+                      id="minPrice"
+                      placeholder="მინ. ფასი"
+                      min="0"
+                      aria-label="მინიმალური ფასი"
+                    />
+                    <span>-</span>
+                    <input
+                      type="number"
+                      id="maxPrice"
+                      placeholder="მაქს. ფასი"
+                      min="0"
+                      aria-label="მაქსიმალური ფასი"
+                    />
+                    <span>₾</span>
+                  </div>
+                  <div class="price-range-slider">
+                    <input
+                      type="range"
+                      id="priceRange"
+                      min="0"
+                      max="200"
+                      value="200"
+                      aria-label="ფასის სლაიდერი"
+                    />
+                    <div class="range-labels">
+                      <span>0₾</span>
+                      <span id="maxPriceLabel">200₾</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Sort Options -->
+              <div class="filter-group">
+                <label class="filter-label" for="sortSelect">დალაგება:</label>
+                <select
+                  id="sortSelect"
+                  class="sort-select"
+                  aria-label="დალაგების არჩევა"
+                >
+                  <option value="default">ნაგულისხმევი</option>
+                  <option value="name-asc">სახელი (ა-ზ)</option>
+                  <option value="name-desc">სახელი (ზ-ა)</option>
+                  <option value="price-asc">ფასი (ზრდადობით)</option>
+                  <option value="price-desc">ფასი (კლებადობით)</option>
+                </select>
+              </div>
+
+              <!-- View Toggle -->
+              <div class="filter-group">
+                <label class="filter-label" for="gridView">ხედი:</label>
+                <div class="view-toggle" id="viewToggle">
+                  <button
+                    type="button"
+                    id="gridView"
+                    class="view-btn active"
+                    title="ბადის ხედი"
+                    aria-label="ბადის ხედი"
+                  >
+                    <i class="fas fa-th"></i>
+                  </button>
+                  <button
+                    type="button"
+                    id="listView"
+                    class="view-btn"
+                    title="სიის ხედი"
+                    aria-label="სიის ხედი"
+                  >
+                    <i class="fas fa-list"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Clear All Filters -->
+              <div class="filter-group">
+                <button
+                  type="button"
+                  id="clearFilters"
+                  class="clear-filters-btn"
+                  aria-label="ფილტრების გასუფთავება"
+                >
+                  <i class="fas fa-undo"></i>
+                  ფილტრების გასუფთავება
+                </button>
+              </div>
+            </div>
+
+            <!-- Results Info -->
+            <div class="results-info">
+              <span id="resultsCount">6 პროდუქტი ნაპოვნია</span>
+              <div class="filter-tags" id="activeFilters"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products-showcase-section" id="products">
+          <div class="products-container">
+            <div class="products-showcase-grid" id="productsGrid">
+              <!-- Product 1 -->
+              <div
+                class="product-showcase-card"
+                data-category="basalt"
+                data-product-id="basalt-30"
+                data-name="ბაზალტის ფილა 30სმ"
+                data-price="47.00"
+              >
+                <div class="product-showcase-image">
+                  <img
+                    src="images/granite pavers.jpg"
+                    alt="ბაზალტის ფილა"
+                    loading="lazy"
+                  />
+                  <div class="product-showcase-overlay">
+                    <button
+                      class="product-quick-view-btn"
+                      onclick="openQuickView(this)"
+                    >
+                      <i class="fas fa-eye"></i>
+                      სწრაფი ნახვა
+                    </button>
+                  </div>
+                  <div class="product-badge">ბესტსელერი</div>
+                </div>
+                <div class="product-showcase-info">
+                  <h3 class="product-showcase-title">ბაზალტის ფილა 30სმ</h3>
+                  <p class="product-showcase-category">ბაზალტი</p>
+                  <div class="product-showcase-price" data-price="47.00">
+                    47.00 ₾
+                  </div>
+                  <button
+                    class="product-add-to-cart-btn"
+                    onclick="addProductToCart(this)"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                    კალათაში დამატება
+                  </button>
+                </div>
+              </div>
+
+              <!-- Product 2 -->
+              <div
+                class="product-showcase-card"
+                data-category="basalt"
+                data-product-id="basalt-40"
+                data-name="ბაზალტის ფილა 40სმ"
+                data-price="65.00"
+              >
+                <div class="product-showcase-image">
+                  <img
+                    src="images/steps.jpg"
+                    alt="ბაზალტის ფილა"
+                    loading="lazy"
+                  />
+                  <div class="product-showcase-overlay">
+                    <button
+                      class="product-quick-view-btn"
+                      onclick="openQuickView(this)"
+                    >
+                      <i class="fas fa-eye"></i>
+                      სწრაფი ნახვა
+                    </button>
+                  </div>
+                  <div class="product-badge new">ახალი</div>
+                </div>
+                <div class="product-showcase-info">
+                  <h3 class="product-showcase-title">ბაზალტის ფილა 40სმ</h3>
+                  <p class="product-showcase-category">ბაზალტი</p>
+                  <div class="product-showcase-price" data-price="65.00">
+                    65.00 ₾
+                  </div>
+                  <button
+                    class="product-add-to-cart-btn"
+                    onclick="addProductToCart(this)"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                    კალათაში დამატება
+                  </button>
+                </div>
+              </div>
+
+              <!-- Product 3 -->
+              <div
+                class="product-showcase-card"
+                data-category="marble"
+                data-product-id="marble-slab"
+                data-name="მარმარილოს ფილა"
+                data-price="85.00"
+              >
+                <div class="product-showcase-image">
+                  <img
+                    src="images/marble pavers.jpg"
+                    alt="მარმარილოს ფილა"
+                    loading="lazy"
+                  />
+                  <div class="product-showcase-overlay">
+                    <button
+                      class="product-quick-view-btn"
+                      onclick="openQuickView(this)"
+                    >
+                      <i class="fas fa-eye"></i>
+                      სწრაფი ნახვა
+                    </button>
+                  </div>
+                  <div class="product-badge premium">პრემიუმი</div>
+                </div>
+                <div class="product-showcase-info">
+                  <h3 class="product-showcase-title">მარმარილოს ფილა</h3>
+                  <p class="product-showcase-category">მარმარილო</p>
+                  <div class="product-showcase-price" data-price="85.00">
+                    85.00 ₾
+                  </div>
+                  <button
+                    class="product-add-to-cart-btn"
+                    onclick="addProductToCart(this)"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                    კალათაში დამატება
+                  </button>
+                </div>
+              </div>
+
+              <!-- Product 4 -->
+              <div
+                class="product-showcase-card"
+                data-category="granite"
+                data-product-id="granite-slab"
+                data-name="გრანიტის ფილა"
+                data-price="72.00"
+              >
+                <div class="product-showcase-image">
+                  <img
+                    src="images/granite table.jpg"
+                    alt="გრანიტის ფილა"
+                    loading="lazy"
+                  />
+                  <div class="product-showcase-overlay">
+                    <button
+                      class="product-quick-view-btn"
+                      onclick="openQuickView(this)"
+                    >
+                      <i class="fas fa-eye"></i>
+                      სწრაფი ნახვა
+                    </button>
+                  </div>
+                </div>
+                <div class="product-showcase-info">
+                  <h3 class="product-showcase-title">გრანიტის ფილა</h3>
+                  <p class="product-showcase-category">გრანიტი</p>
+                  <div class="product-showcase-price" data-price="72.00">
+                    72.00 ₾
+                  </div>
+                  <button
+                    class="product-add-to-cart-btn"
+                    onclick="addProductToCart(this)"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                    კალათაში დამატება
+                  </button>
+                </div>
+              </div>
+
+              <!-- Product 5 -->
+              <div
+                class="product-showcase-card"
+                data-category="basalt"
+                data-product-id="basalt-block"
+                data-name="ბაზალტის ბლოკი"
+                data-price="120.00"
+              >
+                <div class="product-showcase-image">
+                  <img
+                    src="images/pool.jpg"
+                    alt="ბაზალტის ბლოკი"
+                    loading="lazy"
+                  />
+                  <div class="product-showcase-overlay">
+                    <button
+                      class="product-quick-view-btn"
+                      onclick="openQuickView(this)"
+                    >
+                      <i class="fas fa-eye"></i>
+                      სწრაფი ნახვა
+                    </button>
+                  </div>
+                </div>
+                <div class="product-showcase-info">
+                  <h3 class="product-showcase-title">ბაზალტის ბლოკი</h3>
+                  <p class="product-showcase-category">ბაზალტი</p>
+                  <div class="product-showcase-price" data-price="120.00">
+                    120.00 ₾
+                  </div>
+                  <button
+                    class="product-add-to-cart-btn"
+                    onclick="addProductToCart(this)"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                    კალათაში დამატება
+                  </button>
+                </div>
+              </div>
+
+              <!-- Product 6 -->
+              <div
+                class="product-showcase-card"
+                data-category="marble"
+                data-product-id="marble-block"
+                data-name="მარმარილოს ბლოკი"
+                data-price="150.00"
+              >
+                <div class="product-showcase-image">
+                  <img
+                    src="images/modern-kitchen-with-contemporary-interior-decor-furnishings.jpg"
+                    alt="მარმარილოს ბლოკი"
+                    loading="lazy"
+                  />
+                  <div class="product-showcase-overlay">
+                    <button
+                      class="product-quick-view-btn"
+                      onclick="openQuickView(this)"
+                    >
+                      <i class="fas fa-eye"></i>
+                      სწრაფი ნახვა
+                    </button>
+                  </div>
+                  <div class="product-badge premium">პრემიუმი</div>
+                </div>
+                <div class="product-showcase-info">
+                  <h3 class="product-showcase-title">მარმარილოს ბლოკი</h3>
+                  <p class="product-showcase-category">მარმარილო</p>
+                  <div class="product-showcase-price" data-price="150.00">
+                    150.00 ₾
+                  </div>
+                  <button
+                    class="product-add-to-cart-btn"
+                    onclick="addProductToCart(this)"
+                  >
+                    <i class="fas fa-shopping-cart"></i>
+                    კალათაში დამატება
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- No Results Message -->
+            <div id="noResults" class="no-results" style="display: none">
+              <i class="fas fa-search"></i>
+              <h3>პროდუქტები ვერ მოიძებნა</h3>
+              <p>სცადეთ სხვა ძიების პარამეტრები</p>
+              <button onclick="clearAllFilters()" class="clear-filters-btn">
+                ყველა ფილტრის გასუფთავება
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+          <h3 class="stone">Stone</h3>
+          <h3>Factory</h3>
+          <div class="icons">
+            <a href="#"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+            <a
+              href="https://www.facebook.com/profile.php?id=100088853137969"
+              target="_blank"
+              ><i class="fa-brands fa-facebook fa-2xl"></i
+            ></a>
+            <a href="#"><i class="fa-brands fa-x-twitter fa-2xl"></i></a>
+          </div>
+          <div class="foot-nav">
             <a href="index.html">main</a>
             <a href="aboutus.html">about us</a>
             <a href="products.html">Products</a>
             <a href="contact.html">contact</a>
-        </div>
-    </footer>
-        </div>
+          </div>
+        </footer>
+      </div>
     </div>
 
     <!-- Enhanced Quick View Modal -->
     <div class="products-modal" id="quickViewModal">
-        <div class="products-modal-content">
-            <span class="products-close-btn" id="closeModal">&times;</span>
-            <div class="products-modal-body">
-                <div class="products-modal-image">
-                    <img id="modalImage" src="" alt="">
-                    <div class="modal-image-gallery">
-                        <div class="gallery-thumbnails">
-                            <div class="thumbnail active">
-                                <img src="" alt="">
-                            </div>
-                        </div>
-                    </div>
+      <div class="products-modal-content">
+        <span class="products-close-btn" id="closeModal">&times;</span>
+        <div class="products-modal-body">
+          <div class="products-modal-image">
+            <img id="modalImage" src="" alt="" />
+            <div class="modal-image-gallery">
+              <div class="gallery-thumbnails">
+                <div class="thumbnail active">
+                  <img src="" alt="" />
                 </div>
-                <div class="products-modal-info">
-                    <h3 id="modalTitle"></h3>
-                    <p id="modalCategory"></p>
-                    <div id="modalPrice" class="products-modal-price"></div>
-                    <div class="product-rating">
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <span class="rating-text">(4.8/5 - 24 შეფასება)</span>
-                    </div>
-                    <div class="product-features">
-                        <div class="feature">
-                            <i class="fas fa-shield-alt"></i>
-                            <span>მაღალი ხარისხი</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-truck"></i>
-                            <span>უფასო მიტანა</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-medal"></i>
-                            <span>გარანტია</span>
-                        </div>
-                    </div>
-                    <p class="products-modal-description">მაღალი ხარისხის ქვის მასალა, რომელიც შესანიშნავია სამშენებლო და დეკორაციული მიზნებისთვის. ეს პროდუქტი გამოირჩევა თავისი გამძლეობითა და ესთეტიკური სილამაზით.</p>
-                    <div class="modal-actions">
-                        <button class="products-modal-add-to-cart" onclick="addModalProductToCart()">
-                            <i class="fas fa-shopping-cart"></i>
-                            კალათაში დამატება
-                        </button>
-                        <button class="wishlist-btn">
-                            <i class="far fa-heart"></i>
-                        </button>
-                    </div>
-                </div>
+              </div>
             </div>
+          </div>
+          <div class="products-modal-info">
+            <h3 id="modalTitle"></h3>
+            <p id="modalCategory"></p>
+            <div id="modalPrice" class="products-modal-price"></div>
+            <div class="product-rating">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="rating-text">(4.8/5 - 24 შეფასება)</span>
+            </div>
+            <div class="product-features">
+              <div class="feature">
+                <i class="fas fa-shield-alt"></i>
+                <span>მაღალი ხარისხი</span>
+              </div>
+              <div class="feature">
+                <i class="fas fa-truck"></i>
+                <span>უფასო მიტანა</span>
+              </div>
+              <div class="feature">
+                <i class="fas fa-medal"></i>
+                <span>გარანტია</span>
+              </div>
+            </div>
+            <p class="products-modal-description">
+              მაღალი ხარისხის ქვის მასალა, რომელიც შესანიშნავია სამშენებლო და
+              დეკორაციული მიზნებისთვის. ეს პროდუქტი გამოირჩევა თავისი
+              გამძლეობითა და ესთეტიკური სილამაზით.
+            </p>
+            <div class="modal-actions">
+              <button
+                class="products-modal-add-to-cart"
+                onclick="addModalProductToCart()"
+              >
+                <i class="fas fa-shopping-cart"></i>
+                კალათაში დამატება
+              </button>
+              <button class="wishlist-btn">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <style>
-        /* ========== ULTRA-STYLISH PRODUCTS PAGE DESIGN ========== */
-        
-        /* Reset and Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        footer{
-            padding-left: 30px;
-        }
-        
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #f39c12;
-            --accent-color: #e74c3c;
-            --success-color: #27ae60;
-            --text-dark: #2c3e50;
-            --text-light: #7f8c8d;
-            --background-light: #f8f9fa;
-            --white: #ffffff;
-            --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            --shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.15);
-            --border-radius: 12px;
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            --gradient-gold: linear-gradient(135deg, #ffd700 0%, #ffb347 100%);
-        }
+      /* ========== ULTRA-STYLISH PRODUCTS PAGE DESIGN ========== */
 
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            overflow-x: hidden;
-            background: #fafbfc;
-        }
+      /* Reset and Base Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
+      footer {
+        padding-left: 30px;
+      }
+
+      :root {
+        --primary-color: #2c3e50;
+        --secondary-color: #f39c12;
+        --accent-color: #e74c3c;
+        --success-color: #27ae60;
+        --text-dark: #2c3e50;
+        --text-light: #7f8c8d;
+        --background-light: #f8f9fa;
+        --white: #ffffff;
+        --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        --shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.15);
+        --border-radius: 12px;
+        --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        --gradient-gold: linear-gradient(135deg, #ffd700 0%, #ffb347 100%);
+      }
+
+      body {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, sans-serif;
+        line-height: 1.6;
+        color: var(--text-dark);
+        overflow-x: hidden;
+        background: #fafbfc;
+      }
+
+      .products-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Cart Badge */
+      .cart-link {
+        position: relative;
+      }
+
+      .cart-badge {
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        background: var(--accent-color);
+        color: white;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+      }
+
+      /* ========== ENHANCED HERO SECTION ========== */
+      .products-hero {
+        height: 70vh;
+        background: var(--gradient-primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .products-hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url("images/pexels-ahmetcotur-31817156.jpg") center/cover;
+        opacity: 0.15;
+        z-index: 1;
+      }
+
+      .hero-particles {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(
+            circle at 20% 80%,
+            rgba(120, 119, 198, 0.3) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 80% 20%,
+            rgba(255, 215, 0, 0.15) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 40% 40%,
+            rgba(120, 119, 198, 0.2) 0%,
+            transparent 50%
+          );
+        animation: particleFloat 20s ease-in-out infinite alternate;
+        z-index: 1;
+      }
+
+      @keyframes particleFloat {
+        0% {
+          transform: translateY(0px) rotate(0deg);
+        }
+        100% {
+          transform: translateY(-20px) rotate(10deg);
+        }
+      }
+
+      .products-hero-overlay {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        color: white;
+        max-width: 800px;
+        padding: 0 20px;
+      }
+
+      .hero-badge {
+        display: inline-block;
+        padding: 8px 24px;
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 30px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 1.5rem;
+        backdrop-filter: blur(10px);
+        animation: badgeFloat 3s ease-in-out infinite;
+      }
+
+      @keyframes badgeFloat {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-5px);
+        }
+      }
+
+      .products-hero-title {
+        font-size: clamp(3rem, 8vw, 4.5rem);
+        font-weight: 900;
+        margin-bottom: 1rem;
+        opacity: 0;
+        animation: titleSlideIn 1s ease 0.3s forwards;
+        text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      .products-hero-subtitle {
+        font-size: clamp(1.1rem, 3vw, 1.3rem);
+        opacity: 0;
+        animation: subtitleSlideIn 1s ease 0.6s forwards;
+        margin-bottom: 2.5rem;
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      .hero-stats {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        opacity: 0;
+        animation: statsSlideIn 1s ease 0.9s forwards;
+      }
+
+      .hero-stat {
+        text-align: center;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: all 0.4s ease;
+        min-width: 120px;
+      }
+
+      .hero-stat:hover {
+        transform: translateY(-10px) scale(1.05);
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+      }
+
+      .stat-number {
+        font-size: 2.2rem;
+        font-weight: 800;
+        color: #ffd700;
+        margin-bottom: 0.5rem;
+        text-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+      }
+
+      .stat-label {
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.8);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      @keyframes titleSlideIn {
+        from {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes subtitleSlideIn {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes statsSlideIn {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* ========== ENHANCED FILTER SECTION ========== */
+      .products-filter-section {
+        padding: 4rem 0;
+        background: linear-gradient(135deg, #f8fafc 0%, #e0e7ef 100%);
+        position: relative;
+      }
+
+      .products-filter-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="0.5" fill="rgba(44,62,80,0.03)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+      }
+
+      /* Enhanced Search Container */
+      .search-container {
+        margin-bottom: 3rem;
+        position: relative;
+        z-index: 2;
+      }
+
+      .search-box {
+        position: relative;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .search-box i {
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--text-light);
+        font-size: 1.1rem;
+      }
+
+      .search-box input {
+        width: 100%;
+        padding: 18px 60px 18px 55px;
+        border: 2px solid transparent;
+        border-radius: 30px;
+        font-size: 1rem;
+        transition: var(--transition);
+        background: white;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        font-weight: 500;
+      }
+
+      .search-box input:focus {
+        outline: none;
+        border-color: var(--primary-color);
+        box-shadow: 0 15px 40px rgba(44, 62, 80, 0.15),
+          0 0 0 3px rgba(44, 62, 80, 0.1);
+        transform: translateY(-2px);
+      }
+
+      .clear-search-btn {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: var(--accent-color);
+        border: none;
+        color: white;
+        cursor: pointer;
+        padding: 8px;
+        border-radius: 50%;
+        transition: var(--transition);
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .clear-search-btn:hover {
+        background: #c0392b;
+        transform: translateY(-50%) scale(1.1);
+      }
+
+      /* Enhanced Filter Controls */
+      .filter-controls {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+        padding: 2.5rem;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+        position: relative;
+        z-index: 2;
+      }
+
+      .filter-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .filter-label {
+        font-weight: 700;
+        color: var(--text-dark);
+        margin-bottom: 0.5rem;
+        font-size: 0.95rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      /* Enhanced Category Filter Buttons */
+      .products-filter-buttons {
+        display: flex;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+      }
+
+      .products-filter-btn {
+        padding: 0.75rem 1.5rem;
+        border: 2px solid var(--primary-color);
+        background: transparent;
+        color: var(--primary-color);
+        border-radius: 25px;
+        cursor: pointer;
+        transition: var(--transition);
+        font-weight: 600;
+        font-size: 0.9rem;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .products-filter-btn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: var(--gradient-primary);
+        transition: left 0.3s ease;
+        z-index: -1;
+      }
+
+      .products-filter-btn:hover::before,
+      .products-filter-btn.active::before {
+        left: 0;
+      }
+
+      .products-filter-btn:hover,
+      .products-filter-btn.active {
+        color: white;
+        border-color: transparent;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+      }
+
+      /* Enhanced Price Filter */
+      .price-filter {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .price-inputs {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .price-inputs input {
+        flex: 1;
+        padding: 0.75rem;
+        border: 2px solid #e1e5e9;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        transition: var(--transition);
+      }
+
+      .price-inputs input:focus {
+        outline: none;
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.1);
+      }
+
+      .price-range-slider {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .price-range-slider input[type="range"] {
+        width: 100%;
+        height: 6px;
+        border-radius: 5px;
+        background: linear-gradient(
+          to right,
+          var(--primary-color) 0%,
+          var(--primary-color) 50%,
+          #e1e5e9 50%,
+          #e1e5e9 100%
+        );
+        outline: none;
+        cursor: pointer;
+      }
+
+      .price-range-slider input[type="range"]::-webkit-slider-thumb {
+        appearance: none;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background: var(--gradient-primary);
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        transition: var(--transition);
+      }
+
+      .price-range-slider input[type="range"]::-webkit-slider-thumb:hover {
+        transform: scale(1.2);
+        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+      }
+
+      .range-labels {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.8rem;
+        color: var(--text-light);
+        font-weight: 500;
+      }
+
+      /* Enhanced Sort Select */
+      .sort-select {
+        padding: 0.75rem 1rem;
+        border: 2px solid #e1e5e9;
+        border-radius: 8px;
+        background: white;
+        font-size: 0.9rem;
+        cursor: pointer;
+        font-weight: 500;
+        transition: var(--transition);
+      }
+
+      .sort-select:focus {
+        outline: none;
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.1);
+      }
+
+      /* Enhanced View Toggle */
+      .view-toggle {
+        display: flex;
+        gap: 0.5rem;
+        background: #f8f9fa;
+        padding: 4px;
+        border-radius: 8px;
+      }
+
+      .view-btn {
+        padding: 0.75rem;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        border-radius: 6px;
+        transition: var(--transition);
+        color: var(--text-light);
+        font-size: 1rem;
+      }
+
+      .view-btn.active,
+      .view-btn:hover {
+        background: var(--gradient-primary);
+        color: white;
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+      }
+
+      /* Enhanced Clear Filters Button */
+      .clear-filters-btn {
+        padding: 0.75rem 1.5rem;
+        background: var(--gradient-secondary);
+        color: white;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: var(--transition);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .clear-filters-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(240, 147, 251, 0.4);
+      }
+
+      /* Enhanced Results Info */
+      .results-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 3rem;
+        padding: 1.5rem 2rem;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        position: relative;
+        z-index: 2;
+      }
+
+      .results-info span {
+        font-weight: 600;
+        color: var(--text-dark);
+        font-size: 1.1rem;
+      }
+
+      .filter-tags {
+        display: flex;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+      }
+
+      .filter-tag {
+        background: var(--gradient-primary);
+        color: white;
+        padding: 0.4rem 1rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+      }
+
+      .filter-tag button {
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        padding: 0;
+        font-size: 0.9rem;
+        opacity: 0.8;
+        transition: opacity 0.2s ease;
+      }
+
+      .filter-tag button:hover {
+        opacity: 1;
+      }
+
+      /* ========== ENHANCED PRODUCTS SECTION - UNIFORM SIZING ========== */
+      .products-showcase-section {
+        padding: 4rem 0 6rem;
+        background: white;
+        position: relative;
+      }
+
+      .products-showcase-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2.5rem;
+        transition: all 0.4s ease;
+        align-items: stretch; /* This ensures all cards stretch to the same height */
+        justify-items: center;
+      }
+
+      .products-showcase-grid.list-view {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .products-showcase-grid.list-view .product-showcase-card {
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        gap: 2rem;
+        align-items: center;
+        max-width: none;
+        width: 100%;
+        height: auto;
+      }
+
+      .products-showcase-grid.list-view .product-showcase-image {
+        height: 200px;
+      }
+
+      /* Enhanced Product Cards - UNIFORM SIZING */
+      .product-showcase-card {
+        background: white;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+        transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        opacity: 1;
+        transform: scale(1);
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        /* FIXED DIMENSIONS FOR UNIFORM SIZE */
+        width: 450px;
+        height: 550px;
+
+        /* Ensure consistent sizing across all cards */
+        min-height: 550px;
+        max-height: 550px;
+        min-width: 450px;
+        max-width: 450px;
+      }
+
+      .product-showcase-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          45deg,
+          rgba(102, 126, 234, 0.05),
+          rgba(240, 147, 251, 0.05)
+        );
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 1;
+        pointer-events: none;
+      }
+
+      .product-showcase-card:hover {
+        transform: translateY(-15px) scale(1.02);
+        box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+      }
+
+      .product-showcase-card:hover::before {
+        opacity: 1;
+      }
+
+      .product-showcase-card.hide {
+        display: none !important;
+      }
+
+      .product-showcase-card.show {
+        display: flex;
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      /* Enhanced Product Image - FIXED HEIGHT */
+      .product-showcase-image {
+        position: relative;
+        overflow: hidden;
+        height: 280px; /* Fixed height for all images */
+        flex-shrink: 0; /* Prevent shrinking */
+      }
+
+      .product-showcase-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 0.5s ease;
+      }
+
+      .product-showcase-card:hover .product-showcase-image img {
+        transform: scale(1.1);
+      }
+
+      .product-showcase-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          45deg,
+          rgba(102, 126, 234, 0.9),
+          rgba(118, 75, 162, 0.9)
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: all 0.4s ease;
+        z-index: 2;
+      }
+
+      .product-showcase-card:hover .product-showcase-overlay {
+        opacity: 1;
+      }
+
+      .product-quick-view-btn {
+        padding: 1rem 2rem;
+        background: white;
+        color: var(--primary-color);
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        font-weight: 700;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        transform: translateY(20px);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .product-showcase-card:hover .product-quick-view-btn {
+        transform: translateY(0);
+      }
+
+      .product-quick-view-btn:hover {
+        background: var(--gradient-gold);
+        color: white;
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+      }
+
+      /* Product Badges */
+      .product-badge {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        padding: 0.4rem 0.8rem;
+        border-radius: 15px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        z-index: 3;
+        backdrop-filter: blur(10px);
+      }
+
+      .product-badge:not(.new):not(.premium) {
+        background: var(--gradient-secondary);
+        color: white;
+      }
+
+      .product-badge.new {
+        background: var(--gradient-primary);
+        color: white;
+      }
+
+      .product-badge.premium {
+        background: var(--gradient-gold);
+        color: var(--text-dark);
+      }
+
+      /* Enhanced Product Info - FLEXIBLE HEIGHT */
+      .product-showcase-info {
+        padding: 2rem;
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1; /* Allow this section to grow and fill remaining space */
+        justify-content: space-between; /* Distribute content evenly */
+      }
+
+      .product-showcase-title {
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: var(--text-dark);
+        line-height: 1.3;
+        /* Limit title to 2 lines for consistency */
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        min-height: 2.6rem; /* Reserve space for 2 lines */
+      }
+
+      .product-showcase-category {
+        color: var(--text-light);
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .product-showcase-price {
+        font-size: 1.8rem;
+        font-weight: 800;
+        background: var(--gradient-gold);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 1.5rem;
+        display: inline-block;
+        margin-top: auto; /* Push price towards bottom */
+      }
+
+      /* Enhanced Add to Cart Button - CONSISTENT POSITIONING */
+      .product-add-to-cart-btn {
+        width: 100%;
+        padding: 1rem;
+        background: var(--gradient-primary);
+        color: white;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+        font-weight: 700;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        position: relative;
+        overflow: hidden;
+        margin-top: auto; /* Always push to bottom */
+      }
+
+      .product-add-to-cart-btn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: var(--gradient-gold);
+        transition: left 0.3s ease;
+        z-index: -1;
+      }
+
+      .product-add-to-cart-btn:hover::before {
+        left: 0;
+      }
+
+      .product-add-to-cart-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 35px rgba(102, 126, 234, 0.3);
+      }
+
+      /* No Results Enhanced */
+      .no-results {
+        text-align: center;
+        padding: 6rem 2rem;
+        color: var(--text-light);
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      }
+
+      .no-results i {
+        font-size: 5rem;
+        margin-bottom: 2rem;
+        color: #e1e5e9;
+      }
+
+      .no-results h3 {
+        margin-bottom: 1rem;
+        color: var(--text-dark);
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      .no-results p {
+        margin-bottom: 2rem;
+        font-size: 1.1rem;
+      }
+
+      /* ========== ENHANCED MODAL STYLES ========== */
+      .products-modal {
+        display: none;
+        position: fixed;
+        z-index: 2000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(10px);
+      }
+
+      .products-modal-content {
+        background: white;
+        margin: 3% auto;
+        padding: 0;
+        border-radius: 25px;
+        width: 90%;
+        max-width: 1000px;
+        position: relative;
+        animation: modalSlideIn 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
+      }
+
+      @keyframes modalSlideIn {
+        from {
+          opacity: 0;
+          transform: translateY(-50px) scale(0.9);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+
+      .products-close-btn {
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        font-size: 1.8rem;
+        cursor: pointer;
+        z-index: 10;
+        color: var(--text-dark);
+        background: white;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+      }
+
+      .products-close-btn:hover {
+        background: var(--accent-color);
+        color: white;
+        transform: scale(1.1);
+      }
+
+      .products-modal-body {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        padding: 3rem;
+      }
+
+      .products-modal-image {
+        position: relative;
+      }
+
+      .products-modal-image img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 15px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      .modal-image-gallery {
+        margin-top: 1rem;
+      }
+
+      .gallery-thumbnails {
+        display: flex;
+        gap: 0.5rem;
+      }
+
+      .thumbnail {
+        width: 60px;
+        height: 60px;
+        border-radius: 8px;
+        overflow: hidden;
+        cursor: pointer;
+        border: 2px solid transparent;
+        transition: all 0.3s ease;
+      }
+
+      .thumbnail.active {
+        border-color: var(--primary-color);
+      }
+
+      .thumbnail img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .products-modal-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .products-modal-info h3 {
+        font-size: 2.2rem;
+        margin-bottom: 0.5rem;
+        color: var(--text-dark);
+        font-weight: 800;
+      }
+
+      .products-modal-info p {
+        color: var(--text-light);
+        margin-bottom: 1rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .products-modal-price {
+        font-size: 2.5rem;
+        font-weight: 800;
+        background: var(--gradient-gold);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 1.5rem;
+        display: inline-block;
+      }
+
+      /* Product Rating */
+      .product-rating {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .stars {
+        color: #ffd700;
+        font-size: 1.2rem;
+      }
+
+      .rating-text {
+        color: var(--text-light);
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+
+      /* Product Features */
+      .product-features {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-bottom: 2rem;
+      }
+
+      .feature {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        color: var(--text-dark);
+        font-weight: 500;
+      }
+
+      .feature i {
+        color: var(--success-color);
+        font-size: 1.1rem;
+      }
+
+      .products-modal-description {
+        line-height: 1.7;
+        margin-bottom: 2rem;
+        color: var(--text-light);
+        font-size: 1rem;
+      }
+
+      /* Modal Actions */
+      .modal-actions {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+      }
+
+      .products-modal-add-to-cart {
+        flex: 1;
+        padding: 1.2rem 2rem;
+        background: var(--gradient-primary);
+        color: white;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+        font-weight: 700;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .products-modal-add-to-cart:hover {
+        background: var(--gradient-gold);
+        transform: translateY(-3px);
+        box-shadow: 0 15px 35px rgba(255, 215, 0, 0.3);
+      }
+
+      .wishlist-btn {
+        padding: 1.2rem;
+        background: transparent;
+        border: 2px solid var(--text-light);
+        border-radius: 15px;
+        cursor: pointer;
+        color: var(--text-light);
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
+      }
+
+      .wishlist-btn:hover {
+        background: var(--accent-color);
+        border-color: var(--accent-color);
+        color: white;
+        transform: scale(1.1);
+      }
+
+      /* ========== RESPONSIVE DESIGN ========== */
+      @media (max-width: 1200px) {
         .products-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 20px;
+          max-width: 1200px;
+          padding: 0 15px;
         }
 
-        /* Cart Badge */
-        .cart-link {
-            position: relative;
-        }
-
-        .cart-badge {
-            position: absolute;
-            top: -8px;
-            right: -8px;
-            background: var(--accent-color);
-            color: white;
-            border-radius: 50%;
-            width: 20px;
-            height: 20px;
-            font-size: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-        }
-
-        /* ========== ENHANCED HERO SECTION ========== */
-        .products-hero {
-            height: 70vh;
-            background: var(--gradient-primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .products-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('images/pexels-ahmetcotur-31817156.jpg') center/cover;
-            opacity: 0.15;
-            z-index: 1;
-        }
-
-        .hero-particles {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 20%, rgba(255, 215, 0, 0.15) 0%, transparent 50%),
-                        radial-gradient(circle at 40% 40%, rgba(120, 119, 198, 0.2) 0%, transparent 50%);
-            animation: particleFloat 20s ease-in-out infinite alternate;
-            z-index: 1;
-        }
-
-        @keyframes particleFloat {
-            0% { transform: translateY(0px) rotate(0deg); }
-            100% { transform: translateY(-20px) rotate(10deg); }
-        }
-
-        .products-hero-overlay {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            color: white;
-            max-width: 800px;
-            padding: 0 20px;
-        }
-
-        .hero-badge {
-            display: inline-block;
-            padding: 8px 24px;
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 30px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 1.5rem;
-            backdrop-filter: blur(10px);
-            animation: badgeFloat 3s ease-in-out infinite;
-        }
-
-        @keyframes badgeFloat {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-5px); }
-        }
-
-        .products-hero-title {
-            font-size: clamp(3rem, 8vw, 4.5rem);
-            font-weight: 900;
-            margin-bottom: 1rem;
-            opacity: 0;
-            animation: titleSlideIn 1s ease 0.3s forwards;
-            text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .products-hero-subtitle {
-            font-size: clamp(1.1rem, 3vw, 1.3rem);
-            opacity: 0;
-            animation: subtitleSlideIn 1s ease 0.6s forwards;
-            margin-bottom: 2.5rem;
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        .hero-stats {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            opacity: 0;
-            animation: statsSlideIn 1s ease 0.9s forwards;
-        }
-
-        .hero-stat {
-            text-align: center;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.4s ease;
-            min-width: 120px;
-        }
-
-        .hero-stat:hover {
-            transform: translateY(-10px) scale(1.05);
-            background: rgba(255, 255, 255, 0.2);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-        }
-
-        .stat-number {
-            font-size: 2.2rem;
-            font-weight: 800;
-            color: #ffd700;
-            margin-bottom: 0.5rem;
-            text-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
-        }
-
-        .stat-label {
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.8);
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        @keyframes titleSlideIn {
-            from { opacity: 0; transform: translateY(50px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes subtitleSlideIn {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes statsSlideIn {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* ========== ENHANCED FILTER SECTION ========== */
-        .products-filter-section {
-            padding: 4rem 0;
-            background: linear-gradient(135deg, #f8fafc 0%, #e0e7ef 100%);
-            position: relative;
-        }
-
-        .products-filter-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="0.5" fill="rgba(44,62,80,0.03)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-        }
-
-        /* Enhanced Search Container */
-        .search-container {
-            margin-bottom: 3rem;
-            position: relative;
-            z-index: 2;
-        }
-
-        .search-box {
-            position: relative;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .search-box i {
-            position: absolute;
-            left: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--text-light);
-            font-size: 1.1rem;
-        }
-
-        .search-box input {
-            width: 100%;
-            padding: 18px 60px 18px 55px;
-            border: 2px solid transparent;
-            border-radius: 30px;
-            font-size: 1rem;
-            transition: var(--transition);
-            background: white;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            font-weight: 500;
-        }
-
-        .search-box input:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 15px 40px rgba(44, 62, 80, 0.15), 0 0 0 3px rgba(44, 62, 80, 0.1);
-            transform: translateY(-2px);
-        }
-
-        .clear-search-btn {
-            position: absolute;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: var(--accent-color);
-            border: none;
-            color: white;
-            cursor: pointer;
-            padding: 8px;
-            border-radius: 50%;
-            transition: var(--transition);
-            width: 32px;
-            height: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .clear-search-btn:hover {
-            background: #c0392b;
-            transform: translateY(-50%) scale(1.1);
-        }
-
-        /* Enhanced Filter Controls */
         .filter-controls {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-            padding: 2.5rem;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-            position: relative;
-            z-index: 2;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 1.5rem;
+          padding: 2rem;
         }
 
-        .filter-group {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-        }
-
-        .filter-label {
-            font-weight: 700;
-            color: var(--text-dark);
-            margin-bottom: 0.5rem;
-            font-size: 0.95rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        /* Enhanced Category Filter Buttons */
-        .products-filter-buttons {
-            display: flex;
-            gap: 0.75rem;
-            flex-wrap: wrap;
-        }
-
-        .products-filter-btn {
-            padding: 0.75rem 1.5rem;
-            border: 2px solid var(--primary-color);
-            background: transparent;
-            color: var(--primary-color);
-            border-radius: 25px;
-            cursor: pointer;
-            transition: var(--transition);
-            font-weight: 600;
-            font-size: 0.9rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .products-filter-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: var(--gradient-primary);
-            transition: left 0.3s ease;
-            z-index: -1;
-        }
-
-        .products-filter-btn:hover::before,
-        .products-filter-btn.active::before {
-            left: 0;
-        }
-
-        .products-filter-btn:hover,
-        .products-filter-btn.active {
-            color: white;
-            border-color: transparent;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
-        }
-
-        /* Enhanced Price Filter */
-        .price-filter {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .price-inputs {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
-        .price-inputs input {
-            flex: 1;
-            padding: 0.75rem;
-            border: 2px solid #e1e5e9;
-            border-radius: 8px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: var(--transition);
-        }
-
-        .price-inputs input:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.1);
-        }
-
-        .price-range-slider {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .price-range-slider input[type="range"] {
-            width: 100%;
-            height: 6px;
-            border-radius: 5px;
-            background: linear-gradient(to right, var(--primary-color) 0%, var(--primary-color) 50%, #e1e5e9 50%, #e1e5e9 100%);
-            outline: none;
-            cursor: pointer;
-        }
-
-        .price-range-slider input[type="range"]::-webkit-slider-thumb {
-            appearance: none;
-            width: 22px;
-            height: 22px;
-            border-radius: 50%;
-            background: var(--gradient-primary);
-            cursor: pointer;
-            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
-            transition: var(--transition);
-        }
-
-        .price-range-slider input[type="range"]::-webkit-slider-thumb:hover {
-            transform: scale(1.2);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
-        }
-
-        .range-labels {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.8rem;
-            color: var(--text-light);
-            font-weight: 500;
-        }
-
-        /* Enhanced Sort Select */
-        .sort-select {
-            padding: 0.75rem 1rem;
-            border: 2px solid #e1e5e9;
-            border-radius: 8px;
-            background: white;
-            font-size: 0.9rem;
-            cursor: pointer;
-            font-weight: 500;
-            transition: var(--transition);
-        }
-
-        .sort-select:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.1);
-        }
-
-        /* Enhanced View Toggle */
-        .view-toggle {
-            display: flex;
-            gap: 0.5rem;
-            background: #f8f9fa;
-            padding: 4px;
-            border-radius: 8px;
-        }
-
-        .view-btn {
-            padding: 0.75rem;
-            border: none;
-            background: transparent;
-            cursor: pointer;
-            border-radius: 6px;
-            transition: var(--transition);
-            color: var(--text-light);
-            font-size: 1rem;
-        }
-
-        .view-btn.active,
-        .view-btn:hover {
-            background: var(--gradient-primary);
-            color: white;
-            transform: scale(1.05);
-            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
-        }
-
-        /* Enhanced Clear Filters Button */
-        .clear-filters-btn {
-            padding: 0.75rem 1.5rem;
-            background: var(--gradient-secondary);
-            color: white;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.9rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .clear-filters-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(240, 147, 251, 0.4);
-        }
-
-        /* Enhanced Results Info */
-        .results-info {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 3rem;
-            padding: 1.5rem 2rem;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            position: relative;
-            z-index: 2;
-        }
-
-        .results-info span {
-            font-weight: 600;
-            color: var(--text-dark);
-            font-size: 1.1rem;
-        }
-
-        .filter-tags {
-            display: flex;
-            gap: 0.75rem;
-            flex-wrap: wrap;
-        }
-
-        .filter-tag {
-            background: var(--gradient-primary);
-            color: white;
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
-        }
-
-        .filter-tag button {
-            background: none;
-            border: none;
-            color: white;
-            cursor: pointer;
-            padding: 0;
-            font-size: 0.9rem;
-            opacity: 0.8;
-            transition: opacity 0.2s ease;
-        }
-
-        .filter-tag button:hover {
-            opacity: 1;
-        }
-
-        /* ========== ENHANCED PRODUCTS SECTION - UNIFORM SIZING ========== */
-        .products-showcase-section {
-            padding: 4rem 0 6rem;
-            background: white;
-            position: relative;
+        /* Adjust card size for medium screens */
+        .product-showcase-card {
+          width: 320px;
+          height: 500px;
+          min-height: 500px;
+          max-height: 500px;
+          min-width: 320px;
+          max-width: 320px;
         }
 
         .products-showcase-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2.5rem;
-            transition: all 0.4s ease;
-            align-items: stretch; /* This ensures all cards stretch to the same height */
-            justify-items: center;
+          grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero-stats {
+          flex-direction: column;
+          gap: 20px;
         }
 
-        .products-showcase-grid.list-view {
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
+        .hero-stat {
+          min-width: auto;
+        }
+
+        .filter-controls {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+          padding: 1.5rem;
+        }
+
+        .products-filter-buttons {
+          justify-content: center;
+        }
+
+        .results-info {
+          flex-direction: column;
+          gap: 1rem;
+          text-align: center;
+          padding: 1rem;
+        }
+
+        .products-hero {
+          height: 60vh;
+        }
+
+        .products-hero-title {
+          font-size: 2.5rem;
+        }
+
+        .products-hero-subtitle {
+          font-size: 1rem;
+        }
+
+        .products-showcase-grid {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+          justify-items: center;
+        }
+
+        /* Mobile card sizing - still uniform */
+        .product-showcase-card {
+          width: 100%;
+          max-width: 350px;
+          height: 520px;
+          min-height: 520px;
+          max-height: 520px;
         }
 
         .products-showcase-grid.list-view .product-showcase-card {
-            display: grid;
-            grid-template-columns: 250px 1fr;
-            gap: 2rem;
-            align-items: center;
-            max-width: none;
-            width: 100%;
-            height: auto;
-        }
-
-        .products-showcase-grid.list-view .product-showcase-image {
-            height: 200px;
-        }
-
-        /* Enhanced Product Cards - UNIFORM SIZING */
-        .product-showcase-card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-            transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            opacity: 1;
-            transform: scale(1);
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            
-            /* FIXED DIMENSIONS FOR UNIFORM SIZE */
-            width: 450px;
-            height: 550px;
-            
-            /* Ensure consistent sizing across all cards */
-            min-height: 550px;
-            max-height: 550px;
-            min-width: 450px;
-            max-width: 450px;
-        }
-
-        .product-showcase-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, rgba(102, 126, 234, 0.05), rgba(240, 147, 251, 0.05));
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            z-index: 1;
-            pointer-events: none;
-        }
-
-        .product-showcase-card:hover {
-            transform: translateY(-15px) scale(1.02);
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
-        }
-
-        .product-showcase-card:hover::before {
-            opacity: 1;
-        }
-
-        .product-showcase-card.hide {
-            display: none !important;
-        }
-
-        .product-showcase-card.show {
-            display: flex;
-            opacity: 1;
-            transform: scale(1);
-        }
-
-        /* Enhanced Product Image - FIXED HEIGHT */
-        .product-showcase-image {
-            position: relative;
-            overflow: hidden;
-            height: 280px; /* Fixed height for all images */
-            flex-shrink: 0; /* Prevent shrinking */
-        }
-
-        .product-showcase-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: all 0.5s ease;
-        }
-
-        .product-showcase-card:hover .product-showcase-image img {
-            transform: scale(1.1);
-        }
-
-        .product-showcase-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, rgba(102, 126, 234, 0.9), rgba(118, 75, 162, 0.9));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: all 0.4s ease;
-            z-index: 2;
-        }
-
-        .product-showcase-card:hover .product-showcase-overlay {
-            opacity: 1;
-        }
-
-        .product-quick-view-btn {
-            padding: 1rem 2rem;
-            background: white;
-            color: var(--primary-color);
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            font-weight: 700;
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
-            transform: translateY(20px);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .product-showcase-card:hover .product-quick-view-btn {
-            transform: translateY(0);
-        }
-
-        .product-quick-view-btn:hover {
-            background: var(--gradient-gold);
-            color: white;
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
-        }
-
-        /* Product Badges */
-        .product-badge {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            padding: 0.4rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            z-index: 3;
-            backdrop-filter: blur(10px);
-        }
-
-        .product-badge:not(.new):not(.premium) {
-            background: var(--gradient-secondary);
-            color: white;
-        }
-
-        .product-badge.new {
-            background: var(--gradient-primary);
-            color: white;
-        }
-
-        .product-badge.premium {
-            background: var(--gradient-gold);
-            color: var(--text-dark);
-        }
-
-        /* Enhanced Product Info - FLEXIBLE HEIGHT */
-        .product-showcase-info {
-            padding: 2rem;
-            position: relative;
-            z-index: 2;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1; /* Allow this section to grow and fill remaining space */
-            justify-content: space-between; /* Distribute content evenly */
-        }
-
-        .product-showcase-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: var(--text-dark);
-            line-height: 1.3;
-            /* Limit title to 2 lines for consistency */
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            min-height: 2.6rem; /* Reserve space for 2 lines */
-        }
-
-        .product-showcase-category {
-            color: var(--text-light);
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .product-showcase-price {
-            font-size: 1.8rem;
-            font-weight: 800;
-            background: var(--gradient-gold);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 1.5rem;
-            display: inline-block;
-            margin-top: auto; /* Push price towards bottom */
-        }
-
-        /* Enhanced Add to Cart Button - CONSISTENT POSITIONING */
-        .product-add-to-cart-btn {
-            width: 100%;
-            padding: 1rem;
-            background: var(--gradient-primary);
-            color: white;
-            border: none;
-            border-radius: 15px;
-            cursor: pointer;
-            font-weight: 700;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            position: relative;
-            overflow: hidden;
-            margin-top: auto; /* Always push to bottom */
-        }
-
-        .product-add-to-cart-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: var(--gradient-gold);
-            transition: left 0.3s ease;
-            z-index: -1;
-        }
-
-        .product-add-to-cart-btn:hover::before {
-            left: 0;
-        }
-
-        .product-add-to-cart-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.3);
-        }
-
-        /* No Results Enhanced */
-        .no-results {
-            text-align: center;
-            padding: 6rem 2rem;
-            color: var(--text-light);
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-        }
-
-        .no-results i {
-            font-size: 5rem;
-            margin-bottom: 2rem;
-            color: #e1e5e9;
-        }
-
-        .no-results h3 {
-            margin-bottom: 1rem;
-            color: var(--text-dark);
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-
-        .no-results p {
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
-        }
-
-        /* ========== ENHANCED MODAL STYLES ========== */
-        .products-modal {
-            display: none;
-            position: fixed;
-            z-index: 2000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(10px);
-        }
-
-        .products-modal-content {
-            background: white;
-            margin: 3% auto;
-            padding: 0;
-            border-radius: 25px;
-            width: 90%;
-            max-width: 1000px;
-            position: relative;
-            animation: modalSlideIn 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
-        }
-
-        @keyframes modalSlideIn {
-            from {
-                opacity: 0;
-                transform: translateY(-50px) scale(0.9);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
-        }
-
-        .products-close-btn {
-            position: absolute;
-            top: 20px;
-            right: 25px;
-            font-size: 1.8rem;
-            cursor: pointer;
-            z-index: 10;
-            color: var(--text-dark);
-            background: white;
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-            transition: all 0.3s ease;
-        }
-
-        .products-close-btn:hover {
-            background: var(--accent-color);
-            color: white;
-            transform: scale(1.1);
+          grid-template-columns: 1fr;
+          text-align: center;
+          height: auto;
+          min-height: auto;
+          max-height: none;
         }
 
         .products-modal-body {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            padding: 3rem;
+          grid-template-columns: 1fr;
+          gap: 2rem;
+          padding: 2rem;
         }
 
-        .products-modal-image {
-            position: relative;
-        }
-
-        .products-modal-image img {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            border-radius: 15px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        .modal-image-gallery {
-            margin-top: 1rem;
-        }
-
-        .gallery-thumbnails {
-            display: flex;
-            gap: 0.5rem;
-        }
-
-        .thumbnail {
-            width: 60px;
-            height: 60px;
-            border-radius: 8px;
-            overflow: hidden;
-            cursor: pointer;
-            border: 2px solid transparent;
-            transition: all 0.3s ease;
-        }
-
-        .thumbnail.active {
-            border-color: var(--primary-color);
-        }
-
-        .thumbnail img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .products-modal-info {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .products-modal-info h3 {
-            font-size: 2.2rem;
-            margin-bottom: 0.5rem;
-            color: var(--text-dark);
-            font-weight: 800;
-        }
-
-        .products-modal-info p {
-            color: var(--text-light);
-            margin-bottom: 1rem;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .products-modal-price {
-            font-size: 2.5rem;
-            font-weight: 800;
-            background: var(--gradient-gold);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 1.5rem;
-            display: inline-block;
-        }
-
-        /* Product Rating */
-        .product-rating {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .stars {
-            color: #ffd700;
-            font-size: 1.2rem;
-        }
-
-        .rating-text {
-            color: var(--text-light);
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-
-        /* Product Features */
-        .product-features {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-            margin-bottom: 2rem;
-        }
-
-        .feature {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            color: var(--text-dark);
-            font-weight: 500;
-        }
-
-        .feature i {
-            color: var(--success-color);
-            font-size: 1.1rem;
-        }
-
-        .products-modal-description {
-            line-height: 1.7;
-            margin-bottom: 2rem;
-            color: var(--text-light);
-            font-size: 1rem;
-        }
-
-        /* Modal Actions */
         .modal-actions {
-            display: flex;
-            gap: 1rem;
-            align-items: center;
+          flex-direction: column;
         }
 
         .products-modal-add-to-cart {
-            flex: 1;
-            padding: 1.2rem 2rem;
-            background: var(--gradient-primary);
-            color: white;
-            border: none;
-            border-radius: 15px;
-            cursor: pointer;
-            font-weight: 700;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .products-container {
+          padding: 0 10px;
         }
 
-        .products-modal-add-to-cart:hover {
-            background: var(--gradient-gold);
-            transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(255, 215, 0, 0.3);
+        .products-hero {
+          height: 50vh;
         }
 
-        .wishlist-btn {
-            padding: 1.2rem;
-            background: transparent;
-            border: 2px solid var(--text-light);
-            border-radius: 15px;
-            cursor: pointer;
-            color: var(--text-light);
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
+        .products-hero-title {
+          font-size: 2rem;
         }
 
-        .wishlist-btn:hover {
-            background: var(--accent-color);
-            border-color: var(--accent-color);
-            color: white;
-            transform: scale(1.1);
+        .products-showcase-section {
+          padding: 3rem 0;
         }
 
-        /* ========== RESPONSIVE DESIGN ========== */
-        @media (max-width: 1200px) {
-            .products-container {
-                max-width: 1200px;
-                padding: 0 15px;
-            }
-            
-            .filter-controls {
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                gap: 1.5rem;
-                padding: 2rem;
-            }
-
-            /* Adjust card size for medium screens */
-            .product-showcase-card {
-                width: 320px;
-                height: 500px;
-                min-height: 500px;
-                max-height: 500px;
-                min-width: 320px;
-                max-width: 320px;
-            }
-
-            .products-showcase-grid {
-                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            }
+        .product-showcase-info {
+          padding: 1.5rem;
         }
 
-        @media (max-width: 768px) {
-            .hero-stats {
-                flex-direction: column;
-                gap: 20px;
-            }
-            
-            .hero-stat {
-                min-width: auto;
-            }
-            
-            .filter-controls {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-                padding: 1.5rem;
-            }
-
-            .products-filter-buttons {
-                justify-content: center;
-            }
-
-            .results-info {
-                flex-direction: column;
-                gap: 1rem;
-                text-align: center;
-                padding: 1rem;
-            }
-
-            .products-hero {
-                height: 60vh;
-            }
-
-            .products-hero-title {
-                font-size: 2.5rem;
-            }
-
-            .products-hero-subtitle {
-                font-size: 1rem;
-            }
-
-            .products-showcase-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-                justify-items: center;
-            }
-
-            /* Mobile card sizing - still uniform */
-            .product-showcase-card {
-                width: 100%;
-                max-width: 350px;
-                height: 520px;
-                min-height: 520px;
-                max-height: 520px;
-            }
-
-            .products-showcase-grid.list-view .product-showcase-card {
-                grid-template-columns: 1fr;
-                text-align: center;
-                height: auto;
-                min-height: auto;
-                max-height: none;
-            }
-
-            .products-modal-body {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-                padding: 2rem;
-            }
-
-            .modal-actions {
-                flex-direction: column;
-            }
-
-            .products-modal-add-to-cart {
-                width: 100%;
-            }
+        .search-box input {
+          padding: 15px 50px 15px 45px;
+          font-size: 0.9rem;
         }
 
-        @media (max-width: 480px) {
-            .products-container {
-                padding: 0 10px;
-            }
-
-            .products-hero {
-                height: 50vh;
-            }
-
-            .products-hero-title {
-                font-size: 2rem;
-            }
-
-            .products-showcase-section {
-                padding: 3rem 0;
-            }
-
-            .product-showcase-info {
-                padding: 1.5rem;
-            }
-
-            .search-box input {
-                padding: 15px 50px 15px 45px;
-                font-size: 0.9rem;
-            }
-
-            .filter-controls {
-                padding: 1rem;
-            }
-
-            .products-modal-content {
-                margin: 10% auto;
-                width: 95%;
-            }
-
-            .products-modal-body {
-                padding: 1.5rem;
-            }
-
-            /* Smaller mobile card sizing */
-            .product-showcase-card {
-                width: 100%;
-                max-width: 320px;
-                height: 480px;
-                min-height: 480px;
-                max-height: 480px;
-            }
-
-            .product-showcase-image {
-                height: 240px;
-            }
+        .filter-controls {
+          padding: 1rem;
         }
 
-        /* Header Responsive Styles */
-        @media (max-width: 1200px) {
-            header .container {
-                padding: 0 15px;
-            }
-            
-            header h2 {
-                font-size: 1.6rem;
-            }
-            
-            ul {
-                gap: 30px;
-            }
+        .products-modal-content {
+          margin: 10% auto;
+          width: 95%;
         }
 
-        @media (max-width: 1024px) {
-            header {
-                height: 80px;
-            }
-            
-            header h2 {
-                font-size: 1.4rem;
-                letter-spacing: 1px;
-            }
-            
-            #mta {
-                font-size: 1.8rem;
-                margin-right: 10px;
-            }
-            
-            ul {
-                gap: 20px;
-            }
-            
-            .nav {
-                font-size: 0.9rem;
-                padding: 10px 15px;
-            }
+        .products-modal-body {
+          padding: 1.5rem;
         }
 
-        @media (max-width: 768px) {
-            header {
-                height: 70px;
-            }
-            
-            header .container {
-                padding: 0 10px;
-            }
-            
-            header h2 {
-                font-size: 1.2rem;
-                letter-spacing: 0.5px;
-            }
-            
-            #mta {
-                font-size: 1.5rem;
-                margin-right: 8px;
-            }
-            
-            ul {
-                gap: 15px;
-            }
-            
-            .nav {
-                font-size: 0.85rem;
-                padding: 8px 12px;
-            }
-            
-            .cart-link span {
-                display: none;
-            }
-        }
-
-        @media (max-width: 600px) {
-            header {
-                height: 60px;
-            }
-            
-            header .container {
-                justify-content: space-between;
-                padding: 0 15px;
-            }
-            
-            /* Hide desktop navigation */
-            header ul {
-                display: none;
-            }
-        }
-        
-        /* Always show mobile menu */
-        .menu {
-            display: flex;
-            position: relative;
-            top: auto;
-            right: auto;
-            padding: 5px;
-            cursor: pointer;
-        }
-            
-            .menu .bar {
-                width: 25px;
-                height: 2px;
-                margin: 2px 0;
-            }
-            
-            /* Mobile navigation menu */
-            .nav-menu {
-                display: none;
-                position: fixed;
-                top: 60px;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-                backdrop-filter: blur(20px);
-                padding: 20px 0;
-                transform: translateY(-100%);
-                transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-                z-index: 999;
-                flex-direction: column;
-            }
-            
-            .nav-menu.active {
-                display: flex;
-                transform: translateY(0);
-            }
-            
-            .nav-menu a {
-                display: block;
-                padding: 15px 30px;
-                color: white;
-                text-decoration: none;
-                font-size: 1.1rem;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-                transition: all 0.3s ease;
-            }
-            
-            .nav-menu a:hover {
-                background: rgba(255, 215, 0, 0.1);
-                color: #ffd700;
-                transform: translateX(10px);
-            }
-
-        @media (max-width: 480px) {
-            header {
-                height: 55px;
-            }
-            
-            header .container {
-                padding: 0 10px;
-            }
-            
-            header h2 {
-                font-size: 0.9rem;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                max-width: 200px;
-            }
-            
-            #mta {
-                font-size: 1rem;
-                margin-right: 3px;
-            }
-            
-            .menu .bar {
-                width: 20px;
-                height: 2px;
-                margin: 1.5px 0;
-            }
-            
-            .nav-menu {
-                top: 55px;
-            }
-            
-            .nav-menu a {
-                padding: 12px 20px;
-                font-size: 1rem;
-            }
-        }
-
-        @media (max-width: 360px) {
-            header h2 {
-                font-size: 0.8rem;
-                max-width: 150px;
-            }
-            
-            #mta {
-                font-size: 0.9rem;
-            }
-            
-            header .container {
-                padding: 0 8px;
-            }
-        }
-
-        /* Animation classes for scroll triggers */
-        .animate {
-            opacity: 1 !important;
-            transform: translateY(0) !important;
-        }
-
-        /* Initial states for animations */
+        /* Smaller mobile card sizing */
         .product-showcase-card {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
+          width: 100%;
+          max-width: 320px;
+          height: 480px;
+          min-height: 480px;
+          max-height: 480px;
         }
+
+        .product-showcase-image {
+          height: 240px;
+        }
+      }
+
+      /* Header Responsive Styles */
+      @media (max-width: 1200px) {
+        header .container {
+          padding: 0 15px;
+        }
+
+        header h2 {
+          font-size: 1.6rem;
+        }
+
+        ul {
+          gap: 30px;
+        }
+      }
+
+      @media (max-width: 1024px) {
+        header {
+          height: 80px;
+        }
+
+        header h2 {
+          font-size: 1.4rem;
+          letter-spacing: 1px;
+        }
+
+        #mta {
+          font-size: 1.8rem;
+          margin-right: 10px;
+        }
+
+        ul {
+          gap: 20px;
+        }
+
+        .nav {
+          font-size: 0.9rem;
+          padding: 10px 15px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        header {
+          height: 70px;
+        }
+
+        header .container {
+          padding: 0 10px;
+        }
+
+        header h2 {
+          font-size: 1.2rem;
+          letter-spacing: 0.5px;
+        }
+
+        #mta {
+          font-size: 1.5rem;
+          margin-right: 8px;
+        }
+
+        ul {
+          gap: 15px;
+        }
+
+        .nav {
+          font-size: 0.85rem;
+          padding: 8px 12px;
+        }
+
+        .cart-link span {
+          display: none;
+        }
+      }
+
+      @media (max-width: 600px) {
+        header {
+          height: 60px;
+        }
+
+        header .container {
+          justify-content: space-between;
+          padding: 0 15px;
+        }
+
+        /* Hide desktop navigation */
+        header ul {
+          display: none;
+        }
+      }
+
+      /* Always show mobile menu */
+      .menu {
+        display: flex;
+        position: relative;
+        top: auto;
+        right: auto;
+        padding: 5px;
+        cursor: pointer;
+      }
+
+      .menu .bar {
+        width: 25px;
+        height: 2px;
+        margin: 2px 0;
+      }
+
+      /* Mobile navigation menu */
+      .nav-menu {
+        display: none;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          135deg,
+          #1a1a2e 0%,
+          #16213e 50%,
+          #0f3460 100%
+        );
+        backdrop-filter: blur(20px);
+        padding: 20px 0;
+        transform: translateY(-100%);
+        transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        z-index: 999;
+        flex-direction: column;
+      }
+
+      .nav-menu.active {
+        display: flex;
+        transform: translateY(0);
+      }
+
+      .nav-menu a {
+        display: block;
+        padding: 15px 30px;
+        color: white;
+        text-decoration: none;
+        font-size: 1.1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .nav-menu a:hover {
+        background: rgba(255, 215, 0, 0.1);
+        color: #ffd700;
+        transform: translateX(10px);
+      }
+
+      @media (max-width: 480px) {
+        header {
+          height: 55px;
+        }
+
+        header .container {
+          padding: 0 10px;
+        }
+
+        header h2 {
+          font-size: 0.9rem;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: 200px;
+        }
+
+        #mta {
+          font-size: 1rem;
+          margin-right: 3px;
+        }
+
+        .menu .bar {
+          width: 20px;
+          height: 2px;
+          margin: 1.5px 0;
+        }
+
+        .nav-menu {
+          top: 55px;
+        }
+
+        .nav-menu a {
+          padding: 12px 20px;
+          font-size: 1rem;
+        }
+      }
+
+      @media (max-width: 360px) {
+        header h2 {
+          font-size: 0.8rem;
+          max-width: 150px;
+        }
+
+        #mta {
+          font-size: 0.9rem;
+        }
+
+        header .container {
+          padding: 0 8px;
+        }
+      }
+
+      /* Animation classes for scroll triggers */
+      .animate {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+      }
+
+      /* Initial states for animations */
+      .product-showcase-card {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+      }
     </style>
 
     <script src="cart.js"></script>
     <script>
       function toggleMenu() {
-                const menu = document.getElementById("menu");
-                const navMenu = document.getElementById("navMenu");
-                
-                if (menu) menu.classList.toggle("active");
-                if (navMenu) navMenu.classList.toggle("active");
-            }
-            
-        function closeMenu() {
-            const menu = document.querySelector('.menu');
-            const navMenu = document.getElementById('navMenu');
-            
-            if (navMenu && navMenu.classList.contains('active')) {
-                // Add closing animation
-                navMenu.classList.add('closing');
-                
-                // Remove active class after animation delay
-                setTimeout(() => {
-                    navMenu.classList.remove('active', 'closing');
-                }, 400); // Match the slideOut animation duration
-            }
-            
-            if (menu) {
-                menu.classList.remove('active');
-            }
-        }
-            
-        // Setup mobile menu functionality
-        function setupMobileMenu() {
-            const navMenu = document.getElementById('navMenu');
-            
-            if (navMenu) {
-                // Close menu when clicking on links
-                const navLinks = navMenu.querySelectorAll('a');
-                navLinks.forEach(link => {
-                    link.addEventListener('click', closeMenu);
-                });
-                
-                // Close menu when clicking outside
-                document.addEventListener('click', function(e) {
-                    const menu = document.getElementById('menu');
-                    const isClickInsideMenu = menu && menu.contains(e.target);
-                    const isClickInsideNavMenu = navMenu.contains(e.target);
-                    
-                    if (!isClickInsideMenu && !isClickInsideNavMenu && navMenu.classList.contains('active')) {
-                        closeMenu();
-                    }
-                });
-                
-                // Close menu on escape key
-                document.addEventListener('keydown', function(e) {
-                    if (e.key === 'Escape' && navMenu.classList.contains('active')) {
-                        closeMenu();
-                    }
-                });
-            }
+        const menu = document.getElementById("menu");
+        const navMenu = document.getElementById("navMenu");
+
+        if (menu) menu.classList.toggle("active");
+        if (navMenu) navMenu.classList.toggle("active");
+      }
+
+      function closeMenu() {
+        const menu = document.querySelector(".menu");
+        const navMenu = document.getElementById("navMenu");
+
+        if (navMenu && navMenu.classList.contains("active")) {
+          // Add closing animation
+          navMenu.classList.add("closing");
+
+          // Remove active class after animation delay
+          setTimeout(() => {
+            navMenu.classList.remove("active", "closing");
+          }, 400); // Match the slideOut animation duration
         }
 
-        // Global variables
-        let currentModal = null;
-        let allProducts = [];
-        let filteredProducts = [];
-
-        // Initialize products data
-        function initializeProducts() {
-            const productCards = document.querySelectorAll('.product-showcase-card');
-            allProducts = Array.from(productCards).map(card => ({
-                element: card,
-                id: card.getAttribute('data-product-id'),
-                name: card.getAttribute('data-name'),
-                category: card.getAttribute('data-category'),
-                price: parseFloat(card.getAttribute('data-price'))
-            }));
-            filteredProducts = [...allProducts];
+        if (menu) {
+          menu.classList.remove("active");
         }
+      }
 
-        // Search functionality
-        function setupSearch() {
-            const searchInput = document.getElementById('searchInput');
-            const clearSearchBtn = document.getElementById('clearSearch');
+      // Setup mobile menu functionality
+      function setupMobileMenu() {
+        const navMenu = document.getElementById("navMenu");
 
-            searchInput.addEventListener('input', function() {
-                const searchTerm = this.value.toLowerCase();
-                
-                if (searchTerm) {
-                    clearSearchBtn.style.display = 'block';
-                } else {
-                    clearSearchBtn.style.display = 'none';
-                }
+        if (navMenu) {
+          // Close menu when clicking on links
+          const navLinks = navMenu.querySelectorAll("a");
+          navLinks.forEach((link) => {
+            link.addEventListener("click", closeMenu);
+          });
 
-                applyFilters();
-            });
+          // Close menu when clicking outside
+          document.addEventListener("click", function (e) {
+            const menu = document.getElementById("menu");
+            const isClickInsideMenu = menu && menu.contains(e.target);
+            const isClickInsideNavMenu = navMenu.contains(e.target);
 
-            clearSearchBtn.addEventListener('click', function() {
-                searchInput.value = '';
-                this.style.display = 'none';
-                applyFilters();
-            });
+            if (
+              !isClickInsideMenu &&
+              !isClickInsideNavMenu &&
+              navMenu.classList.contains("active")
+            ) {
+              closeMenu();
+            }
+          });
+
+          // Close menu on escape key
+          document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape" && navMenu.classList.contains("active")) {
+              closeMenu();
+            }
+          });
         }
+      }
 
-        // Price filter functionality
-        function setupPriceFilter() {
-            const minPriceInput = document.getElementById('minPrice');
-            const maxPriceInput = document.getElementById('maxPrice');
-            const priceRange = document.getElementById('priceRange');
-            const maxPriceLabel = document.getElementById('maxPriceLabel');
+      // Global variables
+      let currentModal = null;
+      let allProducts = [];
+      let filteredProducts = [];
 
-            // Set max price based on products
-            const maxPrice = Math.max(...allProducts.map(p => p.price));
-            priceRange.max = maxPrice;
-            priceRange.value = maxPrice;
-            maxPriceLabel.textContent = maxPrice + '₾';
-            maxPriceInput.max = maxPrice;
+      // Initialize products data
+      function initializeProducts() {
+        const productCards = document.querySelectorAll(
+          ".product-showcase-card"
+        );
+        allProducts = Array.from(productCards).map((card) => ({
+          element: card,
+          id: card.getAttribute("data-product-id"),
+          name: card.getAttribute("data-name"),
+          category: card.getAttribute("data-category"),
+          price: parseFloat(card.getAttribute("data-price")),
+        }));
+        filteredProducts = [...allProducts];
+      }
 
-            priceRange.addEventListener('input', function() {
-                maxPriceInput.value = this.value;
-                maxPriceLabel.textContent = this.value + '₾';
-                applyFilters();
-            });
+      // Search functionality
+      function setupSearch() {
+        const searchInput = document.getElementById("searchInput");
+        const clearSearchBtn = document.getElementById("clearSearch");
 
-            minPriceInput.addEventListener('input', applyFilters);
-            maxPriceInput.addEventListener('input', function() {
-                priceRange.value = this.value;
-                maxPriceLabel.textContent = this.value + '₾';
-                applyFilters();
-            });
-        }
+        searchInput.addEventListener("input", function () {
+          const searchTerm = this.value.toLowerCase();
 
-        // Sort functionality
-        function setupSort() {
-            const sortSelect = document.getElementById('sortSelect');
-            if (sortSelect) {
-                sortSelect.addEventListener('change', function() {
-                    console.log('Sort changed to:', this.value);
-                    applyFilters();
-                });
-            }
-        }
-        function setupViewToggle() {
-            const gridViewBtn = document.getElementById('gridView');
-            const listViewBtn = document.getElementById('listView');
-            const productsGrid = document.getElementById('productsGrid');
+          if (searchTerm) {
+            clearSearchBtn.style.display = "block";
+          } else {
+            clearSearchBtn.style.display = "none";
+          }
 
-            gridViewBtn.addEventListener('click', function() {
-                productsGrid.classList.remove('list-view');
-                gridViewBtn.classList.add('active');
-                listViewBtn.classList.remove('active');
-            });
-
-            listViewBtn.addEventListener('click', function() {
-                productsGrid.classList.add('list-view');
-                listViewBtn.classList.add('active');
-                gridViewBtn.classList.remove('active');
-            });
-        }
-
-        // Apply all filters
-        function applyFilters() {
-            const searchInput = document.getElementById('searchInput');
-            const activeCategory = document.querySelector('.products-filter-btn.active');
-            const minPriceInput = document.getElementById('minPrice');
-            const maxPriceInput = document.getElementById('maxPrice');
-            const sortSelect = document.getElementById('sortSelect');
-
-            const searchTerm = searchInput ? searchInput.value.toLowerCase() : '';
-            const activeCategoryFilter = activeCategory ? activeCategory.getAttribute('data-filter') : 'all';
-            const minPrice = parseFloat(minPriceInput ? minPriceInput.value : 0) || 0;
-            const maxPrice = parseFloat(maxPriceInput ? maxPriceInput.value : Infinity) || Infinity;
-            const sortBy = sortSelect ? sortSelect.value : 'default';
-
-            // Filter products
-            filteredProducts = allProducts.filter(product => {
-                const matchesSearch = product.name.toLowerCase().includes(searchTerm);
-                const matchesCategory = activeCategoryFilter === 'all' || product.category === activeCategoryFilter;
-                const matchesPrice = product.price >= minPrice && product.price <= maxPrice;
-                
-                return matchesSearch && matchesCategory && matchesPrice;
-            });
-
-            // Sort products
-            sortProducts(filteredProducts, sortBy);
-
-            // Update display
-            updateProductDisplay();
-            updateResultsCount();
-            updateActiveFilters();
-        }
-
-        // Sort products
-        function sortProducts(products, sortBy) {
-            console.log('Sorting products by:', sortBy, 'Total products:', products.length);
-            
-            switch (sortBy) {
-                case 'name-asc':
-                    products.sort((a, b) => a.name.localeCompare(b.name, 'ka'));
-                    console.log('Sorted by name ascending');
-                    break;
-                case 'name-desc':
-                    products.sort((a, b) => b.name.localeCompare(a.name, 'ka'));
-                    console.log('Sorted by name descending');
-                    break;
-                case 'price-asc':
-                    products.sort((a, b) => a.price - b.price);
-                    console.log('Sorted by price ascending');
-                    break;
-                case 'price-desc':
-                    products.sort((a, b) => b.price - a.price);
-                    console.log('Sorted by price descending');
-                    break;
-                default:
-                    console.log('Using default sort order');
-                    // Keep original order - restore to allProducts order
-                    const originalOrder = allProducts.map(p => p.id);
-                    products.sort((a, b) => {
-                        return originalOrder.indexOf(a.id) - originalOrder.indexOf(b.id);
-                    });
-                    break;
-            }
-            
-            // Log first few products after sorting
-            console.log('First 3 products after sort:', products.slice(0, 3).map(p => ({ name: p.name, price: p.price })));
-        }
-
-        // Update product display
-        function updateProductDisplay() {
-            const noResults = document.getElementById('noResults');
-            const productsGrid = document.getElementById('productsGrid');
-            
-            if (!productsGrid) return;
-            
-            // Hide all products first
-            allProducts.forEach(product => {
-                product.element.classList.add('hide');
-                product.element.classList.remove('show');
-            });
-
-            if (filteredProducts.length === 0) {
-                if (noResults) noResults.style.display = 'block';
-            } else {
-                if (noResults) noResults.style.display = 'none';
-                
-                // Clear the grid and re-append in the correct order
-                const productElements = [];
-                
-                // Collect all product elements in the filtered order
-                filteredProducts.forEach(product => {
-                    productElements.push(product.element);
-                });
-                
-                // Re-append elements to maintain proper order
-                productElements.forEach((element, index) => {
-                    productsGrid.appendChild(element);
-                    
-                    // Show products with stagger animation
-                    setTimeout(() => {
-                        element.classList.remove('hide');
-                        element.classList.add('show');
-                    }, index * 100);
-                });
-            }
-        }
-
-        // Update results count
-        function updateResultsCount() {
-            const resultsCount = document.getElementById('resultsCount');
-            if (resultsCount) {
-                const count = filteredProducts.length;
-                resultsCount.textContent = `${count} პროდუქტი ნაპოვნია`;
-            }
-        }
-
-        // Update active filters display
-        function updateActiveFilters() {
-            const activeFiltersContainer = document.getElementById('activeFilters');
-            if (!activeFiltersContainer) return;
-            
-            const filters = [];
-
-            // Search filter
-            const searchInput = document.getElementById('searchInput');
-            const searchTerm = searchInput ? searchInput.value : '';
-            if (searchTerm) {
-                filters.push(`ძიება: "${searchTerm}"`);
-            }
-
-            // Category filter
-            const activeCategory = document.querySelector('.products-filter-btn.active');
-            if (activeCategory && activeCategory.getAttribute('data-filter') !== 'all') {
-                filters.push(`კატეგორია: ${activeCategory.textContent}`);
-            }
-
-            // Price filter
-            const minPriceInput = document.getElementById('minPrice');
-            const maxPriceInput = document.getElementById('maxPrice');
-            const minPrice = minPriceInput ? minPriceInput.value : '';
-            const maxPrice = maxPriceInput ? maxPriceInput.value : '';
-            if (minPrice || (maxPrice && allProducts.length > 0 && maxPrice < Math.max(...allProducts.map(p => p.price)))) {
-                const priceLabel = `ფასი: ${minPrice || 0}₾ - ${maxPrice || '∞'}₾`;
-                filters.push(priceLabel);
-            }
-
-            // Sort filter
-            const sortSelect = document.getElementById('sortSelect');
-            if (sortSelect && sortSelect.value !== 'default') {
-                const sortLabel = sortSelect.options[sortSelect.selectedIndex].text;
-                filters.push(`დალაგება: ${sortLabel}`);
-            }
-
-            // Render filter tags
-            activeFiltersContainer.innerHTML = filters.map(filter => `
-                <div class="filter-tag">${filter}</div>
-            `).join('');
-        }
-
-        // Remove specific filter
-        function removeFilter(type) {
-            switch (type) {
-                case 'search':
-                    const searchInput = document.getElementById('searchInput');
-                    const clearSearchBtn = document.getElementById('clearSearch');
-                    if (searchInput) searchInput.value = '';
-                    if (clearSearchBtn) clearSearchBtn.style.display = 'none';
-                    break;
-                case 'category':
-                    document.querySelectorAll('.products-filter-btn').forEach(btn => btn.classList.remove('active'));
-                    const allBtn = document.querySelector('[data-filter="all"]');
-                    if (allBtn) allBtn.classList.add('active');
-                    break;
-                case 'price':
-                    const minPriceInput = document.getElementById('minPrice');
-                    const maxPriceInput = document.getElementById('maxPrice');
-                    const priceRange = document.getElementById('priceRange');
-                    const maxPriceLabel = document.getElementById('maxPriceLabel');
-                    if (minPriceInput) minPriceInput.value = '';
-                    if (maxPriceInput) maxPriceInput.value = '';
-                    if (allProducts.length > 0) {
-                        const maxProductPrice = Math.max(...allProducts.map(p => p.price));
-                        if (priceRange) priceRange.value = maxProductPrice;
-                        if (maxPriceLabel) maxPriceLabel.textContent = maxProductPrice + '₾';
-                    }
-                    break;
-                case 'sort':
-                    const sortSelect = document.getElementById('sortSelect');
-                    if (sortSelect) sortSelect.value = 'default';
-                    break;
-            }
-            applyFilters();
-        }
-
-        // Clear all filters
-        function clearAllFilters() {
-            const searchInput = document.getElementById('searchInput');
-            const clearSearchBtn = document.getElementById('clearSearch');
-            const minPriceInput = document.getElementById('minPrice');
-            const maxPriceInput = document.getElementById('maxPrice');
-            const sortSelect = document.getElementById('sortSelect');
-            const priceRange = document.getElementById('priceRange');
-            const maxPriceLabel = document.getElementById('maxPriceLabel');
-            
-            if (searchInput) searchInput.value = '';
-            if (clearSearchBtn) clearSearchBtn.style.display = 'none';
-            if (minPriceInput) minPriceInput.value = '';
-            if (maxPriceInput) maxPriceInput.value = '';
-            if (sortSelect) sortSelect.value = 'default';
-            
-            if (allProducts.length > 0) {
-                const maxProductPrice = Math.max(...allProducts.map(p => p.price));
-                if (priceRange) priceRange.value = maxProductPrice;
-                if (maxPriceLabel) maxPriceLabel.textContent = maxProductPrice + '₾';
-            }
-            
-            document.querySelectorAll('.products-filter-btn').forEach(btn => btn.classList.remove('active'));
-            const allBtn = document.querySelector('[data-filter="all"]');
-            if (allBtn) allBtn.classList.add('active');
-            
-            applyFilters();
-        }
-
-        // Setup clear filters button
-        function setupClearFilters() {
-            document.getElementById('clearFilters').addEventListener('click', clearAllFilters);
-        }
-
-        // Add product to cart function
-        function addProductToCart(button) {
-            if (!window.cartManager) {
-                alert('კალათის სისტემა ვერ იტვირთება!');
-                return;
-            }
-
-            const productCard = button.closest('.product-showcase-card');
-            const productId = productCard.getAttribute('data-product-id');
-            const img = productCard.querySelector('img');
-            const title = productCard.querySelector('.product-showcase-title');
-            const category = productCard.querySelector('.product-showcase-category');
-            const priceElement = productCard.querySelector('.product-showcase-price');
-            const price = parseFloat(priceElement.getAttribute('data-price'));
-            
-            const product = {
-                id: productId,
-                name: title.textContent,
-                price: price,
-                category: category.textContent,
-                image: img.src
-            };
-            
-            cartManager.addToCart(product);
-            
-            // Add animation to button
-            button.style.transform = 'scale(0.95)';
-            setTimeout(() => {
-                button.style.transform = 'scale(1)';
-            }, 150);
-        }
-
-        // Add product from modal to cart
-        function addModalProductToCart() {
-            if (!window.cartManager) {
-                alert('კალათის სისტემა ვერ იტვირთება!');
-                return;
-            }
-
-            const modalTitle = document.getElementById('modalTitle');
-            const modalCategory = document.getElementById('modalCategory');
-            const modalPrice = document.getElementById('modalPrice');
-            const modalImage = document.getElementById('modalImage');
-
-            if (modalTitle && modalCategory && modalPrice && modalImage) {
-                // Find the corresponding product card
-                const productCards = document.querySelectorAll('.product-showcase-card');
-                let currentProductCard = null;
-                
-                productCards.forEach(card => {
-                    const cardTitle = card.querySelector('.product-showcase-title').textContent;
-                    if (cardTitle === modalTitle.textContent) {
-                        currentProductCard = card;
-                    }
-                });
-                
-                if (currentProductCard) {
-                    const productId = currentProductCard.getAttribute('data-product-id');
-                    const priceElement = currentProductCard.querySelector('.product-showcase-price');
-                    const price = parseFloat(priceElement.getAttribute('data-price'));
-                    
-                    const product = {
-                        id: productId,
-                        name: modalTitle.textContent,
-                        price: price,
-                        category: modalCategory.textContent,
-                        image: modalImage.src
-                    };
-                    
-                    cartManager.addToCart(product);
-                    closeQuickView();
-                }
-            }
-        }
-
-        // Quick View Modal Function
-        function openQuickView(button) {
-            const productCard = button.closest('.product-showcase-card');
-            const img = productCard.querySelector('img');
-            const title = productCard.querySelector('.product-showcase-title');
-            const category = productCard.querySelector('.product-showcase-category');
-            const price = productCard.querySelector('.product-showcase-price');
-            
-            // Get modal elements
-            const modal = document.getElementById('quickViewModal');
-            const modalImage = document.getElementById('modalImage');
-            const modalTitle = document.getElementById('modalTitle');
-            const modalCategory = document.getElementById('modalCategory');
-            const modalPrice = document.getElementById('modalPrice');
-            
-            if (modal && modalImage && modalTitle && modalCategory && modalPrice) {
-                // Populate modal with product data
-                modalImage.src = img.src;
-                modalImage.alt = img.alt;
-                modalTitle.textContent = title.textContent;
-                modalCategory.textContent = category.textContent;
-                modalPrice.textContent = price.textContent;
-                
-                // Show modal
-                modal.style.display = 'block';
-                document.body.style.overflow = 'hidden';
-                currentModal = modal;
-            }
-        }
-
-        // Close Modal Function
-        function closeQuickView() {
-            const modal = document.getElementById('quickViewModal');
-            if (modal) {
-                modal.style.display = 'none';
-                document.body.style.overflow = 'auto';
-                currentModal = null;
-            }
-        }
-
-        // Scroll animations
-        function setupScrollAnimations() {
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('animate');
-                    }
-                });
-            }, observerOptions);
-
-            // Observe product cards for animation
-            const productCards = document.querySelectorAll('.product-showcase-card');
-            productCards.forEach((card, index) => {
-                card.style.transitionDelay = `${index * 0.1}s`;
-                observer.observe(card);
-            });
-        }
-
-        // DOM Content Loaded Event
-        document.addEventListener('DOMContentLoaded', function() {
-            // Initialize all functionality
-            initializeProducts();
-            setupSearch();
-            setupPriceFilter();
-            setupSort();
-            setupViewToggle();
-            setupScrollAnimations();
-
-            // Setup clear filters button
-            const clearFiltersBtn = document.getElementById('clearFilters');
-            if (clearFiltersBtn) {
-                clearFiltersBtn.addEventListener('click', clearAllFilters);
-            }
-            
-            // Mobile menu setup
-            setupMobileMenu();
-
-            // Initial filter application
-            applyFilters();
-
-            // Close Modal Event Listeners
-            const closeModalBtn = document.getElementById('closeModal');
-            const modal = document.getElementById('quickViewModal');
-            
-            if (closeModalBtn) {
-                closeModalBtn.addEventListener('click', closeQuickView);
-            }
-            
-            // Close modal when clicking outside
-            if (modal) {
-                modal.addEventListener('click', function(e) {
-                    if (e.target === modal) {
-                        closeQuickView();
-                    }
-                });
-            }
-            
-            // Keyboard navigation
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape' && currentModal) {
-                    closeQuickView();
-                }
-            });
-            
-            // Category Filter Event Listeners
-            const filterBtns = document.querySelectorAll('.products-filter-btn');
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    // Remove active class from all buttons
-                    filterBtns.forEach(b => b.classList.remove('active'));
-                    // Add active class to clicked button
-                    this.classList.add('active');
-                    
-                    applyFilters();
-                });
-            });
+          applyFilters();
         });
 
-        // GSAP ScrollSmoother (if GSAP is loaded)
-        if (typeof gsap !== 'undefined') {
-            gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-            ScrollSmoother.create({
-                smooth: 2,
-                effects: true,
-                smoothTouch: 0.1,
-            });
+        clearSearchBtn.addEventListener("click", function () {
+          searchInput.value = "";
+          this.style.display = "none";
+          applyFilters();
+        });
+      }
+
+      // Price filter functionality
+      function setupPriceFilter() {
+        const minPriceInput = document.getElementById("minPrice");
+        const maxPriceInput = document.getElementById("maxPrice");
+        const priceRange = document.getElementById("priceRange");
+        const maxPriceLabel = document.getElementById("maxPriceLabel");
+
+        // Set max price based on products
+        const maxPrice = Math.max(...allProducts.map((p) => p.price));
+        priceRange.max = maxPrice;
+        priceRange.value = maxPrice;
+        maxPriceLabel.textContent = maxPrice + "₾";
+        maxPriceInput.max = maxPrice;
+
+        priceRange.addEventListener("input", function () {
+          maxPriceInput.value = this.value;
+          maxPriceLabel.textContent = this.value + "₾";
+          applyFilters();
+        });
+
+        minPriceInput.addEventListener("input", applyFilters);
+        maxPriceInput.addEventListener("input", function () {
+          priceRange.value = this.value;
+          maxPriceLabel.textContent = this.value + "₾";
+          applyFilters();
+        });
+      }
+
+      // Sort functionality
+      function setupSort() {
+        const sortSelect = document.getElementById("sortSelect");
+        if (sortSelect) {
+          sortSelect.addEventListener("change", function () {
+            console.log("Sort changed to:", this.value);
+            applyFilters();
+          });
         }
+      }
+      function setupViewToggle() {
+        const gridViewBtn = document.getElementById("gridView");
+        const listViewBtn = document.getElementById("listView");
+        const productsGrid = document.getElementById("productsGrid");
+
+        gridViewBtn.addEventListener("click", function () {
+          productsGrid.classList.remove("list-view");
+          gridViewBtn.classList.add("active");
+          listViewBtn.classList.remove("active");
+        });
+
+        listViewBtn.addEventListener("click", function () {
+          productsGrid.classList.add("list-view");
+          listViewBtn.classList.add("active");
+          gridViewBtn.classList.remove("active");
+        });
+      }
+
+      // Apply all filters
+      function applyFilters() {
+        const searchInput = document.getElementById("searchInput");
+        const activeCategory = document.querySelector(
+          ".products-filter-btn.active"
+        );
+        const minPriceInput = document.getElementById("minPrice");
+        const maxPriceInput = document.getElementById("maxPrice");
+        const sortSelect = document.getElementById("sortSelect");
+
+        const searchTerm = searchInput ? searchInput.value.toLowerCase() : "";
+        const activeCategoryFilter = activeCategory
+          ? activeCategory.getAttribute("data-filter")
+          : "all";
+        const minPrice =
+          parseFloat(minPriceInput ? minPriceInput.value : 0) || 0;
+        const maxPrice =
+          parseFloat(maxPriceInput ? maxPriceInput.value : Infinity) ||
+          Infinity;
+        const sortBy = sortSelect ? sortSelect.value : "default";
+
+        // Filter products
+        filteredProducts = allProducts.filter((product) => {
+          const matchesSearch = product.name.toLowerCase().includes(searchTerm);
+          const matchesCategory =
+            activeCategoryFilter === "all" ||
+            product.category === activeCategoryFilter;
+          const matchesPrice =
+            product.price >= minPrice && product.price <= maxPrice;
+
+          return matchesSearch && matchesCategory && matchesPrice;
+        });
+
+        // Sort products
+        sortProducts(filteredProducts, sortBy);
+
+        // Update display
+        updateProductDisplay();
+        updateResultsCount();
+        updateActiveFilters();
+      }
+
+      // Sort products
+      function sortProducts(products, sortBy) {
+        console.log(
+          "Sorting products by:",
+          sortBy,
+          "Total products:",
+          products.length
+        );
+
+        switch (sortBy) {
+          case "name-asc":
+            products.sort((a, b) => a.name.localeCompare(b.name, "ka"));
+            console.log("Sorted by name ascending");
+            break;
+          case "name-desc":
+            products.sort((a, b) => b.name.localeCompare(a.name, "ka"));
+            console.log("Sorted by name descending");
+            break;
+          case "price-asc":
+            products.sort((a, b) => a.price - b.price);
+            console.log("Sorted by price ascending");
+            break;
+          case "price-desc":
+            products.sort((a, b) => b.price - a.price);
+            console.log("Sorted by price descending");
+            break;
+          default:
+            console.log("Using default sort order");
+            // Keep original order - restore to allProducts order
+            const originalOrder = allProducts.map((p) => p.id);
+            products.sort((a, b) => {
+              return originalOrder.indexOf(a.id) - originalOrder.indexOf(b.id);
+            });
+            break;
+        }
+
+        // Log first few products after sorting
+        console.log(
+          "First 3 products after sort:",
+          products.slice(0, 3).map((p) => ({ name: p.name, price: p.price }))
+        );
+      }
+
+      // Update product display
+      function updateProductDisplay() {
+        const noResults = document.getElementById("noResults");
+        const productsGrid = document.getElementById("productsGrid");
+
+        if (!productsGrid) return;
+
+        // Hide all products first
+        allProducts.forEach((product) => {
+          product.element.classList.add("hide");
+          product.element.classList.remove("show");
+        });
+
+        if (filteredProducts.length === 0) {
+          if (noResults) noResults.style.display = "block";
+        } else {
+          if (noResults) noResults.style.display = "none";
+
+          // Clear the grid and re-append in the correct order
+          const productElements = [];
+
+          // Collect all product elements in the filtered order
+          filteredProducts.forEach((product) => {
+            productElements.push(product.element);
+          });
+
+          // Re-append elements to maintain proper order
+          productElements.forEach((element, index) => {
+            productsGrid.appendChild(element);
+
+            // Show products with stagger animation
+            setTimeout(() => {
+              element.classList.remove("hide");
+              element.classList.add("show");
+            }, index * 100);
+          });
+        }
+      }
+
+      // Update results count
+      function updateResultsCount() {
+        const resultsCount = document.getElementById("resultsCount");
+        if (resultsCount) {
+          const count = filteredProducts.length;
+          resultsCount.textContent = `${count} პროდუქტი ნაპოვნია`;
+        }
+      }
+
+      // Update active filters display
+      function updateActiveFilters() {
+        const activeFiltersContainer = document.getElementById("activeFilters");
+        if (!activeFiltersContainer) return;
+
+        const filters = [];
+
+        // Search filter
+        const searchInput = document.getElementById("searchInput");
+        const searchTerm = searchInput ? searchInput.value : "";
+        if (searchTerm) {
+          filters.push(`ძიება: "${searchTerm}"`);
+        }
+
+        // Category filter
+        const activeCategory = document.querySelector(
+          ".products-filter-btn.active"
+        );
+        if (
+          activeCategory &&
+          activeCategory.getAttribute("data-filter") !== "all"
+        ) {
+          filters.push(`კატეგორია: ${activeCategory.textContent}`);
+        }
+
+        // Price filter
+        const minPriceInput = document.getElementById("minPrice");
+        const maxPriceInput = document.getElementById("maxPrice");
+        const minPrice = minPriceInput ? minPriceInput.value : "";
+        const maxPrice = maxPriceInput ? maxPriceInput.value : "";
+        if (
+          minPrice ||
+          (maxPrice &&
+            allProducts.length > 0 &&
+            maxPrice < Math.max(...allProducts.map((p) => p.price)))
+        ) {
+          const priceLabel = `ფასი: ${minPrice || 0}₾ - ${maxPrice || "∞"}₾`;
+          filters.push(priceLabel);
+        }
+
+        // Sort filter
+        const sortSelect = document.getElementById("sortSelect");
+        if (sortSelect && sortSelect.value !== "default") {
+          const sortLabel = sortSelect.options[sortSelect.selectedIndex].text;
+          filters.push(`დალაგება: ${sortLabel}`);
+        }
+
+        // Render filter tags
+        activeFiltersContainer.innerHTML = filters
+          .map(
+            (filter) => `
+                <div class="filter-tag">${filter}</div>
+            `
+          )
+          .join("");
+      }
+
+      // Remove specific filter
+      function removeFilter(type) {
+        switch (type) {
+          case "search":
+            const searchInput = document.getElementById("searchInput");
+            const clearSearchBtn = document.getElementById("clearSearch");
+            if (searchInput) searchInput.value = "";
+            if (clearSearchBtn) clearSearchBtn.style.display = "none";
+            break;
+          case "category":
+            document
+              .querySelectorAll(".products-filter-btn")
+              .forEach((btn) => btn.classList.remove("active"));
+            const allBtn = document.querySelector('[data-filter="all"]');
+            if (allBtn) allBtn.classList.add("active");
+            break;
+          case "price":
+            const minPriceInput = document.getElementById("minPrice");
+            const maxPriceInput = document.getElementById("maxPrice");
+            const priceRange = document.getElementById("priceRange");
+            const maxPriceLabel = document.getElementById("maxPriceLabel");
+            if (minPriceInput) minPriceInput.value = "";
+            if (maxPriceInput) maxPriceInput.value = "";
+            if (allProducts.length > 0) {
+              const maxProductPrice = Math.max(
+                ...allProducts.map((p) => p.price)
+              );
+              if (priceRange) priceRange.value = maxProductPrice;
+              if (maxPriceLabel)
+                maxPriceLabel.textContent = maxProductPrice + "₾";
+            }
+            break;
+          case "sort":
+            const sortSelect = document.getElementById("sortSelect");
+            if (sortSelect) sortSelect.value = "default";
+            break;
+        }
+        applyFilters();
+      }
+
+      // Clear all filters
+      function clearAllFilters() {
+        const searchInput = document.getElementById("searchInput");
+        const clearSearchBtn = document.getElementById("clearSearch");
+        const minPriceInput = document.getElementById("minPrice");
+        const maxPriceInput = document.getElementById("maxPrice");
+        const sortSelect = document.getElementById("sortSelect");
+        const priceRange = document.getElementById("priceRange");
+        const maxPriceLabel = document.getElementById("maxPriceLabel");
+
+        if (searchInput) searchInput.value = "";
+        if (clearSearchBtn) clearSearchBtn.style.display = "none";
+        if (minPriceInput) minPriceInput.value = "";
+        if (maxPriceInput) maxPriceInput.value = "";
+        if (sortSelect) sortSelect.value = "default";
+
+        if (allProducts.length > 0) {
+          const maxProductPrice = Math.max(...allProducts.map((p) => p.price));
+          if (priceRange) priceRange.value = maxProductPrice;
+          if (maxPriceLabel) maxPriceLabel.textContent = maxProductPrice + "₾";
+        }
+
+        document
+          .querySelectorAll(".products-filter-btn")
+          .forEach((btn) => btn.classList.remove("active"));
+        const allBtn = document.querySelector('[data-filter="all"]');
+        if (allBtn) allBtn.classList.add("active");
+
+        applyFilters();
+      }
+
+      // Setup clear filters button
+      function setupClearFilters() {
+        document
+          .getElementById("clearFilters")
+          .addEventListener("click", clearAllFilters);
+      }
+
+      // Add product to cart function
+      function addProductToCart(button) {
+        if (!window.cartManager) {
+          alert("კალათის სისტემა ვერ იტვირთება!");
+          return;
+        }
+
+        const productCard = button.closest(".product-showcase-card");
+        const productId = productCard.getAttribute("data-product-id");
+        const img = productCard.querySelector("img");
+        const title = productCard.querySelector(".product-showcase-title");
+        const category = productCard.querySelector(
+          ".product-showcase-category"
+        );
+        const priceElement = productCard.querySelector(
+          ".product-showcase-price"
+        );
+        const price = parseFloat(priceElement.getAttribute("data-price"));
+
+        const product = {
+          id: productId,
+          name: title.textContent,
+          price: price,
+          category: category.textContent,
+          image: img.src,
+        };
+
+        cartManager.addToCart(product);
+
+        // Add animation to button
+        button.style.transform = "scale(0.95)";
+        setTimeout(() => {
+          button.style.transform = "scale(1)";
+        }, 150);
+      }
+
+      // Add product from modal to cart
+      function addModalProductToCart() {
+        if (!window.cartManager) {
+          alert("კალათის სისტემა ვერ იტვირთება!");
+          return;
+        }
+
+        const modalTitle = document.getElementById("modalTitle");
+        const modalCategory = document.getElementById("modalCategory");
+        const modalPrice = document.getElementById("modalPrice");
+        const modalImage = document.getElementById("modalImage");
+
+        if (modalTitle && modalCategory && modalPrice && modalImage) {
+          // Find the corresponding product card
+          const productCards = document.querySelectorAll(
+            ".product-showcase-card"
+          );
+          let currentProductCard = null;
+
+          productCards.forEach((card) => {
+            const cardTitle = card.querySelector(
+              ".product-showcase-title"
+            ).textContent;
+            if (cardTitle === modalTitle.textContent) {
+              currentProductCard = card;
+            }
+          });
+
+          if (currentProductCard) {
+            const productId =
+              currentProductCard.getAttribute("data-product-id");
+            const priceElement = currentProductCard.querySelector(
+              ".product-showcase-price"
+            );
+            const price = parseFloat(priceElement.getAttribute("data-price"));
+
+            const product = {
+              id: productId,
+              name: modalTitle.textContent,
+              price: price,
+              category: modalCategory.textContent,
+              image: modalImage.src,
+            };
+
+            cartManager.addToCart(product);
+            closeQuickView();
+          }
+        }
+      }
+
+      // Quick View Modal Function
+      function openQuickView(button) {
+        const productCard = button.closest(".product-showcase-card");
+        const img = productCard.querySelector("img");
+        const title = productCard.querySelector(".product-showcase-title");
+        const category = productCard.querySelector(
+          ".product-showcase-category"
+        );
+        const price = productCard.querySelector(".product-showcase-price");
+
+        // Get modal elements
+        const modal = document.getElementById("quickViewModal");
+        const modalImage = document.getElementById("modalImage");
+        const modalTitle = document.getElementById("modalTitle");
+        const modalCategory = document.getElementById("modalCategory");
+        const modalPrice = document.getElementById("modalPrice");
+
+        if (modal && modalImage && modalTitle && modalCategory && modalPrice) {
+          // Populate modal with product data
+          modalImage.src = img.src;
+          modalImage.alt = img.alt;
+          modalTitle.textContent = title.textContent;
+          modalCategory.textContent = category.textContent;
+          modalPrice.textContent = price.textContent;
+
+          // Show modal
+          modal.style.display = "block";
+          document.body.style.overflow = "hidden";
+          currentModal = modal;
+        }
+      }
+
+      // Close Modal Function
+      function closeQuickView() {
+        const modal = document.getElementById("quickViewModal");
+        if (modal) {
+          modal.style.display = "none";
+          document.body.style.overflow = "auto";
+          currentModal = null;
+        }
+      }
+
+      // Scroll animations
+      function setupScrollAnimations() {
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: "0px 0px -50px 0px",
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("animate");
+            }
+          });
+        }, observerOptions);
+
+        // Observe product cards for animation
+        const productCards = document.querySelectorAll(
+          ".product-showcase-card"
+        );
+        productCards.forEach((card, index) => {
+          card.style.transitionDelay = `${index * 0.1}s`;
+          observer.observe(card);
+        });
+      }
+
+      // DOM Content Loaded Event
+      document.addEventListener("DOMContentLoaded", function () {
+        // Initialize all functionality
+        initializeProducts();
+        setupSearch();
+        setupPriceFilter();
+        setupSort();
+        setupViewToggle();
+        setupScrollAnimations();
+
+        // Setup clear filters button
+        const clearFiltersBtn = document.getElementById("clearFilters");
+        if (clearFiltersBtn) {
+          clearFiltersBtn.addEventListener("click", clearAllFilters);
+        }
+
+        // Mobile menu setup
+        setupMobileMenu();
+
+        // Initial filter application
+        applyFilters();
+
+        // Close Modal Event Listeners
+        const closeModalBtn = document.getElementById("closeModal");
+        const modal = document.getElementById("quickViewModal");
+
+        if (closeModalBtn) {
+          closeModalBtn.addEventListener("click", closeQuickView);
+        }
+
+        // Close modal when clicking outside
+        if (modal) {
+          modal.addEventListener("click", function (e) {
+            if (e.target === modal) {
+              closeQuickView();
+            }
+          });
+        }
+
+        // Keyboard navigation
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && currentModal) {
+            closeQuickView();
+          }
+        });
+
+        // Category Filter Event Listeners
+        const filterBtns = document.querySelectorAll(".products-filter-btn");
+        filterBtns.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            // Remove active class from all buttons
+            filterBtns.forEach((b) => b.classList.remove("active"));
+            // Add active class to clicked button
+            this.classList.add("active");
+
+            applyFilters();
+          });
+        });
+      });
+
+      // GSAP ScrollSmoother (if GSAP is loaded)
+      if (typeof gsap !== "undefined") {
+        gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+        ScrollSmoother.create({
+          smooth: 2,
+          effects: true,
+          smoothTouch: 0.1,
+        });
+      }
     </script>
-</body>
+  </body>
 </html>
