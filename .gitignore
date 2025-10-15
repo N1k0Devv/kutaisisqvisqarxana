@@ -1,0 +1,9 @@
+node_modules/
+.env
+*.log
+.DS_Store
+emailjs-config.js
+dist/
+build/
+.replit
+replit.nix

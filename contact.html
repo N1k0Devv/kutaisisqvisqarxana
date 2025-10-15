@@ -27,6 +27,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- EmailJS SDK -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <!-- EmailJS Configuration -->
+    <script src="emailjs-config.js"></script>
   </head>
   <body>
     <div id="smooth-wrapper">
@@ -1430,9 +1432,14 @@
                     to_email: 'info@kutaisistonefactory.ge'
                 };
                 
-                // Send email using EmailJS (fallback to localStorage if EmailJS not configured)
-                if (typeof emailjs !== 'undefined' && emailjs.send) {
-                    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+                const serviceId = window.EMAILJS_SERVICE_ID || 'YOUR_SERVICE_ID';
+                const templateId = window.EMAILJS_TEMPLATE_ID || 'YOUR_TEMPLATE_ID';
+                const publicKey = window.EMAILJS_PUBLIC_KEY || 'YOUR_PUBLIC_KEY';
+                
+                if (typeof emailjs !== 'undefined' && serviceId !== 'YOUR_SERVICE_ID') {
+                    emailjs.init(publicKey);
+                    
+                    emailjs.send(serviceId, templateId, templateParams)
                         .then(function(response) {
                             console.log('SUCCESS!', response.status, response.text);
                             showMessage('success', 'შეტყობინება წარმატებით გაიგზავნა! ჩვენ დაგიკავშირდებით უმოკლეს დროში.');
@@ -1440,24 +1447,14 @@
                         })
                         .catch(function(error) {
                             console.log('FAILED...', error);
-                            // Fallback to localStorage
-                            saveToLocalStorage(data);
-                            showMessage('success', 'შეტყობინება შენახულია! ჩვენ დაგიკავშირდებით უმოკლეს დროში.');
-                            document.getElementById('contactForm').reset();
+                            sendToBackend(data, submitBtn, originalHTML);
                         })
                         .finally(function() {
                             submitBtn.innerHTML = originalHTML;
                             submitBtn.disabled = false;
                         });
                 } else {
-                    // Fallback: Save to localStorage
-                    setTimeout(() => {
-                        saveToLocalStorage(data);
-                        showMessage('success', 'შეტყობინება შენახულია! ჩვენ დაგიკავშირდებით უმოკლეს დროში.');
-                        document.getElementById('contactForm').reset();
-                        submitBtn.innerHTML = originalHTML;
-                        submitBtn.disabled = false;
-                    }, 1500);
+                    sendToBackend(data, submitBtn, originalHTML);
                 }
             });
 
@@ -1618,53 +1615,42 @@
             // Initialize phone functionality when DOM is loaded
             document.addEventListener('DOMContentLoaded', initPhoneFunctionality);
 
+            // Backend fallback function
+            async function sendToBackend(data, submitBtn, originalHTML) {
+                try {
+                    const response = await fetch("/send-message", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify(data),
+                    });
+
+                    const result = await response.json();
+
+                    if (response.ok) {
+                        showMessage('success', 'შეტყობინება წარმატებით გაიგზავნა!');
+                        document.getElementById('contactForm').reset();
+                    } else {
+                        throw new Error(result.message || "დაფიქსირდა შეცდომა");
+                    }
+                } catch (error) {
+                    console.error('Backend send failed:', error);
+                    saveToLocalStorage(data);
+                    showMessage('success', 'შეტყობინება შენახულია! ჩვენ დაგიკავშირდებით უმოკლეს დროში.');
+                    document.getElementById('contactForm').reset();
+                } finally {
+                    submitBtn.innerHTML = originalHTML;
+                    submitBtn.disabled = false;
+                }
+            }
+
           gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-          // create the scrollSmoother before your scrollTriggers
           ScrollSmoother.create({
-            smooth: 2, // how long (in seconds) it takes to "catch up" to the native scroll position
-            effects: true, // looks for data-speed and data-lag attributes on elements
-            smoothTouch: 0.1, // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
+            smooth: 2,
+            effects: true,
+            smoothTouch: 0.1,
           });
-          document.getElementById("contactForm").addEventListener("submit", async function (e) {
-  e.preventDefault();
-
-  const form = e.target;
-  const formData = new FormData(form);
-
-  const data = {
-    firstName: formData.get("firstName"),
-    lastName: formData.get("lastName"),
-    email: formData.get("email"),
-    phone: formData.get("phone"),
-    subject: formData.get("subject"),
-    message: formData.get("message"),
-  };
-
-  try {
-    const response = await fetch("http://localhost:3000/send-message", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
-
-    const result = await response.json();
-
-    if (response.ok) {
-      document.getElementById("success-message").style.display = "block";
-      document.getElementById("error-message").style.display = "none";
-      form.reset();
-    } else {
-      throw new Error(result.message || "დაფიქსირდა შეცდომა");
-    }
-  } catch (error) {
-    document.getElementById("error-message").style.display = "block";
-    document.getElementById("success-message").style.display = "none";
-  }
-
-  document.getElementById("form-messages").style.display = "block";
-});
 
         </script>
       </div>

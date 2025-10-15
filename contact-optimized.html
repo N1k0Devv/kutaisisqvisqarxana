@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - ქუთაისის ქვის ქარხანა</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media.css" />
+    <script src="https://kit.fontawesome.com/7706f5712b.js" crossorigin="anonymous"></script>
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <header>
+                <div class="container">
+                    <i class="fa-solid fa-mountain-sun fa-2xl" id="mta"></i>            
+                    <h2><a href="index.html" class="linki">ქუთაისის ქვის ქარხანა</a></h2>
+                    <ul>
+                        <li><a class="nav" href="index.html">მთავარი</a></li>
+                        <li><a class="nav" href="aboutus.html">ჩვენსშესახებ</a></li>
+                        <li><a href="products.html" class="nav">პროდუქტები</a></li>
+                        <li><a class="nav" href="contact.html">კონტაქტი</a></li>
+                        <li>
+                            <a href="cart.html" class="nav cart-link" style="display: inline-flex; align-items: center; gap: 6px;">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>კალათა</span>
+                            </a>
+                        </li>
+                        <li>
+                            <div class="menu" id="menu" onclick="toggleMenu()">
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                            </div>
+                            <div class="nav-menu" id="navMenu">
+                                <a href="index.html">მთავარი</a>
+                                <a href="aboutus.html">ჩვენს შესახებ</a>
+                                <a href="products.html">პროდუქტები</a>
+                                <a href="contact.html">კონტაქტი</a>
+                                <a href="cart.html">კალათა</a>
+                            </div>
+                        </li>   
+                    </ul>
+                </div>
+            </header>
+
+            <!-- Contact Hero Section -->
+            <section class="contact-hero-enhanced">
+                <div class="hero-background-overlay"></div>
+                <div class="contact-content-enhanced">
+                    <div class="hero-badge">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>დაგვიკავშირდით</span>
+                    </div>
+                    <h1>კონტაქტი</h1>
+                    <p>აქ ნახავთ ჩვენი კონტაქტების, მისამართის, ელ.ფოსტის და ფორმის ინფორმაციას — მოგვწერეთ ნებისმიერი შეკითხვა.</p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">15+</span>
+                            <span class="stat-label">წლიანი გამოცდილება</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">დაკმაყოფილებული კლიენტი</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">მხარდაჭერა</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Information Section -->
+            <section class="contact-info-enhanced">
+                <div class="section-header">
+                    <h2>დაგვიკავშირდით</h2>
+                    <p>მისახვანი ვართ თქვენი შეკითხვების სწრაფ და პროფესიონალურ დასახმარებლად</p>
+                </div>
+                
+                <div class="contact-grid">
+                    <div class="contact-card email-card">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>ელ.ფოსტა</h3>
+                            <p><a href="/cdn-cgi/l/email-protection#e0898e868fa08b95948189938993948f8e85868183948f9299ce8785"><span class="__cf_email__" data-cfemail="20494e464f604b55544149534953544f4e45464143544f52590e4745">[email&#160;protected]</span></a></p>
+                            <a href="/cdn-cgi/l/email-protection#94fdfaf2fbd4ffe1e0f5fde7fde7e0fbfaf1f2f5f7e0fbe6edbaf3f1" class="contact-btn">
+                                <span>წერილი გაგზავნა</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card phone-card">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>ტელეფონი</h3>
+                            <p>
+                                <a href="tel:+995123456789" class="phone-link">+995 123 456 789</a><br>
+                                <a href="tel:+995987654321" class="phone-link">+995 987 654 321</a>
+                            </p>
+                            <div class="phone-buttons">
+                                <a href="tel:+995123456789" class="contact-btn primary-phone">
+                                    <span>ზარი</span>
+                                    <i class="fas fa-phone"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-card location-card">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-map-marker-alt"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>მისამართი</h3>
+                            <p>ქუთაისი, საქართველო</p>
+                            <a href="#map-section" class="contact-btn">
+                                <span>რუკაზე ნახვა</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Form Section -->
+            <section class="contact-form-section">
+                <div class="form-container">
+                    <div class="form-header">
+                        <h2>შეტყობინების გაგზავნა</h2>
+                        <p>შეავსეთ ფორმა და ჩვენ დაგიკავშირდებით უახლოეს დროში</p>
+                    </div>
+                    
+                    <!-- Success/Error Messages -->
+                    <div id="form-messages" class="form-messages" style="display: none;">
+                        <div id="success-message" class="success-message" style="display: none;">
+                            <i class="fas fa-check-circle"></i>
+                            <span>შეტყობინება წარმატებით გაიგზავნა! მალე დაგკავშირდებით.</span>
+                        </div>
+                        <div id="error-message" class="error-message" style="display: none;">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <span>დაფიქსირდა შეცდომა. გთხოვთ სცადოთ თავიდან ან დაგვიკავშირდით ტელეფონით.</span>
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">სახელი *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                                <div class="error-text" id="firstName-error"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">გვარი *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                                <div class="error-text" id="lastName-error"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">ელ.ფოსტა *</label>
+                                <input type="email" id="email" name="email" required>
+                                <div class="error-text" id="email-error"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">ტელეფონი</label>
+                                <input type="tel" id="phone" name="phone">
+                                <div class="error-text" id="phone-error"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">თემა *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">აირჩიეთ თემა</option>
+                                <option value="general">ზოგადი</option>
+                                <option value="quote">ფასები</option>
+                                <option value="support">მხარდაჭერა</option>
+                                <option value="partnership">პარტნიორობა</option>
+                            </select>
+                            <div class="error-text" id="subject-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">შეტყობინება *</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="დაწერეთ თქვენი შეტყობინება აქ..."></textarea>
+                            <div class="error-text" id="message-error"></div>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn" id="submit-btn">
+                            <span>გაგზავნა</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Map Section -->
+            <section class="map-section-fixed" id="map-section">
+                <div class="map-content-wrapper">
+                    <div class="map-header-fixed">
+                        <h2>ჩვენი მდებარეობა</h2>
+                        <p>იპოვეთ ჩვენი ოფისი ქუთაისში</p>
+                    </div>
+                    
+                    <div class="map-layout">
+                        <div class="location-info-panel">
+                            <div class="info-card">
+                                <div class="info-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="info-details">
+                                    <h4>მისამართი</h4>
+                                    <p>ქუთაისი, საქართველო<br>ქვის ქარხნის რაიონი</p>
+                                </div>
+                            </div>
+                            
+                            <div class="info-card">
+                                <div class="info-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="info-details">
+                                    <h4>სამუშაო საათები</h4>
+                                    <p>ყოველთვის ღია</p>
+                                </div>
+                            </div>
+                            
+                            <div class="info-card">
+                                <div class="info-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="info-details">
+                                    <h4>ტელეფონი</h4>
+                                    <p>
+                                        <a href="tel:+995123456789" class="phone-link">+995 123 456 789</a><br>
+                                        <a href="tel:+995987654321" class="phone-link">+995 987 654 321</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="map-display">
+                            <div class="map-frame">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1586.6179632019825!2d42.713427499999995!3d42.2359375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x405ced59ad1080a3%3A0xcfffdd5f8b662e56!2z4YOl4YOj4YOX4YOQ4YOY4YOh4YOY4YOhIOGDpeGDleGDmOGDoSDhg6Xhg5Dhg6Dhg67hg5Dhg5zhg5A!5e1!3m2!1ska!2sge!4v1756673128935!5m2!1ska!2sge"
+                                    allowfullscreen
+                                    loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"
+                                    title="Kutaisi Stone Factory Location">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer>
+                <h3 class="stone">Stone</h3>
+                <h3>Factory</h3>
+                <div class="icons">
+                    <a href="#"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100088853137969" target="_blank"><i class="fa-brands fa-facebook fa-2xl"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter fa-2xl"></i></a>
+                </div>
+                <div class="foot-nav">
+                    <a href="index.html">მთავარი</a>
+                    <a href="aboutus.html">ჩვენს შესახებ</a>
+                    <a href="products.html">პროდუქტები</a>
+                    <a href="contact.html">კონტაქტი</a>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Load EmailJS configuration -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="emailjs-config.js"></script>
+    
+    <!-- Contact Form Script -->
+    <script src="contact-form.js"></script>
+    
+    <!-- Menu functionality -->
+    <script src="menu.js"></script>
+</body>
+</html>
