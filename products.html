@@ -308,8 +308,8 @@
                   <div class="product-badge">ბესტსელერი</div>
                 </div>
                 <div class="product-showcase-info">
-                  <h3 class="product-showcase-title">ბაზალტის ფილა 30სმ</h3>
-                  <p class="product-showcase-category">ბაზალტი</p>
+                  <h3 class="product-showcase-title">გრანიტის ფილა 30სმ</h3>
+                  <p class="product-showcase-category">გრანიტი</p>
                   <div class="product-showcase-price" data-price="47.00">
                     47.00 ₾
                   </div>
@@ -349,8 +349,8 @@
                   <div class="product-badge new">ახალი</div>
                 </div>
                 <div class="product-showcase-info">
-                  <h3 class="product-showcase-title">ბაზალტის ფილა 40სმ</h3>
-                  <p class="product-showcase-category">ბაზალტი</p>
+                  <h3 class="product-showcase-title">გრანიტის საფეხურები</h3>
+                  <p class="product-showcase-category">გრანიტი</p>
                   <div class="product-showcase-price" data-price="65.00">
                     65.00 ₾
                   </div>
@@ -390,8 +390,8 @@
                   <div class="product-badge premium">პრემიუმი</div>
                 </div>
                 <div class="product-showcase-info">
-                  <h3 class="product-showcase-title">მარმარილოს ფილა</h3>
-                  <p class="product-showcase-category">მარმარილო</p>
+                  <h3 class="product-showcase-title">გრანიტის ბორდიული</h3>
+                  <p class="product-showcase-category">გრანიტი</p>
                   <div class="product-showcase-price" data-price="85.00">
                     85.00 ₾
                   </div>
@@ -470,8 +470,8 @@
                   </div>
                 </div>
                 <div class="product-showcase-info">
-                  <h3 class="product-showcase-title">ბაზალტის ბლოკი</h3>
-                  <p class="product-showcase-category">ბაზალტი</p>
+                  <h3 class="product-showcase-title">გრანიტის ბლოკი</h3>
+                  <p class="product-showcase-category">გრანიტი</p>
                   <div class="product-showcase-price" data-price="120.00">
                     120.00 ₾
                   </div>
@@ -511,8 +511,8 @@
                   <div class="product-badge premium">პრემიუმი</div>
                 </div>
                 <div class="product-showcase-info">
-                  <h3 class="product-showcase-title">მარმარილოს ბლოკი</h3>
-                  <p class="product-showcase-category">მარმარილო</p>
+                  <h3 class="product-showcase-title">გრანიტის ქვაფენილი</h3>
+                  <p class="product-showcase-category">გრანიტი</p>
                   <div class="product-showcase-price" data-price="150.00">
                     150.00 ₾
                   </div>
@@ -566,10 +566,15 @@
             background-color: #111;
             color: #fff;
             font-size: 14px;
-            ;
           "
         >
-           გაკეთბულია <a style="color: green;" target="_blank" href="https://n1k0devv.github.io/N1kodevv/">N1kodevv</a>-ის მიერ ©  2025 All Rights Reserved
+          გაკეთბულია
+          <a
+            style="color: green"
+            target="_blank"
+            href="https://n1k0devv.github.io/N1kodevv/"
+            >N1kodevv</a
+          >-ის მიერ © 2025 All Rights Reserved
         </footer>
       </div>
     </div>
@@ -716,6 +721,26 @@
         justify-content: center;
         position: relative;
         overflow: hidden;
+      }
+
+      @media (max-width: 1024px) {
+        .products-hero {
+          height: 80vh;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .products-hero {
+          height: 90vh;
+          background-attachment: scroll;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .products-hero {
+          height: 100vh;
+          background-attachment: scroll;
+        }
       }
 
       .products-hero::before {
@@ -1853,7 +1878,7 @@
         }
 
         .products-hero {
-          height: 60vh;
+          height: 80vh;
         }
 
         .products-hero-title {
@@ -1908,7 +1933,7 @@
         }
 
         .products-hero {
-          height: 50vh;
+          height: 100vh;
         }
 
         .products-hero-title {
