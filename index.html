@@ -3,13 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ქუთაისის ქვის ქარხანა - ნატურალური ქვის დამუშავება, გრანიტი, მარმარილო, 500+ პროექტი"
+    />
     <title>ქუთაისის ქვის ქარხანა</title>
     <script
       src="https://kit.fontawesome.com/7706f5712b.js"
       crossorigin="anonymous"
       defer
+      async
     ></script>
-    <link rel="preload" as="image" href="images/pexels-ahmetcotur-31817156.jpg" fetchpriority="high" />
+    <link
+      rel="preload"
+      as="image"
+      href="images/pexels-ahmetcotur-31817156.jpg"
+      fetchpriority="high"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <style>
+      @font-face {
+        font-family: "System";
+        font-style: normal;
+        font-weight: 400;
+        src: local("Segoe UI"), local("Helvetica Neue"), local("Georgia");
+        font-display: swap;
+      }
+    </style>
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="media.css" />
@@ -25,10 +46,32 @@
               <a href="index.html" class="linki">ქუთაისის ქვის ქარხანა</a>
             </h2>
             <ul>
-              <li><a class="nav" href="index.html">მთავარი</a></li>
-              <li><a class="nav" href="aboutus.html">ჩვენსშესახებ</a></li>
-              <li><a href="products.html" class="nav">პროდუქტები</a></li>
-              <li><a class="nav" href="contact.html">კონტაქტი</a></li>
+              <li>
+                <a class="nav" href="index.html" title="მთავარი გვერდი"
+                  >მთავარი</a
+                >
+              </li>
+              <li>
+                <a
+                  class="nav"
+                  href="aboutus.html"
+                  title="ჩვენზე დამატებითი ინფორმაცია"
+                  >ჩვენსშესახებ</a
+                >
+              </li>
+              <li>
+                <a
+                  href="products.html"
+                  class="nav"
+                  title="ლითონის პროდუქტების კატალოგი"
+                  >პროდუქტები</a
+                >
+              </li>
+              <li>
+                <a class="nav" href="contact.html" title="დაგვიკავშირდით"
+                  >კონტაქტი</a
+                >
+              </li>
               <li>
                 <a
                   href="cart.html"
@@ -58,340 +101,377 @@
           </div>
         </header>
 
-        <!-- Enhanced Hero Section -->
-        <section class="hero-section">
-          <img
-            class="hero-bg"
-            src="images/pexels-ahmetcotur-31817156.jpg"
-            alt=""
-            aria-hidden="true"
-            loading="eager"
-            decoding="async"
-            fetchpriority="high"
-          />
-          <div class="hero-overlay">
-            <div class="hero-content">
-              <div class="hero-badge">პრემიუმი ქვის ქარხანა</div>
-              <h1 class="hero-title">ქუთაისის ქვის ქარხანა</h1>
-              <p class="hero-subtitle">
-                მაღალი ხარისხის ნატურალური ქვის დამუშავება
-              </p>
-              <div class="hero-stats">
-                <div class="hero-stat">
-                  <div class="stat-number">18</div>
-                  <div class="stat-label">აქტიური კარიერები</div>
-                </div>
-                <div class="hero-stat">
-                  <div class="stat-number">500+</div>
-                  <div class="stat-label">პროექტები</div>
-                </div>
-                <div class="hero-stat">
-                  <div class="stat-number">5+</div>
-                  <div class="stat-label">წლიანი გამოცდილება</div>
-                </div>
-              </div>
-              <div class="hero-buttons">
-                <a href="products.html" class="hero-btn primary"
-                  >პროდუქტების ნახვა</a
-                >
-                <a href="aboutus.html" class="hero-btn secondary">გაიგე მეტი</a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Enhanced Features Section -->
-        <section class="marble-features">
-          <div class="features-header">
-            <div class="section-badge">რატომ ჩვენ</div>
-            <h2 class="section-title">პრემიუმი ქვის მახასიათებლები</h2>
-            <p class="section-subtitle">
-              გაიგეთ, რა ხდის ჩვენს ნატურალურ ქვას განსაკუთრებულს
-            </p>
-          </div>
-          <div class="features-grid">
-            <div class="feature-card">
-              <div class="feature-icon">
-                <i class="fas fa-gem"></i>
-              </div>
-              <h3>მუდმივი სილამაზე</h3>
-              <p>
-                გრანიტი გამოირჩევა ელეგანტური წვრილი ხაზებით და ბუნებრივი
-                სილამაზით. თითოეული ფილა უნიკალურია და ხაზს უსვამს სივრცის
-                განსაკუთრებულობას.
-              </p>
-              <div class="feature-highlight">პრემიუმი ხარისხი</div>
-            </div>
-            <div class="feature-card">
-              <div class="feature-icon">
-                <i class="fas fa-crown"></i>
-              </div>
-              <h3>ბუნებრივი ელეგანტურობა</h3>
-              <p>
-                გრანიტი არის ელეგანტურობის სიმბოლო, გლუვი ზედაპირი გამოკვეთავს
-                როგორც თანამედროვე, ასევე კლასიკურ დიზაინს.
-              </p>
-              <div class="feature-highlight">ლუქს დიზაინი</div>
-            </div>
-            <div class="feature-card">
-              <div class="feature-icon">
-                <i class="fas fa-shield-alt"></i>
-              </div>
-              <h3>გამძლე</h3>
-              <p>
-                გამორჩეულად გამძლე და მაღალი ტემპერატურების მიმართ სტაბილური,
-                გრანიტი იდეალური მასალაა სამზარეულოს ზედაპირებისა და
-                ინტერიერისთვის — აერთიანებს ბუნებრივ სიძლიერეს, ელეგანტურ
-                ტექსტურას და ხანგრძლივ მომსახურებას.
-              </p>
-              <div class="feature-highlight">ხანგრძლივობა</div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Enhanced Expertise Section -->
-        <section class="expertise-section">
-          <div class="expertise-container">
-            <div class="expertise-images" id="expertise-left">
-              <div class="image-wrapper">
-                <img
-                  src="images/Marble Warehouse.jpg"
-                  alt="Stone Image"
-                  class="img-right"
-                />
-                <div class="image-overlay">
-                  <div class="overlay-content">
-                    <div class="experience-badge">6+ Years</div>
-                    <p>Industry Experience</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="expertise-text" id="expertise-right">
-              <div class="section-badge">ჩვენი გამოცდილება</div>
-              <h2>2019 წლიდან მოყოლებული</h2>
-              <p>
-                6 წელზე მეტი გამოცდილებით ქვის დამუშავების ინდუსტრიაში, ჩვენი
-                გუნდი უზრუნველყოფს ნებისმიერი მასშტაბის პროექტის მაღალ პროფესიულ
-                შესრულებას.
-              </p>
-              <p>
-                ჩვენი ოსტატები ღრმად აცნობიერებენ მასალის თავისებურებებს და
-                ქმნიან ესთეტიკურ, მომხმარებლის საჭიროებებზე მორგებულ დიზაინს.
-              </p>
-              <div class="expertise-features">
-                <div class="expertise-item">
-                  <div class="expertise-icon">
-                    <i class="fas fa-tools"></i>
-                  </div>
-                  <div class="expertise-content">
-                    <h4>ოსტატი ხელოსნები</h4>
-                    <span>კვალიფიციური ხელოსნები ათწლეულების გამოცდილებით</span>
-                  </div>
-                </div>
-                <div class="expertise-item">
-                  <div class="expertise-icon">
-                    <i class="fas fa-award"></i>
-                  </div>
-                  <div class="expertise-content">
-                    <h4>ხარისხი გარანტირებულია</h4>
-                    <span
-                      >ყველა პროექტი აკმაყოფილებს ჩვენს უმაღლეს
-                      სტანდარტებს</span
-                    >
-                  </div>
-                </div>
-              </div>
-              <a href="aboutus.html" class="expertise-btn">გაიგე მეტი ჩვენზე</a>
-            </div>
-          </div>
-        </section>
-
-        <!-- Enhanced Services Section -->
-        <section class="services-section" id="servisebi">
-          <div class="services-header">
-            <div class="section-badge">ჩვენი სერვისები</div>
-            <h2>პროფესიონალური ქვის მომსახურება</h2>
-            <p>
-              ჩვენ ვთავაზობთ მაღალი სტანდარტის ქვის პროექტების რეალიზაციას,
-              რომელიც აერთიანებს სილამაზესა და განძლეობას.
-            </p>
-          </div>
-          <div class="services-grid">
-            <div class="service-item">
-              <div class="service-image">
-                <img src="images/pool.jpg" alt="Pool Coping" />
-                <div class="service-overlay">
-                  <div class="service-icon">
-                    <i class="fas fa-swimming-pool"></i>
-                  </div>
-                </div>
-              </div>
-              <div class="service-content">
-                <h3>აუზის ფილა</h3>
-                <p>პრემიუმ ქვის ფილა ელეგანტური აუზის დიზაინისთვის</p>
-                <div class="service-features">
-                  <span>სრიალისადმი მდგრადი</span>
-                  <span>ამინდისგან დაცული</span>
-                </div>
-              </div>
-            </div>
-            <div class="service-item">
-              <div class="service-image">
-                <img src="images/granite pavers.jpg" alt="Granite Pavers" />
-                <div class="service-overlay">
-                  <div class="service-icon">
-                    <i class="fas fa-th-large"></i>
-                  </div>
-                </div>
-              </div>
-              <div class="service-content">
-                <h3>გრანიტის ფილები</h3>
-                <p>მყარი გრანიტის ფილები გარე სივრცეებისთვის</p>
-                <div class="service-features">
-                  <span>მძიმე დატვირთვის ატანვის უნარი</span>
-                  <span>მცირე მოვლა-პატრონობის საჭიროება</span>
-                </div>
-              </div>
-            </div>
-            <div class="service-item">
-              <div class="service-image">
-                <img src="images/steps.jpg" alt="Granite Steps" />
-                <div class="service-overlay">
-                  <div class="service-icon">
-                    <i class="fas fa-stairs"></i>
-                  </div>
-                </div>
-              </div>
-              <div class="service-content">
-                <h3>გრანიტის საფეხურები</h3>
-                <p>გამძლე და სტილური გრანიტის საფეხურები</p>
-                <div class="service-features">
-                  <span>სრიალის საწინააღმდეგო</span>
-                  <span>მცირე მოვლა-პატრონობის საჭიროება</span>
-                </div>
-              </div>
-            </div>
-            <div class="service-item">
-              <div class="service-image">
-                <img
-                  src="images/modern-kitchen-with-contemporary-interior-decor-furnishings.jpg"
-                  alt="Marble Kitchen"
-                />
-                <div class="service-overlay">
-                  <div class="service-icon">
-                    <i class="fa-solid fa-sink"></i>
-                  </div>
-                </div>
-              </div>
-              <div class="service-content">
-                <h3>მარმარილოს სამზარეულო</h3>
-                <p>ლუქს კლასის მარმარილოს სამზარეულოს სისტემები</p>
-                <div class="service-features">
-                  <span>სითბოს მდგრადი</span>
-                  <span>პრემიუმ ხარისხი</span>
-                </div>
-              </div>
-            </div>
-            <div class="service-item">
-              <div class="service-image">
-                <img src="images/granite table.jpg" alt="Granite Table" />
-                <div class="service-overlay">
-                  <div class="service-icon">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="icon icon-tabler icons-tabler-outline icon-tabler-picnic-table"
-                    >
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                      <path d="M16 7l2 9m-10 -9l-2 9m-1 -9h14m2 5h-18" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <div class="service-content">
-                <h3>გრანიტის მაგიდა</h3>
-                <p>
-                  კასტომიზებული გრანიტის მაგიდები სასადილო და კომერციული
-                  სივრცეებისთვის
+        <main>
+          <!-- Enhanced Hero Section -->
+          <section class="hero-section">
+            <img
+              class="hero-bg"
+              src="images/pexels-ahmetcotur-31817156.jpg"
+              alt=""
+              aria-hidden="true"
+              loading="eager"
+              decoding="async"
+              fetchpriority="high"
+            />
+            <div class="hero-overlay">
+              <div class="hero-content">
+                <div class="hero-badge">პრემიუმი ქვის ქარხანა</div>
+                <h1 class="hero-title">ქუთაისის ქვის ქარხანა</h1>
+                <p class="hero-subtitle">
+                  მაღალი ხარისხის ნატურალური ქვის დამუშავება
                 </p>
-                <div class="service-features">
-                  <span>ნაკაწრებისადმი მდგრადი</span>
-                  <span>ინდივიდუალური დიზაინი</span>
+                <div class="hero-stats">
+                  <div class="hero-stat">
+                    <div class="stat-number">18</div>
+                    <div class="stat-label">აქტიური კარიერები</div>
+                  </div>
+                  <div class="hero-stat">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">პროექტები</div>
+                  </div>
+                  <div class="hero-stat">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">წლიანი გამოცდილება</div>
+                  </div>
+                </div>
+                <div class="hero-buttons">
+                  <a href="products.html" class="hero-btn primary"
+                    >პროდუქტების ნახვა</a
+                  >
+                  <a href="aboutus.html" class="hero-btn secondary"
+                    >გაიგე მეტი</a
+                  >
                 </div>
               </div>
             </div>
-            <div class="service-item">
-              <div class="service-image">
-                <img src="images/marble pavers.jpg" alt="Marble Pavers" />
-                <div class="service-overlay">
-                  <div class="service-icon">
-                    <i class="fas fa-border-all"></i>
+          </section>
+
+          <!-- Enhanced Features Section -->
+          <section class="marble-features">
+            <div class="features-header">
+              <div class="section-badge">რატომ ჩვენ</div>
+              <h2 class="section-title">პრემიუმი ქვის მახასიათებლები</h2>
+              <p class="section-subtitle">
+                გაიგეთ, რა ხდის ჩვენს ნატურალურ ქვას განსაკუთრებულს
+              </p>
+            </div>
+            <div class="features-grid">
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <i class="fas fa-gem"></i>
+                </div>
+                <h3>მუდმივი სილამაზე</h3>
+                <p>
+                  გრანიტი გამოირჩევა ელეგანტური წვრილი ხაზებით და ბუნებრივი
+                  სილამაზით. თითოეული ფილა უნიკალურია და ხაზს უსვამს სივრცის
+                  განსაკუთრებულობას.
+                </p>
+                <div class="feature-highlight">პრემიუმი ხარისხი</div>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <i class="fas fa-crown"></i>
+                </div>
+                <h3>ბუნებრივი ელეგანტურობა</h3>
+                <p>
+                  გრანიტი არის ელეგანტურობის სიმბოლო, გლუვი ზედაპირი გამოკვეთავს
+                  როგორც თანამედროვე, ასევე კლასიკურ დიზაინს.
+                </p>
+                <div class="feature-highlight">ლუქს დიზაინი</div>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>გამძლე</h3>
+                <p>
+                  გამორჩეულად გამძლე და მაღალი ტემპერატურების მიმართ სტაბილური,
+                  გრანიტი იდეალური მასალაა სამზარეულოს ზედაპირებისა და
+                  ინტერიერისთვის — აერთიანებს ბუნებრივ სიძლიერეს, ელეგანტურ
+                  ტექსტურას და ხანგრძლივ მომსახურებას.
+                </p>
+                <div class="feature-highlight">ხანგრძლივობა</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Enhanced Expertise Section -->
+          <section class="expertise-section">
+            <div class="expertise-container">
+              <div class="expertise-images" id="expertise-left">
+                <div class="image-wrapper">
+                  <img
+                    src="images/Marble Warehouse.jpg"
+                    alt="Stone warehouse with marble inventory"
+                    class="img-right"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div class="image-overlay">
+                    <div class="overlay-content">
+                      <div class="experience-badge">6+ Years</div>
+                      <p>Industry Experience</p>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="service-content">
-                <h3>მარმარილოს ფილები</h3>
+              <div class="expertise-text" id="expertise-right">
+                <div class="section-badge">ჩვენი გამოცდილება</div>
+                <h2>2019 წლიდან მოყოლებული</h2>
                 <p>
-                  ლუქს კლასის მარმარილოს ფილები პრესტიჟული ინსტალაციებისთვის
+                  6 წელზე მეტი გამოცდილებით ქვის დამუშავების ინდუსტრიაში, ჩვენი
+                  გუნდი უზრუნველყოფს ნებისმიერი მასშტაბის პროექტის მაღალ
+                  პროფესიულ შესრულებას.
                 </p>
-                <div class="service-features">
-                  <span>პრემიუმ დასრულება</span>
-                  <span>უნიკალური ნიმუშები</span>
+                <p>
+                  ჩვენი ოსტატები ღრმად აცნობიერებენ მასალის თავისებურებებს და
+                  ქმნიან ესთეტიკურ, მომხმარებლის საჭიროებებზე მორგებულ დიზაინს.
+                </p>
+                <div class="expertise-features">
+                  <div class="expertise-item">
+                    <div class="expertise-icon">
+                      <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="expertise-content">
+                      <h4>ოსტატი ხელოსნები</h4>
+                      <span
+                        >კვალიფიციური ხელოსნები ათწლეულების გამოცდილებით</span
+                      >
+                    </div>
+                  </div>
+                  <div class="expertise-item">
+                    <div class="expertise-icon">
+                      <i class="fas fa-award"></i>
+                    </div>
+                    <div class="expertise-content">
+                      <h4>ხარისხი გარანტირებულია</h4>
+                      <span
+                        >ყველა პროექტი აკმაყოფილებს ჩვენს უმაღლეს
+                        სტანდარტებს</span
+                      >
+                    </div>
+                  </div>
                 </div>
+                <a href="aboutus.html" class="expertise-btn"
+                  >გაიგე მეტი ჩვენზე</a
+                >
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <!-- New CTA Section -->
-        <section class="cta-section">
-          <div class="cta-container">
-            <div class="cta-content">
-              <div class="section-badge">დაიწყე</div>
-              <h2>მზად ხართ შეცვალოთ თქვენი სივრცე?</h2>
+          <!-- Enhanced Services Section -->
+          <section class="services-section" id="servisebi">
+            <div class="services-header">
+              <div class="section-badge">ჩვენი სერვისები</div>
+              <h2>პროფესიონალური ქვის მომსახურება</h2>
               <p>
-                ჩვენი ექსპერტები დაგეხმარებიან იდეალური ქვის გადაწყვეტის
-                არჩევაში. მიიღეთ უფასო კონსულტაცია დღესვე.
+                ჩვენ ვთავაზობთ მაღალი სტანდარტის ქვის პროექტების რეალიზაციას,
+                რომელიც აერთიანებს სილამაზესა და განძლეობას.
               </p>
-              <div class="cta-buttons">
-                <a href="contact.html" class="cta-btn primary"
-                  >დაგვიკავშირდით</a
-                >
-                <a href="products.html" class="cta-btn secondary"
-                  >პროდუქტების ნახვა</a
-                >
+            </div>
+            <div class="services-grid">
+              <div class="service-item">
+                <div class="service-image">
+                  <img
+                    src="images/pool.jpg"
+                    alt="Premium stone pool coping"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div class="service-overlay">
+                    <div class="service-icon">
+                      <i class="fas fa-swimming-pool"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="service-content">
+                  <h3>აუზის ფილა</h3>
+                  <p>პრემიუმ ქვის ფილა ელეგანტური აუზის დიზაინისთვის</p>
+                  <div class="service-features">
+                    <span>სრიალისადმი მდგრადი</span>
+                    <span>ამინდისგან დაცული</span>
+                  </div>
+                </div>
+              </div>
+              <div class="service-item">
+                <div class="service-image">
+                  <img
+                    src="images/granite pavers.jpg"
+                    alt="Durable granite pavers for outdoor spaces"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div class="service-overlay">
+                    <div class="service-icon">
+                      <i class="fas fa-th-large"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="service-content">
+                  <h3>გრანიტის ფილები</h3>
+                  <p>მყარი გრანიტის ფილები გარე სივრცეებისთვის</p>
+                  <div class="service-features">
+                    <span>მძიმე დატვირთვის ატანვის უნარი</span>
+                    <span>მცირე მოვლა-პატრონობის საჭიროება</span>
+                  </div>
+                </div>
+              </div>
+              <div class="service-item">
+                <div class="service-image">
+                  <img
+                    src="images/steps.jpg"
+                    alt="Professional granite steps installation"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div class="service-overlay">
+                    <div class="service-icon">
+                      <i class="fas fa-stairs"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="service-content">
+                  <h3>გრანიტის საფეხურები</h3>
+                  <p>გამძლე და სტილური გრანიტის საფეხურები</p>
+                  <div class="service-features">
+                    <span>სრიალის საწინააღმდეგო</span>
+                    <span>მცირე მოვლა-პატრონობის საჭიროება</span>
+                  </div>
+                </div>
+              </div>
+              <div class="service-item">
+                <div class="service-image">
+                  <img
+                    src="images/modern-kitchen-with-contemporary-interior-decor-furnishings.jpg"
+                    alt="Luxury marble kitchen countertops and design"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div class="service-overlay">
+                    <div class="service-icon">
+                      <i class="fa-solid fa-sink"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="service-content">
+                  <h3>მარმარილოს სამზარეულო</h3>
+                  <p>ლუქს კლასის მარმარილოს სამზარეულოს სისტემები</p>
+                  <div class="service-features">
+                    <span>სითბოს მდგრადი</span>
+                    <span>პრემიუმ ხარისხი</span>
+                  </div>
+                </div>
+              </div>
+              <div class="service-item">
+                <div class="service-image">
+                  <img
+                    src="images/granite table.jpg"
+                    alt="Custom granite dining and commercial tables"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div class="service-overlay">
+                    <div class="service-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-picnic-table"
+                      >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M16 7l2 9m-10 -9l-2 9m-1 -9h14m2 5h-18" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="service-content">
+                  <h3>გრანიტის მაგიდა</h3>
+                  <p>
+                    კასტომიზებული გრანიტის მაგიდები სასადილო და კომერციული
+                    სივრცეებისთვის
+                  </p>
+                  <div class="service-features">
+                    <span>ნაკაწრებისადმი მდგრადი</span>
+                    <span>ინდივიდუალური დიზაინი</span>
+                  </div>
+                </div>
+              </div>
+              <div class="service-item">
+                <div class="service-image">
+                  <img
+                    src="images/marble pavers.jpg"
+                    alt="Premium marble pavers for luxurious installations"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div class="service-overlay">
+                    <div class="service-icon">
+                      <i class="fas fa-border-all"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="service-content">
+                  <h3>მარმარილოს ფილები</h3>
+                  <p>
+                    ლუქს კლასის მარმარილოს ფილები პრესტიჟული ინსტალაციებისთვის
+                  </p>
+                  <div class="service-features">
+                    <span>პრემიუმ დასრულება</span>
+                    <span>უნიკალური ნიმუშები</span>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="cta-features">
-              <div class="cta-feature">
-                <div class="cta-icon">
-                  <i class="fas fa-phone"></i>
-                </div>
-                <div class="cta-text">
-                  <h4>უფასო კონსულტაცია</h4>
-                  <span>ექსპერტის რჩევა თქვენი პროექტისთვის</span>
+          </section>
+
+          <!-- New CTA Section -->
+          <section class="cta-section">
+            <div class="cta-container">
+              <div class="cta-content">
+                <div class="section-badge">დაიწყე</div>
+                <h2>მზად ხართ შეცვალოთ თქვენი სივრცე?</h2>
+                <p>
+                  ჩვენი ექსპერტები დაგეხმარებიან იდეალური ქვის გადაწყვეტის
+                  არჩევაში. მიიღეთ უფასო კონსულტაცია დღესვე.
+                </p>
+                <div class="cta-buttons">
+                  <a href="contact.html" class="cta-btn primary"
+                    >დაგვიკავშირდით</a
+                  >
+                  <a href="products.html" class="cta-btn secondary"
+                    >პროდუქტების ნახვა</a
+                  >
                 </div>
               </div>
-              <div class="cta-feature">
-                <div class="cta-icon">
-                  <i class="fas fa-truck"></i>
+              <div class="cta-features">
+                <div class="cta-feature">
+                  <div class="cta-icon">
+                    <i class="fas fa-phone"></i>
+                  </div>
+                  <div class="cta-text">
+                    <h4>უფასო კონსულტაცია</h4>
+                    <span>ექსპერტის რჩევა თქვენი პროექტისთვის</span>
+                  </div>
                 </div>
-                <div class="cta-text">
-                  <h4>სწრაფი მიწოდება</h4>
-                  <span>სწრაფი და უსაფრთხო ინსტალაცია</span>
+                <div class="cta-feature">
+                  <div class="cta-icon">
+                    <i class="fas fa-truck"></i>
+                  </div>
+                  <div class="cta-text">
+                    <h4>სწრაფი მიწოდება</h4>
+                    <span>სწრაფი და უსაფრთხო ინსტალაცია</span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </main>
 
         <footer>
           <h3 class="stone">ქვის</h3>
@@ -423,7 +503,7 @@
         >
           გაკეთბულია
           <a
-            style="color:chartreuse"
+            style="color: chartreuse"
             target="_blank"
             href="https://n1k0devv.github.io/N1kodevv/"
             >N1kodevv</a
@@ -1518,7 +1598,10 @@
             }
           }
 
-          @supports not ((backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))) {
+          @supports not (
+            (backdrop-filter: blur(10px)) or
+              (-webkit-backdrop-filter: blur(10px))
+          ) {
             .hero-stat {
               backdrop-filter: none !important;
               background: rgba(0, 0, 0, 0.25) !important;

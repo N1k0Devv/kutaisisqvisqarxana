@@ -14,6 +14,12 @@
   --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
+@font-face {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  font-display: swap;
+  src: local("Segoe UI"), local("Helvetica Neue"), local("-apple-system");
+}
+
 body {
   font-family: "Inter", "Segoe UI", sans-serif;
   line-height: 1.6;
@@ -21,6 +27,7 @@ body {
   scroll-behavior: smooth;
   overflow-x: hidden;
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  font-display: swap;
 }
 
 /* Custom Scrollbar */
@@ -1178,11 +1185,11 @@ footer h3:hover {
     padding: 20px;
     gap: 15px;
   }
-  
+
   .info-details h4 {
     font-size: 1.2rem;
   }
-  
+
   .info-details p {
     font-size: 0.95rem;
   }
@@ -1196,27 +1203,27 @@ footer h3:hover {
     text-align: center;
     align-items: center;
   }
-  
+
   .info-icon {
     width: 45px;
     height: 45px;
     min-width: 45px;
   }
-  
+
   .info-icon i {
     font-size: 1.1rem;
   }
-  
+
   .info-details {
     text-align: center;
     width: 100%;
   }
-  
+
   .info-details h4 {
     font-size: 1.1rem;
     margin-bottom: 6px;
   }
-  
+
   .info-details p {
     font-size: 0.9rem;
     line-height: 1.5;
@@ -1229,23 +1236,23 @@ footer h3:hover {
     gap: 10px;
     margin-bottom: 15px;
   }
-  
+
   .info-icon {
     width: 40px;
     height: 40px;
     min-width: 40px;
     border-radius: 12px;
   }
-  
+
   .info-icon i {
     font-size: 1rem;
   }
-  
+
   .info-details h4 {
     font-size: 1rem;
     margin-bottom: 5px;
   }
-  
+
   .info-details p {
     font-size: 0.85rem;
     line-height: 1.4;
@@ -1257,21 +1264,21 @@ footer h3:hover {
     padding: 12px;
     gap: 8px;
   }
-  
+
   .info-icon {
     width: 35px;
     height: 35px;
     min-width: 35px;
   }
-  
+
   .info-icon i {
     font-size: 0.9rem;
   }
-  
+
   .info-details h4 {
     font-size: 0.95rem;
   }
-  
+
   .info-details p {
     font-size: 0.8rem;
   }
