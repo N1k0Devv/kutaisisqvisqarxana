@@ -7,24 +7,13 @@
     <script
       src="https://kit.fontawesome.com/7706f5712b.js"
       crossorigin="anonymous"
+      defer
     ></script>
+    <link rel="preload" as="image" href="images/pexels-ahmetcotur-31817156.jpg" fetchpriority="high" />
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="media.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-      crossorigin="anonymous"
-    ></script>
+    <script src="gsap-smoother.js" defer></script>
   </head>
   <body>
     <div id="smooth-wrapper">
@@ -70,10 +59,16 @@
         </header>
 
         <!-- Enhanced Hero Section -->
-        <section
-          class="hero-section"
-          style="background-image: url('images/pexels-ahmetcotur-31817156.jpg')"
-        >
+        <section class="hero-section">
+          <img
+            class="hero-bg"
+            src="images/pexels-ahmetcotur-31817156.jpg"
+            alt=""
+            aria-hidden="true"
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+          />
           <div class="hero-overlay">
             <div class="hero-content">
               <div class="hero-badge">პრემიუმი ქვის ქარხანა</div>
@@ -428,7 +423,7 @@
         >
           გაკეთბულია
           <a
-            style="color: chartreuse;"
+            style="color:chartreuse"
             target="_blank"
             href="https://n1k0devv.github.io/N1kodevv/"
             >N1kodevv</a
@@ -1432,10 +1427,101 @@
             .hero-subtitle {
               font-size: 1rem !important;
             }
+          }
 
+          /* ===== Performance + responsive hero overrides (2025-12) ===== */
+          :root {
+            --header-h: 90px;
+          }
+          @media (max-width: 1024px) {
+            :root {
+              --header-h: 80px;
+            }
+          }
+          @media (max-width: 768px) {
+            :root {
+              --header-h: 70px;
+            }
+          }
+          @media (max-width: 600px) {
+            :root {
+              --header-h: 60px;
+            }
+          }
+          @media (max-width: 480px) {
+            :root {
+              --header-h: 55px;
+            }
+          }
+
+          .hero-section {
+            min-height: calc(100svh - var(--header-h));
+            background: #0f1a24;
+            background-attachment: scroll !important;
+            display: grid;
+            place-items: center;
+          }
+
+          .hero-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: translateZ(0) scale(1.02);
+          }
+
+          .hero-overlay {
+            position: absolute;
+            inset: 0;
+            padding: clamp(40px, 6vw, 96px) 16px;
+          }
+
+          .hero-content {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+          }
+
+          .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+          }
+
+          @media (max-width: 768px) {
             .hero-stats {
-              flex-direction: column !important;
-              gap: 12px !important;
+              grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+            .hero-btn {
+              width: min(420px, 100%);
+              text-align: center;
+            }
+          }
+
+          @media (max-width: 420px) {
+            .hero-stats {
+              grid-template-columns: 1fr;
+            }
+          }
+
+          @media (prefers-reduced-motion: reduce) {
+            .hero-overlay::before,
+            .hero-badge,
+            .hero-title,
+            .hero-subtitle,
+            .hero-stats,
+            .hero-buttons,
+            .scroll-arrow {
+              animation: none !important;
+              transition: none !important;
+            }
+          }
+
+          @supports not ((backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))) {
+            .hero-stat {
+              backdrop-filter: none !important;
+              background: rgba(0, 0, 0, 0.25) !important;
             }
           }
         </style>
@@ -1509,50 +1595,24 @@
           // Initialize mobile menu on page load
           document.addEventListener("DOMContentLoaded", setupMobileMenu);
 
-          // Wait for jQuery to load before using it
-          $(document).ready(function () {
-            // Smooth scrolling for anchor links
-            $("a[href*='#']").on("click", function (event) {
-              // Make sure this.hash has a value before overriding default behavior
-              if (this.hash !== "") {
-                // Prevent default anchor click behavior
-                event.preventDefault();
+          // Smooth scrolling for anchor links (vanilla JS)
+          document.addEventListener("click", function (event) {
+            const anchor = event.target.closest('a[href^="#"]');
+            if (!anchor) return;
 
-                // Store hash
-                var hash = this.hash;
+            const href = anchor.getAttribute("href");
+            if (!href || href === "#") return;
 
-                // Using jQuery's animate() method to add smooth page scroll
-                $("html, body").animate(
-                  {
-                    scrollTop: $(hash).offset().top,
-                  },
-                  800,
-                  function () {
-                    // Add hash (#) to URL when done scrolling (default click behavior)
-                    window.location.hash = hash;
-                  }
-                );
-              }
-            });
+            const target = document.querySelector(href);
+            if (!target) return;
+
+            event.preventDefault();
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
           });
 
           // GSAP ScrollSmoother and animations
           document.addEventListener("DOMContentLoaded", function () {
-            // Check if GSAP is loaded
-            if (
-              typeof gsap !== "undefined" &&
-              typeof ScrollTrigger !== "undefined" &&
-              typeof ScrollSmoother !== "undefined"
-            ) {
-              gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-
-              // Create the scrollSmoother
-              ScrollSmoother.create({
-                smooth: 1,
-                effects: true,
-                smoothTouch: 0.1,
-              });
-            }
+            // ScrollSmoother is lazy-loaded via `gsap-smoother.js` (after window load on desktop only).
 
             // Enhanced scroll animations with Intersection Observer
             const observerOptions = {

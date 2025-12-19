@@ -10,6 +10,7 @@
     <script
       src="https://kit.fontawesome.com/7706f5712b.js"
       crossorigin="anonymous"
+      defer
     ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,14 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
       rel="stylesheet"
     />
-    <script
-      src="https://kit.fontawesome.com/00871c31a5.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="gsap-smoother.js" defer></script>
     <!-- EmailJS SDK -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <!-- EmailJS Configuration -->
@@ -1648,12 +1642,18 @@
                 }
             }
 
-          gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-          ScrollSmoother.create({
-            smooth: 1,
-            effects: true,
-            smoothTouch: 0.1,
-          });
+          if (
+            typeof gsap !== "undefined" &&
+            typeof ScrollTrigger !== "undefined" &&
+            typeof ScrollSmoother !== "undefined"
+          ) {
+            gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+            ScrollSmoother.create({
+              smooth: 1,
+              effects: true,
+              smoothTouch: 0.1,
+            });
+          }
 
         </script>
       </div>

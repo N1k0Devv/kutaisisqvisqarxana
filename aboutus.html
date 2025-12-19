@@ -4,20 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ქუთაისის ქვის ქარხანა - ჩვენს შესახებ</title>
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="media.css" />
     <script
       src="https://kit.fontawesome.com/7706f5712b.js"
       crossorigin="anonymous"
+      defer
     ></script>
-    <script
-      src="https://kit.fontawesome.com/00871c31a5.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="preload" as="image" href="images/Marble Warehouse.jpg" fetchpriority="high" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media.css" />
+    <script src="gsap-smoother.js" defer></script>
   </head>
   <body>
     <div id="smooth-wrapper">
@@ -63,10 +59,16 @@
         </header>
 
         <!-- Hero Section -->
-        <section
-          class="hero-section"
-          style="background-image: url('images/Marble Warehouse.jpg')"
-        >
+        <section class="hero-section">
+          <img
+            class="hero-bg"
+            src="images/Marble Warehouse.jpg"
+            alt=""
+            aria-hidden="true"
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+          />
           <div class="hero-overlay">
             <div class="hero-content">
               <div class="hero-badge">ჩვენი ისტორია</div>
@@ -2831,6 +2833,102 @@
       .value-card.animate {
         opacity: 1;
         transform: translateY(0);
+      }
+
+      /* ===== Performance + responsive hero overrides (2025-12) ===== */
+      :root {
+        --header-h: 90px;
+      }
+      @media (max-width: 1024px) {
+        :root {
+          --header-h: 80px;
+        }
+      }
+      @media (max-width: 768px) {
+        :root {
+          --header-h: 70px;
+        }
+      }
+      @media (max-width: 600px) {
+        :root {
+          --header-h: 60px;
+        }
+      }
+      @media (max-width: 480px) {
+        :root {
+          --header-h: 55px;
+        }
+      }
+
+      .hero-section {
+        min-height: calc(100svh - var(--header-h));
+        background: #0f1a24;
+        background-attachment: scroll !important;
+        display: grid;
+        place-items: center;
+      }
+
+      .hero-bg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: translateZ(0) scale(1.02);
+      }
+
+      .hero-overlay {
+        position: absolute;
+        inset: 0;
+        padding: clamp(40px, 6vw, 96px) 16px;
+      }
+
+      .hero-content {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .hero-stats {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      @media (max-width: 768px) {
+        .hero-stats {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .hero-btn {
+          width: min(420px, 100%);
+          text-align: center;
+        }
+      }
+
+      @media (max-width: 420px) {
+        .hero-stats {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .hero-overlay::before,
+        .hero-badge,
+        .hero-title,
+        .hero-subtitle,
+        .hero-stats,
+        .hero-buttons,
+        .scroll-arrow {
+          animation: none !important;
+          transition: none !important;
+        }
+      }
+
+      @supports not ((backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))) {
+        .hero-stat {
+          backdrop-filter: none !important;
+          background: rgba(0, 0, 0, 0.25) !important;
+        }
       }
     </style>
 
