@@ -1,11 +1,22 @@
-/* Modern Enhanced CSS for Georgian Stone Factory */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* ========== TYPOGRAPHY & LOGO SETUP ========== */
+
+/* 1. Custom Georgian Font (Dachi the Lynx) */
+@font-face {
+  font-family: "GeorgianDisplay";
+  /* Ensure this path matches your file location */
+  src: url("fonts/Dachi the Lynx-46841546889.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
+/* 2. Global Variables */
 :root {
+  /* Font Definitions */
+  --font-body: "Noto Sans Georgian", sans-serif;
+  --font-display: "GeorgianDisplay", "Georgia", serif; 
+
+  /* Colors */
   --primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   --dark: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
   --gold: linear-gradient(135deg, #ffd700 0%, #ffb347 100%);
@@ -14,20 +25,67 @@
   --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-@font-face {
-  font-family: "Inter", "Segoe UI", sans-serif;
-  font-display: swap;
-  src: local("Segoe UI"), local("Helvetica Neue"), local("-apple-system");
+/* 3. Base Styles & Scrollbar Fixes */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* FIX: Prevents "sidebar" / horizontal scrollbar issues */
 }
 
 body {
-  font-family: "Inter", "Segoe UI", sans-serif;
+  font-family: var(--font-body);
   line-height: 1.6;
   color: #333;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  font-display: swap;
+}
+
+/* ========== FONT ASSIGNMENTS ========== */
+
+/* Navbar Title - Smaller Size */
+header h2,
+header .linki {
+  font-family: var(--font-display);
+  font-size: 1.1rem; /* Reduced from 1.35rem */
+  letter-spacing: 0.5px;
+  font-weight: normal; 
+}
+
+/* Hero Section Title */
+.hero-title, .about-hero h1 {
+  font-family: var(--font-display);
+  line-height: 1.2;
+}
+
+/* Footer Title */
+footer h3, footer .stone {
+  font-family: var(--font-display);
+}
+
+/* Body Text (Noto Sans) */
+p, li, a, span, button, .nav, h4, h5, h6 {
+  font-family: var(--font-body);
+}
+
+/* Headings Default */
+h1, h2, h3 {
+  font-family: var(--font-body);
+  font-weight: 700;
+}
+
+/* Logo Image Styling - Bigger Size */
+#logo-img {
+  height: 65px; /* Increased from 50px */
+  width: auto;
+  margin-right: 12px;
+  object-fit: contain;
+  transition: var(--transition);
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+
+#logo-img:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 4px 8px rgba(255, 215, 0, 0.4));
 }
 
 /* Custom Scrollbar */
@@ -526,6 +584,10 @@ ul {
     display: flex !important;
     justify-content: flex-end;
   }
+  header h2 {
+    display: none; 
+  }
+  
 
   /* Show burger menu ONLY on mobile */
   .menu {
@@ -582,9 +644,9 @@ ul {
     letter-spacing: 0;
   }
 
-  #mta {
+ #mta, #logo-img { /* Applied to both just in case */
     font-size: 1.2rem;
-    margin-right: 5px;
+    margin-right: 0; /* Removed margin since title is gone */
   }
 }
 
@@ -623,6 +685,13 @@ ul {
   .nav-menu a {
     padding: 12px 20px;
     font-size: 1rem;
+  }
+  #mta, #logo-img { /* Applied to both just in case */
+    font-size: 1.2rem;
+    margin-right: 0; /* Removed margin since title is gone */
+    height: 45px;
+    width: auto;
+
   }
 }
 
