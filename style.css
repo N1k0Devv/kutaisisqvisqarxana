@@ -14,7 +14,7 @@
 :root {
   /* Font Definitions */
   --font-body: "Noto Sans Georgian", sans-serif;
-  --font-display: "GeorgianDisplay", "Georgia", serif; 
+  --font-display: "GeorgianDisplay", "Georgia", serif;
 
   /* Colors */
   --primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -26,9 +26,14 @@
 }
 
 /* 3. Base Styles & Scrollbar Fixes */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-html, body {
+html,
+body {
   width: 100%;
   overflow-x: hidden; /* FIX: Prevents "sidebar" / horizontal scrollbar issues */
 }
@@ -48,27 +53,39 @@ header .linki {
   font-family: var(--font-display);
   font-size: 1.1rem; /* Reduced from 1.35rem */
   letter-spacing: 0.5px;
-  font-weight: normal; 
+  font-weight: normal;
 }
 
 /* Hero Section Title */
-.hero-title, .about-hero h1 {
+.hero-title,
+.about-hero h1 {
   font-family: var(--font-display);
   line-height: 1.2;
 }
 
 /* Footer Title */
-footer h3, footer .stone {
+footer h3,
+footer .stone {
   font-family: var(--font-display);
 }
 
 /* Body Text (Noto Sans) */
-p, li, a, span, button, .nav, h4, h5, h6 {
+p,
+li,
+a,
+span,
+button,
+.nav,
+h4,
+h5,
+h6 {
   font-family: var(--font-body);
 }
 
 /* Headings Default */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: var(--font-body);
   font-weight: 700;
 }
@@ -80,7 +97,7 @@ h1, h2, h3 {
   margin-right: 12px;
   object-fit: contain;
   transition: var(--transition);
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
 #logo-img:hover {
@@ -157,7 +174,7 @@ header .container {
 
 header h2 {
   color: #fff;
-  font-family: "Georgia", serif;
+  font-family: var(--font-display);
   font-size: 1.6rem;
   font-weight: 700;
   letter-spacing: 2px;
@@ -585,9 +602,8 @@ ul {
     justify-content: flex-end;
   }
   header h2 {
-    display: none; 
+    display: none;
   }
-  
 
   /* Show burger menu ONLY on mobile */
   .menu {
@@ -644,7 +660,9 @@ ul {
     letter-spacing: 0;
   }
 
- #mta, #logo-img { /* Applied to both just in case */
+  #mta,
+  #logo-img {
+    /* Applied to both just in case */
     font-size: 1.2rem;
     margin-right: 0; /* Removed margin since title is gone */
   }
@@ -686,12 +704,13 @@ ul {
     padding: 12px 20px;
     font-size: 1rem;
   }
-  #mta, #logo-img { /* Applied to both just in case */
+  #mta,
+  #logo-img {
+    /* Applied to both just in case */
     font-size: 1.2rem;
     margin-right: 0; /* Removed margin since title is gone */
     height: 45px;
     width: auto;
-
   }
 }
 
@@ -773,8 +792,8 @@ ul {
   }
 }
 
-/* Marble Features */
-.marble-features {
+/* Granite Features */
+.granite-features {
   background: var(--primary);
   background-attachment: fixed;
   display: flex;
@@ -1408,7 +1427,7 @@ footer h3:hover {
   .about-hero h1 {
     font-size: 3rem;
   }
-  .marble-features {
+  .granite-features {
     padding: 60px 30px;
     flex-direction: column;
   }
@@ -1447,7 +1466,7 @@ footer h3:hover {
   .overlay {
     padding: 40px 20px;
   }
-  .marble-features {
+  .granite-features {
     padding: 40px 20px;
   }
   .expertise-section {
@@ -1488,7 +1507,7 @@ footer h3:hover {
 
 /* Additional spacing & responsiveness tweaks (refinement pass) */
 @media (max-width: 1024px) {
-  .marble-features {
+  .granite-features {
     padding: 80px 30px;
   }
   .services-section {
@@ -1509,7 +1528,7 @@ footer h3:hover {
 }
 
 @media (max-width: 768px) {
-  .marble-features {
+  .granite-features {
     padding: 50px 18px;
   }
   .hero-section {
@@ -1560,7 +1579,7 @@ footer h3:hover {
 }
 
 @media (max-width: 480px) {
-  .marble-features {
+  .granite-features {
     padding: 40px 12px;
   }
   .feature-card {
@@ -1619,7 +1638,7 @@ img {
   display: block;
 }
 
-/* Center CTA buttons and ensure marble features content is centered */
+/* Center CTA buttons and ensure granite features content is centered */
 .cta-buttons {
   display: flex;
   justify-content: center;
@@ -1628,7 +1647,7 @@ img {
   flex-wrap: wrap;
 }
 
-.marble-features {
+.granite-features {
   /* already flex, ensure center alignment across contexts */
   display: flex;
   justify-content: center;
@@ -1747,89 +1766,89 @@ img {
 
 /* Fix Hero Height & Layout on Mobile/Tablet */
 @media (max-width: 900px) {
-    .hero-section {
-        /* Reset the excessive 155vh height */
-        min-height: 100svh !important; 
-        height: auto !important;
-        
-        /* Add spacing so header doesn't cover content */
-        padding-top: 100px !important; 
-        padding-bottom: 60px !important;
-        
-        /* Ensure vertical centering */
-        display: flex;
-        align-items: center;
-    }
+  .hero-section {
+    /* Reset the excessive 155vh height */
+    min-height: 100svh !important;
+    height: auto !important;
 
-    .hero-content {
-        width: 100%;
-        padding: 0 20px;
-        transform: none !important; /* Stop layout shifts */
-    }
+    /* Add spacing so header doesn't cover content */
+    padding-top: 100px !important;
+    padding-bottom: 60px !important;
 
-    .hero-title {
-        /* Resize text dynamically so it fits */
-        font-size: clamp(2rem, 8vw, 3rem) !important;
-        line-height: 1.2;
-        margin-bottom: 20px;
-    }
+    /* Ensure vertical centering */
+    display: flex;
+    align-items: center;
+  }
 
-    /* Fix Stats Grid */
-    .hero-stats {
-        display: flex !important;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-        margin-top: 30px;
-        margin-bottom: 30px;
-    }
+  .hero-content {
+    width: 100%;
+    padding: 0 20px;
+    transform: none !important; /* Stop layout shifts */
+  }
 
-    .hero-stat {
-        /* 2 items per row on tablet, nicely spaced */
-        flex: 1 1 40%; 
-        min-width: 140px;
-        margin: 0 !important;
-    }
+  .hero-title {
+    /* Resize text dynamically so it fits */
+    font-size: clamp(2rem, 8vw, 3rem) !important;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  /* Fix Stats Grid */
+  .hero-stats {
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .hero-stat {
+    /* 2 items per row on tablet, nicely spaced */
+    flex: 1 1 40%;
+    min-width: 140px;
+    margin: 0 !important;
+  }
 }
 
 /* Fixes specifically for Phones */
 @media (max-width: 480px) {
-    .hero-section {
-        padding-top: 110px !important; /* More space for header on small screens */
-    }
+  .hero-section {
+    padding-top: 110px !important; /* More space for header on small screens */
+  }
 
-    .hero-title {
-        font-size: 2.2rem !important;
-    }
+  .hero-title {
+    font-size: 2.2rem !important;
+  }
 
-    .hero-stats {
-        gap: 10px;
-    }
+  .hero-stats {
+    gap: 10px;
+  }
 
-    .hero-stat {
-        /* Stack stats 1 per row on very small phones for readability */
-        flex: 1 1 100%; 
-        width: 100%;
-    }
+  .hero-stat {
+    /* Stack stats 1 per row on very small phones for readability */
+    flex: 1 1 100%;
+    width: 100%;
+  }
 
-    .hero-buttons {
-        flex-direction: column;
-        width: 100%;
-        gap: 15px;
-    }
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+  }
 
-    .hero-btn {
-        width: 100%;
-        text-align: center;
-        display: block;
-    }
-    
-    /* Ensure background image covers full height without white gaps */
-    .hero-bg {
-        height: 100% !important;
-        min-height: 100svh;
-    }
+  .hero-btn {
+    width: 100%;
+    text-align: center;
+    display: block;
+  }
+
+  /* Ensure background image covers full height without white gaps */
+  .hero-bg {
+    height: 100% !important;
+    min-height: 100svh;
+  }
 }
 /* =======================================================
    ABOUT US & iPHONE SE (375px) RESPONSIVE FIXES
@@ -1837,9 +1856,9 @@ img {
 
 /* 1. Global Container Fix for Small Screens */
 @media (max-width: 480px) {
-  .container, 
-  .story-container, 
-  .process-container, 
+  .container,
+  .story-container,
+  .process-container,
   .values-container,
   .materials-container,
   .factory-gallery-container {
@@ -1872,7 +1891,7 @@ img {
   .hero-title {
     font-size: 2rem !important; /* Smaller title for SE */
   }
-  
+
   .hero-subtitle {
     font-size: 0.95rem !important;
     margin-bottom: 20px !important;
@@ -1901,7 +1920,7 @@ img {
     order: -1; /* Show image first on mobile */
     margin-bottom: 20px;
   }
-  
+
   .image-wrapper img {
     height: 250px !important; /* Reduce height */
   }
@@ -1928,7 +1947,7 @@ img {
     flex-direction: column !important;
     gap: 30px !important;
   }
-  
+
   .materials-image img {
     max-height: 250px !important;
     width: 100% !important;
@@ -1943,13 +1962,15 @@ img {
   .values-grid {
     grid-template-columns: 1fr !important;
   }
-  
-  .mission-stats, .values-stats {
+
+  .mission-stats,
+  .values-stats {
     flex-direction: column !important;
     width: 100%;
   }
-  
-  .mission-stat, .values-stat {
+
+  .mission-stat,
+  .values-stat {
     width: 100% !important;
     flex-direction: row !important; /* Keep icon next to text */
     justify-content: center;
@@ -1959,14 +1980,15 @@ img {
   footer {
     padding: 40px 15px 20px !important;
   }
-  
+
   footer h3 {
     font-size: 2rem !important;
     margin-left: 0 !important;
     text-align: center;
   }
-  
-  .icons, .foot-nav {
+
+  .icons,
+  .foot-nav {
     margin-left: 0 !important;
     justify-content: center !important;
     flex-wrap: wrap;
@@ -1978,82 +2000,82 @@ img {
    ================================================== */
 
 @media (max-width: 400px) {
-    /* 1. Container & Spacing Fixes */
-    .hero-section {
-        min-height: 100svh !important; /* Full height but respects browser bars */
-        padding-top: 80px !important;  /* Prevent header overlap */
-        padding-bottom: 40px !important;
-        background-attachment: scroll !important; /* Fix mobile scroll jitter */
-    }
+  /* 1. Container & Spacing Fixes */
+  .hero-section {
+    min-height: 100svh !important; /* Full height but respects browser bars */
+    padding-top: 80px !important; /* Prevent header overlap */
+    padding-bottom: 40px !important;
+    background-attachment: scroll !important; /* Fix mobile scroll jitter */
+  }
 
-    .hero-content {
-        padding: 0 15px !important;
-        width: 100% !important;
-    }
+  .hero-content {
+    padding: 0 15px !important;
+    width: 100% !important;
+  }
 
-    /* 2. Typography Adjustments */
-    .hero-badge {
-        font-size: 0.8rem !important;
-        padding: 6px 16px !important;
-        margin-bottom: 1rem !important;
-    }
+  /* 2. Typography Adjustments */
+  .hero-badge {
+    font-size: 0.8rem !important;
+    padding: 6px 16px !important;
+    margin-bottom: 1rem !important;
+  }
 
-    .hero-title {
-        /* Clamp font size to fit "ქუთაისის ქვის ქარხანა" on two lines */
-        font-size: 2.4rem !important; 
-        line-height: 1.1 !important;
-        margin-bottom: 1rem !important;
-    }
+  .hero-title {
+    /* Clamp font size to fit "ქუთაისის ქვის ქარხანა" on two lines */
+    font-size: 2.4rem !important;
+    line-height: 1.1 !important;
+    margin-bottom: 1rem !important;
+  }
 
-    .hero-subtitle {
-        font-size: 1rem !important;
-        line-height: 1.5 !important;
-        margin-bottom: 2rem !important;
-    }
+  .hero-subtitle {
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 2rem !important;
+  }
 
-    /* 3. Stats Stack (Vertical Layout) */
-    .hero-stats {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 12px !important;
-        margin-bottom: 2.5rem !important;
-        width: 100% !important;
-    }
+  /* 3. Stats Stack (Vertical Layout) */
+  .hero-stats {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    margin-bottom: 2.5rem !important;
+    width: 100% !important;
+  }
 
-    .hero-stat {
-        width: 100% !important;
-        margin: 0 !important;
-        padding: 15px !important;
-        display: flex !important;
-        flex-direction: row !important; /* Keep number next to label */
-        align-items: center !important;
-        justify-content: center !important;
-        gap: 15px !important;
-        text-align: left !important;
-    }
-    
-    .stat-number {
-        font-size: 1.8rem !important;
-        margin-bottom: 0 !important;
-        min-width: 60px !important; /* Align numbers */
-        text-align: right !important;
-    }
+  .hero-stat {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 15px !important;
+    display: flex !important;
+    flex-direction: row !important; /* Keep number next to label */
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 15px !important;
+    text-align: left !important;
+  }
 
-    .stat-label {
-        font-size: 0.8rem !important;
-        text-align: left !important;
-    }
+  .stat-number {
+    font-size: 1.8rem !important;
+    margin-bottom: 0 !important;
+    min-width: 60px !important; /* Align numbers */
+    text-align: right !important;
+  }
 
-    /* 4. Buttons (Full Width Stack) */
-    .hero-buttons {
-        flex-direction: column !important;
-        gap: 12px !important;
-        width: 100% !important;
-    }
+  .stat-label {
+    font-size: 0.8rem !important;
+    text-align: left !important;
+  }
 
-    .hero-btn {
-        width: 100% !important;
-        padding: 14px 20px !important;
-        font-size: 0.95rem !important;
-    }
+  /* 4. Buttons (Full Width Stack) */
+  .hero-buttons {
+    flex-direction: column !important;
+    gap: 12px !important;
+    width: 100% !important;
+  }
+
+  .hero-btn {
+    width: 100% !important;
+    padding: 14px 20px !important;
+    font-size: 0.95rem !important;
+  }
 }

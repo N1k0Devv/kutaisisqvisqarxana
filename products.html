@@ -1,14 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ka">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ქუთაისის ქვის ქარხანა - პროდუქტები</title>
+    <title>გრანიტის სერვისები - ქუთაისის გრანიტის ქარხანა</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="media.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@100..900&display=swap"
       rel="stylesheet"
     />
     <link
@@ -18,59 +20,64 @@
     <script src="gsap-smoother.js" defer></script>
   </head>
   <body>
-    <div id="smooth-wrapper">
-      <div id="smooth-content">
         <!-- Header -->
         <header>
-  <div class="container">
-    
-    <a href="index.html">
-        <img src="images/logo.png" alt="Company Logo" id="logo-img">
-    </a>
+          <div class="container">
+            <a href="index.html">
+              <img src="images/logo.png" alt="Company Logo" id="logo-img" />
+            </a>
 
-    <h2 style="margin-left: 5px;">
-      <a href="index.html" class="linki">ქუთაისის ქვის ქარხანა</a>
-    </h2>
-    
-    <ul>
-      <li><a class="nav" href="index.html" title="მთავარი გვერდი">მთავარი</a></li>
-      <li><a class="nav" href="aboutus.html" title="ჩვენზე">ჩვენსშესახებ</a></li>
-      <li><a href="products.html" class="nav" title="პროდუქტები">პროდუქტები</a></li>
-      <li><a class="nav" href="contact.html" title="კონტაქტი">კონტაქტი</a></li>
-      <li>
-        <a href="cart.html" class="nav cart-link" style="display: inline-flex; align-items: center; gap: 6px">
-          <i class="fas fa-shopping-cart"></i>
-          <span>კალათა</span>
-        </a>
-      </li>
+            <h2 style="margin-left: 5px">
+              <a href="index.html" class="linki">ქუთაისის ქვის ქარხანა</a>
+            </h2>
 
-      <li>
-        <div class="menu" id="menu" onclick="toggleMenu()">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-        </div>
-        <div class="nav-menu" id="navMenu">
-           <a href="index.html">მთავარი</a>
-           <a href="aboutus.html">ჩვენს შესახებ</a>
-           <a href="products.html">პროდუქტები</a>
-           <a href="contact.html">კონტაქტი</a>
-           <a href="cart.html">კალათა</a>
-        </div>
-      </li>
-    </ul>
-  </div>
-</header>
+            <ul>
+              <li>
+                <a class="nav" href="index.html" title="მთავარი გვერდი"
+                  >მთავარი</a
+                >
+              </li>
+              <li>
+                <a class="nav" href="aboutus.html" title="ჩვენზე"
+                  >ჩვენსშესახებ</a
+                >
+              </li>
+              <li>
+                <a href="products.html" class="nav" title="სერვისები"
+                  >სერვისები</a
+                >
+              </li>
+              <li>
+                <a class="nav" href="contact.html" title="კონტაქტი">კონტაქტი</a>
+              </li>
+
+              <li>
+                <div class="menu" id="menu" onclick="toggleMenu()">
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                </div>
+                <div class="nav-menu" id="navMenu">
+                  <a href="index.html">მთავარი</a>
+                  <a href="aboutus.html">ჩვენს შესახებ</a>
+                  <a href="products.html">პროდუქტები</a>
+                  <a href="contact.html">კონტაქტი</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </header>
 
         <!-- Enhanced Hero Section -->
         <section class="products-hero">
           <div class="hero-particles"></div>
           <div class="products-hero-overlay">
             <div class="products-hero-content">
-              <div class="hero-badge">პრემიუმ კოლექცია</div>
-              <h1 class="products-hero-title">ჩვენი პროდუქტები</h1>
+              <div class="hero-badge">პროფესიონალური სერვისი</div>
+              <h1 class="products-hero-title">გრანიტის სერვისები</h1>
               <p class="products-hero-subtitle">
-                მაღალი ხარისხის ქვის მასალები თქვენი პროექტებისთვის
+                სრული დიაპაზონის გრანიტის დამუშავება და დიზაინი თქვენი
+                პროექტისთვის
               </p>
               <div class="hero-stats">
                 <div class="hero-stat">
@@ -100,7 +107,7 @@
                 <input
                   type="text"
                   id="searchInput"
-                  placeholder="ძიება პროდუქტებში..."
+                  placeholder="ძიება სერვისებში..."
                 />
                 <button
                   id="clearSearch"
@@ -121,7 +128,7 @@
               <!-- Category Filter -->
               <div class="filter-group">
                 <label class="filter-label" for="categoryFilter"
-                  >კატეგორია:</label
+                  >სერვისი:</label
                 >
                 <div class="products-filter-buttons" id="categoryFilter">
                   <button
@@ -137,13 +144,6 @@
                     data-filter="basalt"
                   >
                     ბაზალტი
-                  </button>
-                  <button
-                    type="button"
-                    class="products-filter-btn"
-                    data-filter="marble"
-                  >
-                    მარმარილო
                   </button>
                   <button
                     type="button"
@@ -296,10 +296,12 @@
                   </div>
                   <button
                     class="product-add-to-cart-btn"
-                    onclick="addProductToCart(this)"
+                    onclick="
+                      alert('გთხოვთ დაგვიკავშირდით პროექტის დეტალებისთვის')
+                    "
                   >
-                    <i class="fas fa-shopping-cart"></i>
-                    კალათაში დამატება
+                    <i class="fas fa-phone"></i>
+                    დაგვიკავშირდით
                   </button>
                 </div>
               </div>
@@ -337,26 +339,28 @@
                   </div>
                   <button
                     class="product-add-to-cart-btn"
-                    onclick="addProductToCart(this)"
+                    onclick="
+                      alert('გთხოვთ დაგვიკავშირდით პროექტის დეტალებისთვის')
+                    "
                   >
-                    <i class="fas fa-shopping-cart"></i>
-                    კალათაში დამატება
+                    <i class="fas fa-phone"></i>
+                    დაგვიკავშირდით
                   </button>
                 </div>
               </div>
 
-              <!-- Product 3 -->
+              <!-- Product 3: Granite Fabrication -->
               <div
                 class="product-showcase-card"
-                data-category="marble"
-                data-product-id="marble-slab"
-                data-name="მარმარილოს ფილა"
-                data-price="85.00"
+                data-category="granite"
+                data-product-id="granite-fabrication"
+                data-name="გრანიტის ჭრა და დამუშავება"
+                data-price="75.00"
               >
                 <div class="product-showcase-image">
                   <img
-                    src="images/marble pavers.jpg"
-                    alt="მარმარილოს ფილა"
+                    src="images/granite pavers.jpg"
+                    alt="გრანიტის ჭრა და დამუშავება"
                     loading="lazy"
                   />
                   <div class="product-showcase-overlay">
@@ -365,23 +369,29 @@
                       onclick="openQuickView(this)"
                     >
                       <i class="fas fa-eye"></i>
-                      სწრაფი ნახვა
+                      მეტის ნახვა
                     </button>
                   </div>
-                  <div class="product-badge premium">პრემიუმი</div>
+                  <div class="product-badge premium">სერვისი</div>
                 </div>
                 <div class="product-showcase-info">
-                  <h3 class="product-showcase-title">გრანიტის ბორდიული</h3>
+                  <h3 class="product-showcase-title">
+                    გრანიტის ჭრა და დამუშავება
+                  </h3>
                   <p class="product-showcase-category">გრანიტი</p>
-                  <div class="product-showcase-price" data-price="85.00">
-                    85.00 ₾
+                  <div class="product-showcase-price" data-price="75.00">
+                    კონსულტაცია უფასოა
                   </div>
                   <button
                     class="product-add-to-cart-btn"
-                    onclick="addProductToCart(this)"
+                    onclick="
+                      alert(
+                        'გთხოვთ დაგვიკავშირდით კონკრეტული შინაარსის მისაღებად',
+                      )
+                    "
                   >
-                    <i class="fas fa-shopping-cart"></i>
-                    კალათაში დამატება
+                    <i class="fas fa-phone"></i>
+                    დაგვიკავშირდით
                   </button>
                 </div>
               </div>
@@ -418,10 +428,12 @@
                   </div>
                   <button
                     class="product-add-to-cart-btn"
-                    onclick="addProductToCart(this)"
+                    onclick="
+                      alert('გთხოვთ დაგვიკავშირდით პროექტის დეტალებისთვის')
+                    "
                   >
-                    <i class="fas fa-shopping-cart"></i>
-                    კალათაში დამატება
+                    <i class="fas fa-phone"></i>
+                    დაგვიკავშირდით
                   </button>
                 </div>
               </div>
@@ -458,26 +470,28 @@
                   </div>
                   <button
                     class="product-add-to-cart-btn"
-                    onclick="addProductToCart(this)"
+                    onclick="
+                      alert('გთხოვთ დაგვიკავშირდით პროექტის დეტალებისთვის')
+                    "
                   >
-                    <i class="fas fa-shopping-cart"></i>
-                    კალათაში დამატება
+                    <i class="fas fa-phone"></i>
+                    დაგვიკავშირდით
                   </button>
                 </div>
               </div>
 
-              <!-- Product 6 -->
+              <!-- Product 6: Granite Countertops -->
               <div
                 class="product-showcase-card"
-                data-category="marble"
-                data-product-id="marble-block"
-                data-name="მარმარილოს ბლოკი"
+                data-category="granite"
+                data-product-id="granite-countertops"
+                data-name="გრანიტის სამზარეულო კაბინეტი"
                 data-price="150.00"
               >
                 <div class="product-showcase-image">
                   <img
                     src="images/modern-kitchen-with-contemporary-interior-decor-furnishings.jpg"
-                    alt="მარმარილოს ბლოკი"
+                    alt="გრანიტის კუთხის სამზარეულო ზედაპირი"
                     loading="lazy"
                   />
                   <div class="product-showcase-overlay">
@@ -486,23 +500,29 @@
                       onclick="openQuickView(this)"
                     >
                       <i class="fas fa-eye"></i>
-                      სწრაფი ნახვა
+                      მეტის ნახვა
                     </button>
                   </div>
-                  <div class="product-badge premium">პრემიუმი</div>
+                  <div class="product-badge premium">სერვისი</div>
                 </div>
                 <div class="product-showcase-info">
-                  <h3 class="product-showcase-title">გრანიტის ქვაფენილი</h3>
+                  <h3 class="product-showcase-title">
+                    გრანიტის სამზარეულო სერვისი
+                  </h3>
                   <p class="product-showcase-category">გრანიტი</p>
                   <div class="product-showcase-price" data-price="150.00">
-                    150.00 ₾
+                    კონსულტაცია უფასოა
                   </div>
                   <button
                     class="product-add-to-cart-btn"
-                    onclick="addProductToCart(this)"
+                    onclick="
+                      alert(
+                        'გთხოვთ დაგვიკავშირდით დეტალური მოთხოვნილებების გამოხატვისთვის',
+                      )
+                    "
                   >
-                    <i class="fas fa-shopping-cart"></i>
-                    კალათაში დამატება
+                    <i class="fas fa-phone"></i>
+                    დაგვიკავშირდით
                   </button>
                 </div>
               </div>
@@ -557,7 +577,6 @@
             >N1kodev</a
           >-ის მიერ © 2025 All Rights Reserved
         </footer>
-
       </div>
     </div>
 
@@ -612,10 +631,10 @@
             <div class="modal-actions">
               <button
                 class="products-modal-add-to-cart"
-                onclick="addModalProductToCart()"
+                onclick="alert('გთხოვთ დაგვიკავშირდით მეტი ინფორმაციისთვის')"
               >
-                <i class="fas fa-shopping-cart"></i>
-                კალათაში დამატება
+                <i class="fas fa-phone"></i>
+                დაგვიკავშირდით
               </button>
               <button class="wishlist-btn">
                 <i class="far fa-heart"></i>
@@ -659,8 +678,7 @@
       }
 
       body {
-        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
-          Roboto, sans-serif;
+        font-family: var(--font-body);
         line-height: 1.6;
         color: var(--text-dark);
         overflow-x: hidden;
@@ -732,7 +750,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: url("images/pexels-ahmetcotur-31817156.jpg") center/cover;
+        background: url("images/pattern 2.png") center/cover;
         opacity: 0.15;
         z-index: 1;
       }
@@ -743,7 +761,8 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: radial-gradient(
+        background:
+          radial-gradient(
             circle at 20% 80%,
             rgba(120, 119, 198, 0.3) 0%,
             transparent 50%
@@ -951,7 +970,8 @@
       .search-box input:focus {
         outline: none;
         border-color: var(--primary-color);
-        box-shadow: 0 15px 40px rgba(44, 62, 80, 0.15),
+        box-shadow:
+          0 15px 40px rgba(44, 62, 80, 0.15),
           0 0 0 3px rgba(44, 62, 80, 0.1);
         transform: translateY(-2px);
       }
@@ -2173,11 +2193,12 @@
       .product-showcase-card {
         opacity: 0;
         transform: translateY(30px);
-        transition: opacity 0.6s ease, transform 0.6s ease;
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s ease;
       }
     </style>
 
-    <script src="cart.js"></script>
     <script>
       function toggleMenu() {
         const menu = document.getElementById("menu");
@@ -2249,7 +2270,7 @@
       // Initialize products data
       function initializeProducts() {
         const productCards = document.querySelectorAll(
-          ".product-showcase-card"
+          ".product-showcase-card",
         );
         allProducts = Array.from(productCards).map((card) => ({
           element: card,
@@ -2345,7 +2366,7 @@
       function applyFilters() {
         const searchInput = document.getElementById("searchInput");
         const activeCategory = document.querySelector(
-          ".products-filter-btn.active"
+          ".products-filter-btn.active",
         );
         const minPriceInput = document.getElementById("minPrice");
         const maxPriceInput = document.getElementById("maxPrice");
@@ -2389,7 +2410,7 @@
           "Sorting products by:",
           sortBy,
           "Total products:",
-          products.length
+          products.length,
         );
 
         switch (sortBy) {
@@ -2422,7 +2443,7 @@
         // Log first few products after sorting
         console.log(
           "First 3 products after sort:",
-          products.slice(0, 3).map((p) => ({ name: p.name, price: p.price }))
+          products.slice(0, 3).map((p) => ({ name: p.name, price: p.price })),
         );
       }
 
@@ -2490,7 +2511,7 @@
 
         // Category filter
         const activeCategory = document.querySelector(
-          ".products-filter-btn.active"
+          ".products-filter-btn.active",
         );
         if (
           activeCategory &&
@@ -2526,7 +2547,7 @@
           .map(
             (filter) => `
                 <div class="filter-tag">${filter}</div>
-            `
+            `,
           )
           .join("");
       }
@@ -2556,7 +2577,7 @@
             if (maxPriceInput) maxPriceInput.value = "";
             if (allProducts.length > 0) {
               const maxProductPrice = Math.max(
-                ...allProducts.map((p) => p.price)
+                ...allProducts.map((p) => p.price),
               );
               if (priceRange) priceRange.value = maxProductPrice;
               if (maxPriceLabel)
@@ -2610,90 +2631,6 @@
       }
 
       // Add product to cart function
-      function addProductToCart(button) {
-        if (!window.cartManager) {
-          alert("კალათის სისტემა ვერ იტვირთება!");
-          return;
-        }
-
-        const productCard = button.closest(".product-showcase-card");
-        const productId = productCard.getAttribute("data-product-id");
-        const img = productCard.querySelector("img");
-        const title = productCard.querySelector(".product-showcase-title");
-        const category = productCard.querySelector(
-          ".product-showcase-category"
-        );
-        const priceElement = productCard.querySelector(
-          ".product-showcase-price"
-        );
-        const price = parseFloat(priceElement.getAttribute("data-price"));
-
-        const product = {
-          id: productId,
-          name: title.textContent,
-          price: price,
-          category: category.textContent,
-          image: img.src,
-        };
-
-        cartManager.addToCart(product);
-
-        // Add animation to button
-        button.style.transform = "scale(0.95)";
-        setTimeout(() => {
-          button.style.transform = "scale(1)";
-        }, 150);
-      }
-
-      // Add product from modal to cart
-      function addModalProductToCart() {
-        if (!window.cartManager) {
-          alert("კალათის სისტემა ვერ იტვირთება!");
-          return;
-        }
-
-        const modalTitle = document.getElementById("modalTitle");
-        const modalCategory = document.getElementById("modalCategory");
-        const modalPrice = document.getElementById("modalPrice");
-        const modalImage = document.getElementById("modalImage");
-
-        if (modalTitle && modalCategory && modalPrice && modalImage) {
-          // Find the corresponding product card
-          const productCards = document.querySelectorAll(
-            ".product-showcase-card"
-          );
-          let currentProductCard = null;
-
-          productCards.forEach((card) => {
-            const cardTitle = card.querySelector(
-              ".product-showcase-title"
-            ).textContent;
-            if (cardTitle === modalTitle.textContent) {
-              currentProductCard = card;
-            }
-          });
-
-          if (currentProductCard) {
-            const productId =
-              currentProductCard.getAttribute("data-product-id");
-            const priceElement = currentProductCard.querySelector(
-              ".product-showcase-price"
-            );
-            const price = parseFloat(priceElement.getAttribute("data-price"));
-
-            const product = {
-              id: productId,
-              name: modalTitle.textContent,
-              price: price,
-              category: modalCategory.textContent,
-              image: modalImage.src,
-            };
-
-            cartManager.addToCart(product);
-            closeQuickView();
-          }
-        }
-      }
 
       // Quick View Modal Function
       function openQuickView(button) {
@@ -2701,7 +2638,7 @@
         const img = productCard.querySelector("img");
         const title = productCard.querySelector(".product-showcase-title");
         const category = productCard.querySelector(
-          ".product-showcase-category"
+          ".product-showcase-category",
         );
         const price = productCard.querySelector(".product-showcase-price");
 
@@ -2754,7 +2691,7 @@
 
         // Observe product cards for animation
         const productCards = document.querySelectorAll(
-          ".product-showcase-card"
+          ".product-showcase-card",
         );
         productCards.forEach((card, index) => {
           card.style.transitionDelay = `${index * 0.1}s`;

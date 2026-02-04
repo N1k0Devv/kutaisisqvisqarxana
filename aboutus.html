@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ka">
   <head>
     <meta charset="UTF-8" />
@@ -9,60 +9,75 @@
       crossorigin="anonymous"
       defer
     ></script>
-    <link rel="preload" as="image" href="images/Marble Warehouse.jpg" fetchpriority="high" />
+    <link
+      rel="preload"
+      as="image"
+      href="images/Marble Warehouse.jpg"
+      fetchpriority="high"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="media.css" />
     <script src="gsap-smoother.js" defer></script>
   </head>
   <body>
-    <div id="smooth-wrapper">
-      <div id="smooth-content">
         <header>
-  <div class="container">
-    
-    <a href="index.html">
-        <img src="images/logo.png" alt="Company Logo" id="logo-img">
-    </a>
+          <div class="container">
+            <a href="index.html">
+              <img src="images/logo.png" alt="Company Logo" id="logo-img" />
+            </a>
 
-    <h2 style="margin-left: 5px;">
-      <a href="index.html" class="linki">ქუთაისის ქვის ქარხანა</a>
-    </h2>
-    
-    <ul>
-      <li><a class="nav" href="index.html" title="მთავარი გვერდი">მთავარი</a></li>
-      <li><a class="nav" href="aboutus.html" title="ჩვენზე">ჩვენსშესახებ</a></li>
-      <li><a href="products.html" class="nav" title="პროდუქტები">პროდუქტები</a></li>
-      <li><a class="nav" href="contact.html" title="კონტაქტი">კონტაქტი</a></li>
-      <li>
-        <a href="cart.html" class="nav cart-link" style="display: inline-flex; align-items: center; gap: 6px">
-          <i class="fas fa-shopping-cart"></i>
-          <span>კალათა</span>
-        </a>
-      </li>
+            <h2 style="margin-left: 5px">
+              <a href="index.html" class="linki">ქუთაისის ქვის ქარხანა</a>
+            </h2>
 
-      <li>
-        <div class="menu" id="menu" onclick="toggleMenu()">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-        </div>
-        <div class="nav-menu" id="navMenu">
-           <a href="index.html">მთავარი</a>
-           <a href="aboutus.html">ჩვენს შესახებ</a>
-           <a href="products.html">პროდუქტები</a>
-           <a href="contact.html">კონტაქტი</a>
-           <a href="cart.html">კალათა</a>
-        </div>
-      </li>
-    </ul>
-  </div>
-</header>
+            <ul>
+              <li>
+                <a class="nav" href="index.html" title="მთავარი გვერდი"
+                  >მთავარი</a
+                >
+              </li>
+              <li>
+                <a class="nav" href="aboutus.html" title="ჩვენზე"
+                  >ჩვენსშესახებ</a
+                >
+              </li>
+              <li>
+                <a href="products.html" class="nav" title="პროდუქტები"
+                  >პროდუქტები</a
+                >
+              </li>
+              <li>
+                <a class="nav" href="contact.html" title="კონტაქტი">კონტაქტი</a>
+              </li>
+
+              <li>
+                <div class="menu" id="menu" onclick="toggleMenu()">
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                </div>
+                <div class="nav-menu" id="navMenu">
+                  <a href="index.html">მთავარი</a>
+                  <a href="aboutus.html">ჩვენს შესახებ</a>
+                  <a href="products.html">სერვისები</a>
+                  <a href="contact.html">კონტაქტი</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </header>
         <!-- Hero Section -->
         <section class="hero-section">
           <img
             class="hero-bg"
-            src="images/Marble Warehouse.jpg"
+            src="images/pattern 2.png"
             alt=""
             aria-hidden="true"
             loading="eager"
@@ -117,7 +132,7 @@
                   ვმუშაობთ ქართულ ბაზარზე და ვაწარმოებთ უმაღლესი ხარისხის ქვის
                   პროდუქტებს როგორც საცხოვრებელი, ისე კომერციული
                   დანიშნულებისთვის. ჩვენი ძირითადი მიმართულებებია გრანიტისა და
-                  მარმარილოს მოპოვება, დამუშავება და დიზაინზე მორგებული
+                  მაღალი ხარისხის ნატურალური გრანიტის დამუშავება სამი ათწლეულის
                   ნაკეთობების წარმოება. ქარხანა სრულად აღჭურვილია თანამედროვე
                   ტექნოლოგიებითა და გამოცდილი ოსტატების გუნდით, რომლებიც ყოველ
                   დეტალში ზრუნავენ ხარისხზე და სილამაზეზე. ჩვენი პროდუქციის
@@ -216,7 +231,12 @@
               <!-- Main Featured Image -->
               <div
                 class="gallery-main"
-                onclick="openLightbox('images/Marble Warehouse.jpg', 'Main Factory Floor')"
+                onclick="
+                  openLightbox(
+                    'images/Marble Warehouse.jpg',
+                    'Main Factory Floor',
+                  )
+                "
               >
                 <div class="gallery-item large">
                   <img
@@ -241,7 +261,12 @@
               <div class="gallery-secondary">
                 <div
                   class="gallery-item"
-                  onclick="openLightbox('images/pexels-ahmetcotur-31817156.jpg', 'Stone Processing Area')"
+                  onclick="
+                    openLightbox(
+                      'images/pexels-ahmetcotur-31817156.jpg',
+                      'Stone Processing Area',
+                    )
+                  "
                 >
                   <img
                     src="images/pexels-ahmetcotur-31817156.jpg"
@@ -260,7 +285,12 @@
 
                 <div
                   class="gallery-item"
-                  onclick="openLightbox('images/granite pavers.jpg', 'Quality Control Station')"
+                  onclick="
+                    openLightbox(
+                      'images/granite pavers.jpg',
+                      'Quality Control Station',
+                    )
+                  "
                 >
                   <img
                     src="images/granite pavers.jpg"
@@ -279,7 +309,9 @@
 
                 <div
                   class="gallery-item"
-                  onclick="openLightbox('images/steps.jpg', 'Finishing Workshop')"
+                  onclick="
+                    openLightbox('images/steps.jpg', 'Finishing Workshop')
+                  "
                 >
                   <img src="images/steps.jpg" alt="Finishing Workshop" />
                   <div class="gallery-overlay">
@@ -295,7 +327,9 @@
 
                 <div
                   class="gallery-item"
-                  onclick="openLightbox('images/pool.jpg', 'Storage & Logistics')"
+                  onclick="
+                    openLightbox('images/pool.jpg', 'Storage & Logistics')
+                  "
                 >
                   <img src="images/pool.jpg" alt="Storage & Logistics" />
                   <div class="gallery-overlay">
@@ -379,10 +413,10 @@
             <div class="materials-text">
               <h2>საერთაშორისო კლასის ქვის არჩევანი</h2>
               <p>
-                ჩვენ ვიბარებთ მარმარილოსა და გრანიტს საუკეთესო ქვანებიდან მთელ
-                მსოფლიოში, რათა მცირე დეტალებამდე უზრუნველყოთ ზედა ხარისხი.
-                არჩევანში შედის სხვადასხვა ფერები და ნიმუშები — კლასიკური
-                თეთრიდან ეგზოტიკურ ვარიანტებამდე.
+                ჩვენ ვიბარებთ გრანიტს საუკეთესო ქვანებიდან მთელ მსოფლიოში, რათა
+                მცირე დეტალებამდე უზრუნველყოთ ზედა ხარისხი. არჩევანში შედის
+                სხვადასხვა ფერები და ნიმუშები — კლასიკური თეთრიდან ეგზოტიკურ
+                ვარიანტებამდე.
               </p>
 
               <div class="materials-stats">
@@ -490,7 +524,7 @@
 
         <!-- Contact Section -->
 
-       <footer>
+        <footer>
           <h3 class="stone">ქვის</h3>
           <h3>ქარხანა</h3>
           <div class="icons">
@@ -526,7 +560,6 @@
             >N1kodev</a
           >-ის მიერ © 2025 All Rights Reserved
         </footer>
-
       </div>
     </div>
 
@@ -534,267 +567,275 @@
       /* ========== COMPREHENSIVE HOVER EFFECTS FOR ALL ELEMENTS ========== */
 
       /* Hero Section Enhanced Hover Effects */
-      .hero-section {
-        min-height: 100vh;
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-      }
+      /* =======================================================
+   HERO SECTION STYLES (Copied from Index.html)
+   ======================================================= */
 
-      @media (max-width: 1024px) {
-        .hero-section {
-          min-height: 110vh;
-        }
-      }
+/* 1. Base Layout & Background */
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #0f1a24; /* Fallback color */
+}
 
-      @media (max-width: 768px) {
-        .hero-section {
-          min-height: 120vh;
-          background-attachment: scroll;
-        }
-      }
+/* Ensure the pattern image covers the whole area */
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  transform: translateZ(0) scale(1.02); /* Slight scale to prevent white edges */
+}
 
-      @media (max-width: 480px) {
-        .hero-section {
-          min-height: 130vh;
-          background-attachment: scroll;
-        }
-      }
+/* 2. Overlay (Gradient + Animation) */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(44, 62, 80, 0.85) 0%,
+    rgba(52, 73, 94, 0.75) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  z-index: 1;
+}
 
-      .hero-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          135deg,
-          rgba(44, 62, 80, 0.8) 0%,
-          rgba(52, 73, 94, 0.6) 100%
-        );
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-      }
+/* Optional glowing effect from index.html */
+.hero-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at 30% 70%,
+    rgba(243, 156, 18, 0.1) 0%,
+    transparent 50%
+  );
+  animation: heroGlow 8s ease-in-out infinite alternate;
+  pointer-events: none;
+}
 
-      .hero-overlay::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: radial-gradient(
-          circle at 30% 70%,
-          rgba(243, 156, 18, 0.1) 0%,
-          transparent 50%
-        );
-        animation: heroGlow 8s ease-in-out infinite alternate;
-      }
+@keyframes heroGlow {
+  0% { opacity: 0.3; transform: scale(1); }
+  100% { opacity: 0.7; transform: scale(1.1); }
+}
 
-      @keyframes heroGlow {
-        0% {
-          opacity: 0.3;
-          transform: scale(1);
-        }
-        100% {
-          opacity: 0.7;
-          transform: scale(1.1);
-        }
-      }
+/* 3. Content Styling */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
 
-      .hero-content {
-        text-align: center;
-        max-width: 800px;
-        padding: 0 20px;
-        position: relative;
-        z-index: 2;
-      }
+.hero-badge {
+  display: inline-block;
+  padding: 8px 24px;
+  background: linear-gradient(45deg, #f39c12, #e74c3c);
+  color: white;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 25px rgba(243, 156, 18, 0.3);
+}
 
-      .hero-badge {
-        display: inline-block;
-        padding: 8px 24px;
-        background: linear-gradient(45deg, #f39c12, #e74c3c);
-        color: white;
-        border-radius: 30px;
-        font-size: 0.9rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        margin-bottom: 1.5rem;
-        box-shadow: 0 8px 25px rgba(243, 156, 18, 0.3);
-        animation: badgeFloat 3s ease-in-out infinite;
-      }
+.hero-title {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 900;
+  color: white;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
 
-      @keyframes badgeFloat {
-        0%,
-        100% {
-          transform: translateY(0px);
-        }
-        50% {
-          transform: translateY(-5px);
-        }
-      }
+.hero-subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  color: #ecf0f1;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-      .hero-title {
-        font-size: clamp(3rem, 8vw, 5rem);
-        font-weight: 900;
-        color: white;
-        margin-bottom: 1rem;
-        text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        animation: titleSlideIn 1s ease-out;
-      }
+/* 4. Stats Styling */
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
 
-      @keyframes titleSlideIn {
-        0% {
-          opacity: 0;
-          transform: translateY(50px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
+.hero-stat {
+  text-align: center;
+  padding: 20px 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  min-width: 150px;
+  transition: transform 0.3s ease;
+}
 
-      .hero-subtitle {
-        font-size: 1.3rem;
-        color: #ecf0f1;
-        margin-bottom: 2.5rem;
-        line-height: 1.6;
-        animation: subtitleSlideIn 1s ease-out 0.3s both;
-      }
+.hero-stat:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.2);
+}
 
-      @keyframes subtitleSlideIn {
-        0% {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
+.stat-number {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #f39c12;
+  display: block;
+  margin-bottom: 5px;
+  text-shadow: 0 5px 15px rgba(243, 156, 18, 0.3);
+}
 
-      .hero-stats {
-        display: flex;
-        justify-content: center;
-        gap: 40px;
-        margin-bottom: 3rem;
-        animation: statsSlideIn 1s ease-out 0.6s both;
-      }
+.stat-label {
+  font-size: 0.85rem;
+  color: #bdc3c7;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
 
-      @keyframes statsSlideIn {
-        0% {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
+/* 5. Buttons Styling */
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
-      .hero-stat {
-        text-align: center;
-        padding: 20px;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 15px;
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        transition: all 0.4s ease;
-      }
+.hero-btn {
+  padding: 15px 35px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
 
-      .hero-stat:hover {
-        transform: translateY(-10px) scale(1.05);
-        background: rgba(255, 255, 255, 0.2);
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-      }
+.hero-btn.primary {
+  background: linear-gradient(45deg, #f39c12, #e74c3c);
+  color: white;
+  box-shadow: 0 8px 25px rgba(243, 156, 18, 0.4);
+}
 
-      .stat-number {
-        font-size: 2.5rem;
-        font-weight: 800;
-        color: #f39c12;
-        margin-bottom: 0.5rem;
-        text-shadow: 0 5px 15px rgba(243, 156, 18, 0.3);
-      }
+.hero-btn.primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(243, 156, 18, 0.6);
+}
 
-      .stat-label {
-        font-size: 0.9rem;
-        color: #bdc3c7;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-      }
+.hero-btn.secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
 
-      .hero-buttons {
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-        flex-wrap: wrap;
-        animation: buttonsSlideIn 1s ease-out 0.9s both;
-      }
+.hero-btn.secondary:hover {
+  background: white;
+  color: #2c3e50;
+  transform: translateY(-3px);
+}
 
-      @keyframes buttonsSlideIn {
-        0% {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
+/* =======================================================
+   RESPONSIVE FIXES (Matches Index.html Logic)
+   ======================================================= */
 
-      .hero-btn {
-        padding: 15px 35px;
-        border-radius: 50px;
-        font-weight: 600;
-        text-decoration: none;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        position: relative;
-        overflow: hidden;
-      }
+/* Tablet & Mobile (Below 1024px) */
+@media (max-width: 1024px) {
+  .hero-section {
+    min-height: auto;
+    padding-top: 80px; /* Space for fixed header */
+  }
+  
+  .hero-overlay {
+    position: relative; /* Document flow behavior */
+    height: auto;
+    min-height: calc(100vh - 80px); /* Fill remaining screen */
+    padding: 60px 20px;
+  }
+  
+  .hero-bg {
+    position: absolute;
+    height: 100%;
+  }
+}
 
-      .hero-btn.primary {
-        background: linear-gradient(45deg, #f39c12, #e74c3c);
-        color: white;
-        box-shadow: 0 8px 25px rgba(243, 156, 18, 0.4);
-      }
+/* Small Mobile (Below 480px) */
+@media (max-width: 480px) {
+  .hero-section {
+    display: block; /* Remove flex centering */
+    padding-top: 70px;
+  }
 
-      .hero-btn.primary:hover {
-        transform: translateY(-3px) scale(1.05);
-        box-shadow: 0 15px 40px rgba(243, 156, 18, 0.6);
-        background: linear-gradient(45deg, #e74c3c, #f39c12);
-      }
+  .hero-overlay {
+    padding: 40px 15px 60px;
+    
+  }
 
-      .hero-btn.secondary {
-        background: transparent;
-        color: white;
-        border: 2px solid white;
-      }
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  
+  .hero-stats {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+  
+  .hero-stat {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px;
+    text-align: left;
+  }
 
-      .hero-btn.secondary:hover {
-        background: white;
-        color: #2c3e50;
-        transform: translateY(-3px) scale(1.05);
-        box-shadow: 0 15px 40px rgba(255, 255, 255, 0.3);
-      }
+  .stat-number {
+    font-size: 1.8rem;
+    margin-bottom: 0;
+    min-width: 60px;
+    text-align: right;
+  }
 
-      .hero-scroll-indicator {
-        position: absolute;
-        bottom: 30px;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 2;
-      }
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
 
       /* Story Section Enhanced Hover Effects */
       .story-section {
@@ -2826,7 +2867,9 @@
       .value-card {
         opacity: 0;
         transform: translateY(30px);
-        transition: opacity 0.6s ease, transform 0.6s ease;
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s ease;
       }
 
       .story-text.animate,
@@ -2925,10 +2968,90 @@
         }
       }
 
-      @supports not ((backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))) {
+      @supports not (
+        (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))
+      ) {
         .hero-stat {
           backdrop-filter: none !important;
           background: rgba(0, 0, 0, 0.25) !important;
+        }
+      }
+      /* ========== ABOUT US HERO MOBILE FIXES (Under 480px) ========== */
+      @media (max-width: 480px) {
+        .hero-section {
+          /* Fix excessive height */
+          min-height: 100svh !important;
+          height: auto !important;
+
+          /* Add padding so header doesn't cover content */
+          padding-top: 110px !important;
+          padding-bottom: 60px !important;
+
+          /* Ensure background doesn't jitter */
+          background-attachment: scroll !important;
+          background-position: center !important;
+          align-items: flex-start !important; /* Align to top so padding works */
+        }
+
+        .hero-content {
+          padding: 0 15px !important;
+          width: 100% !important;
+          transform: none !important; /* Stop any centering transforms causing blur */
+          margin-top: 0 !important;
+        }
+
+        .hero-title {
+          /* Resize text to fit screen width */
+          font-size: clamp(1.8rem, 8vw, 2.5rem) !important;
+          line-height: 1.2 !important;
+          margin-bottom: 15px !important;
+        }
+
+        .hero-subtitle {
+          font-size: 1rem !important;
+          margin-bottom: 30px !important;
+        }
+
+        /* Stack the stats vertically or in a grid for readability */
+        .hero-stats {
+          display: flex !important;
+          flex-direction: column !important;
+          gap: 15px !important;
+          margin-bottom: 30px !important;
+        }
+
+        .hero-stat {
+          width: 100% !important;
+          margin: 0 !important;
+          padding: 15px !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+          gap: 15px !important;
+        }
+
+        .stat-number {
+          font-size: 2rem !important;
+          margin-bottom: 0 !important;
+          text-align: center !important;
+        }
+
+        .stat-label {
+          font-size: 0.85rem !important;
+          text-align: center !important;
+        }
+
+        /* Stack buttons */
+        .hero-buttons {
+          flex-direction: column !important;
+          width: 100% !important;
+          gap: 15px !important;
+        }
+
+        .hero-btn {
+          width: 100% !important;
+          display: block !important;
+          text-align: center !important;
         }
       }
     </style>
@@ -3005,7 +3128,7 @@
 
         // Observe elements for animation
         const animatedElements = document.querySelectorAll(
-          ".story-text, .process-step, .value-card"
+          ".story-text, .process-step, .value-card",
         );
         animatedElements.forEach((el) => observer.observe(el));
 
