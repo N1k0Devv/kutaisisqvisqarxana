@@ -958,6 +958,7 @@ body {
   backdrop-filter: blur(20px);
   padding: 40px 30px;
   width: 340px;
+  max-width: 100%;
   border-radius: 25px;
   text-align: center;
   box-shadow: var(--shadow);
@@ -1765,6 +1766,59 @@ footer h3:hover {
   .nav-menu a {
     font-size: 1.15rem;
     padding: 14px 18px;
+  }
+}
+
+/* Ultra-small screens - prevent feature cards from overflowing */
+@media (max-width: 414px) {
+  .granite-features {
+    padding: 30px 8px !important;
+    gap: 16px !important;
+  }
+
+  .features-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 16px !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .features-header {
+    padding: 0 8px !important;
+  }
+
+  .feature-card {
+    width: calc(100% - 8px) !important;
+    padding: 18px 12px !important;
+    border-radius: 16px !important;
+    margin: 0 4px !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-8px) scale(1.01) !important;
+  }
+
+  .feature-card img {
+    width: 48px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .feature-card h3 {
+    font-size: 1.1rem !important;
+    margin-bottom: 10px !important;
+  }
+
+  .feature-card p {
+    font-size: 0.85rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .section-title,
+  .section-subtitle {
+    overflow-wrap: anywhere !important;
+    word-break: break-word !important;
   }
 }
 

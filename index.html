@@ -1490,6 +1490,38 @@
             }
           }
 
+          @media (max-width: 414px) {
+            .granite-features {
+              padding: 80px 12px;
+            }
+
+            .features-header {
+              padding: 0 8px;
+            }
+
+            .features-grid {
+              grid-template-columns: minmax(0, 1fr);
+              gap: 16px;
+              padding: 0;
+            }
+
+            .feature-card {
+              padding: 24px 18px;
+            }
+
+            .feature-card h3,
+            .feature-card p {
+              overflow-wrap: anywhere;
+              word-break: break-word;
+            }
+
+            .section-title,
+            .section-subtitle {
+              overflow-wrap: anywhere;
+              word-break: break-word;
+            }
+          }
+
           /* Hide old about-hero class */
           .about-hero {
             display: none;
