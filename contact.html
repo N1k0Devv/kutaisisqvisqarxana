@@ -1,9 +1,20 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ka">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Us - ქუთაისის ქვის ქარხანა</title>
+    <title>კონტაქტი - ქუთაისის ქვის ქარხანა</title>
+    <meta name="description" content="დაგვიკავშირდით ქუთაისის ქვის ქარხანას. დიდი კითხვები, უფასო კვოტა, კონსულტაცია. დააკონტაქტეთ ჩვენი გამოცდილი ტიმი დღეს." />
+    <meta name="keywords" content="კონტაქტი, დაგვიკავშირდით, ქუთაისი, გრანიტი, მოთხოვნა, ფასი, საფასო" />
+    <meta name="author" content="ქუთაისის ქვის ქარხანა" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="კონტაქტი - ქუთაისის ქვის ქარხანა" />
+    <meta property="og:description" content="კონტაქტი და კვოტის მოთხოვნა ყველა გრანიტის სერვისებისთვის" />
+    <meta property="og:locale" content="ka_GE" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="canonical" href="contact.html" />
+    <link rel="alternate" hreflang="ka" href="contact.html" />
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="media.css" />
@@ -23,6 +34,21 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <!-- EmailJS Configuration -->
     <script src="emailjs-config.js"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "კონტაქტი",
+      "url": "contact.html",
+      "description": "დაგვიკავშირდით ქუთაისის ქვის ქარხანას - დაუკომენტირებული კითხვებისთვის",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "availableLanguage": ["ka", "en"],
+        "areaServed": "საქართველო"
+      }
+    }
+    </script>
   </head>
   <body>
 
@@ -42,23 +68,33 @@
       <li><a class="nav" href="aboutus.html" title="ჩვენზე">ჩვენსშესახებ</a></li>
       <li><a href="products.html" class="nav" title="სერვისები">სერვისები</a></li>
       <li><a class="nav" href="contact.html" title="კონტაქტი">კონტაქტი</a></li>
-
-      <li>
-        <div class="menu" id="menu" onclick="toggleMenu()">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-        </div>
-        <div class="nav-menu" id="navMenu">
-           <a href="index.html">მთავარი</a>
-           <a href="aboutus.html">ჩვენს შესახებ</a>
-           <a href="products.html">სერვისები</a>
-           <a href="contact.html">კონტაქტი</a>
-        </div>
-      </li>
-    </ul>
+                            <li>
+                <div class="menu" id="menu" onclick="toggleMenu()">
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                </div>
+                <div class="nav-menu" id="navMenu">
+                  <a href="index.html">???????</a>
+                  <a href="aboutus.html">????? ???????</a>
+                  <a href="products.html">?????????</a>
+                  <a href="contact.html">????????</a>
+                  <div class="nav-menu-lang" aria-label="Language selector">
+                    <div class="nav-menu-label">Language</div>
+                    <div class="nav-menu-options">
+                      <button class="lang-pill is-active" type="button" data-lang="ka">KA</button>
+                      <button class="lang-pill" type="button" data-lang="en">EN</button>
+                      <button class="lang-pill" type="button" data-lang="ru">RU</button>
+                      <button class="lang-pill" type="button" data-lang="tr">TR</button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
   </div>
 </header>
+  <div id="google_translate_element" class="google-translate-hidden" aria-hidden="true"></div>
+
 
         <!-- Enhanced Contact Hero Section -->
         <section class="contact-hero-enhanced">
@@ -78,7 +114,7 @@
                 <span class="stat-label">წლიანი გამოცდილება</span>
               </div>
               <div class="stat-item">
-                <span class="stat-number">500+</span>
+                <span class="stat-number">1000+</span>
                 <span class="stat-label">დაკმაყოფილებული კლიენტი</span>
               </div>
               <div class="stat-item">
@@ -108,8 +144,8 @@
               </div>
               <div class="card-content">
                 <h3>ელ.ფოსტა</h3>
-                <p><a href="mailto:info@kutaisistonefactory.ge">info@kutaisistonefactory.ge</a></p>
-                <a href="mailto:info@kutaisistonefactory.ge" class="contact-btn">
+                <p><a href="mailto:kutaisistonefactoryltd@gmail.com">kutaisistonefactoryltd@gmail.com</a></p>
+                <a href="mailto:kutaisistonefactoryltd@gmail.com" class="contact-btn">
                   <span>წერილი გაგზავნა</span>
                   <i class="fas fa-arrow-right"></i>
                 </a>
@@ -124,15 +160,15 @@
               <div class="card-content">
                 <h3>ტელეფონი</h3>
                 <p>
-                  <a href="tel:+995123456789" class="phone-link">+995 123 456 789</a><br>
-                  <a href="tel:+995987654321" class="phone-link">+995 987 654 321</a>
+                  <a href="tel:+995 599 22 97 33" class="phone-link">+995 599 22 97 33</a><br>
+                  <a href="tel:+995 595 63 88 28" class="phone-link">+995 595 63 88 28</a>
                 </p>
                 <div class="phone-buttons">
-                  <a href="tel:+995123456789" class="contact-btn primary-phone">
+                  <a href="tel:+995 599 22 97 33" class="contact-btn primary-phone">
                     <span>ზარი</span>
                     <i class="fas fa-phone"></i>
                   </a>
-                  <a href="tel:+995987654321" class="contact-btn secondary-phone">
+                  <a href="tel:+995 595 63 88 28" class="contact-btn secondary-phone">
                     <span>ზარი 2</span>
                     <i class="fas fa-phone"></i>
                   </a>
@@ -156,9 +192,6 @@
                   </a>
                   <a href="#" target="_blank">
                     <i class="fa-brands fa-instagram"></i>
-                  </a>
-                  <a href="#" target="_blank">
-                    <i class="fa-brands fa-x-twitter"></i>
                   </a>
                 </div>
               </div>
@@ -284,8 +317,8 @@
                   <div class="info-details">
                     <h4>ტელეფონი</h4>
                     <p>
-                      <a href="tel:+995123456789" class="phone-link">+995 123 456 789</a><br>
-                      <a href="tel:+995987654321" class="phone-link">+995 987 654 321</a>
+                      <a href="tel:+995599229733" class="phone-link">+995 599 22 97 33</a><br>
+                      <a href="tel:+995595638828" class="phone-link">+995 595 63 88 28</a>
                     </p>
                   </div>
                 </div>
@@ -321,12 +354,11 @@
               target="_blank"
               ><i class="fa-brands fa-facebook fa-2xl"></i
             ></a>
-            <a href="#"><i class="fa-brands fa-x-twitter fa-2xl"></i></a>
           </div>
           <div class="foot-nav">
             <a href="index.html">მთავარი</a>
             <a href="aboutus.html">ჩვენს შესახებ</a>
-            <a href="products.html">პროდუქტები</a>
+            <a href="products.html">სერვისები</a>
             <a href="contact.html">კონტაქტი</a>
           </div>
         </footer>
@@ -778,6 +810,7 @@
             border-color: #ffd700;
             background: rgba(255, 255, 255, 0.15);
             transform: translateY(-2px);
+            color: #333;
           }
 
           .form-group input::placeholder,
@@ -1786,5 +1819,115 @@
         </script>
       </div>
     </div>
-  </body>
+  
+    <script>
+    let pendingLang = null;
+
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        {
+          pageLanguage: "ka",
+          includedLanguages: "ka,en,ru,tr",
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+          autoDisplay: false,
+        },
+        "google_translate_element"
+      );
+
+      const storedLang = localStorage.getItem("site_lang");
+      if (storedLang && storedLang !== "ka") {
+        setGoogleTranslate(storedLang);
+      } else if (pendingLang && pendingLang !== "ka") {
+        setGoogleTranslate(pendingLang);
+      }
+    }
+
+    function setGoogleTranslate(lang) {
+      const combo = document.querySelector(".goog-te-combo");
+      if (!combo) {
+        pendingLang = lang;
+        return;
+      }
+      combo.value = lang;
+      combo.dispatchEvent(new Event("change"));
+    }
+
+    function updateLangUI(lang) {
+      document.querySelectorAll(".lang-current").forEach((el) => {
+        el.textContent = lang.toUpperCase();
+      });
+
+      document.querySelectorAll(".lang-option").forEach((opt) => {
+        opt.classList.toggle("is-active", opt.dataset.lang === lang);
+      });
+
+      const pills = document.querySelectorAll(".lang-pill");
+      pills.forEach((pill) => {
+        pill.classList.toggle("is-active", pill.dataset.lang === lang);
+      });
+    }
+
+    function closeAllLangMenus(except = null) {
+      document.querySelectorAll(".lang-switcher").forEach((switcher) => {
+        if (except && switcher === except) return;
+        switcher.classList.remove("is-open");
+        const trigger = switcher.querySelector(".lang-trigger");
+        if (trigger) trigger.setAttribute("aria-expanded", "false");
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const storedLang = localStorage.getItem("site_lang") || "ka";
+      updateLangUI(storedLang);
+      pendingLang = storedLang;
+
+      document.querySelectorAll(".lang-switcher").forEach((switcher) => {
+        const trigger = switcher.querySelector(".lang-trigger");
+
+        if (trigger) {
+          trigger.addEventListener("click", (e) => {
+            e.stopPropagation();
+            const isOpen = switcher.classList.toggle("is-open");
+            trigger.setAttribute("aria-expanded", isOpen ? "true" : "false");
+            if (isOpen) closeAllLangMenus(switcher);
+          });
+        }
+
+        switcher.querySelectorAll(".lang-option").forEach((opt) => {
+          opt.addEventListener("click", () => {
+            const lang = opt.dataset.lang;
+            localStorage.setItem("site_lang", lang);
+            updateLangUI(lang);
+            setGoogleTranslate(lang);
+            closeAllLangMenus();
+          });
+        });
+      });
+
+      document.querySelectorAll(".lang-pill").forEach((pill) => {
+        pill.addEventListener("click", () => {
+          const lang = pill.dataset.lang;
+          localStorage.setItem("site_lang", lang);
+          updateLangUI(lang);
+          setGoogleTranslate(lang);
+          closeAllLangMenus();
+        });
+      });
+
+      document.addEventListener("click", () => closeAllLangMenus());
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeAllLangMenus();
+      });
+    });
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
 </html>
+
+
+
+
+
+
+
+

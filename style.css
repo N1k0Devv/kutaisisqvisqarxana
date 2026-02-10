@@ -252,6 +252,152 @@ ul {
   box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
 }
 
+/* Language Switcher */
+.lang-item {
+  display: flex;
+  align-items: center;
+}
+
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: var(--transition);
+  position: relative;
+}
+
+.lang-switcher i {
+  color: #ffd700;
+  font-size: 1rem;
+}
+
+.lang-switcher::after {
+  content: "▾";
+  color: #ffd700;
+  font-size: 0.75rem;
+  margin-left: -6px;
+}
+
+.lang-switcher:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(255, 215, 0, 0.25);
+}
+
+.lang-select {
+  appearance: none;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  padding: 8px 36px 8px 14px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  transition: var(--transition);
+}
+
+.lang-select:focus {
+  outline: none;
+  border-color: rgba(255, 215, 0, 0.7);
+  box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.2);
+}
+
+.lang-select option {
+  color: #1a1a2e;
+}
+
+.lang-switcher::after {
+  position: absolute;
+  right: 12px;
+  pointer-events: none;
+}
+
+/* Google Translate widget cleanup */
+.google-translate-hidden {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.goog-te-banner-frame.skiptranslate,
+.goog-logo-link,
+.goog-te-gadget span {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
+
+.nav-menu-lang {
+  margin-top: 10px;
+  padding: 20px 24px;
+  width: 90%;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  opacity: 0;
+  transform: translateX(50px);
+}
+
+.nav-menu.active .nav-menu-lang {
+  opacity: 1;
+  transform: translateX(0);
+  animation: slideInLink 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation-delay: 0.6s;
+}
+
+.nav-menu-label {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.nav-menu-options {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.lang-pill {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.lang-pill:hover {
+  color: #ffd700;
+  border-color: rgba(255, 215, 0, 0.7);
+  transform: translateY(-2px);
+}
+
+.lang-pill.is-active {
+  background: rgba(255, 215, 0, 0.15);
+  border-color: rgba(255, 215, 0, 0.7);
+  color: #ffd700;
+  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.2);
+}
+
 /* ========== MOBILE MENU SYSTEM - Updated 2025-09-08 ========== */
 
 /* DEFAULT STATE: Hide burger menu on all screens */
