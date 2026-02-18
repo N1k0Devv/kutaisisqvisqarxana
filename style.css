@@ -130,10 +130,12 @@ h3 {
 /* Header */
 header {
   background: var(--dark);
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1000;
   box-shadow: var(--shadow);
+  -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   height: 90px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -245,6 +247,7 @@ ul {
 
 .nav:hover {
   background: var(--glass);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: 2px solid rgba(255, 255, 255, 0.2);
   color: #ffd700;
@@ -289,6 +292,7 @@ ul {
 }
 
 .lang-select {
+  -webkit-appearance: none;
   appearance: none;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -497,6 +501,7 @@ body {
   width: 100%;
   height: 100vh;
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   flex-direction: column;
   justify-content: center;
@@ -908,6 +913,7 @@ body {
 .overlay {
   padding: 80px 40px;
   width: 100%;
+  -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
   position: relative;
   z-index: 2;
@@ -955,6 +961,7 @@ body {
 
 .feature-card {
   background: var(--glass);
+  -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   padding: 40px 30px;
   width: 340px;
@@ -1097,6 +1104,7 @@ iframe {
 
 .service-item {
   background: var(--glass);
+  -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   border-radius: 30px;
   overflow: hidden;
@@ -1136,6 +1144,7 @@ iframe {
   color: #fff;
   font-weight: 700;
   margin: 0;
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   transition: var(--transition);
 }
@@ -1192,6 +1201,7 @@ footer h3:hover {
   padding: 15px;
   border-radius: 50%;
   background: var(--glass);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -1244,6 +1254,7 @@ footer h3:hover {
   align-items: center;
   gap: 20px;
   background: rgba(255, 255, 255, 0.9);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-radius: 15px;
   padding: 25px 30px;
@@ -1522,6 +1533,7 @@ footer h3:hover {
 /* Enhanced location info panel responsive behavior */
 .location-info-panel {
   background: rgba(255, 255, 255, 0.95);
+  -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   border-radius: 25px;
   padding: 40px;

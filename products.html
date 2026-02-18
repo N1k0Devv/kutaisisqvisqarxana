@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="ka">
   <head>
     <meta charset="UTF-8" />
@@ -127,19 +127,10 @@
                   <div class="bar"></div>
                 </div>
                 <div class="nav-menu" id="navMenu">
-                  <a href="index.html">???????</a>
-                  <a href="aboutus.html">????? ???????</a>
-                  <a href="products.html">?????????</a>
-                  <a href="contact.html">????????</a>
-                  <div class="nav-menu-lang" aria-label="Language selector">
-                    <div class="nav-menu-label">Language</div>
-                    <div class="nav-menu-options">
-                      <button class="lang-pill is-active" type="button" data-lang="ka">KA</button>
-                      <button class="lang-pill" type="button" data-lang="en">EN</button>
-                      <button class="lang-pill" type="button" data-lang="ru">RU</button>
-                      <button class="lang-pill" type="button" data-lang="tr">TR</button>
-                    </div>
-                  </div>
+                  <a href="index.html">მთავარი</a>
+                  <a href="aboutus.html">ჩვენსშესახებ</a>
+                  <a href="products.html">სერვისები</a>
+                  <a href="contact.html">კონტაქტი</a>
                 </div>
               </li>
             </ul>
@@ -157,19 +148,7 @@
                 სრული დიაპაზონის გრანიტის დამუშავება და დიზაინი თქვენი
                 პროექტისთვის
               </p>
-              <div class="hero-stats">
-                <div class="hero-stat">
-                  <div class="stat-number">50+</div>
-                  <div class="stat-label">პროდუქტი</div>
-                </div>
-                <div class="hero-stat">
-                  <div class="stat-number">3</div>
-                  <div class="stat-label">კატეგორია</div>
-                </div>
-                <div class="hero-stat">
-                  <div class="stat-number">100%</div>
-                  <div class="stat-label">ხარისხი</div>
-                </div>
+              
               </div>
             </div>
           </div>
@@ -621,47 +600,7 @@
                     დაგვიკავშირდით
                   </button>
                 </div>
-                 <div
-                class="product-showcase-card"
-                data-category="granite"
-                data-product-id="polished-tile"
-                data-name="პოლირებული ფილა"
-                data-price="150.00"
-                data-images="images/IMG_0734.JPG|images/IMG_0746.JPG|images/IMG_0748.JPG"
-              >
-                <div class="product-showcase-image">
-                  <img
-                    src="images/IMG_0734.JPG"
-                    alt="პოლირებული ფილა"
-                    loading="lazy"
-                  />
-                  <div class="product-showcase-overlay">
-                    <button
-                      class="product-quick-view-btn"
-                      onclick="openQuickView(this)"
-                    >
-                      <i class="fas fa-eye"></i>
-                      მეტის ნახვა
-                    </button>
-                  </div>
-                  <div class="product-badge premium">პრემიუმი</div>
-                </div>
-                <div class="product-showcase-info">
-                  <h3 class="product-showcase-title">პოლირებული ფილა</h3>
-                  <p class="product-showcase-category">გრანიტი</p>
-                  <div class="product-showcase-price" data-price="150.00">
-                    
-                  </div>
-                  <button
-                    class="product-add-to-cart-btn"
-                   onclick="window.location.href='contact.html'"
-                  >
-                    <i class="fas fa-phone"></i>
-                    დაგვიკავშირდით
-                  </button>
-                </div>
-              </div>
-            </div>
+                 
 
             <!-- No Results Message -->
             <div id="noResults" class="no-results" style="display: none">
@@ -947,6 +886,7 @@
         text-transform: uppercase;
         letter-spacing: 1px;
         margin-bottom: 1.5rem;
+        -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px);
         animation: badgeFloat 3s ease-in-out infinite;
       }
@@ -991,6 +931,7 @@
         padding: 20px;
         background: rgba(255, 255, 255, 0.1);
         border-radius: 15px;
+        -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px);
         border: 1px solid rgba(255, 255, 255, 0.2);
         transition: all 0.4s ease;
@@ -1262,6 +1203,7 @@
       }
 
       .price-range-slider input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
         appearance: none;
         width: 22px;
         height: 22px;
@@ -1587,6 +1529,7 @@
         text-transform: uppercase;
         letter-spacing: 0.5px;
         z-index: 3;
+        -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px);
       }
 
@@ -1732,6 +1675,7 @@
         width: 100%;
         height: 100%;
         background: rgba(0, 0, 0, 0.8);
+        -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px);
       }
 
@@ -2204,6 +2148,7 @@
           #16213e 50%,
           #0f3460 100%
         );
+        -webkit-backdrop-filter: blur(20px);
         backdrop-filter: blur(20px);
         padding: 20px 0;
         transform: translateY(-100%);
@@ -3252,7 +3197,7 @@
       });
     });
   </script>
-  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
 
