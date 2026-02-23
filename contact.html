@@ -3,6 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function () {
+        var doc = document.documentElement;
+
+        // Small polyfills for older browsers.
+        if (window.NodeList && !NodeList.prototype.forEach) {
+          NodeList.prototype.forEach = Array.prototype.forEach;
+        }
+        if (window.Element && !Element.prototype.matches) {
+          Element.prototype.matches =
+            Element.prototype.msMatchesSelector ||
+            Element.prototype.webkitMatchesSelector;
+        }
+        if (window.Element && !Element.prototype.closest) {
+          Element.prototype.closest = function (selector) {
+            var el = this;
+            while (el && el.nodeType === 1) {
+              if (el.matches(selector)) return el;
+              el = el.parentElement || el.parentNode;
+            }
+            return null;
+          };
+        }
+
+        // Mark legacy devices/browsers to avoid heavy effects.
+        var isOldAndroid = /Android [0-7]\./i.test(navigator.userAgent);
+        var isOldIOS = /OS (9|10|11|12)_/i.test(navigator.userAgent);
+        var weakCpu = navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4;
+        var weakMem = navigator.deviceMemory && navigator.deviceMemory <= 4;
+        if (isOldAndroid || isOldIOS || weakCpu || weakMem) {
+          doc.className += " legacy-device";
+        }
+
+        // Browsers without CSS variables can break complex styles.
+        if (!window.CSS || !CSS.supports || !CSS.supports("color", "var(--x)")) {
+          doc.className += " no-cssvars legacy-device";
+        }
+      })();
+    </script>
     <title>კონტაქტი და შეკვეთა | ქუთაისის ქვის ქარხანა</title>
     <meta
       name="description"
@@ -427,6 +466,36 @@
 
         <!-- Enhanced CSS Styles -->
         <style>
+          /* Compatibility fallback for older browsers/devices */
+          .legacy-device * {
+            animation: none !important;
+            transition: none !important;
+          }
+
+          .legacy-device .contact-hero-enhanced,
+          .legacy-device .contact-card,
+          .legacy-device .location-info-panel,
+          .legacy-device .map-overlay-info,
+          .legacy-device .contact-form {
+            -webkit-backdrop-filter: none !important;
+            backdrop-filter: none !important;
+            box-shadow: none !important;
+          }
+
+          .legacy-device .floating-elements {
+            display: none !important;
+          }
+
+          .legacy-device .contact-hero-enhanced {
+            min-height: auto !important;
+            padding: 60px 20px !important;
+          }
+
+          .no-cssvars body {
+            background: #f4f6f8 !important;
+            color: #1a1a1a !important;
+          }
+
           /* Enhanced Contact Hero Section */
           .contact-hero-enhanced {
             position: relative;
@@ -1855,7 +1924,11 @@
                 }
             }
 
+          const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+          const allowSmoothEffects = !document.body.classList.contains("low-power") && !reduceMotion;
+
           if (
+            allowSmoothEffects &&
             typeof gsap !== "undefined" &&
             typeof ScrollTrigger !== "undefined" &&
             typeof ScrollSmoother !== "undefined"
@@ -1872,8 +1945,18 @@
       </div>
     </div>
   
-    <script>
+  <script>
     let pendingLang = null;
+    function dispatchChangeEvent(el) {
+      if (!el) return;
+      if (typeof Event === "function") {
+        el.dispatchEvent(new Event("change"));
+        return;
+      }
+      const evt = document.createEvent("Event");
+      evt.initEvent("change", true, true);
+      el.dispatchEvent(evt);
+    }
 
     function googleTranslateElementInit() {
       new google.translate.TranslateElement(
@@ -1901,7 +1984,7 @@
         return;
       }
       combo.value = lang;
-      combo.dispatchEvent(new Event("change"));
+      dispatchChangeEvent(combo);
     }
 
     function updateLangUI(lang) {
