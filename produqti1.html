@@ -33,24 +33,13 @@
                   <a href="aboutus.html">????? ???????</a>
                   <a href="products.html">?????????</a>
                   <a href="contact.html">????????</a>
-                  <div class="nav-menu-lang" aria-label="Language selector">
-                    <div class="nav-menu-label">Language</div>
-                    <div class="nav-menu-options">
-                      <button class="lang-pill is-active" type="button" data-lang="ka">KA</button>
-                      <button class="lang-pill" type="button" data-lang="en">EN</button>
-                      <button class="lang-pill" type="button" data-lang="ru">RU</button>
-                      <button class="lang-pill" type="button" data-lang="tr">TR</button>
-                    </div>
-                  </div>
                 </div>
               </li>
             </ul>
         </div>
     </header>
-  <div id="google_translate_element" class="google-translate-hidden" aria-hidden="true"></div>
-
+  
     </header>
-  <div id="google_translate_element" class="google-translate-hidden" aria-hidden="true"></div>
 
 <section class="product-1">
      <div class="container">
@@ -457,17 +446,30 @@
 function toggleMenu() {
     const menu = document.getElementById("menu");
     const navMenu = document.getElementById("navMenu");
-    
-    if (menu) menu.classList.toggle("active");
-    if (navMenu) navMenu.classList.toggle("active");
+
+    if (!menu || !navMenu) return;
+
+    const shouldOpen = !navMenu.classList.contains("active");
+    menu.classList.toggle("active");
+    navMenu.classList.toggle("active");
+    navMenu.classList.remove("closing");
+    document.body.classList.toggle("menu-open", shouldOpen);
 }
 
 function closeMenu() {
     const menu = document.querySelector('.menu');
     const navMenu = document.getElementById('navMenu');
-    
+
+    if (navMenu && navMenu.classList.contains("active")) {
+        navMenu.classList.add("closing");
+        setTimeout(() => {
+            navMenu.classList.remove("active", "closing");
+        }, 400);
+    }
+
+    document.body.classList.remove("menu-open");
+
     if (menu) menu.classList.remove('active');
-    if (navMenu) navMenu.classList.remove('active');
 }
 
 // Setup mobile menu functionality
@@ -479,6 +481,12 @@ function setupMobileMenu() {
         const navLinks = navMenu.querySelectorAll('a');
         navLinks.forEach(link => {
             link.addEventListener('click', closeMenu);
+        });
+
+        navMenu.addEventListener('click', function (e) {
+            if (e.target === navMenu) {
+                closeMenu();
+            }
         });
         
         // Close menu when clicking outside
@@ -562,107 +570,6 @@ document.addEventListener('DOMContentLoaded', setupMobileMenu);
     </div>
     </div>
 
-    <script>
-    let pendingLang = null;
-
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement(
-        {
-          pageLanguage: "ka",
-          includedLanguages: "ka,en,ru,tr",
-          layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-          autoDisplay: false,
-        },
-        "google_translate_element"
-      );
-
-      const storedLang = localStorage.getItem("site_lang");
-      if (storedLang && storedLang !== "ka") {
-        setGoogleTranslate(storedLang);
-      } else if (pendingLang && pendingLang !== "ka") {
-        setGoogleTranslate(pendingLang);
-      }
-    }
-
-    function setGoogleTranslate(lang) {
-      const combo = document.querySelector(".goog-te-combo");
-      if (!combo) {
-        pendingLang = lang;
-        return;
-      }
-      combo.value = lang;
-      combo.dispatchEvent(new Event("change"));
-    }
-
-    function updateLangUI(lang) {
-      document.querySelectorAll(".lang-current").forEach((el) => {
-        el.textContent = lang.toUpperCase();
-      });
-
-      document.querySelectorAll(".lang-option").forEach((opt) => {
-        opt.classList.toggle("is-active", opt.dataset.lang === lang);
-      });
-
-      const pills = document.querySelectorAll(".lang-pill");
-      pills.forEach((pill) => {
-        pill.classList.toggle("is-active", pill.dataset.lang === lang);
-      });
-    }
-
-    function closeAllLangMenus(except = null) {
-      document.querySelectorAll(".lang-switcher").forEach((switcher) => {
-        if (except && switcher === except) return;
-        switcher.classList.remove("is-open");
-        const trigger = switcher.querySelector(".lang-trigger");
-        if (trigger) trigger.setAttribute("aria-expanded", "false");
-      });
-    }
-
-    document.addEventListener("DOMContentLoaded", () => {
-      const storedLang = localStorage.getItem("site_lang") || "ka";
-      updateLangUI(storedLang);
-      pendingLang = storedLang;
-
-      document.querySelectorAll(".lang-switcher").forEach((switcher) => {
-        const trigger = switcher.querySelector(".lang-trigger");
-
-        if (trigger) {
-          trigger.addEventListener("click", (e) => {
-            e.stopPropagation();
-            const isOpen = switcher.classList.toggle("is-open");
-            trigger.setAttribute("aria-expanded", isOpen ? "true" : "false");
-            if (isOpen) closeAllLangMenus(switcher);
-          });
-        }
-
-        switcher.querySelectorAll(".lang-option").forEach((opt) => {
-          opt.addEventListener("click", () => {
-            const lang = opt.dataset.lang;
-            localStorage.setItem("site_lang", lang);
-            updateLangUI(lang);
-            setGoogleTranslate(lang);
-            closeAllLangMenus();
-          });
-        });
-      });
-
-      document.querySelectorAll(".lang-pill").forEach((pill) => {
-        pill.addEventListener("click", () => {
-          const lang = pill.dataset.lang;
-          localStorage.setItem("site_lang", lang);
-          updateLangUI(lang);
-          setGoogleTranslate(lang);
-          closeAllLangMenus();
-        });
-      });
-
-      document.addEventListener("click", () => closeAllLangMenus());
-      document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape") closeAllLangMenus();
-      });
-    });
-  </script>
-  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
 

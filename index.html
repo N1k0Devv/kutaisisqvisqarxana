@@ -3,6 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function () {
+        const params = new URLSearchParams(window.location.search);
+        const fallbackPath = params.get("p");
+        if (!fallbackPath) return;
+
+        const routeMap = {
+          "/": "index.html",
+          "/index": "index.html",
+          "/index.html": "index.html",
+          "/aboutus": "aboutus.html",
+          "/aboutus.html": "aboutus.html",
+          "/products": "products.html",
+          "/products.html": "products.html",
+          "/contact": "contact.html",
+          "/contact.html": "contact.html",
+          "/produqti1": "produqti1.html",
+          "/produqti1.html": "produqti1.html",
+        };
+
+        const queryPart = params.get("q");
+        const hashPart = params.get("h");
+        const decodedPath = decodeURIComponent(fallbackPath);
+        const normalizedPath = decodedPath.startsWith("/")
+          ? decodedPath
+          : "/" + decodedPath;
+
+        const pathSegments = window.location.pathname
+          .split("/")
+          .filter(Boolean);
+        const basePath =
+          window.location.hostname.endsWith(".github.io") &&
+          pathSegments.length > 0
+            ? "/" + pathSegments[0]
+            : "";
+
+        const targetFile = routeMap[normalizedPath] || "index.html";
+        let destination = basePath + "/" + targetFile;
+
+        if (queryPart) {
+          destination += "?" + decodeURIComponent(queryPart);
+        }
+        if (hashPart) {
+          destination += "#" + decodeURIComponent(hashPart);
+        }
+
+        window.location.replace(destination);
+      })();
+    </script>
     <meta
       name="description"
       content="ქუთაისში მდებარე ქვის ქარხანა: გრანიტის დამუშავება, ჭრა, მონტაჟი და ინდივიდუალური დიზაინი. მაღალი ხარისხის ქვის პროდუქცია მთელი საქართველოსთვის."
@@ -27,7 +76,7 @@
     />
     <meta property="og:locale" content="ka_GE" />
     <meta property="og:url" content="https://qutstone.com/" />
-    <meta property="og:image" content="https://qutstone.com/images/pexels-ahmetcotur-31817156.jpg" />
+    <meta property="og:image" content="https://qutstone.com/images/modern-kitchen-with-contemporary-interior-decor-furnishings.jpg" />
     <meta property="og:image:alt" content="ქუთაისის ქვის ქარხანის გრანიტის ნამუშევრები" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="ქუთაისის ქვის ქარხანა | გრანიტის დამუშავება ქუთაისში" />
@@ -35,7 +84,7 @@
       name="twitter:description"
       content="მაღალი ხარისხის გრანიტის სერვისები და ქვის პროდუქცია მთელი საქართველოსთვის."
     />
-    <meta name="twitter:image" content="https://qutstone.com/images/pexels-ahmetcotur-31817156.jpg" />
+    <meta name="twitter:image" content="https://qutstone.com/images/modern-kitchen-with-contemporary-interior-decor-furnishings.jpg" />
     <link rel="canonical" href="https://qutstone.com/" />
     <link rel="alternate" hreflang="ka-GE" href="https://qutstone.com/" />
     <link rel="alternate" hreflang="ka" href="https://qutstone.com/" />
@@ -57,7 +106,7 @@
     <link
       rel="preload"
       as="image"
-      href="images/pexels-ahmetcotur-31817156.jpg"
+      href="images/modern-kitchen-with-contemporary-interior-decor-furnishings.jpg"
       fetchpriority="high"
     />
     <style>
@@ -1720,8 +1769,13 @@
             const menu = document.getElementById("menu");
             const navMenu = document.getElementById("navMenu");
 
-            if (menu) menu.classList.toggle("active");
-            if (navMenu) navMenu.classList.toggle("active");
+            if (!menu || !navMenu) return;
+
+            const shouldOpen = !navMenu.classList.contains("active");
+            menu.classList.toggle("active");
+            navMenu.classList.toggle("active");
+            navMenu.classList.remove("closing");
+            document.body.classList.toggle("menu-open", shouldOpen);
           }
 
           function closeMenu() {
@@ -1738,6 +1792,8 @@
               }, 400); // Match the slideOut animation duration
             }
 
+            document.body.classList.remove("menu-open");
+
             if (menu) {
               menu.classList.remove("active");
             }
@@ -1752,6 +1808,12 @@
               const navLinks = navMenu.querySelectorAll("a");
               navLinks.forEach((link) => {
                 link.addEventListener("click", closeMenu);
+              });
+
+              navMenu.addEventListener("click", function (e) {
+                if (e.target === navMenu) {
+                  closeMenu();
+                }
               });
 
               // Close menu when clicking outside

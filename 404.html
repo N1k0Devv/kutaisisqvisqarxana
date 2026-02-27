@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting...</title>
+    <script>
+      (function () {
+        const { location } = window;
+        const pathParts = location.pathname.split("/").filter(Boolean);
+        const basePath =
+          location.hostname.endsWith(".github.io") && pathParts.length > 0
+            ? "/" + pathParts[0]
+            : "";
+
+        let appPath = location.pathname;
+        if (basePath && appPath.startsWith(basePath)) {
+          appPath = appPath.slice(basePath.length) || "/";
+        }
+
+        const query = location.search
+          ? "&q=" + encodeURIComponent(location.search.slice(1))
+          : "";
+        const hash = location.hash
+          ? "&h=" + encodeURIComponent(location.hash.slice(1))
+          : "";
+
+        const target =
+          basePath +
+          "/index.html?p=" +
+          encodeURIComponent(appPath) +
+          query +
+          hash;
+        location.replace(target);
+      })();
+    </script>
+  </head>
+  <body>
+    <p>Redirecting...</p>
+  </body>
+</html>
