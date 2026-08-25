@@ -36,6 +36,7 @@ html,
 body {
   width: 100%;
   overflow-x: hidden; /* FIX: Prevents "sidebar" / horizontal scrollbar issues */
+  height: auto !important;
 }
 
 body {
@@ -2200,7 +2201,9 @@ img {
   justify-content: center;
   font-size: 1.1rem;
   line-height: 1;
-  transition: background 0.2s ease, transform 0.2s ease;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
   z-index: 2;
 }
 
@@ -2279,4 +2282,8 @@ img {
   .qv-dots {
     display: flex;
   }
+}
+.ScrollSmoother-wrapper {
+  z-index: 999 !important;
+  height: 90px !important;
 }
