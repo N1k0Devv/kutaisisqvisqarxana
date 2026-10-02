@@ -145,7 +145,7 @@
         wordsClass: "split-word",
       });
       gsap.from(split.words, {
-        yPercent: 110,
+        yPercent: 140,
         duration: 1.05,
         ease: "power4.out",
         stagger: 0.035,
