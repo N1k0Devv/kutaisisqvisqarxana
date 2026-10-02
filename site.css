@@ -674,7 +674,7 @@ h1,
   inset: 0;
   z-index: 3;
   pointer-events: none;
-  background: linear-gradient(104deg, transparent 42%, rgba(255, 236, 206, 0.22) 50%, transparent 58%);
+  background: linear-gradient(104deg, transparent 40%, rgba(255, 236, 206, 0.42) 50%, transparent 60%);
   background-size: 240% 100%;
   background-repeat: no-repeat;
   background-position: 130% 0;

@@ -236,8 +236,8 @@
         scale: 1,
         clipPath: "inset(0% 0% 0% 0% round 0px)",
       }, {
-        scale: 0.9,
-        clipPath: "inset(4.5% 3.5% 6% 3.5% round 22px)",
+        scale: 0.86,
+        clipPath: "inset(7% 5.5% 9% 5.5% round 28px)",
         ease: "none",
         duration: 1,
       }, 0)
