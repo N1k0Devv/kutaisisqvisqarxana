@@ -1,41 +1,53 @@
 <!doctype html>
-<html lang="en">
+<html lang="ka">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Redirecting...</title>
+    <title>გვერდი ვერ მოიძებნა | ქუთაისის ქვის ქარხანა</title>
+    <meta name="robots" content="noindex" />
+    <link rel="icon" href="images/Artboard 2-8.png" type="image/png" />
+    <link rel="stylesheet" href="site.css" />
     <script>
       (function () {
         const { location } = window;
         const pathParts = location.pathname.split("/").filter(Boolean);
         const basePath =
-          location.hostname.endsWith(".github.io") && pathParts.length > 0
+          location.hostname.endsWith(".github.io") && pathParts.length > 0 && pathParts[0] !== "404.html"
             ? "/" + pathParts[0]
             : "";
-
         let appPath = location.pathname;
-        if (basePath && appPath.startsWith(basePath)) {
-          appPath = appPath.slice(basePath.length) || "/";
+        if (basePath && appPath.startsWith(basePath)) appPath = appPath.slice(basePath.length) || "/";
+        const routeMap = {
+          "/": "index.html",
+          "/index": "index.html",
+          "/index.html": "index.html",
+          "/aboutus": "aboutus.html",
+          "/aboutus.html": "aboutus.html",
+          "/products": "products.html",
+          "/products.html": "products.html",
+          "/contact": "contact.html",
+          "/contact.html": "contact.html",
+          "/produqti1": "produqti1.html",
+          "/produqti1.html": "produqti1.html",
+          "/cart": "cart.html",
+          "/cart.html": "cart.html",
+        };
+        if (routeMap[appPath]) {
+          const query = location.search ? "&q=" + encodeURIComponent(location.search.slice(1)) : "";
+          const hash = location.hash ? "&h=" + encodeURIComponent(location.hash.slice(1)) : "";
+          location.replace(basePath + "/index.html?p=" + encodeURIComponent(appPath) + query + hash);
         }
-
-        const query = location.search
-          ? "&q=" + encodeURIComponent(location.search.slice(1))
-          : "";
-        const hash = location.hash
-          ? "&h=" + encodeURIComponent(location.hash.slice(1))
-          : "";
-
-        const target =
-          basePath +
-          "/index.html?p=" +
-          encodeURIComponent(appPath) +
-          query +
-          hash;
-        location.replace(target);
       })();
     </script>
   </head>
   <body>
-    <p>Redirecting...</p>
+    <main class="lost">
+      <div>
+        <p class="kicker" style="justify-content:center">ქუთაისის ქვის ქარხანა</p>
+        <h1>404</h1>
+        <p>ეს გვერდი ვერ მოიძებნა.</p>
+        <a class="btn btn-solid" href="index.html">მთავარზე დაბრუნება</a>
+      </div>
+    </main>
   </body>
 </html>

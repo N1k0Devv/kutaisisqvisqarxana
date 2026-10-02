@@ -1,583 +1,194 @@
-﻿<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="ka">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ქუთაისის ქვის ქარხანა</title>
-    <script src="https://kit.fontawesome.com/7706f5712b.js" crossorigin="anonymous" defer></script>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="media.css">
-    <script src="gsap-smoother.js" defer></script>
-</head>
-<body>
-    <div id="smooth-wrapper">
-    <div id="smooth-content">
-        <header>
-        <div class="container">
-            <i class="fa-solid fa-mountain-sun fa-2xl" id="mta"></i>            
-            <h2><a href="index.html" class="linki">ქუთაისის ქვის ქარხანა</a></h2>
-                <ul>
-                    <li><a class="nav" id="nav" href="index.html">მთავარი</a></li>
-                    <li><a class="nav" id="nav" href="aboutus.html">ჩვენსშესახებ</a></li>
-                    <li><a href="products.html" class="nav">სერვისები</a></li>
-                    <li><a class="nav" id="nav" href="contact.html">კონტაქტი</a></li>
-                                  <li>
-                <div class="menu" id="menu" onclick="toggleMenu()">
-                  <div class="bar"></div>
-                  <div class="bar"></div>
-                  <div class="bar"></div>
-                </div>
-                <div class="nav-menu" id="navMenu">
-                  <a href="index.html">???????</a>
-                  <a href="aboutus.html">????? ???????</a>
-                  <a href="products.html">?????????</a>
-                  <a href="contact.html">????????</a>
-                </div>
-              </li>
-            </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ბაბადუბის ფილა 30სმ | ქუთაისის ქვის ქარხანა</title>
+    <meta name="description" content="ბაბადუბის ფილა 30სმ. ფასი ერთ კვადრატულ მეტრზე. სიგანე 30სმ, სისქე 2,2სმ, ფერი რუხი. ქუთაისის ქვის ქარხანა." />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0c0b09" />
+    <meta property="og:title" content="ბაბადუბის ფილა 30სმ | ქუთაისის ქვის ქარხანა" />
+    <meta property="og:description" content="ფასი მოცემულია ერთ კვადრატულ მეტრზე. რუხი ფერი, ნაყრითა დამუშავება." />
+    <meta property="og:image" content="https://qutstone.com/images/opt/paving-3.jpg" />
+    <meta property="og:url" content="https://qutstone.com/produqti1.html" />
+    <link rel="canonical" href="https://qutstone.com/produqti1.html" />
+    <link rel="icon" href="images/Artboard 2-8.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Sans+Georgian:wght@400;500;600&family=Noto+Serif+Georgian:wght@500;600&display=swap" rel="stylesheet" />
+    <link rel="preload" href="fonts/dachi-the-lynx.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="site.css" />
+    <script>
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("js-anim");
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">შინაარსზე გადასვლა</a>
+    <header class="site-header is-solid" data-header data-solid>
+      <div class="header-inner">
+        <a class="brand" href="index.html"><img src="images/logo.png" alt="ქუთაისის ქვის ქარხანის ლოგო" width="858" height="469" /></a>
+        <nav class="desktop-nav" aria-label="მთავარი ნავიგაცია">
+          <a href="index.html">მთავარი</a>
+          <a href="aboutus.html">ჩვენს შესახებ</a>
+          <a href="products.html">სერვისები</a>
+          <a href="contact.html">კონტაქტი</a>
+        </nav>
+        <div class="header-tools">
+          <a class="cart-link" href="cart.html" aria-label="კალათა">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 7h12l-1 13H7L6 7z"/><path d="M9 7V5.8A3 3 0 0 1 12 3a3 3 0 0 1 3 2.8V7"/></svg>
+            <span class="cart-badge" data-cart-count hidden>0</span>
+          </a>
+          <button class="nav-toggle" id="menu" aria-expanded="false" aria-controls="navMenu" aria-label="მენიუს გახსნა"><span></span></button>
         </div>
+      </div>
     </header>
-  
-    </header>
-
-<section class="product-1">
-     <div class="container">
-        <div class="product-section">
-            <!-- Product Image -->
-            <div class="product-image">
-                <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800" alt="ბაბადუბის ფილა">
-                <button class="expand-btn">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polyline points="15,3 21,3 21,9"></polyline>
-                        <polyline points="9,21 3,21 3,15"></polyline>
-                        <line x1="21" y1="3" x2="14" y2="10"></line>
-                        <line x1="3" y1="21" x2="10" y2="14"></line>
-                    </svg>
-                </button>
-            </div>
-
-            <!-- Product Details -->
-            <div class="product-details">
-                <h1 class="product-title">ბაბადუბის ფილა 30სმ</h1>
-                
-                <div class="product-price">47.00 ₾</div>
-                
-                <div class="product-code">ბაბადუბის ფილა</div>
-                
-                <p class="product-description">
-                    ფასი მოცემულია ერთ კვადრატულ მეტრზე.
-                </p>
-
-                <div class="specifications">
-                    <div class="spec-item">
-                        <span class="spec-label">სიგრძე:</span>
-                        <span class="spec-value">თავისუფალი</span>
-                    </div>
-                    
-                    <div class="spec-item">
-                        <span class="spec-label">სიგანე:</span>
-                        <span class="spec-value">30სმ</span>
-                    </div>
-                    
-                    <div class="spec-item">
-                        <span class="spec-label">სისქე:</span>
-                        <span class="spec-value">2,2სმ</span>
-                    </div>
-                    
-                    <div class="spec-item">
-                        <span class="spec-label">ფერი:</span>
-                        <span class="spec-value">რუხი</span>
-                    </div>
-                    
-                    <div class="spec-item">
-                        <span class="spec-label">დამუშავება:</span>
-                        <span class="spec-value">ნაყრითა, კუთხე-ჩამოგანული</span>
-                    </div>
-                    
-                    <div class="spec-item">
-                        <span class="spec-label">ზარმომშვიდია:</span>
-                        <span class="spec-value">თეთრი-ნყატი, საქართველო</span>
-                    </div>
-                </div>
-
-                <div class="action-buttons">
-                    <button class="add-to-cart-btn" onclick="alert('გთხოვთ დაგვიკავშირდით პროდუქტის დეტალებისთვის: contact@granite.ge ან +995 599 123 456')">დაგვიკავშირდით</button>
-                    <button class="wishlist-btn">♡</button>
-                </div>
-            </div>
-        </div>
+    <div class="nav-overlay" id="navMenu" hidden>
+      <nav aria-label="მობილური ნავიგაცია">
+        <a href="index.html">მთავარი</a>
+        <a href="aboutus.html">ჩვენს შესახებ</a>
+        <a href="products.html">სერვისები</a>
+        <a href="contact.html">კონტაქტი</a>
+        <a href="cart.html">კალათა</a>
+      </nav>
     </div>
 
-    <!-- Modal for enlarged image -->
-    <div id="imageModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <img id="modalImage" src="" alt="Enlarged view">
+    <main id="main" class="detail">
+      <div class="wrap">
+        <p class="crumbs"><a href="index.html">მთავარი</a> / <a href="products.html">სერვისები</a> / ბაბადუბის ფილა</p>
+        <div class="detail-grid">
+          <div class="detail-photo">
+            <picture>
+              <source srcset="images/opt/paving-3.webp" type="image/webp" />
+              <img id="productImage" src="images/opt/paving-3.jpg" alt="ბაბადუბის ფილა" width="1400" height="934" />
+            </picture>
+            <button class="expand-btn" type="button" aria-label="სურათის გადიდება">+</button>
+          </div>
+          <div>
+            <p class="kicker">ბაბადუბის ფილა</p>
+            <h1>ბაბადუბის ფილა 30სმ</h1>
+            <p class="detail-price">47.00 ₾</p>
+            <p>ფასი მოცემულია ერთ კვადრატულ მეტრზე.</p>
+            <div class="specs">
+              <div class="spec"><span>სიგრძე</span><strong>თავისუფალი</strong></div>
+              <div class="spec"><span>სიგანე</span><strong>30სმ</strong></div>
+              <div class="spec"><span>სისქე</span><strong>2,2სმ</strong></div>
+              <div class="spec"><span>ფერი</span><strong>რუხი</strong></div>
+              <div class="spec"><span>დამუშავება</span><strong>ნაყრითა, კუთხე-ჩამოგანული</strong></div>
+              <div class="spec"><span>ზარმომშვიდია</span><strong>თეთრი-ნყატი, საქართველო</strong></div>
+            </div>
+            <div class="detail-actions">
+              <button type="button" class="btn btn-dark" id="addDetail">კალათაში დამატება</button>
+              <button type="button" class="btn btn-dark" id="wishlist" aria-pressed="false">შენახვა</button>
+              <a class="btn btn-ghost" href="contact.html">დაგვიკავშირდით</a>
+            </div>
+          </div>
         </div>
-    </div>
-</section>
-    <style>
-        /* ...existing code... */
+      </div>
+    </main>
 
-.product-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s cubic-bezier(.77,0,.18,1);
-}
+    <section class="section" style="padding-top:0">
+      <div class="wrap" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem">
+        <article>
+          <h3>ტელეფონი</h3>
+          <p><a href="tel:+995599229733">+995 599 22 97 33</a><br /><a href="tel:+995595638828">+995 595 63 88 28</a></p>
+        </article>
+        <article>
+          <h3>მისამართი</h3>
+          <p>N19 ახალგაზრდობის გამზირი, ქუთაისი</p>
+        </article>
+        <article>
+          <h3>ელ.ფოსტა</h3>
+          <p><a href="mailto:kutaisistonefactoryltd@gmail.com">kutaisistonefactoryltd@gmail.com</a></p>
+        </article>
+      </div>
+    </section>
 
-.product-image:hover img {
-    transform: scale(1.12);
-}
-   .product-1 {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 48px 16px;
-}
-
-.product-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 48px;
-    align-items: start;
-}
-
-/* Product Image */
-.product-image {
-    position: relative;
-    aspect-ratio: 1;
-    background-color: #e5e7eb;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.product-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.expand-btn {
-    position: absolute;
-    bottom: 16px;
-    left: 16px;
-    background: white;
-    border: none;
-    border-radius: 50%;
-    width: 48px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    transition: box-shadow 0.2s ease;
-    color: #4b5563;
-}
-
-.expand-btn:hover {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-}
-
-/* Product Details */
-.product-details {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-}
-
-.product-title {
-    font-size: 2.25rem;
-    font-weight: 700;
-    color: #111827;
-    line-height: 1.2;
-}
-
-.product-price {
-    font-size: 2.25rem;
-    font-weight: 700;
-    color: #f97316;
-}
-
-.product-code {
-    font-size: 1.125rem;
-    color: #6b7280;
-}
-
-.product-description {
-    font-size: 1.125rem;
-    color: #374151;
-    line-height: 1.7;
-}
-
-/* Specifications */
-.specifications {
-    display: flex;
-    flex-direction: column;
-}
-
-.spec-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 0;
-    border-bottom: 1px solid #e5e7eb;
-}
-
-.spec-item:last-child {
-    border-bottom: none;
-}
-
-.spec-label {
-    font-weight: 500;
-    color: #6b7280;
-}
-
-.spec-value {
-    color: #111827;
-    text-align: right;
-}
-
-/* Action Buttons */
-.action-buttons {
-    display: flex;
-    gap: 16px;
-    margin-top: 24px;
-}
-
-.add-to-cart-btn {
-    flex: 1;
-    background-color: #f97316;
-    color: white;
-    border: none;
-    padding: 16px 32px;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-}
-
-.add-to-cart-btn:hover {
-    background-color: #ea580c;
-}
-
-.wishlist-btn {
-    padding: 16px 32px;
-    border: 2px solid #d1d5db;
-    background: white;
-    color: #374151;
-    border-radius: 8px;
-    font-size: 1.25rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: border-color 0.2s ease;
-}
-
-.wishlist-btn:hover {
-    border-color: #9ca3af;
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .product-section {
-        grid-template-columns: 1fr;
-        gap: 32px;
-    }
-    
-    .product-title {
-        font-size: 2rem;
-    }
-    
-    .product-price {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 640px) {
-    .container {
-        padding: 24px 16px;
-    }
-    
-    .product-title {
-        font-size: 1.75rem;
-    }
-    
-    .product-price {
-        font-size: 1.75rem;
-    }
-    
-    .action-buttons {
-        flex-direction: column;
-    }
-    
-    .wishlist-btn {
-        align-self: center;
-        width: 60px;
-    }
-}
-
-/* Modal Styles */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    animation: fadeIn 0.3s ease;
-}
-
-.modal-content {
-    position: relative;
-    margin: auto;
-    padding: 20px;
-    width: 90%;
-    max-width: 1200px;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.modal-content img {
-    max-width: 100%;
-    max-height: 90vh;
-    object-fit: contain;
-    border-radius: 8px;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-}
-
-.close {
-    position: absolute;
-    top: 20px;
-    right: 35px;
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 1001;
-    transition: color 0.3s ease;
-}
-
-.close:hover,
-.close:focus {
-    color: #f97316;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes fadeOut {
-    from { opacity: 1; }
-    to { opacity: 0; }
-}
-
-.modal.fade-out {
-    animation: fadeOut 0.3s ease;
-}
-</style>
-<section class="contact-section">
-  <div class="contact-item">
-    <i class="fa-solid fa-phone fa-2xl" id="icona"></i>
-    <p>(+995) 123 45 67 89 <span class="highlight"></span></p>
-  </div>
-  <div class="contact-item">
-    <i class="fa-solid fa-location-dot fa-2xl" id="icona"></i>
-    <p>n 19 ახალგაზრდობის გამზ, ქუთაისი</p>
-  </div>
-  <div class="contact-item">
-    <i class="fa-solid fa-envelope fa-2xl" id="icona"></i>
-    <p>info@qvisqarxana</p>
-  </div>
-</section>
-
-<style>
-  .contact-section {
-    display: flex;
-    justify-content: space-around;
-    background-color: #222;
-    padding: 20px;
-    color: white;
-    text-align: center;
-    flex-wrap: wrap;
-    gap: 20px; 
-    margin-top: 20px;
-  }
-  .contact-item {
-    flex: 1 1 200px;
-    max-width: 300px;
-  }
-  #icona {
-    width: 30px;
-    height: 30px;
-    margin-bottom: 8px;
-  }
-  .highlight {
-    color: #e74c3c;
-  }
-  @media (max-width: 600px) {
-    .contact-section {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-</style>
-<footer>
-        <h3 class="stone">Stone</h3>
-        <h3>Factory</h3>
-        <div class="icons">
-        <a href="https://www.instagram.com/qutaisisqvisqarxana/" target="_blank"><i class="fa-brands fa-instagram fa-2xl"></i></a>
-        <a href="https://www.facebook.com/profile.php?id=100088853137969" target="_blank"><i class="fa-brands fa-facebook fa-2xl"></i></a>
+    <footer class="site-footer">
+      <div class="wrap footer-grid">
+        <div class="footer-brand"><h2>ქვის ქარხანა</h2></div>
+        <div>
+          <h3>ნავიგაცია</h3>
+          <ul>
+            <li><a href="index.html">მთავარი</a></li>
+            <li><a href="aboutus.html">ჩვენს შესახებ</a></li>
+            <li><a href="products.html">სერვისები</a></li>
+            <li><a href="contact.html">კონტაქტი</a></li>
+          </ul>
         </div>
-        <div class="foot-nav">
-            <a href="index.html">main</a>
-            <a href="aboutus.html">about us</a>
-            <a href="index.html#servisebi">services</a>
-            <a href="contact.html">contact</a>
+        <div>
+          <h3>სოციალური</h3>
+          <ul>
+            <li><a href="https://www.instagram.com/qutaisisqvisqarxana/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=100088853137969" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+          </ul>
         </div>
+        <div></div>
+      </div>
+      <div class="wrap footer-base">
+        <span>© 2026 ქუთაისის ქვის ქარხანა</span>
+        <span>Developed by <a href="https://n1k0devv.github.io/N1kodevv/" target="_blank" rel="noopener noreferrer">N1kodev</a></span>
+      </div>
     </footer>
-        <script>
-function toggleMenu() {
-    const menu = document.getElementById("menu");
-    const navMenu = document.getElementById("navMenu");
 
-    if (!menu || !navMenu) return;
-
-    const shouldOpen = !navMenu.classList.contains("active");
-    menu.classList.toggle("active");
-    navMenu.classList.toggle("active");
-    navMenu.classList.remove("closing");
-    document.body.classList.toggle("menu-open", shouldOpen);
-}
-
-function closeMenu() {
-    const menu = document.querySelector('.menu');
-    const navMenu = document.getElementById('navMenu');
-
-    if (navMenu && navMenu.classList.contains("active")) {
-        navMenu.classList.add("closing");
-        setTimeout(() => {
-            navMenu.classList.remove("active", "closing");
-        }, 400);
-    }
-
-    document.body.classList.remove("menu-open");
-
-    if (menu) menu.classList.remove('active');
-}
-
-// Setup mobile menu functionality
-function setupMobileMenu() {
-    const navMenu = document.getElementById('navMenu');
-    
-    if (navMenu) {
-        // Close menu when clicking on links
-        const navLinks = navMenu.querySelectorAll('a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', closeMenu);
-        });
-
-        navMenu.addEventListener('click', function (e) {
-            if (e.target === navMenu) {
-                closeMenu();
-            }
-        });
-        
-        // Close menu when clicking outside
-        document.addEventListener('click', function(e) {
-            const menu = document.getElementById('menu');
-            const isClickInsideMenu = menu && menu.contains(e.target);
-            const isClickInsideNavMenu = navMenu.contains(e.target);
-            
-            if (!isClickInsideMenu && !isClickInsideNavMenu && navMenu.classList.contains('active')) {
-                closeMenu();
-            }
-        });
-        
-        // Close menu on escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
-                closeMenu();
-            }
-        });
-    }
-}
-
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-  // create the scrollSmoother before your scrollTriggers
-ScrollSmoother.create({
-  smooth: 1, // how long (in seconds) it takes to "catch up" to the native scroll position
-  effects: true, // looks for data-speed and data-lag attributes on elements
-  smoothTouch: 0.1, // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
-});
-const modal = document.getElementById('imageModal');
-const modalImage = document.getElementById('modalImage');
-const expandBtn = document.querySelector('.expand-btn');
-const closeBtn = document.querySelector('.close');
-const productImage = document.querySelector('.product-image img');
-
-// Open modal when expand button is clicked
-expandBtn.addEventListener('click', function() {
-    modal.style.display = 'block';
-    modalImage.src = productImage.src;
-    modalImage.alt = productImage.alt;
-    document.body.style.overflow = 'hidden'; // Prevent background scrolling
-});
-
-// Close modal when X button is clicked
-closeBtn.addEventListener('click', function() {
-    closeModal();
-});
-
-// Close modal when clicking outside the image
-modal.addEventListener('click', function(e) {
-    if (e.target === modal) {
-        closeModal();
-    }
-});
-
-// Close modal with Escape key
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && modal.style.display === 'block') {
-        closeModal();
-    }
-});
-
-// Function to close modal with animation
-function closeModal() {
-    modal.classList.add('fade-out');
-    setTimeout(() => {
-        modal.style.display = 'none';
-        modal.classList.remove('fade-out');
-        document.body.style.overflow = 'auto'; // Restore scrolling
-    }, 300);
-}
-
-// Prevent modal from closing when clicking on the image
-modalImage.addEventListener('click', function(e) {
-    e.stopPropagation();
-});
-
-// Initialize mobile menu on page load
-document.addEventListener('DOMContentLoaded', setupMobileMenu);
-</script>
-    </div>
+    <div id="imageModal" class="lightbox" hidden>
+      <button class="lightbox-close close" type="button" aria-label="დახურვა">×</button>
+      <img id="modalImage" src="" alt="გადიდებული ხედი" />
     </div>
 
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/site.js" defer></script>
+    <script>
+      document.getElementById("addDetail")?.addEventListener("click", () => {
+        if (!window.cartManager) return;
+        window.cartManager.addToCart({
+          id: "babadubi-30",
+          name: "ბაბადუბის ფილა 30სმ",
+          price: 47,
+          category: "granite",
+          image: "images/opt/paving-3.jpg",
+        });
+      });
+      const wish = document.getElementById("wishlist");
+      const wishKey = "stoneFactoryWishlist";
+      function readWish() {
+        try { return JSON.parse(localStorage.getItem(wishKey) || "[]"); } catch (e) { return []; }
+      }
+      function paintWish() {
+        const saved = readWish().includes("babadubi-30");
+        if (!wish) return;
+        wish.setAttribute("aria-pressed", saved ? "true" : "false");
+        wish.textContent = saved ? "შენახულია" : "შენახვა";
+      }
+      paintWish();
+      wish?.addEventListener("click", () => {
+        const items = readWish().filter((id) => id !== "babadubi-30");
+        if (wish.getAttribute("aria-pressed") !== "true") items.push("babadubi-30");
+        localStorage.setItem(wishKey, JSON.stringify(items));
+        paintWish();
+      });
+      const modal = document.getElementById("imageModal");
+      const modalImage = document.getElementById("modalImage");
+      const productImage = document.getElementById("productImage");
+      function openModal() {
+        modal.hidden = false;
+        modal.classList.add("is-open");
+        modalImage.src = productImage.currentSrc || productImage.src;
+        modalImage.alt = productImage.alt;
+        document.body.classList.add("modal-open");
+      }
+      function closeModal() {
+        modal.classList.remove("is-open");
+        modal.hidden = true;
+        document.body.classList.remove("modal-open");
+      }
+      document.querySelector(".expand-btn")?.addEventListener("click", openModal);
+      modal?.addEventListener("click", (event) => { if (event.target === modal) closeModal(); });
+      document.querySelector(".close")?.addEventListener("click", closeModal);
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && modal.classList.contains("is-open")) closeModal();
+      });
+    </script>
+  </body>
 </html>
-
-
-
-
-
-
-
-
-
