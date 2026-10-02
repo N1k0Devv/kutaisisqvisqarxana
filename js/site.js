@@ -192,7 +192,80 @@
     );
   });
 
+  const heroStage = document.querySelector("[data-hero-stage]");
+  if (heroStage) {
+    const zoom = document.querySelector("[data-hero-zoom]");
+    const backLayer = heroStage.querySelector(".hero-layer-back");
+    const compactIntro = window.matchMedia("(max-width: 980px)").matches;
+    if (zoom) {
+      gsap.fromTo(zoom, { scale: 1.12 }, { scale: 1, duration: compactIntro ? 1.15 : 1.7, ease: "power3.out" });
+    }
+    if (backLayer) {
+      gsap.fromTo(
+        backLayer,
+        { clipPath: compactIntro ? "inset(3% 3% 3% 3%)" : "inset(5% 5% 5% 5%)" },
+        { clipPath: "inset(0% 0% 0% 0%)", duration: compactIntro ? 0.95 : 1.3, ease: "power3.inOut" }
+      );
+    }
+    gsap.fromTo(
+      ".hero-intro",
+      { autoAlpha: 0, y: compactIntro ? 14 : 20 },
+      { autoAlpha: 1, y: 0, duration: compactIntro ? 0.75 : 0.95, stagger: 0.07, delay: 0.08, ease: "power3.out" }
+    );
+    gsap.fromTo(
+      ".hero-slab",
+      { autoAlpha: 0, y: 24, x: compactIntro ? 0 : 18 },
+      { autoAlpha: 1, y: 0, x: 0, duration: compactIntro ? 0.85 : 1.15, delay: 0.16, ease: "power3.out" }
+    );
+  }
+
   const mm = gsap.matchMedia();
+  mm.add("(min-width: 981px)", () => {
+    const scroll = document.querySelector("[data-hero-scroll]");
+    const stage = document.querySelector("[data-hero-stage]");
+    if (scroll && stage) {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: scroll,
+          start: "top top",
+          end: "bottom bottom",
+          scrub: 0.65,
+        },
+      });
+      tl.fromTo(stage, {
+        scale: 1,
+        clipPath: "inset(0% 0% 0% 0% round 0px)",
+      }, {
+        scale: 0.9,
+        clipPath: "inset(4.5% 3.5% 6% 3.5% round 22px)",
+        ease: "none",
+        duration: 1,
+      }, 0)
+        .to(".hero-foreground", { y: -28, autoAlpha: 0, ease: "none", duration: 0.42 }, 0.48)
+        .to(".hero-home .scroll-hint", { autoAlpha: 0, y: 10, ease: "none", duration: 0.28 }, 0)
+        .fromTo("[data-hero-back]", { scale: 1 }, { scale: 1.1, ease: "none", duration: 1 }, 0)
+        .fromTo(".hero-slab-wrap", { yPercent: 0 }, { yPercent: -16, ease: "none", duration: 1 }, 0);
+      return () => tl.kill();
+    }
+  });
+
+  mm.add("(max-width: 980px)", () => {
+    const back = document.querySelector("[data-hero-back]");
+    const hero = document.querySelector(".hero-home");
+    if (!back || !hero) return;
+    const tween = gsap.to(back, {
+      yPercent: 7,
+      ease: "none",
+      scrollTrigger: {
+        trigger: hero,
+        start: "top top",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
+    return () => tween.kill();
+  });
+
   mm.add("(min-width: 981px)", () => {
     document.querySelectorAll("[data-parallax]").forEach((el) => {
       gsap.to(el, {

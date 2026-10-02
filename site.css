@@ -2,10 +2,12 @@
 
 @font-face {
   font-family: "Dachi Lynx";
-  src: url("fonts/Dachi the Lynx-46841546889.otf") format("opentype");
+  src: url("fonts/dachi-the-lynx.woff2") format("woff2"),
+       url("fonts/Dachi the Lynx-46841546889.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
+  unicode-range: U+0000-00FF, U+10A0-10FF, U+2D00-2D2F;
 }
 
 :root {
@@ -172,10 +174,23 @@ h1,
 h2,
 h3,
 .display {
-  font-family: var(--serif);
   font-weight: 500;
   letter-spacing: -0.02em;
-  line-height: 1.15;
+  line-height: 1.18;
+}
+
+h2,
+h3 {
+  font-family: var(--serif);
+}
+
+h1,
+.display {
+  font-family: var(--display);
+  font-weight: 400;
+  font-synthesis: none;
+  letter-spacing: 0;
+  line-height: 1.12;
 }
 
 .display {
@@ -583,6 +598,268 @@ h3,
   height: 48px;
   background: linear-gradient(var(--brass), transparent);
   display: block;
+}
+
+/* Homepage hero — layered stone, intro, scroll-out */
+.hero.hero-home {
+  display: block;
+  min-height: 0;
+  overflow: visible;
+  background: var(--paper);
+}
+
+.hero-scroll {
+  position: relative;
+  height: 100svh;
+  background: var(--paper);
+}
+
+.hero-stage {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  overflow: hidden;
+  contain: paint;
+  background: #0c0b09;
+  transform-origin: 50% 46%;
+  clip-path: inset(0% 0% 0% 0% round 0px);
+}
+
+.hero-layer-back,
+.hero-back-scale {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-layer-back {
+  z-index: 0;
+}
+
+.hero-back-scale {
+  transform-origin: center center;
+}
+
+.hero-layer-back img {
+  position: absolute;
+  left: 0;
+  top: -9%;
+  width: 100%;
+  height: 118%;
+  object-fit: cover;
+}
+
+.hero-home .hero-shade {
+  z-index: 1;
+  background:
+    linear-gradient(90deg, rgba(12, 11, 9, 0.82) 0%, rgba(12, 11, 9, 0.5) 42%, rgba(12, 11, 9, 0.22) 68%, rgba(12, 11, 9, 0.38) 100%),
+    linear-gradient(180deg, rgba(12, 11, 9, 0.55) 0%, rgba(12, 11, 9, 0.08) 30%, rgba(12, 11, 9, 0.18) 58%, rgba(12, 11, 9, 0.72) 100%);
+}
+
+.hero-grain {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.28;
+  mix-blend-mode: overlay;
+  background-image:
+    radial-gradient(rgba(255, 255, 255, 0.7) 0.45px, transparent 0.55px),
+    radial-gradient(rgba(0, 0, 0, 0.55) 0.45px, transparent 0.55px);
+  background-size: 3px 3px, 5px 5px;
+  background-position: 0 0, 1px 2px;
+}
+
+.hero-sweep {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  background: linear-gradient(104deg, transparent 42%, rgba(255, 236, 206, 0.22) 50%, transparent 58%);
+  background-size: 240% 100%;
+  background-repeat: no-repeat;
+  background-position: 130% 0;
+  mix-blend-mode: screen;
+}
+
+.hero-foreground {
+  position: relative;
+  z-index: 4;
+  height: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1.22fr) minmax(200px, 0.68fr);
+  grid-template-rows: minmax(0, 1fr) auto;
+  column-gap: clamp(1.25rem, 3vw, 3.5rem);
+  row-gap: 1.35rem;
+  padding: calc(var(--header) + 0.4rem) var(--gutter) 5.3rem;
+}
+
+.hero-copy {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: center;
+  max-width: none;
+}
+
+.hero-home h1 {
+  max-width: none;
+  font-size: clamp(3.2rem, 5.6vw, 5.85rem);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
+@media (min-width: 981px) {
+  .hero-home h1 span {
+    white-space: nowrap;
+  }
+}
+
+.hero-home .hero-lead {
+  max-width: 28rem;
+  margin-top: 1.1rem;
+  color: #e4dcd0;
+}
+
+.hero-home .btn-solid::after {
+  content: "";
+  width: 1.15rem;
+  height: 1px;
+  background: currentColor;
+}
+
+.hero-slab-wrap {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: center;
+  justify-self: end;
+  width: min(280px, 100%);
+}
+
+.hero-slab {
+  position: relative;
+  margin: 0;
+  padding: 0.55rem;
+  background: rgba(12, 11, 9, 0.28);
+  border: 1px solid rgba(196, 163, 106, 0.62);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.42);
+  aspect-ratio: 3 / 4;
+}
+
+.hero-slab img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-slab figcaption {
+  position: absolute;
+  left: 0.55rem;
+  bottom: 0.55rem;
+  padding: 0.28rem 0.55rem;
+  background: rgba(12, 11, 9, 0.78);
+  color: var(--brass-2);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+}
+
+.hero-home .hero-meta {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  margin: 0;
+  padding-top: 1.15rem;
+  border-top: 1px solid rgba(196, 163, 106, 0.5);
+}
+
+.hero-home .hero-meta div {
+  padding-right: 1.25rem;
+}
+
+.hero-home .hero-meta div + div {
+  padding-left: 1.25rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.hero-home .hero-place {
+  font-family: var(--display);
+  font-size: 1.7rem;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.hero-home .scroll-hint {
+  left: 0;
+  right: 0;
+  width: max-content;
+  margin-inline: auto;
+  bottom: 0.85rem;
+  flex-direction: column;
+  gap: 0.4rem;
+  z-index: 5;
+  font-family: var(--sans);
+  letter-spacing: 0.14em;
+  text-transform: none;
+  font-size: 0.68rem;
+  color: #efe8dc;
+}
+
+.hero-home .scroll-hint i {
+  position: relative;
+  overflow: hidden;
+  width: 1px;
+  height: 42px;
+  background: rgba(196, 163, 106, 0.4);
+}
+
+.hero-home .scroll-hint i::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 14px;
+  background: #f7f2ea;
+  animation: heroCue 1.7s ease-in-out infinite;
+}
+
+@keyframes heroSweep {
+  from { background-position: 130% 0; }
+  to { background-position: -130% 0; }
+}
+
+@keyframes heroCue {
+  0% { transform: translateY(-120%); opacity: 0; }
+  28% { opacity: 1; }
+  100% { transform: translateY(240%); opacity: 0; }
+}
+
+.js-anim .hero-intro,
+.js-anim .hero-slab {
+  opacity: 0;
+}
+
+.js-anim .hero-back-scale {
+  transform: scale(1.12);
+}
+
+.js-anim .hero-layer-back {
+  clip-path: inset(5% 5% 5% 5%);
+}
+
+.js-anim .hero-sweep {
+  animation: heroSweep 2.15s var(--ease) 0.18s 1 both;
+}
+
+@media (min-width: 981px) {
+  .js-anim .hero-scroll {
+    height: 172vh;
+  }
+}
+
+@media (max-width: 980px) and (max-height: 680px) {
+  .hero-slab-wrap { display: none; }
 }
 
 /* Intro */
@@ -1893,6 +2170,45 @@ h3,
     border-bottom: 1px solid var(--line-soft);
   }
   .scroll-hint { display: none; }
+  .hero-home .scroll-hint { display: flex; }
+  .hero-foreground {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 0.85rem;
+    height: 100%;
+    padding-top: calc(var(--header) + 0.75rem);
+    padding-bottom: 5.4rem;
+  }
+  .hero-copy { max-width: none; }
+  .hero-home .hero-meta { grid-row: auto; }
+  .hero-slab-wrap {
+    position: absolute;
+    top: calc(var(--header) + 0.65rem);
+    right: var(--gutter);
+    width: 96px;
+  }
+  .hero-home h1 {
+    max-width: none;
+    font-size: clamp(2.15rem, 9.2vw, 2.8rem);
+  }
+  .hero-home .hero-actions { flex-wrap: nowrap; }
+  .hero-home .btn {
+    padding: 0.7rem 0.8rem;
+    font-size: 0.88rem;
+    min-height: 46px;
+  }
+  .hero-home .hero-meta {
+    grid-template-columns: 1fr 1fr;
+  }
+  .hero-home .hero-meta div:last-child {
+    grid-column: 1 / -1;
+    border-left: 0;
+    padding-left: 0;
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+  }
   .h-pin { overflow: visible; padding-bottom: 3rem; }
   .h-track {
     display: grid;
@@ -1927,7 +2243,12 @@ h3,
   .cart-item { grid-template-columns: 88px 1fr; }
   .cart-item img { width: 88px; height: 72px; }
   .remove-btn { grid-column: 2; justify-self: start; }
-  .hero h1 { font-size: clamp(2.5rem, 12vw, 3.4rem); }
+  .hero h1 { font-size: clamp(2.45rem, 11vw, 3.35rem); }
+  .hero-home h1 { font-size: clamp(2.15rem, 9.2vw, 2.8rem); line-height: 1.08; }
+  .display { font-size: clamp(1.65rem, 7.4vw, 2.05rem); }
+  .hero-slab { padding: 0.4rem; }
+  .hero-home .hero-meta div strong { font-size: 1.55rem; }
+  .hero-home .hero-place { font-size: 1.45rem; }
   .brand img { height: 46px; }
   .filter-top, .filter-row { align-items: stretch; }
   .search { max-width: none; }
@@ -1956,7 +2277,16 @@ html.lenis body {
     transition: none !important;
     scroll-behavior: auto !important;
   }
-  .js-anim [data-reveal] { opacity: 1 !important; }
+  .js-anim [data-reveal],
+  .js-anim .hero-intro,
+  .js-anim .hero-slab { opacity: 1 !important; }
   .hero-media img,
+  .hero-layer-back img,
   .cta-media img { top: 0; height: 100%; }
+  .hero-scroll,
+  .js-anim .hero-scroll { height: 100svh !important; }
+  .hero-back-scale,
+  .hero-stage { transform: none !important; }
+  .hero-layer-back { clip-path: none !important; }
+  .hero-sweep { display: none !important; }
 }

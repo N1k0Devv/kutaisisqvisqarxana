@@ -69,6 +69,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Sans+Georgian:wght@400;500;600&family=Noto+Serif+Georgian:wght@500;600&display=swap" rel="stylesheet" />
     <link rel="preload" as="image" href="images/opt/hero.webp" type="image/webp" fetchpriority="high" />
+    <link rel="preload" href="fonts/dachi-the-lynx.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="site.css" />
     <script>
       if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
@@ -158,40 +159,63 @@
     </div>
 
     <main id="main">
-      <section class="hero">
-        <div class="hero-media">
-          <picture>
-            <source srcset="images/opt/hero.webp" type="image/webp" />
-            <img src="images/opt/hero.jpg" alt="ვენირებული გრანიტის ზედაპირი ქუთაისის ქვის ქარხნიდან" width="2000" height="1334" fetchpriority="high" decoding="async" data-parallax />
-          </picture>
-        </div>
-        <div class="hero-shade"></div>
-        <div class="hero-content">
-          <p class="kicker">ქუთაისი · 2019</p>
-          <h1 data-split data-split-load>
-            <span>ქუთაისის</span>
-            <span>ქვის ქარხანა</span>
-          </h1>
-          <p class="hero-lead">მაღალი ხარისხის ნატურალური ქვის დამუშავება</p>
-          <div class="hero-actions">
-            <a class="btn btn-solid" href="products.html">სერვისების ნახვა</a>
-            <a class="btn" href="aboutus.html">გაიგე მეტი</a>
-          </div>
-          <div class="hero-meta">
-            <div>
-              <strong data-count="2000" data-suffix="+">2000+</strong>
-              <span>პროექტები</span>
+      <section class="hero hero-home" id="hero">
+        <div class="hero-scroll" data-hero-scroll>
+          <div class="hero-stage" data-hero-stage>
+            <div class="hero-layer hero-layer-back">
+              <div class="hero-back-scale" data-hero-zoom>
+                <picture>
+                  <source srcset="images/opt/hero.webp" type="image/webp" />
+                  <img src="images/opt/hero.jpg" alt="ვენირებული გრანიტის ზედაპირი ქუთაისის ქვის ქარხნიდან" width="2000" height="1334" fetchpriority="high" decoding="async" data-hero-back />
+                </picture>
+              </div>
             </div>
-            <div>
-              <strong data-count="6" data-suffix="+">6+</strong>
-              <span>წლიანი გამოცდილება</span>
+            <div class="hero-shade"></div>
+            <div class="hero-grain" aria-hidden="true"></div>
+            <div class="hero-sweep" aria-hidden="true"></div>
+            <div class="hero-foreground">
+              <div class="hero-copy">
+                <p class="kicker">ქუთაისი · 2019</p>
+                <h1>
+                  <span>ქუთაისის</span>
+                  <span>ქვის ქარხანა</span>
+                </h1>
+                <p class="hero-lead hero-intro">მაღალი ხარისხის ნატურალური ქვის დამუშავება</p>
+                <div class="hero-actions hero-intro">
+                  <a class="btn btn-solid" href="products.html">სერვისების ნახვა</a>
+                  <a class="btn" href="aboutus.html">გაიგე მეტი</a>
+                </div>
+              </div>
+              <div class="hero-slab-wrap">
+                <figure class="hero-slab">
+                  <picture>
+                    <source srcset="images/opt/vein.webp" type="image/webp" />
+                    <img src="images/opt/vein.jpg" alt="ვენირებული ქვის დეტალი" width="1600" height="1067" decoding="async" />
+                  </picture>
+                  <figcaption>ვენირი</figcaption>
+                </figure>
+              </div>
+              <div class="hero-meta hero-intro">
+                <div>
+                  <strong data-count="2000" data-suffix="+">2000+</strong>
+                  <span>პროექტები</span>
+                </div>
+                <div>
+                  <strong data-count="6" data-suffix="+">6+</strong>
+                  <span>წლიანი გამოცდილება</span>
+                </div>
+                <div>
+                  <strong class="hero-place">ქუთაისი</strong>
+                  <span>ახალგაზრდობის გამზირი 19</span>
+                </div>
+              </div>
             </div>
+            <button class="scroll-hint" type="button" data-scroll="#atelier">
+              <span>ჩამოსქროლე</span>
+              <i></i>
+            </button>
           </div>
         </div>
-        <button class="scroll-hint" type="button" data-scroll="#atelier">
-          <span>ჩამოსქროლე</span>
-          <i></i>
-        </button>
       </section>
 
       <section class="section" id="atelier">
