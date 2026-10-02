@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ka">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>კალათა | ქუთაისის ქვის ქარხანა</title>
+    <meta name="description" content="ქუთაისის ქვის ქარხანის კალათა. შერჩეული პროდუქცია ინახება თქვენს ბრაუზერში და შეგიძლიათ კონსულტაცია მოითხოვოთ." />
+    <meta name="robots" content="noindex, follow" />
+    <meta name="theme-color" content="#0c0b09" />
+    <link rel="icon" href="images/Artboard 2-8.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Sans+Georgian:wght@400;500;600&family=Noto+Serif+Georgian:wght@500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="site.css" />
+    <script>
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("js-anim");
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">შინაარსზე გადასვლა</a>
+    <header class="site-header is-solid" data-header data-solid>
+      <div class="header-inner">
+        <a class="brand" href="index.html"><img src="images/logo.png" alt="ქუთაისის ქვის ქარხანის ლოგო" width="858" height="469" /></a>
+        <nav class="desktop-nav" aria-label="მთავარი ნავიგაცია">
+          <a href="index.html">მთავარი</a>
+          <a href="aboutus.html">ჩვენს შესახებ</a>
+          <a href="products.html">სერვისები</a>
+          <a href="contact.html">კონტაქტი</a>
+        </nav>
+        <div class="header-tools">
+          <a class="cart-link" href="cart.html" aria-label="კალათა" aria-current="page">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 7h12l-1 13H7L6 7z"/><path d="M9 7V5.8A3 3 0 0 1 12 3a3 3 0 0 1 3 2.8V7"/></svg>
+            <span class="cart-badge" data-cart-count hidden>0</span>
+          </a>
+          <button class="nav-toggle" id="menu" aria-expanded="false" aria-controls="navMenu" aria-label="მენიუს გახსნა"><span></span></button>
+        </div>
+      </div>
+    </header>
+    <div class="nav-overlay" id="navMenu" hidden>
+      <nav aria-label="მობილური ნავიგაცია">
+        <a href="index.html">მთავარი</a>
+        <a href="aboutus.html">ჩვენს შესახებ</a>
+        <a href="products.html">სერვისები</a>
+        <a href="contact.html">კონტაქტი</a>
+        <a href="cart.html" aria-current="page">კალათა</a>
+      </nav>
+    </div>
+
+    <main id="main" class="cart-page">
+      <div class="wrap">
+        <p class="kicker">შეკვეთა</p>
+        <h1 class="display">კალათა</h1>
+        <div id="emptyCart" class="empty-cart" hidden>
+          <p>კალათა ცარიელია.</p>
+          <a class="btn btn-dark" href="products.html">სერვისების ნახვა</a>
+        </div>
+        <div class="cart-layout">
+          <div class="cart-items" id="cartItems"></div>
+          <aside class="summary" id="cartSummary" hidden>
+            <h2>შეკვეთის შეჯამება</h2>
+            <div class="summary-row"><span>ნივთები</span><span id="itemCount">0</span></div>
+            <div class="summary-row"><span>ჯამი</span><span class="summary-total" id="cartTotal">0.00 ₾</span></div>
+            <button type="button" class="btn btn-dark" id="clearCart">კალათის გასუფთავება</button>
+            <button type="button" class="btn btn-solid" id="checkout" style="color:#161310">გაფორმება</button>
+            <p style="color:var(--muted);font-size:0.9rem">გაფორმება გადაგიყვანთ კონტაქტის ფორმაზე შერჩეული პროდუქციით. ფასები საორიენტაციოა.</p>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-base">
+        <span>© 2026 ქუთაისის ქვის ქარხანა</span>
+        <span>Developed by <a href="https://n1k0devv.github.io/N1kodevv/" target="_blank" rel="noopener noreferrer">N1kodev</a></span>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/cart-page.js" defer></script>
+    <script src="js/site.js" defer></script>
+  </body>
+</html>
