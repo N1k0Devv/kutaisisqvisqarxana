@@ -153,6 +153,8 @@
       to_email: "info@kutaisistonefactory.ge",
     };
 
+    // Set window.EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID and EMAILJS_PUBLIC_KEY
+    // before this script if EmailJS is configured. Otherwise the message is saved locally.
     const serviceId = window.EMAILJS_SERVICE_ID || "YOUR_SERVICE_ID";
     const templateId = window.EMAILJS_TEMPLATE_ID || "YOUR_TEMPLATE_ID";
     const publicKey = window.EMAILJS_PUBLIC_KEY || "YOUR_PUBLIC_KEY";
