@@ -11,7 +11,7 @@ A modern, high-performance e-commerce website for a Georgian marble and stone ma
 - **Performance Optimized**: Lazy loading, caching headers, and optimized assets
 - **Georgian Language**: Full UTF-8 support for Georgian text
 
-## 📝 License
+## 📝 Licenseb
 
 © 2026 Kutaisi Stone Factory. All rights reserved.
 
