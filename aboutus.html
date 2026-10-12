@@ -42,11 +42,16 @@
     <link rel="alternate" hreflang="ka-GE" href="https://qutstone.com/aboutus.html" />
     <link rel="alternate" hreflang="ka" href="https://qutstone.com/aboutus.html" />
     <link rel="alternate" hreflang="x-default" href="https://qutstone.com/aboutus.html" />
-    <script
-      src="https://kit.fontawesome.com/7706f5712b.js"
-      crossorigin="anonymous"
-      defer
-    ></script>
+    <script>
+      // Load Font Awesome after the page has rendered so its ~270KB of fonts
+      // do not compete with the first paint on slow connections.
+      window.addEventListener("load", function () {
+        var s = document.createElement("script");
+        s.src = "https://kit.fontawesome.com/7706f5712b.js";
+        s.crossOrigin = "anonymous";
+        document.head.appendChild(s);
+      });
+    </script>
     <link
       rel="preload"
       as="image"
@@ -111,7 +116,7 @@
         <header>
           <div class="container">
             <a href="index.html">
-              <img src="images/logo.png" alt="ქუთაისის ქვის ქარხანის ლოგო" id="logo-img" />
+              <img src="images/logo-300.webp" alt="ქუთაისის ქვის ქარხანის ლოგო" id="logo-img" />
             </a>
 
             <h2 style="margin-left: 5px">
@@ -239,7 +244,9 @@
               <div class="story-image">
                 <div class="image-wrapper">
                   <img
-                    src="images/granite.jpg"
+                    src="images/granite-04616-700.webp"
+                srcset="images/granite-04616-700.webp 700w, images/granite-04616-1200.webp 1200w"
+                sizes="(max-width: 700px) calc(100vw - 30px), 540px"
                     alt="Stone Factory"
                   />
                   <div class="image-overlay"></div>
@@ -302,7 +309,9 @@
               <!-- Main Featured Product -->
               <div class="gallery-main">
                 <div class="gallery-item large">
-                  <img src="images/IMG_0018.JPG" alt="გრანიტის ფილა" loading="lazy" decoding="async" />
+                  <img src="images/IMG_0018-29df0-700.webp"
+                srcset="images/IMG_0018-29df0-700.webp 700w, images/IMG_0018-29df0-1200.webp 1200w"
+                sizes="(max-width: 700px) calc(100vw - 30px), 880px" alt="გრანიტის ფილა" loading="lazy" decoding="async" />
                   <div class="gallery-overlay">
                     <div class="gallery-content">
                       <div class="gallery-icon">
@@ -319,7 +328,9 @@
               <div class="gallery-secondary">
                 <!-- Product 2: საფეხურები -->
                 <div class="gallery-item">
-                  <img src="images/kibe 1 IMG_0799.JPG" alt="საფეხურები" loading="lazy" decoding="async" />
+                  <img src="images/kibe-1-IMG_0799-b1e7b-700.webp"
+                srcset="images/kibe-1-IMG_0799-b1e7b-700.webp 700w, images/kibe-1-IMG_0799-b1e7b-1200.webp 1200w"
+                sizes="(max-width: 700px) calc(100vw - 30px), 220px" alt="საფეხურები" loading="lazy" decoding="async" />
                   <div class="gallery-overlay">
                     <div class="gallery-content">
                       <div class="gallery-icon">
@@ -333,7 +344,9 @@
 
                 <!-- Product 3: ბორდიული -->
                 <div class="gallery-item">
-                  <img src="images/IMG_0162.JPG" alt="ბორდიული" loading="lazy" decoding="async" />
+                  <img src="images/IMG_0162-2a3a0-700.webp"
+                srcset="images/IMG_0162-2a3a0-700.webp 700w, images/IMG_0162-2a3a0-1200.webp 1200w"
+                sizes="(max-width: 700px) calc(100vw - 30px), 220px" alt="ბორდიული" loading="lazy" decoding="async" />
                   <div class="gallery-overlay">
                     <div class="gallery-content">
                       <div class="gallery-icon">
@@ -347,7 +360,9 @@
 
                 <!-- Product 4: ქვაფენილი -->
                 <div class="gallery-item">
-                  <img src="images/IMG_0094 ქვაფენილი.JPG" alt="ქვაფენილი" loading="lazy" decoding="async" />
+                  <img src="images/IMG_0094-a683e-700.webp"
+                srcset="images/IMG_0094-a683e-700.webp 700w, images/IMG_0094-a683e-1200.webp 1200w"
+                sizes="(max-width: 700px) calc(100vw - 30px), 220px" alt="ქვაფენილი" loading="lazy" decoding="async" />
                   <div class="gallery-overlay">
                     <div class="gallery-content">
                       <div class="gallery-icon">
@@ -363,7 +378,9 @@
 
                 <!-- Product 6: პოლირებული ფილა -->
                 <div class="gallery-item">
-                  <img src="images/IMG_0734.JPG" alt="პოლირებული ფილა" loading="lazy" decoding="async" />
+                  <img src="images/IMG_0734-5f753-700.webp"
+                srcset="images/IMG_0734-5f753-700.webp 700w, images/IMG_0734-5f753-1200.webp 1200w"
+                sizes="(max-width: 700px) calc(100vw - 30px), 220px" alt="პოლირებული ფილა" loading="lazy" decoding="async" />
                   <div class="gallery-overlay">
                     <div class="gallery-content">
                       <div class="gallery-icon">
@@ -438,7 +455,9 @@
           <div class="materials-container">
             <div class="materials-image">
               <img
-                src="images/IMG_0807.JPG"
+                src="images/IMG_0807-cb0a9-700.webp"
+                srcset="images/IMG_0807-cb0a9-700.webp 700w, images/IMG_0807-cb0a9-1200.webp 1200w"
+                sizes="(max-width: 700px) calc(100vw - 60px), 740px"
                 alt="Kitchen Countertop"
               />
             </div>

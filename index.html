@@ -96,12 +96,16 @@
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400..900&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400..900&display=swap" /></noscript>
     <title>ქუთაისის ქვის ქარხანა | გრანიტის დამუშავება და ქვის პროდუქცია</title>
-    <script
-      src="https://kit.fontawesome.com/7706f5712b.js"
-      crossorigin="anonymous"
-      defer
-      async
-    ></script>
+    <script>
+      // Load Font Awesome after the page has rendered so its ~270KB of fonts
+      // do not compete with the first paint on slow connections.
+      window.addEventListener("load", function () {
+        var s = document.createElement("script");
+        s.src = "https://kit.fontawesome.com/7706f5712b.js";
+        s.crossOrigin = "anonymous";
+        document.head.appendChild(s);
+      });
+    </script>
     <link
       rel="preload"
       as="image"
@@ -182,7 +186,7 @@
         <header>
           <div class="container">
             <a href="index.html">
-              <img src="images/logo.png" alt="ქუთაისის ქვის ქარხანის ლოგო" id="logo-img" />
+              <img src="images/logo-300.webp" alt="ქუთაისის ქვის ქარხანის ლოგო" id="logo-img" />
             </a>
 
             <h2 style="margin-left: 5px">
@@ -324,7 +328,9 @@
               <div class="expertise-images" id="expertise-left">
                 <div class="image-wrapper">
                   <img
-                    src="images/granite.jpg"
+                    src="images/granite-04616-700.webp"
+                srcset="images/granite-04616-700.webp 700w, images/granite-04616-1200.webp 1200w"
+                sizes="(max-width: 700px) calc(100vw - 40px), 500px"
                     alt="გრანიტის საწყობი ქვის მარაგით"
                     class="img-right"
                     loading="lazy"
@@ -396,7 +402,9 @@
               <div class="service-item">
                 <div class="service-image">
                   <img
-                    src="images/pool.jpg"
+                    src="images/pool-aca40-700.webp"
+                srcset="images/pool-aca40-700.webp 700w, images/pool-aca40-1200.webp 1200w"
+                sizes="(max-width: 700px) calc(100vw - 40px), 365px"
                     alt="გრანიტის ბორდიური აუზისთვის"
                     loading="lazy"
                     decoding="async"
@@ -419,7 +427,9 @@
               <div class="service-item">
                 <div class="service-image">
                   <img
-                    src="images/IMG_0094 ქვაფენილი.JPG"
+                    src="images/IMG_0094-a683e-700.webp"
+                srcset="images/IMG_0094-a683e-700.webp 700w, images/IMG_0094-a683e-1200.webp 1200w"
+                sizes="(max-width: 700px) calc(100vw - 40px), 365px"
                     alt="გრანიტის ქვაფენილი გარე სივრცეებისთვის"
                     loading="lazy"
                     decoding="async"
@@ -442,7 +452,9 @@
               <div class="service-item">
                 <div class="service-image">
                   <img
-                    src="images/steps.jpg"
+                    src="images/steps-231c3-700.webp"
+                srcset="images/steps-231c3-700.webp 700w, images/steps-231c3-1200.webp 1200w"
+                sizes="(max-width: 700px) calc(100vw - 40px), 365px"
                     alt="გრანიტის საფეხურების მონტაჟი"
                     loading="lazy"
                     decoding="async"
@@ -465,7 +477,9 @@
               <div class="service-item">
                 <div class="service-image">
                   <img
-                    src="images/modern-kitchen-with-contemporary-interior-decor-furnishings.jpg"
+                    src="images/modern-kitchen-with-contemporary-interior-decor-furnishings-2af24-700.webp"
+                srcset="images/modern-kitchen-with-contemporary-interior-decor-furnishings-2af24-700.webp 700w, images/modern-kitchen-with-contemporary-interior-decor-furnishings-2af24-1200.webp 1200w"
+                sizes="(max-width: 700px) calc(100vw - 40px), 365px"
                     alt="გრანიტის სამზარეულოს სამუშაო ზედაპირი"
                     loading="lazy"
                     decoding="async"
@@ -488,7 +502,9 @@
               <div class="service-item">
                 <div class="service-image">
                   <img
-                    src="images/granite table.jpg"
+                    src="images/granite-table-e214c-700.webp"
+                srcset="images/granite-table-e214c-700.webp 700w, images/granite-table-e214c-1200.webp 1200w"
+                sizes="(max-width: 700px) calc(100vw - 40px), 365px"
                     alt="გრანიტის მაგიდები შეკვეთით"
                     loading="lazy"
                     decoding="async"
@@ -528,7 +544,9 @@
               <div class="service-item">
                 <div class="service-image">
                   <img
-                    src="images/marble pavers.jpg"
+                    src="images/marble-pavers-e798f-700.webp"
+                srcset="images/marble-pavers-e798f-700.webp 700w, images/marble-pavers-e798f-1200.webp 1200w"
+                sizes="(max-width: 700px) calc(100vw - 40px), 365px"
                     alt="გრანიტის ფილები პროფესიონალური მონტაჟისთვის"
                     loading="lazy"
                     decoding="async"
