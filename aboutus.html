@@ -51,14 +51,14 @@
       rel="preload"
       as="image"
       href="images/pattern-2.webp"
+      imagesrcset="images/pattern-2-800.webp 800w, images/pattern-2.webp 1600w"
+      imagesizes="100vw"
       fetchpriority="high"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400..900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400..900&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400..900&display=swap" /></noscript>
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="media.css" />
@@ -158,6 +158,8 @@
           <img
             class="hero-bg"
             src="images/pattern-2.webp"
+              srcset="images/pattern-2-800.webp 800w, images/pattern-2.webp 1600w"
+              sizes="100vw"
             alt=""
             aria-hidden="true"
             loading="eager"
@@ -552,7 +554,7 @@
           <h3>ქარხანა</h3>
           <div class="icons">
             <a aria-label="ქუთაისის ქვის ქარხანა Instagram-ზე" href="https://www.instagram.com/qutaisisqvisqarxana/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram fa-2xl"></i></a>
-            <a
+            <a aria-label="ქუთაისის ქვის ქარხანა Facebook-ზე"
               href="https://www.facebook.com/profile.php?id=100088853137969"
               target="_blank" rel="noopener noreferrer"
               ><i class="fa-brands fa-facebook fa-2xl"></i
