@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://qutstone.com/sitemap.xml
+Sitemap: https://www.qutstone.com/sitemap.xml
