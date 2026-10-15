@@ -81,19 +81,10 @@
     <link rel="alternate" hreflang="ka-GE" href="https://qutstone.com/contact.html" />
     <link rel="alternate" hreflang="ka" href="https://qutstone.com/contact.html" />
     <link rel="alternate" hreflang="x-default" href="https://qutstone.com/contact.html" />
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="media.css" />
-    <script>
-      // Load Font Awesome after the page has rendered so its ~270KB of fonts
-      // do not compete with the first paint on slow connections.
-      window.addEventListener("load", function () {
-        var s = document.createElement("script");
-        s.src = "https://kit.fontawesome.com/7706f5712b.js";
-        s.crossOrigin = "anonymous";
-        document.head.appendChild(s);
-      });
-    </script>
+    <link rel="preload" href="fonts/dachi-the-lynx.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="site.min.css" />
+    <link rel="preload" as="style" href="icons.min.css" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="icons.min.css" /></noscript>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400..900&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
@@ -153,7 +144,7 @@
   <div class="container">
     
     <a href="index.html">
-        <img src="images/logo-300.webp" alt="ქუთაისის ქვის ქარხანის ლოგო" id="logo-img">
+        <img width="300" height="164" src="images/logo-300.webp" alt="ქუთაისის ქვის ქარხანის ლოგო" id="logo-img">
     </a>
 
     <h2 style="margin-left: 5px;">

@@ -42,31 +42,15 @@
     <link rel="alternate" hreflang="ka-GE" href="https://qutstone.com/aboutus.html" />
     <link rel="alternate" hreflang="ka" href="https://qutstone.com/aboutus.html" />
     <link rel="alternate" hreflang="x-default" href="https://qutstone.com/aboutus.html" />
-    <script>
-      // Load Font Awesome after the page has rendered so its ~270KB of fonts
-      // do not compete with the first paint on slow connections.
-      window.addEventListener("load", function () {
-        var s = document.createElement("script");
-        s.src = "https://kit.fontawesome.com/7706f5712b.js";
-        s.crossOrigin = "anonymous";
-        document.head.appendChild(s);
-      });
-    </script>
-    <link
-      rel="preload"
-      as="image"
-      href="images/pattern-2.webp"
-      imagesrcset="images/pattern-2-800.webp 800w, images/pattern-2.webp 1600w"
-      imagesizes="100vw"
-      fetchpriority="high"
-    />
+    <link rel="preload" as="image" type="image/avif" href="images/pattern-2-800.avif" imagesrcset="images/pattern-2-800.avif 800w, images/pattern-2-1600.avif 1600w" imagesizes="100vw" fetchpriority="high" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400..900&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400..900&display=swap" /></noscript>
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="media.css" />
+    <link rel="preload" href="fonts/dachi-the-lynx.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="site.min.css" />
+    <link rel="preload" as="style" href="icons.min.css" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="icons.min.css" /></noscript>
     <script src="gsap-smoother.js" defer></script>
     <script type="application/ld+json">
     {
@@ -116,7 +100,7 @@
         <header>
           <div class="container">
             <a href="index.html">
-              <img src="images/logo-300.webp" alt="ქუთაისის ქვის ქარხანის ლოგო" id="logo-img" />
+              <img width="300" height="164" src="images/logo-300.webp" alt="ქუთაისის ქვის ქარხანის ლოგო" id="logo-img" />
             </a>
 
             <h2 style="margin-left: 5px">
@@ -160,7 +144,9 @@
         </header>
         <!-- Hero Section -->
         <section class="hero-section">
-          <img
+          <picture>
+            <source type="image/avif" srcset="images/pattern-2-800.avif 800w, images/pattern-2-1600.avif 1600w" sizes="100vw" />
+            <img width="1600" height="1122"
             class="hero-bg"
             src="images/pattern-2.webp"
               srcset="images/pattern-2-800.webp 800w, images/pattern-2.webp 1600w"
@@ -171,6 +157,7 @@
             decoding="async"
             fetchpriority="high"
           />
+          </picture>
           <div class="hero-overlay">
             <div class="hero-content">
               <div class="hero-badge">ჩვენი ისტორია</div>
@@ -243,12 +230,15 @@
               </div>
               <div class="story-image">
                 <div class="image-wrapper">
-                  <img
+                  <picture>
+                    <source type="image/avif" srcset="images/granite-04616-700.avif 700w, images/granite-04616-1200.avif 1200w" sizes="(max-width: 700px) calc(100vw - 30px), 540px" />
+                    <img width="700" height="525"
                     src="images/granite-04616-700.webp"
                 srcset="images/granite-04616-700.webp 700w, images/granite-04616-1200.webp 1200w"
                 sizes="(max-width: 700px) calc(100vw - 30px), 540px"
                     alt="Stone Factory"
                   />
+                  </picture>
                   <div class="image-overlay"></div>
                 </div>
               </div>
@@ -309,7 +299,7 @@
               <!-- Main Featured Product -->
               <div class="gallery-main">
                 <div class="gallery-item large">
-                  <img src="images/IMG_0018-29df0-700.webp"
+                  <img width="700" height="467" src="images/IMG_0018-29df0-700.webp"
                 srcset="images/IMG_0018-29df0-700.webp 700w, images/IMG_0018-29df0-1200.webp 1200w"
                 sizes="(max-width: 700px) calc(100vw - 30px), 880px" alt="გრანიტის ფილა" loading="lazy" decoding="async" />
                   <div class="gallery-overlay">
@@ -328,7 +318,7 @@
               <div class="gallery-secondary">
                 <!-- Product 2: საფეხურები -->
                 <div class="gallery-item">
-                  <img src="images/kibe-1-IMG_0799-b1e7b-700.webp"
+                  <img width="700" height="467" src="images/kibe-1-IMG_0799-b1e7b-700.webp"
                 srcset="images/kibe-1-IMG_0799-b1e7b-700.webp 700w, images/kibe-1-IMG_0799-b1e7b-1200.webp 1200w"
                 sizes="(max-width: 700px) calc(100vw - 30px), 220px" alt="საფეხურები" loading="lazy" decoding="async" />
                   <div class="gallery-overlay">
@@ -344,7 +334,7 @@
 
                 <!-- Product 3: ბორდიული -->
                 <div class="gallery-item">
-                  <img src="images/IMG_0162-2a3a0-700.webp"
+                  <img width="700" height="467" src="images/IMG_0162-2a3a0-700.webp"
                 srcset="images/IMG_0162-2a3a0-700.webp 700w, images/IMG_0162-2a3a0-1200.webp 1200w"
                 sizes="(max-width: 700px) calc(100vw - 30px), 220px" alt="ბორდიული" loading="lazy" decoding="async" />
                   <div class="gallery-overlay">
@@ -360,7 +350,7 @@
 
                 <!-- Product 4: ქვაფენილი -->
                 <div class="gallery-item">
-                  <img src="images/IMG_0094-a683e-700.webp"
+                  <img width="700" height="467" src="images/IMG_0094-a683e-700.webp"
                 srcset="images/IMG_0094-a683e-700.webp 700w, images/IMG_0094-a683e-1200.webp 1200w"
                 sizes="(max-width: 700px) calc(100vw - 30px), 220px" alt="ქვაფენილი" loading="lazy" decoding="async" />
                   <div class="gallery-overlay">
@@ -378,7 +368,7 @@
 
                 <!-- Product 6: პოლირებული ფილა -->
                 <div class="gallery-item">
-                  <img src="images/IMG_0734-5f753-700.webp"
+                  <img width="700" height="467" src="images/IMG_0734-5f753-700.webp"
                 srcset="images/IMG_0734-5f753-700.webp 700w, images/IMG_0734-5f753-1200.webp 1200w"
                 sizes="(max-width: 700px) calc(100vw - 30px), 220px" alt="პოლირებული ფილა" loading="lazy" decoding="async" />
                   <div class="gallery-overlay">
@@ -454,7 +444,7 @@
         <section class="materials-section">
           <div class="materials-container">
             <div class="materials-image">
-              <img
+              <img width="700" height="467"
                 src="images/IMG_0807-cb0a9-700.webp"
                 srcset="images/IMG_0807-cb0a9-700.webp 700w, images/IMG_0807-cb0a9-1200.webp 1200w"
                 sizes="(max-width: 700px) calc(100vw - 60px), 740px"

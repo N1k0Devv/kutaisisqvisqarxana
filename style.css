@@ -4,7 +4,9 @@
 @font-face {
   font-family: "GeorgianDisplay";
   /* Ensure this path matches your file location */
-  src: url("fonts/Dachi the Lynx-46841546889.otf") format("opentype");
+  src:
+    url("fonts/dachi-the-lynx.woff2") format("woff2"),
+    url("fonts/Dachi the Lynx-46841546889.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;

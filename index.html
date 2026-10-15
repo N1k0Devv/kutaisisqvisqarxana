@@ -96,24 +96,7 @@
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400..900&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400..900&display=swap" /></noscript>
     <title>ქუთაისის ქვის ქარხანა | გრანიტის დამუშავება და ქვის პროდუქცია</title>
-    <script>
-      // Load Font Awesome after the page has rendered so its ~270KB of fonts
-      // do not compete with the first paint on slow connections.
-      window.addEventListener("load", function () {
-        var s = document.createElement("script");
-        s.src = "https://kit.fontawesome.com/7706f5712b.js";
-        s.crossOrigin = "anonymous";
-        document.head.appendChild(s);
-      });
-    </script>
-    <link
-      rel="preload"
-      as="image"
-      href="images/pattern-2.webp"
-      imagesrcset="images/pattern-2-800.webp 800w, images/pattern-2.webp 1600w"
-      imagesizes="100vw"
-      fetchpriority="high"
-    />
+    <link rel="preload" as="image" type="image/avif" href="images/pattern-2-800.avif" imagesrcset="images/pattern-2-800.avif 800w, images/pattern-2-1600.avif 1600w" imagesizes="100vw" fetchpriority="high" />
     <style>
       @font-face {
         font-family: "System";
@@ -123,9 +106,10 @@
         font-display: swap;
       }
     </style>
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="media.css" />
+    <link rel="preload" href="fonts/dachi-the-lynx.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="site.min.css" />
+    <link rel="preload" as="style" href="icons.min.css" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="icons.min.css" /></noscript>
     <script src="gsap-smoother.js" defer></script>
     <script type="application/ld+json">
     {
@@ -186,7 +170,7 @@
         <header>
           <div class="container">
             <a href="index.html">
-              <img src="images/logo-300.webp" alt="ქუთაისის ქვის ქარხანის ლოგო" id="logo-img" />
+              <img width="300" height="164" src="images/logo-300.webp" alt="ქუთაისის ქვის ქარხანის ლოგო" id="logo-img" />
             </a>
 
             <h2 style="margin-left: 5px">
@@ -233,7 +217,9 @@
         <main>
           <!-- Enhanced Hero Section -->
           <section class="hero-section">
-            <img
+            <picture>
+              <source type="image/avif" srcset="images/pattern-2-800.avif 800w, images/pattern-2-1600.avif 1600w" sizes="100vw" />
+              <img width="1600" height="1122"
               class="hero-bg"
               src="images/pattern-2.webp"
               srcset="images/pattern-2-800.webp 800w, images/pattern-2.webp 1600w"
@@ -244,6 +230,7 @@
               decoding="async"
               fetchpriority="high"
             />
+            </picture>
             <div class="hero-overlay">
               <div class="hero-content">
                 <div class="hero-badge">პრემიუმი ქვის ქარხანა</div>
@@ -327,7 +314,9 @@
             <div class="expertise-container">
               <div class="expertise-images" id="expertise-left">
                 <div class="image-wrapper">
-                  <img
+                  <picture>
+                    <source type="image/avif" srcset="images/granite-04616-700.avif 700w, images/granite-04616-1200.avif 1200w" sizes="(max-width: 700px) calc(100vw - 40px), 500px" />
+                    <img width="700" height="525"
                     src="images/granite-04616-700.webp"
                 srcset="images/granite-04616-700.webp 700w, images/granite-04616-1200.webp 1200w"
                 sizes="(max-width: 700px) calc(100vw - 40px), 500px"
@@ -336,6 +325,7 @@
                     loading="lazy"
                     decoding="async"
                   />
+                  </picture>
                   <div class="image-overlay">
                     <div class="overlay-content">
                       <div class="experience-badge">6+ Years</div>
@@ -401,7 +391,7 @@
             <div class="services-grid">
               <div class="service-item">
                 <div class="service-image">
-                  <img
+                  <img width="700" height="467"
                     src="images/pool-aca40-700.webp"
                 srcset="images/pool-aca40-700.webp 700w, images/pool-aca40-1200.webp 1200w"
                 sizes="(max-width: 700px) calc(100vw - 40px), 365px"
@@ -426,7 +416,7 @@
               </div>
               <div class="service-item">
                 <div class="service-image">
-                  <img
+                  <img width="700" height="467"
                     src="images/IMG_0094-a683e-700.webp"
                 srcset="images/IMG_0094-a683e-700.webp 700w, images/IMG_0094-a683e-1200.webp 1200w"
                 sizes="(max-width: 700px) calc(100vw - 40px), 365px"
@@ -451,7 +441,7 @@
               </div>
               <div class="service-item">
                 <div class="service-image">
-                  <img
+                  <img width="700" height="700"
                     src="images/steps-231c3-700.webp"
                 srcset="images/steps-231c3-700.webp 700w, images/steps-231c3-1200.webp 1200w"
                 sizes="(max-width: 700px) calc(100vw - 40px), 365px"
@@ -476,7 +466,7 @@
               </div>
               <div class="service-item">
                 <div class="service-image">
-                  <img
+                  <img width="700" height="467"
                     src="images/modern-kitchen-with-contemporary-interior-decor-furnishings-2af24-700.webp"
                 srcset="images/modern-kitchen-with-contemporary-interior-decor-furnishings-2af24-700.webp 700w, images/modern-kitchen-with-contemporary-interior-decor-furnishings-2af24-1200.webp 1200w"
                 sizes="(max-width: 700px) calc(100vw - 40px), 365px"
@@ -501,7 +491,7 @@
               </div>
               <div class="service-item">
                 <div class="service-image">
-                  <img
+                  <img width="700" height="934"
                     src="images/granite-table-e214c-700.webp"
                 srcset="images/granite-table-e214c-700.webp 700w, images/granite-table-e214c-1200.webp 1200w"
                 sizes="(max-width: 700px) calc(100vw - 40px), 365px"
@@ -543,7 +533,7 @@
               </div>
               <div class="service-item">
                 <div class="service-image">
-                  <img
+                  <img width="700" height="769"
                     src="images/marble-pavers-e798f-700.webp"
                 srcset="images/marble-pavers-e798f-700.webp 700w, images/marble-pavers-e798f-1200.webp 1200w"
                 sizes="(max-width: 700px) calc(100vw - 40px), 365px"
