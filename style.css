@@ -105,13 +105,7 @@ h3 {
   width: auto;
   margin-right: 12px;
   object-fit: contain;
-  transition: var(--transition);
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
-}
-
-#logo-img:hover {
-  transform: scale(1.05);
-  filter: drop-shadow(0 4px 8px rgba(255, 215, 0, 0.4));
+  flex-shrink: 0;
 }
 
 /* Custom Scrollbar */
@@ -188,14 +182,7 @@ header h2 {
   letter-spacing: 2px;
   margin: 0;
   margin-right: 50px;
-  transition: var(--transition);
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-}
-
-header h2:hover {
-  color: #ffd700;
-  text-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
-  transform: scale(1.05);
+  white-space: nowrap;
 }
 
 #mta {
@@ -220,13 +207,12 @@ header h2:hover {
   text-decoration: none;
   display: flex;
   align-items: center;
-  transition: var(--transition);
+  transition: color 0.2s ease;
   position: relative;
 }
 
 .linki:hover {
   color: #ffd700;
-  transform: translateY(-2px);
 }
 
 /* Navigation */
@@ -243,19 +229,19 @@ ul {
   text-decoration: none;
   font-size: 1rem;
   font-weight: 500;
-  padding: 12px 20px;
+  padding: 10px 18px;
+  border: 2px solid transparent; /* reserved so hover never changes the size */
   border-radius: 30px;
-  transition: var(--transition);
+  display: inline-block;
+  white-space: nowrap;
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
   position: relative;
-  overflow: hidden;
 }
 
 .nav:hover {
-  background: var(--glass);
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  background-color: var(--glass);
+  border-color: rgba(255, 255, 255, 0.2);
   color: #ffd700;
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
 }
 
 /* ========== MOBILE MENU SYSTEM - Updated 2025-09-08 ========== */

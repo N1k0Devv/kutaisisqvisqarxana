@@ -628,3 +628,13 @@
     display: none;
   }
 }
+
+/* Header: never squash the logo, and fit the title + 4 links on tablet widths */
+header .container > a { flex-shrink: 0; }
+@media (min-width: 601px) and (max-width: 900px) {
+  header h2 { font-size: 0.95rem; letter-spacing: 0; margin-right: 8px; }
+  header ul { gap: 2px; }
+  header .nav { padding: 8px 7px; font-size: 0.8rem; }
+  header h2 { font-size: clamp(0.72rem, 1.5vw, 0.85rem); }
+  #logo-img { margin-right: 6px; }
+}
