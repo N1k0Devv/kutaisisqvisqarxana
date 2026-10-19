@@ -667,3 +667,23 @@ h1, h2 { overflow-wrap: break-word; }
 @media (min-width: 1201px) {
   .gallery-grid { grid-template-columns: 3fr 2fr !important; }
 }
+
+/* About page gallery: hover text on the small photos must fit inside them */
+.gallery-secondary .gallery-content { padding: 8px 10px !important; max-width: 100%; }
+.gallery-secondary .gallery-icon {
+  width: clamp(30px, 3.2vw, 44px) !important;
+  height: clamp(30px, 3.2vw, 44px) !important;
+  font-size: clamp(0.85rem, 1.4vw, 1.15rem) !important;
+  margin: 0 auto 6px !important;
+}
+.gallery-secondary .gallery-content h3 {
+  font-size: clamp(0.8rem, 1.25vw, 1.1rem) !important;
+  line-height: 1.25;
+  margin: 0 !important;
+}
+.gallery-secondary .gallery-content p { display: none !important; }
+.gallery-main .gallery-content h3 { font-size: clamp(1.1rem, 2vw, 1.6rem); }
+@media (max-width: 480px) {
+  .gallery-secondary .gallery-icon { display: none !important; }
+  .gallery-secondary .gallery-content h3 { font-size: 0.85rem !important; }
+}
