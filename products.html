@@ -1334,7 +1334,7 @@
       /* Enhanced Filter Controls */
       .filter-controls {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
         gap: 2rem;
         margin-bottom: 3rem;
         padding: 2.5rem;
@@ -1613,7 +1613,7 @@
 
       .products-showcase-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
         gap: 2.5rem;
         transition: all 0.4s ease;
         align-items: stretch; /* This ensures all cards stretch to the same height */
@@ -2140,12 +2140,12 @@
           height: 500px;
           min-height: 500px;
           max-height: 500px;
-          min-width: 320px;
+          min-width: min(320px, 100%);
           max-width: 320px;
         }
 
         .products-showcase-grid {
-          grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+          grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
         }
       }
 
