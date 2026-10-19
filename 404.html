@@ -1,42 +1,30 @@
 <!doctype html>
-<html lang="en">
+<html lang="ka">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Redirecting...</title>
+    <title>გვერდი ვერ მოიძებნა | ქუთაისის ქვის ქარხანა</title>
     <meta name="robots" content="noindex" />
     <script>
+      // Keep old extension-less links working (/products -> /products.html)
       (function () {
-        const { location } = window;
-        const pathParts = location.pathname.split("/").filter(Boolean);
-        const basePath =
-          location.hostname.endsWith(".github.io") && pathParts.length > 0
-            ? "/" + pathParts[0]
-            : "";
-
-        let appPath = location.pathname;
-        if (basePath && appPath.startsWith(basePath)) {
-          appPath = appPath.slice(basePath.length) || "/";
-        }
-
-        const query = location.search
-          ? "&q=" + encodeURIComponent(location.search.slice(1))
-          : "";
-        const hash = location.hash
-          ? "&h=" + encodeURIComponent(location.hash.slice(1))
-          : "";
-
-        const target =
-          basePath +
-          "/index.html?p=" +
-          encodeURIComponent(appPath) +
-          query +
-          hash;
-        location.replace(target);
+        var routes = { "/aboutus": "aboutus.html", "/products": "products.html", "/contact": "contact.html", "/index": "index.html" };
+        var path = location.pathname.replace(/\/+$/, "");
+        if (routes[path]) location.replace("/" + routes[path] + location.search + location.hash);
       })();
     </script>
+    <style>
+      body { font-family: "Noto Sans Georgian", system-ui, sans-serif; background: #f5f7fa; color: #1a1a2e; margin: 0; min-height: 100vh; display: grid; place-items: center; text-align: center; padding: 24px; }
+      h1 { font-size: 4rem; margin: 0; }
+      p { margin: 12px 0 24px; }
+      a { color: #764ba2; font-weight: 600; margin: 0 10px; }
+    </style>
   </head>
   <body>
-    <p>Redirecting...</p>
+    <main>
+      <h1>404</h1>
+      <p>გვერდი ვერ მოიძებნა.</p>
+      <nav><a href="/">მთავარი</a><a href="/products.html">პროდუქცია</a><a href="/aboutus.html">ჩვენს შესახებ</a><a href="/contact.html">კონტაქტი</a></nav>
+    </main>
   </body>
 </html>

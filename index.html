@@ -4,67 +4,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script>
-      (function () {
-        const params = new URLSearchParams(window.location.search);
-        const fallbackPath = params.get("p");
-        if (!fallbackPath) return;
-
-        const routeMap = {
-          "/": "index.html",
-          "/index": "index.html",
-          "/index.html": "index.html",
-          "/aboutus": "aboutus.html",
-          "/aboutus.html": "aboutus.html",
-          "/products": "products.html",
-          "/products.html": "products.html",
-          "/contact": "contact.html",
-          "/contact.html": "contact.html",
-          "/produqti1": "produqti1.html",
-          "/produqti1.html": "produqti1.html",
-        };
-
-        const queryPart = params.get("q");
-        const hashPart = params.get("h");
-        const decodedPath = decodeURIComponent(fallbackPath);
-        const normalizedPath = decodedPath.startsWith("/")
-          ? decodedPath
-          : "/" + decodedPath;
-
-        const pathSegments = window.location.pathname
-          .split("/")
-          .filter(Boolean);
-        const basePath =
-          window.location.hostname.endsWith(".github.io") &&
-          pathSegments.length > 0
-            ? "/" + pathSegments[0]
-            : "";
-
-        const targetFile = routeMap[normalizedPath] || "index.html";
-        let destination = basePath + "/" + targetFile;
-
-        if (queryPart) {
-          destination += "?" + decodeURIComponent(queryPart);
-        }
-        if (hashPart) {
-          destination += "#" + decodeURIComponent(hashPart);
-        }
-
-        window.location.replace(destination);
-      })();
-    </script>
     <meta
       name="description"
       content="ქუთაისში მდებარე ქვის ქარხანა: გრანიტის დამუშავება, ჭრა, მონტაჟი და ინდივიდუალური დიზაინი. მაღალი ხარისხის ქვის პროდუქცია მთელი საქართველოსთვის."
     />
-    <meta
-      name="keywords"
-      content="ქუთაისის ქვის ქარხანა, გრანიტი ქუთაისში, ქვის დამუშავება, გრანიტის ფილა, გრანიტის საფეხურები, ქვის პროდუქცია"
-    />
     <meta name="author" content="ქუთაისის ქვის ქარხანა" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-    <meta http-equiv="content-language" content="ka-GE" />
-    <meta name="language" content="Georgian" />
     <meta name="geo.region" content="GE-IM" />
     <meta name="geo.placename" content="Kutaisi" />
     <meta name="theme-color" content="#0f1a24" />
@@ -76,8 +21,8 @@
       content="პროფესიონალური გრანიტის დამუშავება, ჭრა, დიზაინი და მონტაჟი საქართველოში."
     />
     <meta property="og:locale" content="ka_GE" />
-    <meta property="og:url" content="https://qutstone.com/" />
-    <meta property="og:image" content="https://qutstone.com/images/modern-kitchen-with-contemporary-interior-decor-furnishings.jpg" />
+    <meta property="og:url" content="https://www.qutstone.com/" />
+    <meta property="og:image" content="https://www.qutstone.com/images/modern-kitchen-with-contemporary-interior-decor-furnishings.jpg" />
     <meta property="og:image:alt" content="ქუთაისის ქვის ქარხანის გრანიტის ნამუშევრები" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="ქუთაისის ქვის ქარხანა | გრანიტის დამუშავება ქუთაისში" />
@@ -85,35 +30,18 @@
       name="twitter:description"
       content="მაღალი ხარისხის გრანიტის სერვისები და ქვის პროდუქცია მთელი საქართველოსთვის."
     />
-    <meta name="twitter:image" content="https://qutstone.com/images/modern-kitchen-with-contemporary-interior-decor-furnishings.jpg" />
-    <link rel="canonical" href="https://qutstone.com/" />
-    <link rel="alternate" hreflang="ka-GE" href="https://qutstone.com/" />
-    <link rel="alternate" hreflang="ka" href="https://qutstone.com/" />
-    <link rel="alternate" hreflang="x-default" href="https://qutstone.com/" />
+    <meta name="twitter:image" content="https://www.qutstone.com/images/modern-kitchen-with-contemporary-interior-decor-furnishings.jpg" />
+    <link rel="canonical" href="https://www.qutstone.com/" />
+    <link rel="alternate" hreflang="ka-GE" href="https://www.qutstone.com/" />
+    <link rel="alternate" hreflang="ka" href="https://www.qutstone.com/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.qutstone.com/" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
      <link rel="icon" href="images/Artboard 2-8.png" type="image/x-icon">
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400..900&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400..900&display=swap" /></noscript>
     <title>ქუთაისის ქვის ქარხანა | გრანიტის დამუშავება და ქვის პროდუქცია</title>
-    <script>
-      // Load Font Awesome after the page has rendered so its ~270KB of fonts
-      // do not compete with the first paint on slow connections.
-      window.addEventListener("load", function () {
-        var s = document.createElement("script");
-        s.src = "https://kit.fontawesome.com/7706f5712b.js";
-        s.crossOrigin = "anonymous";
-        document.head.appendChild(s);
-      });
-    </script>
-    <link
-      rel="preload"
-      as="image"
-      href="images/pattern-2.webp"
-      imagesrcset="images/pattern-2-800.webp 800w, images/pattern-2.webp 1600w"
-      imagesizes="100vw"
-      fetchpriority="high"
-    />
+    <link rel="preload" as="image" type="image/avif" href="images/pattern-2-800.avif" imagesrcset="images/pattern-2-800.avif 800w, images/pattern-2-1600.avif 1600w" imagesizes="100vw" fetchpriority="high" />
     <style>
       @font-face {
         font-family: "System";
@@ -123,70 +51,242 @@
         font-display: swap;
       }
     </style>
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="media.css" />
+    <link rel="preload" href="fonts/dachi-the-lynx.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="site.min.css" />
+    <link rel="preload" as="style" href="icons.min.css" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="icons.min.css" /></noscript>
     <script src="gsap-smoother.js" defer></script>
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "LocalBusiness",
-          "@id": "https://qutstone.com/#organization",
-          "name": "ქუთაისის ქვის ქარხანა",
-          "url": "https://qutstone.com/",
-          "image": "https://qutstone.com/images/logo.png",
-          "description": "ქუთაისში მდებარე ქვის დამუშავების საწარმო, რომელიც ქმნის გრანიტის მაღალხარისხიან პროდუქტებს.",
-          "email": "mailto:kutaisistonefactoryltd@gmail.com",
-          "telephone": "+995599229733",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "ქუთაისი",
-            "addressRegion": "იმერეთი",
-            "addressCountry": "GE"
-          },
-          "areaServed": {
-            "@type": "Country",
-            "name": "საქართველო"
-          },
-          "sameAs": [
-            "https://www.facebook.com/profile.php?id=100088853137969",
-            "https://www.instagram.com/qutaisisqvisqarxana/"
-          ],
-          "contactPoint": [
-            {
-              "@type": "ContactPoint",
-              "contactType": "customer service",
-              "telephone": "+995599229733",
-              "availableLanguage": ["ka", "en"]
-            },
-            {
-              "@type": "ContactPoint",
-              "contactType": "sales",
-              "telephone": "+995595638828",
-              "availableLanguage": ["ka", "en"]
+      "@type": "LocalBusiness",
+      "@id": "https://www.qutstone.com/#organization",
+      "name": "ქუთაისის ქვის ქარხანა",
+      "alternateName": [
+        "Kutaisi Stone Factory"
+      ],
+      "url": "https://www.qutstone.com/",
+      "logo": "https://www.qutstone.com/images/logo.png",
+      "image": "https://www.qutstone.com/images/logo.png",
+      "description": "ქუთაისში მდებარე გრანიტის დამუშავების საწარმო, რომელიც 2019 წლიდან აწარმოებს გრანიტის ფილებს, საფეხურებს, ქვაფენილს, ბორდიურს და სხვა ქვის ნაკეთობებს.",
+      "email": "kutaisistonefactoryltd@gmail.com",
+      "telephone": "+995599229733",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ახალგაზრდობის გამზირი N19",
+        "addressLocality": "ქუთაისი",
+        "addressRegion": "იმერეთი",
+        "addressCountry": "GE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 42.2359344,
+        "longitude": 42.7157878
+      },
+      "hasMap": "https://www.google.com/maps/place/%E1%83%A5%E1%83%A3%E1%83%97%E1%83%90%E1%83%98%E1%83%A1%E1%83%98%E1%83%A1+%E1%83%A5%E1%83%95%E1%83%98%E1%83%A1+%E1%83%A5%E1%83%90%E1%83%A0%E1%83%AE%E1%83%90%E1%83%9C%E1%83%90/@42.2359344,42.7132129,645m/data=!3m2!1e3!4b1!4m6!3m5!1s0x405ced59ad1080a3:0xcfffdd5f8b662e56!8m2!3d42.2359344!4d42.7157878!16s%2Fg%2F11ksnw4jhv",
+      "areaServed": {
+        "@type": "Country",
+        "name": "საქართველო"
+      },
+      "foundingDate": "2019",
+      "priceRange": "₾₾",
+      "knowsAbout": [
+        "გრანიტის დამუშავება",
+        "გრანიტის ფილები",
+        "გრანიტის საფეხურები",
+        "ქვაფენილი",
+        "გრანიტის ზედაპირები"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "გრანიტის პროდუქცია",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "გრანიტის ფილა"
             }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "კიბის საფეხურები"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "ქვაფენილი"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "ბორდიური"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "სანიაღვრე"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "კარნიზები"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "ბუხრები"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "სამზარეულოსა და მაგიდის ზედაპირები"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "ფანჯრის რაფები"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "ბარის ზედაპირები"
+            }
+          }
+        ]
+      },
+      "sameAs": [
+        "https://www.google.com/maps/place/%E1%83%A5%E1%83%A3%E1%83%97%E1%83%90%E1%83%98%E1%83%A1%E1%83%98%E1%83%A1+%E1%83%A5%E1%83%95%E1%83%98%E1%83%A1+%E1%83%A5%E1%83%90%E1%83%A0%E1%83%AE%E1%83%90%E1%83%9C%E1%83%90/@42.2359344,42.7132129,645m/data=!3m2!1e3!4b1!4m6!3m5!1s0x405ced59ad1080a3:0xcfffdd5f8b662e56!8m2!3d42.2359344!4d42.7157878!16s%2Fg%2F11ksnw4jhv",
+        "https://www.facebook.com/profile.php?id=100088853137969",
+        "https://www.instagram.com/qutaisisqvisqarxana/"
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "telephone": "+995599229733",
+          "availableLanguage": [
+            "ka"
           ],
-          "priceRange": "₾₾",
-          "foundingDate": "2019"
+          "areaServed": "GE"
         },
         {
-          "@type": "WebSite",
-          "@id": "https://qutstone.com/#website",
-          "url": "https://qutstone.com/",
-          "name": "ქუთაისის ქვის ქარხანა",
-          "inLanguage": "ka-GE"
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "telephone": "+995595638828",
+          "availableLanguage": [
+            "ka"
+          ],
+          "areaServed": "GE"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.qutstone.com/#website",
+      "url": "https://www.qutstone.com/",
+      "name": "ქუთაისის ქვის ქარხანა",
+      "inLanguage": "ka-GE",
+      "publisher": {
+        "@id": "https://www.qutstone.com/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.qutstone.com/#webpage",
+      "url": "https://www.qutstone.com/",
+      "name": "ქუთაისის ქვის ქარხანა | გრანიტის დამუშავება და ქვის პროდუქცია",
+      "inLanguage": "ka-GE",
+      "isPartOf": {
+        "@id": "https://www.qutstone.com/#website"
+      },
+      "about": {
+        "@id": "https://www.qutstone.com/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.qutstone.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "სად მდებარეობს ქუთაისის ქვის ქარხანა?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ქარხანა მდებარეობს ქუთაისში, ახალგაზრდობის გამზირი N19. შეკვეთის გასაფორმებლად შეგიძლიათ ეწვიოთ ქარხანას ადგილზე ან დაგვირეკოთ."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "რა პროდუქციას ამზადებს ქუთაისის ქვის ქარხანა?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ჩვენი ძირითადი მიმართულებაა ნატურალური გრანიტის დამუშავება. ვამზადებთ გრანიტის ფილებს, კიბის საფეხურებს, ქვაფენილს, ბორდიურს, სანიაღვრეს, კარნიზებს, ბუხრებს, სამზარეულოსა და მაგიდის ზედაპირებს, ფანჯრის რაფებსა და ბარის ზედაპირებს."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "როგორ შემიძლია პროდუქციის შეკვეთა?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "დაგვირეკეთ ნომრებზე +995 599 22 97 33 ან +995 595 63 88 28, მოგვწერეთ ელ.ფოსტაზე kutaisistonefactoryltd@gmail.com ან ეწვიეთ ქარხანას ქუთაისში."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "შესაძლებელია თუ არა ინდივიდუალური დიზაინის პროდუქციის დამზადება?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "დიახ. ვამზადებთ მომხმარებლის საჭიროებებზე მორგებულ გრანიტის ნაკეთობებს, მათ შორის ინდივიდუალური დიზაინის მაგიდებსა და ზედაპირებს. დეტალებისთვის დაგვიკავშირდით."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "რა ღირს გრანიტის პროდუქცია და არის თუ არა კონსულტაცია უფასო?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "კონკრეტული პროდუქტის ფასს და პროექტის დეტალებს ტელეფონით დაგიზუსტებთ. კონსულტაცია უფასოა."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "რამდენი ხანია მუშაობს ქუთაისის ქვის ქარხანა?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ქარხანა ქართულ ბაზარზე 2019 წლიდან მუშაობს და ამუშავებს ბუნებრივ ქვას საცხოვრებელი და კომერციული დანიშნულებისთვის."
+          }
         }
       ]
     }
+  ]
+}
     </script>
   </head>
   <body>
         <header>
           <div class="container">
             <a href="index.html">
-              <img src="images/logo-300.webp" alt="ქუთაისის ქვის ქარხანის ლოგო" id="logo-img" />
+              <img width="300" height="164" src="images/logo-300.webp" alt="ქუთაისის ქვის ქარხანის ლოგო" id="logo-img" />
             </a>
 
             <h2 style="margin-left: 5px">
@@ -201,7 +301,7 @@
               </li>
               <li>
                 <a class="nav" href="aboutus.html" title="ჩვენზე"
-                  >ჩვენსშესახებ</a
+                  >ჩვენს შესახებ</a
                 >
               </li>
               <li>
@@ -221,7 +321,7 @@
                 </div>
                 <div class="nav-menu" id="navMenu">
                   <a href="index.html">მთავარი</a>
-                  <a href="aboutus.html">ჩვენსშესახებ</a>
+                  <a href="aboutus.html">ჩვენს შესახებ</a>
                   <a href="products.html">სერვისები</a>
                   <a href="contact.html">კონტაქტი</a>
                 </div>
@@ -233,7 +333,9 @@
         <main>
           <!-- Enhanced Hero Section -->
           <section class="hero-section">
-            <img
+            <picture>
+              <source type="image/avif" srcset="images/pattern-2-800.avif 800w, images/pattern-2-1600.avif 1600w" sizes="100vw" />
+              <img width="1600" height="1122"
               class="hero-bg"
               src="images/pattern-2.webp"
               srcset="images/pattern-2-800.webp 800w, images/pattern-2.webp 1600w"
@@ -244,9 +346,10 @@
               decoding="async"
               fetchpriority="high"
             />
+            </picture>
             <div class="hero-overlay">
               <div class="hero-content">
-                <div class="hero-badge">პრემიუმი ქვის ქარხანა</div>
+                <div class="hero-badge">პრემიუმ ქვის ქარხანა</div>
                 <h1 class="hero-title">ქუთაისის ქვის ქარხანა</h1>
                 <p class="hero-subtitle">
                   მაღალი ხარისხის ნატურალური ქვის დამუშავება
@@ -254,7 +357,7 @@
                 <div class="hero-stats">
                   <div class="hero-stat">
                     <div class="stat-number">2000+</div>
-                    <div class="stat-label">პროექტები</div>
+                    <div class="stat-label">პროექტი</div>
                   </div>
                   <div class="hero-stat">
                     <div class="stat-number">6+</div>
@@ -266,7 +369,7 @@
                     >სერვისების ნახვა</a
                   >
                   <a href="aboutus.html" class="hero-btn secondary"
-                    >გაიგე მეტი</a
+                    >გაიგეთ მეტი</a
                   >
                 </div>
               </div>
@@ -277,7 +380,7 @@
           <section class="granite-features">
             <div class="features-header">
               <div class="section-badge">რატომ ჩვენ</div>
-              <h2 class="section-title">პრემიუმი ქვის მახასიათებლები</h2>
+              <h2 class="section-title">პრემიუმ ქვის მახასიათებლები</h2>
               <p class="section-subtitle">
                 გაიგეთ, რა ხდის ჩვენს ნატურალურ ქვას განსაკუთრებულს
               </p>
@@ -293,7 +396,7 @@
                   სილამაზით. თითოეული ფილა უნიკალურია და ხაზს უსვამს სივრცის
                   განსაკუთრებულობას.
                 </p>
-                <div class="feature-highlight">პრემიუმი ხარისხი</div>
+                <div class="feature-highlight">პრემიუმ ხარისხი</div>
               </div>
               <div class="feature-card">
                 <div class="feature-icon">
@@ -317,7 +420,7 @@
                   ინტერიერისთვის — აერთიანებს ბუნებრივ სიძლიერეს, ელეგანტურ
                   ტექსტურას და ხანგრძლივ მომსახურებას.
                 </p>
-                <div class="feature-highlight">ხანგრძლივობა</div>
+                <div class="feature-highlight">გამძლეობა</div>
               </div>
             </div>
           </section>
@@ -327,7 +430,9 @@
             <div class="expertise-container">
               <div class="expertise-images" id="expertise-left">
                 <div class="image-wrapper">
-                  <img
+                  <picture>
+                    <source type="image/avif" srcset="images/granite-04616-700.avif 700w, images/granite-04616-1200.avif 1200w" sizes="(max-width: 700px) calc(100vw - 40px), 500px" />
+                    <img width="700" height="525"
                     src="images/granite-04616-700.webp"
                 srcset="images/granite-04616-700.webp 700w, images/granite-04616-1200.webp 1200w"
                 sizes="(max-width: 700px) calc(100vw - 40px), 500px"
@@ -336,10 +441,11 @@
                     loading="lazy"
                     decoding="async"
                   />
+                  </picture>
                   <div class="image-overlay">
                     <div class="overlay-content">
-                      <div class="experience-badge">6+ Years</div>
-                      <p>Industry Experience</p>
+                      <div class="experience-badge">6+ წელი</div>
+                      <p>გამოცდილება ინდუსტრიაში</p>
                     </div>
                   </div>
                 </div>
@@ -382,7 +488,7 @@
                   </div>
                 </div>
                 <a href="aboutus.html" class="expertise-btn"
-                  >გაიგე მეტი ჩვენზე</a
+                  >გაიგეთ მეტი ჩვენს შესახებ</a
                 >
               </div>
             </div>
@@ -395,13 +501,13 @@
               <h2>პროფესიონალური ქვის მომსახურება</h2>
               <p>
                 ჩვენ ვთავაზობთ მაღალი სტანდარტის ქვის პროექტების რეალიზაციას,
-                რომელიც აერთიანებს სილამაზესა და განძლეობას.
+                რომელიც აერთიანებს სილამაზესა და გამძლეობას.
               </p>
             </div>
             <div class="services-grid">
               <div class="service-item">
                 <div class="service-image">
-                  <img
+                  <img width="700" height="467"
                     src="images/pool-aca40-700.webp"
                 srcset="images/pool-aca40-700.webp 700w, images/pool-aca40-1200.webp 1200w"
                 sizes="(max-width: 700px) calc(100vw - 40px), 365px"
@@ -426,7 +532,7 @@
               </div>
               <div class="service-item">
                 <div class="service-image">
-                  <img
+                  <img width="700" height="467"
                     src="images/IMG_0094-a683e-700.webp"
                 srcset="images/IMG_0094-a683e-700.webp 700w, images/IMG_0094-a683e-1200.webp 1200w"
                 sizes="(max-width: 700px) calc(100vw - 40px), 365px"
@@ -451,7 +557,7 @@
               </div>
               <div class="service-item">
                 <div class="service-image">
-                  <img
+                  <img width="700" height="700"
                     src="images/steps-231c3-700.webp"
                 srcset="images/steps-231c3-700.webp 700w, images/steps-231c3-1200.webp 1200w"
                 sizes="(max-width: 700px) calc(100vw - 40px), 365px"
@@ -476,7 +582,7 @@
               </div>
               <div class="service-item">
                 <div class="service-image">
-                  <img
+                  <img width="700" height="467"
                     src="images/modern-kitchen-with-contemporary-interior-decor-furnishings-2af24-700.webp"
                 srcset="images/modern-kitchen-with-contemporary-interior-decor-furnishings-2af24-700.webp 700w, images/modern-kitchen-with-contemporary-interior-decor-furnishings-2af24-1200.webp 1200w"
                 sizes="(max-width: 700px) calc(100vw - 40px), 365px"
@@ -492,7 +598,7 @@
                 </div>
                 <div class="service-content">
                   <h3>გრანიტის სამზარეულო</h3>
-                  <p>პროფესიონალური გრანიტის სამზარეულოს კაბინეტი და დიზაინი</p>
+                  <p>პროფესიონალური გრანიტის სამზარეულოს სამუშაო ზედაპირები და დიზაინი</p>
                   <div class="service-features">
                     <span>სითბოს მდგრადი</span>
                     <span>პრემიუმ ხარისხი</span>
@@ -501,7 +607,7 @@
               </div>
               <div class="service-item">
                 <div class="service-image">
-                  <img
+                  <img width="700" height="934"
                     src="images/granite-table-e214c-700.webp"
                 srcset="images/granite-table-e214c-700.webp 700w, images/granite-table-e214c-1200.webp 1200w"
                 sizes="(max-width: 700px) calc(100vw - 40px), 365px"
@@ -532,7 +638,7 @@
                 <div class="service-content">
                   <h3>მაგიდა</h3>
                   <p>
-                    კასტომიზებული გრანიტის მაგიდები სასადილო და კომერციული
+                    ინდივიდუალური დიზაინის გრანიტის მაგიდები სასადილო და კომერციული
                     სივრცეებისთვის
                   </p>
                   <div class="service-features">
@@ -543,7 +649,7 @@
               </div>
               <div class="service-item">
                 <div class="service-image">
-                  <img
+                  <img width="700" height="769"
                     src="images/marble-pavers-e798f-700.webp"
                 srcset="images/marble-pavers-e798f-700.webp 700w, images/marble-pavers-e798f-1200.webp 1200w"
                 sizes="(max-width: 700px) calc(100vw - 40px), 365px"
@@ -558,8 +664,8 @@
                   </div>
                 </div>
                 <div class="service-content">
-                  <h3>მოსაპირკეთბელი ფილები</h3>
-                  <p>პრემიუმ გრანიტის ფილები დიზაინერული ინსტალაციებისთვის</p>
+                  <h3>მოსაპირკეთებელი ფილები</h3>
+                  <p>პრემიუმ გრანიტის ფილები დიზაინერული პროექტებისთვის</p>
                   <div class="service-features">
                     <span>პრემიუმ დასრულება</span>
                     <span>უნიკალური ნიმუშები</span>
@@ -569,11 +675,42 @@
             </div>
           </section>
 
+          <!-- FAQ Section -->
+          <section class="faq-section" id="faq" aria-labelledby="faq-title">
+            <div class="faq-container">
+              <h2 id="faq-title">ხშირად დასმული კითხვები</h2>
+              <details class="faq-item">
+                <summary>სად მდებარეობს ქუთაისის ქვის ქარხანა?</summary>
+                <p>ქარხანა მდებარეობს ქუთაისში, ახალგაზრდობის გამზირი N19. შეკვეთის გასაფორმებლად შეგიძლიათ ეწვიოთ ქარხანას ადგილზე ან დაგვირეკოთ.</p>
+              </details>
+              <details class="faq-item">
+                <summary>რა პროდუქციას ამზადებს ქუთაისის ქვის ქარხანა?</summary>
+                <p>ჩვენი ძირითადი მიმართულებაა ნატურალური გრანიტის დამუშავება. ვამზადებთ გრანიტის ფილებს, კიბის საფეხურებს, ქვაფენილს, ბორდიურს, სანიაღვრეს, კარნიზებს, ბუხრებს, სამზარეულოსა და მაგიდის ზედაპირებს, ფანჯრის რაფებსა და ბარის ზედაპირებს.</p>
+              </details>
+              <details class="faq-item">
+                <summary>როგორ შემიძლია პროდუქციის შეკვეთა?</summary>
+                <p>დაგვირეკეთ ნომრებზე +995 599 22 97 33 ან +995 595 63 88 28, მოგვწერეთ ელ.ფოსტაზე kutaisistonefactoryltd@gmail.com ან ეწვიეთ ქარხანას ქუთაისში.</p>
+              </details>
+              <details class="faq-item">
+                <summary>შესაძლებელია თუ არა ინდივიდუალური დიზაინის პროდუქციის დამზადება?</summary>
+                <p>დიახ. ვამზადებთ მომხმარებლის საჭიროებებზე მორგებულ გრანიტის ნაკეთობებს, მათ შორის ინდივიდუალური დიზაინის მაგიდებსა და ზედაპირებს. დეტალებისთვის დაგვიკავშირდით.</p>
+              </details>
+              <details class="faq-item">
+                <summary>რა ღირს გრანიტის პროდუქცია და არის თუ არა კონსულტაცია უფასო?</summary>
+                <p>კონკრეტული პროდუქტის ფასს და პროექტის დეტალებს ტელეფონით დაგიზუსტებთ. კონსულტაცია უფასოა.</p>
+              </details>
+              <details class="faq-item">
+                <summary>რამდენი ხანია მუშაობს ქუთაისის ქვის ქარხანა?</summary>
+                <p>ქარხანა ქართულ ბაზარზე 2019 წლიდან მუშაობს და ამუშავებს ბუნებრივ ქვას საცხოვრებელი და კომერციული დანიშნულებისთვის.</p>
+              </details>
+            </div>
+          </section>
+
           <!-- New CTA Section -->
           <section class="cta-section">
             <div class="cta-container">
               <div class="cta-content">
-                <div class="section-badge">დაიწყე</div>
+                <div class="section-badge">დაიწყეთ</div>
                 <h2>მზად ხართ შეცვალოთ თქვენი სივრცე?</h2>
                 <p>
                   ჩვენი ექსპერტები დაგეხმარებიან იდეალური ქვის გადაწყვეტის
@@ -1380,6 +1517,18 @@
           }
 
           /* New CTA Section */
+          /* FAQ */
+          .faq-section { padding: 90px 20px; }
+          .faq-container { max-width: 860px; margin: 0 auto; }
+          .faq-container h2 { text-align: center; font-size: clamp(1.6rem, 4vw, 2.4rem); margin-bottom: 32px; color: #1a1a2e; }
+          .faq-item { background: #fff; border-radius: 14px; margin-bottom: 12px; box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08); overflow: hidden; }
+          .faq-item summary { cursor: pointer; list-style: none; padding: 18px 22px; font-weight: 600; color: #1a1a2e; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+          .faq-item summary::-webkit-details-marker { display: none; }
+          .faq-item summary::after { content: "+"; font-size: 1.5rem; line-height: 1; color: #b8860b; flex-shrink: 0; }
+          .faq-item[open] summary::after { content: "\2013"; }
+          .faq-item p { padding: 0 22px 20px; margin: 0; line-height: 1.7; color: #444; }
+          @media (max-width: 768px) { .faq-section { padding: 60px 18px; } }
+
           .cta-section {
             padding: 120px 0;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);

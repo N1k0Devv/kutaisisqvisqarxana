@@ -1,20 +1,24 @@
 # ქუთაისის ქვის ქარხანა (Kutaisi Stone Factory)
 
-A modern, high-performance e-commerce website for a Georgian marble and stone manufacturing company.
+Static website for a granite processing factory in Kutaisi, Georgia. Live at https://www.qutstone.com (GitHub Pages, see `CNAME`).
 
-## 🌟 Features
+## Pages
+`index.html`, `products.html`, `aboutus.html`, `contact.html`, `404.html`
 
-- **Responsive Design**: Mobile-first, works on all devices
-- **Modern Animations**: GSAP-powered smooth scrolling and animations
-- **Shopping Cart**: LocalStorage-based cart with real-time updates
-- **Contact Form**: EmailJS integration with backend fallback
-- **Performance Optimized**: Lazy loading, caching headers, and optimized assets
-- **Georgian Language**: Full UTF-8 support for Georgian text
+## Build
+Pages load minified CSS bundles. Edit `reset.css`, `style.css`, `media.css`, `icons.css`, then:
 
-## 📝 Licenseb
+```
+cd tools && npm i && npm run build      # run `npm run icons` first if you add an icon
+```
 
-© 2026 Kutaisi Stone Factory. All rights reserved.
+Do not edit `*.min.css` by hand.
 
-## 🤝 Support
+## SEO / GEO / AEO
+- JSON-LD (LocalBusiness, WebSite, WebPage/CollectionPage/AboutPage/ContactPage, FAQPage, Product list, BreadcrumbList) lives in each page's `<head>`. Keep the business details identical in all pages.
+- The FAQ on the home page is visible content and mirrors the `FAQPage` markup. Change both together.
+- `robots.txt` explicitly allows search and AI answer-engine crawlers; `llms.txt` is a plain summary for AI tools.
+- Update `lastmod` in `sitemap.xml` when a page changes.
 
-For support, email info@kutaisistonefactory.ge or visit our website.
+## Notes
+- The contact form needs EmailJS keys (`window.EMAILJS_SERVICE_ID`, `EMAILJS_TEMPLATE_ID`, `EMAILJS_PUBLIC_KEY`) before it can send anything.

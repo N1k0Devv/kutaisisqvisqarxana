@@ -1,0 +1,7 @@
+{
+  "name": "qutstone-build-tools",
+  "private": true,
+  "type": "module",
+  "scripts": { "icons": "node build-icons.mjs", "build": "node build.mjs" },
+  "devDependencies": { "@fortawesome/fontawesome-free": "6.7.2", "lightningcss": "1.28.2" }
+}
