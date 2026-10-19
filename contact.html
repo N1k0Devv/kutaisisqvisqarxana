@@ -83,7 +83,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400..900&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400..900&display=swap" /></noscript>
-    <script src="gsap-smoother.js" defer></script>
     <!-- EmailJS SDK -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="application/ld+json">
@@ -596,8 +595,6 @@
           .legacy-device .location-info-panel,
           .legacy-device .map-overlay-info,
           .legacy-device .contact-form {
-            -webkit-backdrop-filter: none !important;
-            backdrop-filter: none !important;
             box-shadow: none !important;
           }
 
@@ -662,8 +659,6 @@
             align-items: center;
             gap: 10px;
             background: rgba(255, 255, 255, 0.2);
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
             padding: 12px 24px;
             border-radius: 50px;
             font-size: 0.9rem;
@@ -729,15 +724,12 @@
             width: 60px;
             height: 60px;
             background: rgba(255, 255, 255, 0.1);
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 1.5rem;
             color: #ffd700;
-            animation: float 6s ease-in-out infinite;
           }
 
           .float-1 {
@@ -814,8 +806,6 @@
 
           .contact-card {
             background: rgba(255, 255, 255, 0.9);
-            -webkit-backdrop-filter: blur(20px);
-            backdrop-filter: blur(20px);
             border-radius: 25px;
             padding: 40px 30px;
             position: relative;
@@ -999,8 +989,6 @@
 
           .contact-form {
             background: rgba(255, 255, 255, 0.1);
-            -webkit-backdrop-filter: blur(20px);
-            backdrop-filter: blur(20px);
             border-radius: 25px;
             padding: 50px;
             border: 1px solid rgba(255, 255, 255, 0.2);
@@ -1037,8 +1025,6 @@
             color: white;
             font-size: 1rem;
             transition: all 0.3s ease;
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
           }
 
           .form-group input:focus,
@@ -1178,8 +1164,6 @@
 
           .location-info-panel {
             background: rgba(255, 255, 255, 0.95);
-            -webkit-backdrop-filter: blur(20px);
-            backdrop-filter: blur(20px);
             border-radius: 25px;
             padding: 40px;
             box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
@@ -1272,8 +1256,6 @@
             top: 20px;
             left: 20px;
             background: rgba(255, 255, 255, 0.95);
-            -webkit-backdrop-filter: blur(20px);
-            backdrop-filter: blur(20px);
             padding: 20px 25px;
             border-radius: 15px;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
@@ -2055,23 +2037,6 @@
                     submitBtn.disabled = false;
                 }
             }
-
-          const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-          const allowSmoothEffects = !document.body.classList.contains("low-power") && !reduceMotion;
-
-          if (
-            allowSmoothEffects &&
-            typeof gsap !== "undefined" &&
-            typeof ScrollTrigger !== "undefined" &&
-            typeof ScrollSmoother !== "undefined"
-          ) {
-            gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-            ScrollSmoother.create({
-              smooth: 1,
-              effects: true,
-              smoothTouch: 0.1,
-            });
-          }
 
         </script>
       </div>

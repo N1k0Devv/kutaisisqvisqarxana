@@ -55,7 +55,6 @@
     <link rel="stylesheet" href="site.min.css" />
     <link rel="preload" as="style" href="icons.min.css" onload="this.onload=null;this.rel='stylesheet'" />
     <noscript><link rel="stylesheet" href="icons.min.css" /></noscript>
-    <script src="gsap-smoother.js" defer></script>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -793,7 +792,6 @@
             min-height: 100vh;
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
             position: relative;
             display: flex;
             align-items: center;
@@ -850,7 +848,6 @@
               rgba(243, 156, 18, 0.1) 0%,
               transparent 50%
             );
-            animation: heroGlow 8s ease-in-out infinite alternate;
           }
 
           @keyframes heroGlow {
@@ -884,7 +881,6 @@
             letter-spacing: 1px;
             margin-bottom: 1.5rem;
             box-shadow: 0 8px 25px rgba(243, 156, 18, 0.3);
-            animation: badgeFloat 3s ease-in-out infinite;
           }
 
           @keyframes badgeFloat {
@@ -960,8 +956,6 @@
             padding: 20px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
             transition: all 0.4s ease;
           }
@@ -1061,7 +1055,6 @@
             align-items: center;
             justify-content: center;
             color: white;
-            animation: scrollBounce 2s ease-in-out infinite;
             cursor: pointer;
             transition: all 0.3s ease;
           }
@@ -1479,8 +1472,6 @@
             justify-content: center;
             color: white;
             font-size: 2rem;
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
           }
 
           .service-content {
@@ -1658,8 +1649,6 @@
             padding: 25px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
             transition: all 0.3s ease;
           }
@@ -1927,8 +1916,6 @@
               (-webkit-backdrop-filter: blur(10px))
           ) {
             .hero-stat {
-              -webkit-backdrop-filter: none !important;
-              backdrop-filter: none !important;
               background: rgba(0, 0, 0, 0.25) !important;
             }
           }
@@ -2031,10 +2018,8 @@
             target.scrollIntoView({ behavior: "smooth", block: "start" });
           });
 
-          // GSAP ScrollSmoother and animations
+          // Scroll animations
           document.addEventListener("DOMContentLoaded", function () {
-            // ScrollSmoother is lazy-loaded via `gsap-smoother.js` (after window load on desktop only).
-
             // Enhanced scroll animations with Intersection Observer
             const observerOptions = {
               threshold: 0.1,

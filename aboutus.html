@@ -45,7 +45,6 @@
     <link rel="stylesheet" href="site.min.css" />
     <link rel="preload" as="style" href="icons.min.css" onload="this.onload=null;this.rel='stylesheet'" />
     <noscript><link rel="stylesheet" href="icons.min.css" /></noscript>
-    <script src="gsap-smoother.js" defer></script>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -789,7 +788,6 @@
     rgba(243, 156, 18, 0.1) 0%,
     transparent 50%
   );
-  animation: heroGlow 8s ease-in-out infinite alternate;
   pointer-events: none;
 }
 
@@ -855,8 +853,6 @@
   padding: 20px 30px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 15px;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   min-width: 150px;
   transition: transform 0.3s ease;
@@ -1219,8 +1215,6 @@
         font-size: 1.5rem;
         cursor: pointer;
         transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
       }
 
       .play-button:hover {
@@ -1567,7 +1561,6 @@
           #f39c12
         );
         background-size: 300% 300%;
-        animation: gradientShift 8s ease infinite;
         z-index: -1;
         margin: -2px;
         border-radius: 22px;
@@ -1719,8 +1712,6 @@
         padding: 15px;
         background: rgba(255, 255, 255, 0.1);
         border-radius: 15px;
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
         transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         cursor: pointer;
         position: relative;
@@ -1808,7 +1799,6 @@
           #27ae60
         );
         background-size: 300% 300%;
-        animation: valuesGradientShift 10s ease infinite;
         z-index: -1;
         margin: -2px;
         border-radius: 22px;
@@ -1959,8 +1949,6 @@
         padding: 15px;
         background: rgba(255, 255, 255, 0.1);
         border-radius: 15px;
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
         transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         cursor: pointer;
         position: relative;
@@ -2310,8 +2298,6 @@
         justify-content: center;
         margin: 0 auto clamp(15px, 3vw, 20px);
         font-size: clamp(1.5rem, 3vw, 2rem);
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
         transition: all 0.3s ease;
       }
 
@@ -2348,8 +2334,6 @@
         padding: clamp(20px, 4vw, 30px);
         background: rgba(255, 255, 255, 0.1);
         border-radius: clamp(15px, 3vw, 20px);
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
         border: 1px solid rgba(255, 255, 255, 0.2);
         transition: all 0.4s ease;
         cursor: pointer;
@@ -2410,8 +2394,6 @@
         width: 100%;
         height: 100%;
         background: rgba(0, 0, 0, 0.9);
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
       }
 
       .lightbox-content {
@@ -2572,8 +2554,6 @@
         justify-content: center;
         color: white;
         font-size: 2rem;
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
       }
 
       .service-content {
@@ -2738,8 +2718,6 @@
         padding: 25px;
         background: rgba(255, 255, 255, 0.1);
         border-radius: 15px;
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
         border: 1px solid rgba(255, 255, 255, 0.2);
         transition: all 0.3s ease;
       }
@@ -3142,8 +3120,6 @@
         (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))
       ) {
         .hero-stat {
-          -webkit-backdrop-filter: none !important;
-          backdrop-filter: none !important;
           background: rgba(0, 0, 0, 0.25) !important;
         }
       }
@@ -3343,15 +3319,6 @@
         window.addEventListener("scroll", checkScroll);
       });
 
-      // GSAP ScrollSmoother
-      if (typeof gsap !== "undefined") {
-        gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-        ScrollSmoother.create({
-          smooth: 1,
-          effects: true,
-          smoothTouch: 0.1,
-        });
-      }
     </script>
 </body>
 </html>
