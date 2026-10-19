@@ -646,3 +646,24 @@ h1, h2 { overflow-wrap: break-word; }
 @media (max-width: 480px) {
   .services-section .services-header h2 { font-size: clamp(1.35rem, 6.6vw, 1.9rem); }
 }
+
+/* Very small phones (<=340px): a fixed 320px card would stick out of the screen */
+@media (max-width: 340px) {
+  .product-showcase-card { width: 100% !important; min-width: 0 !important; max-width: 100% !important; }
+  .products-showcase-grid { grid-template-columns: minmax(0, 1fr) !important; }
+}
+
+/* About page: step number badges were cut off by the card edge */
+.process-step { padding-top: 66px !important; }
+.process-step .step-number { top: 14px !important; }
+
+/* About page gallery: show whole photos (3:2) instead of cropping them into tall boxes */
+.gallery-main .gallery-item,
+.gallery-secondary .gallery-item { height: auto !important; aspect-ratio: 3 / 2; }
+.gallery-grid { align-items: center; }
+@media (max-width: 1200px) {
+  .gallery-grid { max-width: 760px; margin-left: auto; margin-right: auto; }
+}
+@media (min-width: 1201px) {
+  .gallery-grid { grid-template-columns: 3fr 2fr !important; }
+}
