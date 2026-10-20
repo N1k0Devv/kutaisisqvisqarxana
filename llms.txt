@@ -1,10 +1,14 @@
 # ქუთაისის ქვის ქარხანა (Kutaisi Stone Factory)
 
-> Granite processing factory in Kutaisi, Georgia, operating since 2019. Makes granite tiles, stair steps, paving stones, curbs, drain channels, cornices, fireplaces, kitchen and table countertops, window sills and bar tops. Orders by phone or by visiting the factory. Website language: Georgian.
+> Granite processing factory in Kutaisi, Georgia, operating since 2019. Makes granite tiles (გრანიტის ფილები / გრანიტის ფილა), granite blocks (გრანიტის ბლოკი), granite stairs (გრანიტის კიბე), stair steps, paving stones, curbs, drain channels, cornices, fireplaces, kitchen and table countertops, window sills and bar tops. Orders by phone or by visiting the factory. Website language: Georgian. Serves all of Georgia including Kutaisi, Tbilisi and Batumi.
+
+## Primary Georgian search topics
+გრანიტის ფილები, გრანიტის ფილა, გრანიტის ბლოკი, გრანიტის კიბე, გრანიტის საფეხურები, გრანიტის დამუშავება, გრანიტის ქვაფენილი, გრანიტის ბორდიური, ნატურალური გრანიტი, გრანიტი ქუთაისი, გრანიტი საქართველო, გრანიტის ფასი
 
 ## Pages
-- [Home](https://www.qutstone.com/): overview, services and frequently asked questions
+- [Home](https://www.qutstone.com/): overview, granite services and FAQ
 - [Products](https://www.qutstone.com/products.html): granite product catalogue
+- [Blog](https://www.qutstone.com/blog/): 50 Georgian articles on granite tiles, blocks, stairs and processing
 - [About us](https://www.qutstone.com/aboutus.html): company history and production process
 - [Contact](https://www.qutstone.com/contact.html): phones, email, address and map
 
